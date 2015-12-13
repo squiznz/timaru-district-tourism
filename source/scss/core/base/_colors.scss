@@ -1,0 +1,61 @@
+/***
+*   Base - Colors
+***/
+
+// Black
+.bgc-black                   {   background-color: $black !important;             }
+.bgc-black-1                 {   background-color: $black-1 !important;           }
+.bgc-black-2                 {   background-color: $black-2 !important;           }
+.bgc-black-3                 {   background-color: $black-3 !important;           }
+.bgc-black-4                 {   background-color: $black-4 !important;           }
+
+.tc-black                   {   color: $black !important;             }
+.tc-black-1                 {   color: $black-1 !important;           }
+.tc-black-2                 {   color: $black-2 !important;           }
+.tc-black-3                 {   color: $black-3 !important;           }
+.tc-black-4                 {   color: $black-4 !important;           }
+
+
+// White
+.bgc-white                   {   background-color: $white !important;             }
+.bgc-white-1                 {   background-color: $white-1 !important;           }
+.bgc-white-2                 {   background-color: $white-2 !important;           }
+.bgc-white-3                 {   background-color: $white-3 !important;           }
+.bgc-white-4                 {   background-color: $white-4 !important;           }
+
+
+.bgc-grey-50                 {   background-color: $grey-50 !important;           }
+.bgc-grey-100                {   background-color: $grey-100 !important;          }
+.bgc-grey-200                {   background-color: $grey-200 !important;          }
+.bgc-grey-300                {   background-color: $grey-300 !important;          }
+.bgc-grey-400                {   background-color: $grey-400 !important;          }
+.bgc-grey-500                {   background-color: $grey-500 !important;          }
+.bgc-grey-600                {   background-color: $grey-600 !important;          }
+.bgc-grey-700                {   background-color: $grey-700 !important;          }
+.bgc-grey-800                {   background-color: $grey-800 !important;          }
+.bgc-grey-900                {   background-color: $grey-900 !important;          }
+
+.tc-grey-50                 {   color: $grey-50 !important;           }
+.tc-grey-100                {   color: $grey-100 !important;          }
+.tc-grey-200                {   color: $grey-200 !important;          }
+.tc-grey-300                {   color: $grey-300 !important;          }
+.tc-grey-400                {   color: $grey-400 !important;          }
+.tc-grey-500                {   color: $grey-500 !important;          }
+.tc-grey-600                {   color: $grey-600 !important;          }
+.tc-grey-700                {   color: $grey-700 !important;          }
+.tc-grey-800                {   color: $grey-800 !important;          }
+.tc-grey-900                {   color: $grey-900 !important;          }
+
+
+// Client Color Palette Background and Text Color Convenience Classes
+// eg .lightest-orange             {   background-color: $lightest-orange !important;   }
+// eg .lighter-orange              {   background-color: $lighter-orange !important;    }
+// eg .light-orange                {   background-color: $light-orange !important;      }
+// eg .orange                      {   background-color: $orange !important;            }
+// eg .red                         {   background-color: $red !important;               }
+
+// eg .tc-lightest-orange          {   color: $lightest-orange !important;   }
+// eg .tc-lighter-orange           {   color: $lighter-orange !important;    }
+// eg .tc-light-orange             {   color: $light-orange !important;      }
+// eg .tc-orange                   {   color: $orange !important;            }
+// eg .tc-red                      {   color: $red !important;               }

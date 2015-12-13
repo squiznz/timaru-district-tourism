@@ -1,0 +1,31 @@
+/***
+*   Base - Typography
+***/
+
+@import url('//fonts.googleapis.com/css?family=Raleway:300,400,500,700,900');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+// @import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css');
+
+$font-primary:'Raleway', sans-serif;
+$font-secondary:'Open Sans', serif;
+
+
+// Font Weights
+$light      :  300;
+$normal     :  400;
+$medium     :  500;
+$bold       :  700;
+$ultrabold  :  900;
+
+//Fonts
+@include headings(){
+    font-family: $font-primary;
+    font-weight: normal;
+    color: $grey-800;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    margin: 0;
+    padding: 0;
+}

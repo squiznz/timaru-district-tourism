@@ -1,0 +1,10 @@
+/***
+*   Objects - Z-Depth
+***/
+
+// Z-depth classes
+@for $i from 1 through 5 {
+    .z-depth#{$i} {
+        @include z-depth($i);
+    }
+}

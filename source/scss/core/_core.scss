@@ -1,0 +1,27 @@
+/***
+*   Core
+***/
+
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../../bower_components/susy/sass/susy";
+
+@import "settings/colors";
+@import "settings/defaults";
+@import "settings/responsive";
+
+@import "tools/functions";
+@import "tools/mixins";
+@import "tools/responsive";
+
+@import "generic/normalize";
+@import "generic/box-sizing";
+@import "generic/reset";
+
+@import "base/page";
+@import "base/images";
+@import "base/typography";
+@import "base/colors";
+
+@import "trumps/helpers";
+
+@import "objects/bare-list";

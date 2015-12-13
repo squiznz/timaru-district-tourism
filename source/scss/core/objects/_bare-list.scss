@@ -1,0 +1,11 @@
+/***
+*   Objects - Bare List
+***/
+
+// The bare-list object simply removes any indents and bullet points from lists
+.bare-list,
+%bare-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

@@ -1,0 +1,26 @@
+/***
+*   Settings - Responsive
+***/
+
+// Hold our breakpoint aliases and conditions in a list.
+//
+// These can be invoked later on via the `media-query()` mixin found in
+// `_tools.responsive`.
+
+$breakpoints: (
+    "palm"            "screen and (max-width: 480px)",
+    "palm-landscape"  "screen and (max-width: 767px)",
+    "palm-land-up"    "screen and (min-width: 768px)",
+    "lap"             "screen and (min-width: 481px) and (max-width: 1023px)",
+    "lap-and-up"      "screen and (min-width: 481px)",
+    "portable"        "screen and (max-width: 1023px)",
+    "note"            "screen and (min-width: 1024px) and (max-width: 1279px)",
+    "note-and-up"     "screen and (min-width: 1024px)",
+    "below-desk"      "screen and (max-width: 1280px)",
+    "desk"            "screen and (min-width: 1281px)",
+    "desk-wide"       "screen and (min-width: 1400px)",
+    "full-hd"         "screen and (min-width: 1920px)",
+    "retina"          "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)",
+    "short"           "screen and (max-height: 799px)",
+    "tall"            "screen and (min-height: 800px)"
+) !default;

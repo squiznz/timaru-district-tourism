@@ -1,0 +1,67 @@
+/***
+*   Trumps - Helpers
+***/
+
+// Clearfix.
+.clearfix { @include clearfix; }
+
+
+// Container
+.container {
+	@include container;
+	padding: 0 2%;
+
+    @include media-query(note-and-up) {
+        padding: 0 1%;
+    }
+}
+
+
+// Display.
+.display--block           { display: block; }
+.display--inline          { display: inline; }
+.display--inline-block    { display: inline-block; }
+
+
+// Position.
+.position--relative     {position: relative;}
+.position--absolute     {position: absolute;}
+
+
+// Add/remove floats.
+.float--right   { float:right !important; }
+.float--left    { float:left  !important; }
+.float--none    { float:none  !important; }
+
+
+// Text alignment.
+.text--left     { text-align: left   !important; }
+.text--center   { text-align: center !important; }
+.text--right    { text-align: right  !important; }
+
+
+// Text transforms
+.text--uppercase  { text-transform: uppercase; }
+.text--capitalize  { text-transform: capitalize; }
+
+
+// Mouse managment.
+.clickable       { cursor: pointer }
+
+
+// Hide content off-screen without resorting to `display:none;`.
+.visuallyhidden {
+    @include visuallyhidden();
+}
+
+.hidden-portable {
+    @include media-query(portable) {
+        @include visuallyhidden();
+    }
+}
+
+.visible-portable {
+    @include media-query(note-and-up) {
+        @include visuallyhidden();
+    }
+}
