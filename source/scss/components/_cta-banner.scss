@@ -6,9 +6,24 @@
 	background-color: $tdc-purple;
 	color: $white;
 	background-image: url('../img/swirls-purple.png');
+	padding: $padding * 4.5 $padding * 2.652;
+	text-align: center;
 
 	&.bgc-tdc-green {
 		background-image: url('../img/swirls-green.png');
+
+		a {
+			color: $white !important;
+		}
+	}
+
+	a {
+		@include font-size(19px);
+		color: $tdc-green;
+	}
+
+	p {
+		@include font-size(32px);
 	}
 }
 

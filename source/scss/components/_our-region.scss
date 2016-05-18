@@ -1,3 +1,11 @@
 /***
 *   Our Region
 ***/
+
+.page__our-region {
+	padding: $padding * 4.5 $padding * 2.652;
+	
+	a {
+		@include font-size(14px);
+	}
+}

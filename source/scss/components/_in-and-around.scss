@@ -1,3 +1,22 @@
 /***
 *   In & Around
 ***/
+
+.page__in-and-around {
+
+	h2 {
+		width: 100%;
+		display: block;
+		background-color: $tdc-dark-navy;
+		padding: 15px $padding * 2.652;
+		color: $white;
+	}
+
+
+}
+
+	.page__in-and-around--wrap {
+		padding: $padding * 4.5 $padding * 2.652;
+
+	}
+

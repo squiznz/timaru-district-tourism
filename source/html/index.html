@@ -16,15 +16,15 @@
 <body>
   <!-- Being Global Header -->
   <header class="global-header">
-    <div class="container">
+    <div class="container p0">
 
       <!-- Begin Tertiary Navigation -->
       <nav class="tertiary-nav">
         <ul class="bare-list">
           <li class="tertiary-nav__tourism-statement hidden-portable">The official tourism website of the Timaru District</li>
-          <li><a href="">Visit Timaru</a></li>
-          <li><a href="">Live, Work, Business</a></li>
-          <li><a href="">Tourism New Zealand</a></li>
+          <li class="tertiary-nav__visit"><a href="">Visit Timaru</a></li>
+          <li><a href="">Live, Work, Play</a></li>
+          <li><a href=""><img src="../img/tripadvisor-logo.png" alt="Tripadvisor"></a></li>
         </ul>
       </nav>
       <!-- End Tertiary Navigation -->
@@ -34,21 +34,26 @@
         <ul class="bare-list">
           <li class="utility-nav__logo">
             <a href="/">
-              <img src="" alt="Timaru Tourism logo. ">
+              <img src="../img/logo.png" alt="Timaru Tourism logo. ">
             </a>
           </li>
           <li class="utility-nav__primary-toggle">
+            <a href="">
+              <hr>
+              <hr>
+              <hr>
+            </a>
             <span class="visuallyhidden">Skip to primary navigation. </span>
           </li>   
           <li class="utility-nav__search-toggle">
             <a href="">
-              <i></i>
+              <i class="fa fa-search"></i>
               <span class="hidden-portable">Search this site. </span>
             </a>
             <span class="visuallyhidden">Skip to search. </span>
           </li>
           <li class="visuallyhidden">
-            <a href="#page">Skip to content. </span>
+            <a href="#page">Skip to content. </a>
           </li>
         </ul>
       </nav>
@@ -74,44 +79,206 @@
   <!-- Begin Page Contents -->
   <main id="page" class="page clearfix">
     <section class="page__feature-banner">
-      <h1>Always more to uncover</h1>
-      
-      <a class="page__feature-banner--scroll-indicator" href="">
-        <span>
-          |
-        </span>
-      </a>
+      <div class="page__feature-banner--wrap container p0">
+        <h1>Always more to uncover</h1>
 
+        <a class="page__feature-banner--scroll-indicator" href=""></a>
+      </div>
     </section>
+
     <section class="page__location-banner">
-      
+      <div class="page__location-banner--info">
+        <span class="page__location-banner--location">Caroline Bay / Timaru, NZ</span>
+        <p><strong>The Bay: </strong>things here</p>
+        <a class="page__location-banner--cta" href="#">
+          <span>Explore Caroline Bay</span>
+        </a>
+      </div>
     </section>
+
     <section class="page__our-region">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eaque nisi, itaque et. Obcaecati enim ea optio doloribus dolor distinctio, magnam, beatae quia nulla, accusamus dolorum, at eveniet vel ratione.</p>
+      <h2 class="display--inline">Our Region</h2>
+      <select class="page__our-region--selector">
+        <option value="">What to do</option>
+      </select>
+      <div class="container p0">
+        <ul id="page__our-region--what-to-do" class="page__our-region--slider bare-list">
+          <li>
+            <img src="../img/placeholder1.jpeg" alt="">
+            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem temporibus, numquam odio mollitia ad, culpa? Inventore doloremque officiis dolorum adipisci, ha.</p>
+            <a href="">View all activities</a>
+          </li>
+          <li>
+            <img src="../img/placeholder1.jpeg" alt="">
+            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos harum aspernatur commodi fugit sint natus vel itaque maiores perspiciatis enim labor.</p>
+            <a href="">View all activities</a>
+          </li>
+          <li>
+            <img src="../img/placeholder1.jpeg" alt="">
+            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui assumenda beatae, natus iusto. Quia laudantium laboriosam dignissimos facilis voluptatem repellat, es.</p>
+            <a href="">View all activities</a>
+          </li>
+        </ul>
+        <a href="">View all activities</a>
+      </div>
     </section>
+
     <section class="page__cta-banner">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quo, nesciunt, provident placeat debitis iure vitae ratione id esse itaque architecto dicta porro rem. At enim doloribus recusandae, vel ea!</p>
+      <p><strong>Timaru:</strong> surprisingly full of opportunities</p>
+      <a href="">Find out more about Timaru</a>
     </section>
+
     <section class="page__three-best">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptatum repellendus, aliquam hic harum sequi vero totam, atque dolorem quibusdam vitae sunt quaerat quam repellat, ea asperiores officiis quos cum.</p>
+      <h2 class="display--inline">Three of the best</h2>
+
+      <select class="page__three-best--selector">
+        <option value="">Places to get coffee</option>
+      </select>
+
+      <div class="container p0">
+        <ul id="page__three-best--coffee" class="page__three-best--slider bare-list">
+          <li>
+            <img src="../img/placeholder1.jpeg" alt="">
+            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem temporibus, numquam odio mollitia ad, culpa? Inventore doloremque officiis dolorum adipisci, ha.</p>
+            <a href="">View all activities</a>
+          </li>
+          <li>
+            <img src="../img/placeholder1.jpeg" alt="">
+            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos harum aspernatur commodi fugit sint natus vel itaque maiores perspiciatis enim labor.</p>
+            <a href="">View all activities</a>
+          </li>
+          <li>
+            <img src="../img/placeholder1.jpeg" alt="">
+            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui assumenda beatae, natus iusto. Quia laudantium laboriosam dignissimos facilis voluptatem repellat, es.</p>
+            <a href="">View all activities</a>
+          </li>
+        </ul>
+        <a href="">View all activities</a>
+      </div>
     </section>
-    <section class="page__cta-banner">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nobis itaque velit inventore magni placeat laborum sunt tempora saepe quod ullam doloribus unde commodi voluptate eligendi ab ex temporibus, accusamus!</p>
-    </section>
+
     <section class="page__location-banner">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione doloribus velit maiores, nihil molestiae laudantium numquam, provident ullam sequi veniam voluptatem deleniti reiciendis animi sint nemo fugit rerum facilis incidunt.</p>
+      <div class="page__location-banner--info">
+        <span class="page__location-banner--location">Caroline Bay / Timaru, NZ</span>
+        <p><strong>The Bay: </strong>things here</p>
+        <a class="page__location-banner--cta" href="#">
+          <span>Explore Caroline Bay</span>
+        </a>
+      </div>
     </section>
+
     <section class="page__watch-timaru">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, consequuntur minus voluptatem explicabo, necessitatibus maxime, id incidunt maiores aspernatur, modi rem quis nisi enim! Animi repellat blanditiis, quibusdam vel labore.</p>
+      <video src=""></video>
     </section>
+
     <section class="page__in-and-around">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, consequuntur minus voluptatem explicabo, necessitatibus maxime, id incidunt maiores aspernatur, modi rem quis nisi enim! Animi repellat blanditiis, quibusdam vel labore.</p>
+      <h2>In and Around Timaru</h2>
+      <div class="page__in-and-around--wrap">
+        <div class="page__in-and-around--map">
+          map
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, consequuntur minus voluptatem explicabo, necessitatibus maxime, id incidunt maiores aspernatur, modi rem quis nisi enim! Animi repellat blanditiis, quibusdam vel labore.</p>
+      </div>
     </section>
+
     <section class="page__whats-on">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore in, accusantium quisquam voluptas! Voluptate accusantium dolorem, nostrum suscipit nisi ducimus illo molestias quibusdam possimus. Iusto totam harum eaque voluptatum sed.</p>
+      <h2>What's on</h2>
+      <ul class="page__whats-on--events-list bare-list">
+        <li class="page__whats-on--event-featured">
+          <p> 
+            <span class="display--inline tc-tdc-green">Featured</span>
+            <span class="page__whats-on-list-topic">/ Health</span>
+          </p>
+          <h3>
+            <strong>Jun</strong> 03
+          </h3>
+          <span class="page__whats-on-list-location tc-tdc-green">Caroline Bay Soundshell</span>
+          <h4></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit sunt porro pariatur aspernatur distinctio architecto iste qui ducimus.</p>
+          <a href="">View event</a>
+        </li>
+        <li class="page__whats-on--event-item">
+          <span class="page__whats-on-list-topic">Health</span>
+          <h3>
+            <strong>Jun</strong> 03
+          </h3>
+          <span class="page__whats-on-list-location tc-tdc-green">Caroline Bay Soundshell</span>
+          <h4></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit sunt porro pariatur aspernatur distinctio architecto iste qui ducimus.</p>
+          <a href="">View event</a>
+        </li>
+        <li class="page__whats-on--event-item">
+          <span class="page__whats-on-list-topic">Health</span>
+          <h3>
+            <strong>Jun</strong> 03
+          </h3>
+          <span class="page__whats-on-list-location tc-tdc-green">Caroline Bay Soundshell</span>
+          <h4></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit sunt porro pariatur aspernatur distinctio architecto iste qui ducimus.</p>
+          <a href="">View event</a>
+        </li>
+        <li class="page__whats-on--event-item">
+          <span class="page__whats-on-list-topic">Health</span>
+          <h3>
+            <strong>Jun</strong> 03
+          </h3>
+          <span class="page__whats-on-list-location tc-tdc-green">Caroline Bay Soundshell</span>
+          <h4></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit sunt porro pariatur aspernatur distinctio architecto iste qui ducimus.</p>
+          <a href="">View event</a>
+        </li>
+        <li class="page__whats-on--event-item">
+          <span class="page__whats-on-list-topic">Health</span>
+          <h3>
+            <strong>Jun</strong> 03
+          </h3>
+          <span class="page__whats-on-list-location tc-tdc-green">Caroline Bay Soundshell</span>
+          <h4></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit sunt porro pariatur aspernatur distinctio architecto iste qui ducimus.</p>
+          <a href="">View event</a>
+        </li>
+        <li class="page__whats-on--event-item">
+          <span class="page__whats-on-list-topic">Health</span>
+          <h3>
+            <strong>Jun</strong> 03
+          </h3>
+          <span class="page__whats-on-list-location tc-tdc-green">Caroline Bay Soundshell</span>
+          <h4></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit sunt porro pariatur aspernatur distinctio architecto iste qui ducimus.</p>
+          <a href="">View event</a>
+        </li>
+        <li class="page__whats-on--event-item">
+          <span class="page__whats-on-list-topic">Health</span>
+          <h3>
+            <strong>Jun</strong> 03
+          </h3>
+          <span class="page__whats-on-list-location tc-tdc-green">Caroline Bay Soundshell</span>
+          <h4></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit sunt porro pariatur aspernatur distinctio architecto iste qui ducimus.</p>
+          <a href="">View event</a>
+        </li>
+        <li class="page__whats-on--event-item">
+          <span class="page__whats-on-list-topic">Health</span>
+          <h3>
+            <strong>Jun</strong> 03
+          </h3>
+          <span class="page__whats-on-list-location tc-tdc-green">Caroline Bay Soundshell</span>
+          <h4></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit sunt porro pariatur aspernatur distinctio architecto iste qui ducimus.</p>
+          <a href="">View event</a>
+        </li>
+      </ul>
     </section>
-    <section class="page__cta-banner bgc-td">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, magni eligendi accusantium incidunt, nam, tempore officiis explicabo fugit hic ex vel cupiditate sint voluptates excepturi. Iure laudantium, laborum rerum fugit.</p>
+
+    <section class="page__cta-banner bgc-tdc-green">
+      <p><strong>Opportunities for talent, business &amp; investment</p>
+      <a href="">World Class in Timaru. Find out more</a>
     </section>
   </main>
   <!-- End Page Contents -->
@@ -119,23 +286,31 @@
   <!-- Begin Global Footer -->
   <footer class="global-footer">
     <div class="global-footer__wrap container">
-      <a href="/">
-        <img src="" alt="Timaru Tourism Logo. ">
+      <a href="/" class="float--left">
+        <img src="../img/logo.png" alt="Timaru Tourism Logo. ">
       </a>
 
       <!-- Begin Social Media Links -->
-      <ul class="social-media-links bare-list">
+      <ul class="social-media-links bare-list float--left ml++">
         <li class="social-media-links__twitter">
-          <a href=""></a>
+          <a href="">
+            <i class="fa fa-twitter"></i>
+          </a>
         </li>
         <li class="social-media-links__instagram">
-          <a href=""></a>
+          <a href="">
+            <i class="fa fa-instagram"></i>
+          </a>
         </li>
         <li class="social-media-links__youtube">
-          <a href=""></a>
+          <a href="">
+            <i class="fa fa-youtube"></i>
+          </a>
         </li>
         <li class="social-media-links__facebook">
-          <a href=""></a>
+          <a href="">
+            <i class="fa fa-facebook"></i>
+          </a>
         </li>
       </ul>
       <!-- End Social Media Links -->
@@ -158,7 +333,7 @@
     <ul class="footer-utilities bare-list">
       <li class="footer-utilities__tourism-statement">The official tourism website of the Timaru District</li>
       <li><a href="">Visit Timaru</a></li>
-      <li><a href="">Live, Work, Business</a></li>
+      <li><a href="">Live, Work, Play</a></li>
     </ul>
     <!-- End Footer Utilities -->
 

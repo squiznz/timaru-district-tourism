@@ -2,21 +2,7 @@
 *   Global Header
 ***/
 
-.tertiary-nav {
-	@include font-size(13px);
-	height: 42px;
-	font-family: $font-primary;
-	font-weight: $semibold;
+.global-header {
+	
 
-	li {
-		display: inline-block;
-
-		a {
-			color: $black;
-			text-decoration: none;
-		}
-
-	}
 }
-
-

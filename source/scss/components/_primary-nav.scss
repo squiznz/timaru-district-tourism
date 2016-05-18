@@ -3,5 +3,25 @@
 ***/
 
 .primary-nav {
+	@include position(absolute, 125px 0 null 0);
+	background-color: $tdc-purple;
+	z-index: 99999;
+	border-bottom: 2px solid $black;
 
+	ul {
+		li {
+			color: $white;
+			display: block;
+			padding: 21px $padding * 2.652;
+			border-bottom: 1px solid $black;
+
+			a {
+				color: inherit;
+				font-weight: $semibold;
+				@include font-size(19px);
+				text-decoration: none;
+			}
+
+		}
+	}
 }

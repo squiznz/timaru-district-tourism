@@ -4,7 +4,6 @@
 
 .global-footer {
 	background-color: $tdc-navy;
-	font-family: $font-primary;
 	font-weight: $semibold;
 
 	a {
@@ -18,12 +17,26 @@
 
 	.global-footer__wrap {
 		padding: $padding * 4.5 $padding * 2.652;
-
 	}
 
+
 		
+	.social-media-links {
+		li {
+			display: inline-block;
+			padding: 0 $padding;
+			text-align: center;
+
+			i {
+				@include font-size(18px);
+			}
+		}
+	}
 
 	.footer-nav {
+		float: left;
+		margin-top: 20px;
+
 		li {
 			@include span(1 of 2 float inside);
 			
@@ -41,16 +54,21 @@
 
 	.footer-utilities {
 		background-color: $tdc-dark-navy;
-		padding: 0 $padding * 2.652;
 		color: $white;
+		@include font-size(12px);
 
 		li {
 			display: inline-block;
+			padding: 10px $padding * 2.652;
+			width: 49.4%;
+			border-right: 1px solid $tdc-navy;
 		}
 
 	}
 
 
 		.footer-utilities__tourism-statement {
-			@include font-size(12px);
+			width: 100% !important;
+			border-bottom: 1px solid $tdc-navy;
 		}
+
