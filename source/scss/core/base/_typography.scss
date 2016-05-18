@@ -2,24 +2,24 @@
 *   Base - Typography
 ***/
 
-@import url('//fonts.googleapis.com/css?family=Raleway:300,400,500,700,900');
-@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-// @import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic');
+@import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css');
 
-$font-primary:'Raleway', sans-serif;
-$font-secondary:'Open Sans', serif;
+$font-primary: 'Source Sans Pro', sans-serif;
+$font-secondary: 'Open Sans', serif;
 
 
 // Font Weights
 $light      :  300;
 $normal     :  400;
 $medium     :  500;
+$semibold	:  600; 
 $bold       :  700;
 $ultrabold  :  900;
 
 //Fonts
 @include headings(){
-    font-family: $font-primary;
+    font-family: $font-secondary;
     font-weight: normal;
     color: $grey-800;
     font-smoothing: antialiased;

@@ -1,6 +1,24 @@
 /***
-*   Insert Client Name Styles
+	TDC Tourism Portal
+	Dev: Lilly Dorgan
 ***/
 
+// Main Components
 @import "core/core";
 @import "components/all";
+@import "components/global-header";
+@import "components/global-footer";
+@import "components/primary-nav";
+@import "components/utility-nav";
+
+
+// Page Sections
+@import "components/cta-banner";
+@import "components/in-and-around";
+@import "components/location-banner";
+@import "components/our-region";
+@import "components/three-best";
+@import "components/watch-timaru";
+@import "components/whats-on";
+@import "components/feature-banner";
+

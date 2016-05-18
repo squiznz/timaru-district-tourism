@@ -1,0 +1,14 @@
+/***
+*   Feature Banner
+***/
+
+.page__cta-banner {
+	background-color: $tdc-purple;
+	color: $white;
+	background-image: url('../img/swirls-purple.png');
+
+	&.bgc-tdc-green {
+		background-image: url('../img/swirls-green.png');
+	}
+}
+

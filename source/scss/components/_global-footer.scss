@@ -1,0 +1,56 @@
+/***
+*   Global Footer
+***/
+
+.global-footer {
+	background-color: $tdc-navy;
+	font-family: $font-primary;
+	font-weight: $semibold;
+
+	a {
+		color: $white;
+		text-decoration: none;
+		@include font-size(12px);
+	}
+}
+
+
+
+	.global-footer__wrap {
+		padding: $padding * 4.5 $padding * 2.652;
+
+	}
+
+		
+
+	.footer-nav {
+		li {
+			@include span(1 of 2 float inside);
+			
+			&:nth-child(odd) {
+				padding-left: 0;
+			}
+
+			&:nth-child(even) {
+				padding-right: 0;
+			}
+		}
+	}
+
+
+
+	.footer-utilities {
+		background-color: $tdc-dark-navy;
+		padding: 0 $padding * 2.652;
+		color: $white;
+
+		li {
+			display: inline-block;
+		}
+
+	}
+
+
+		.footer-utilities__tourism-statement {
+			@include font-size(12px);
+		}

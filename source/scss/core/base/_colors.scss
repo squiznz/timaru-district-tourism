@@ -46,16 +46,12 @@
 .tc-grey-800                {   color: $grey-800 !important;          }
 .tc-grey-900                {   color: $grey-900 !important;          }
 
+.bgc-tdc-navy               {   background-color: $tdc-navy !important;             }
+.bgc-tdc-green              {   background-color: $tdc-green !important;            }
+.bgc-tdc-purple		        {   background-color: $tdc-purple !important;           }
+.bgc-tdc-dark-navy          {   background-color: $tdc-dark-navy !important;        }
 
-// Client Color Palette Background and Text Color Convenience Classes
-// eg .lightest-orange             {   background-color: $lightest-orange !important;   }
-// eg .lighter-orange              {   background-color: $lighter-orange !important;    }
-// eg .light-orange                {   background-color: $light-orange !important;      }
-// eg .orange                      {   background-color: $orange !important;            }
-// eg .red                         {   background-color: $red !important;               }
-
-// eg .tc-lightest-orange          {   color: $lightest-orange !important;   }
-// eg .tc-lighter-orange           {   color: $lighter-orange !important;    }
-// eg .tc-light-orange             {   color: $light-orange !important;      }
-// eg .tc-orange                   {   color: $orange !important;            }
-// eg .tc-red                      {   color: $red !important;               }
+.tc-tdc-navy                {   color: $tdc-navy !important;             	}
+.tc-tdc-green               {   color: $tdc-green !important;            	}
+.tc-tdc-purple		        {   color: $tdc-purple !important;           	}
+.tc-tdc-dark-navy           {   color: $tdc-dark-navy !important;        	}
