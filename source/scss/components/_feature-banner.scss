@@ -14,11 +14,20 @@
 	h1 {
 		color: $white;
 		@include font-size(33px);
+		text-transform: uppercase;
+		width: 60%;
+		display: block;
+		letter-spacing: 10px;
+		margin: 0 auto;
+
+		strong {
+			font-family: 'PlutoSansBold';
+		}
 	}
 }
 
 
-	.page__feature-banner--wrap {
+	.page__feature-banner__wrap {
 		@include position(relative, null);
 		padding: 0 77px;
 		width: 100%;
@@ -26,7 +35,7 @@
 	}
 
 
-		.page__feature-banner--scroll-indicator {
+		.page__feature-banner__scroll-indicator {
 			@include position(absolute, null 50% 0 null);
 			display: block;
 			width: 2px;

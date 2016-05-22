@@ -3,10 +3,8 @@
 ***/
 
 .utility-nav {
-	position: absolute;
-	top: 80px;
-	left: 21px;
-	right: 21px;
+	@include position(absolute, 80px 21px null 21px);
+	z-index: 99998;
 
 	li {
 		display: inline-block;
@@ -19,30 +17,92 @@
 }
 
 
-	.utility-nav__logo {
+	.utility-nav__item--logo {
 		float: left;
 		padding-top: 2px;
+
+		img {
+			width: 50%;
+		}
 	}
 
 
-	.utility-nav__search-toggle {
+	.utility-nav__item--search-toggle {
 		float: right;
 		@include font-size(20px);
 	}
 
 
-	.utility-nav__primary-toggle {
+	.utility-nav__item--primary-toggle {
 		float: right;
 		width: 26px;
+		height: 26px;
+		position: relative;
+		margin: 0;
 		margin-left: 17px;
-		padding: 4px 0;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: .5s ease-in-out;
+		-moz-transition: .5s ease-in-out;
+		-o-transition: .5s ease-in-out;
+		transition: .5s ease-in-out;
+		cursor: pointer;
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: 4px 0;
+		}
 
 		hr {
 			display: block;
-		    height: 2px;
-		    border: 0;
-		    border-top: 2px solid $white;
-		    padding: 0;
-		  	margin-bottom: 5px;
+			height: 2px;
+			width: 100%;
+			background: $white;
+			border: none;
+			opacity: 1;
+			float: right;
+			margin-bottom: 7px;
+			left: 0;
+		 	-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+
+		&.close {
+
+			hr {
+				@include position(absolute, null);
+				height: 3px;
+			}
+
+			hr:nth-child(1){
+				top: 12px;
+				background: $tdc-green;
+			  	-webkit-transform: rotate(135deg);
+			  	-moz-transform: rotate(135deg);
+			  	-o-transform: rotate(135deg);
+			  	transform: rotate(135deg);
+			}
+
+			hr:nth-child(2){
+				opacity: 0;
+				top: 10px;
+				display: none;
+			}
+
+			hr:nth-child(3){
+				top: 12px;
+				background: $tdc-green;
+			  	-webkit-transform: rotate(-135deg);
+			  	-moz-transform: rotate(-135deg);
+			  	-o-transform: rotate(-135deg);
+			  	transform: rotate(-135deg);
+			}
 		}
 	}
+

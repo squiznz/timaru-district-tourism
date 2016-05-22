@@ -6,3 +6,57 @@
 	
 
 }
+
+
+	.site-search {
+		display: none;
+		z-index: 99999;
+		background-color: $tdc-navy;
+		padding: 10px 21px 13px 21px;
+		@include position(absolute, 42px 0 null 0);
+
+		input[type="search"] {
+			background-color: $tdc-navy;
+			width: 90%;
+			padding: 0 0 $padding / 2 0;
+			border: none;
+			border-bottom: 2px solid $tdc-green;
+
+			&::-webkit-input-placeholder {
+			   color: $white;
+			   opacity: 1;
+			   font-weight: $semibold;
+			   @include font-size(13px);
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			   color: $white;
+			   opacity: 1;
+			   font-weight: $semibold;
+			   @include font-size(13px);  
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   color: $white;
+			   opacity: 1;
+			   font-weight: $semibold;
+			   @include font-size(13px);  
+			}
+
+			&:-ms-input-placeholder {  
+			   color: $white;
+			   opacity: 1;
+			   font-weight: $semibold;
+			   @include font-size(13px);  
+			}
+		}
+		
+		button {
+			background-color: $tdc-navy;
+			border: none;
+			color: $white;
+			@include font-size(18px);
+		}
+	}
+
+

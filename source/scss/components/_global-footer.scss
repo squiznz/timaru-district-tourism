@@ -16,12 +16,20 @@
 
 
 	.global-footer__wrap {
-		padding: $padding * 4.5 $padding * 2.652;
+		padding: 36px 21px;
+
 	}
 
-
+	.global-footer__logo {
+		display: inline-block;
+		float: left;
+		width: 100px;
+	}
 		
+
 	.social-media-links {
+		float: left;
+
 		li {
 			display: inline-block;
 			padding: 0 $padding;
@@ -33,13 +41,16 @@
 		}
 	}
 
+
 	.footer-nav {
 		float: left;
 		margin-top: 20px;
 
 		li {
 			@include span(1 of 2 float inside);
-			
+			@include font-size(15px);
+			line-height: 29px;
+
 			&:nth-child(odd) {
 				padding-left: 0;
 			}
@@ -59,7 +70,7 @@
 
 		li {
 			display: inline-block;
-			padding: 10px $padding * 2.652;
+			padding: 10px 21px;
 			width: 49.4%;
 			border-right: 1px solid $tdc-navy;
 		}

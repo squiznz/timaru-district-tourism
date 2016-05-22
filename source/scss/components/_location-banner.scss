@@ -15,32 +15,33 @@
 }
 
 
-	.page__location-banner--location {
+	.page__location-banner__location {
 		color: $tdc-light-blue;
 		text-transform: uppercase;
 		@include position(relative, null null null null);
-		padding-left: 10px;
+		padding-left: 12px;
 		@include clearfix();
 		@include font-size(12px);
 
 
 		&:before {
 			@include position(absolute, 0 null null 0);
-			content: "!";
-
-		}
+			content: "\f041";
+			font-family: 'FontAwesome';
+			line-height: 1.2em;
+		}	
 	}
 
 
-	.page__location-banner--info {
-		padding: $padding * 4.5 $padding * 2.652;
+	.page__location-banner__info {
+		padding: $padding * 4.5 21px;
 		background-color: $tdc-navy;
 		@include position(absolute, null 0 0 0);
 		@include font-size(22px);
 	}
 
 
-	.page__location-banner--cta {
+	.page__location-banner__cta {
 		background-color: $tdc-purple;
 		color: $white;
 		text-decoration: none;
@@ -55,10 +56,11 @@
 
 		span {
 			@include position(relative, null null null null);	
+			color: $white !important;
 
 			&:after {
-				content: "!";
-				@include position(absolute, 2px -0.5em 0 null);
+				content: "->";
+				@include position(absolute, 2px -1em 0 null);
 			}
 		}
 	}

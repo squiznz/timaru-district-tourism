@@ -3,23 +3,27 @@
 ***/
 
 .primary-nav {
-	@include position(absolute, 125px 0 null 0);
+	@include position(absolute, 42px 0 null 0);
 	background-color: $tdc-purple;
-	z-index: 99999;
-	border-bottom: 2px solid $black;
+	z-index: 99997;
+	border-bottom: 3px solid $black;
+	display: none;
+	padding-top: 75px;
 
 	ul {
 		li {
 			color: $white;
 			display: block;
-			padding: 21px $padding * 2.652;
 			border-bottom: 1px solid $black;
 
 			a {
 				color: inherit;
+				display: block;
+				padding: 21px 21px;
 				font-weight: $semibold;
 				@include font-size(19px);
 				text-decoration: none;
+				font-family: $font-primary;
 			}
 
 		}

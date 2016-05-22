@@ -1,1 +1,2 @@
-//@prepros-append ../bower_components/jquery/dist/jquery.min.js
+//@prepros-append ../bower_components/jquery/jquery.min.js
+//@prepros-append lib/slick.min.js

@@ -1,3 +1,53 @@
 /***
 *   Watch Timaru
 ***/
+
+.page__watch-timaru {
+	padding: 55px 0 21px 0;
+
+	h2 {
+		padding: 0 21px;
+		@include font-size(23px);
+	}
+}
+
+
+	.page__watch-timaru__list {
+		margin-top: 21px;
+
+		li {
+			video {
+				width: 100%;
+				display: block;
+				height: 100%;
+				background-color: $black;
+			}
+
+			strong {
+				color: $tdc-green;
+				@include font-size(18px);
+			}
+		}
+
+		&.slick {
+			padding-bottom: 20px !important;
+		}
+	}
+
+
+	.page__watch-timaru__info-wrap {		
+		padding: $padding * 4.5 21px;
+	}
+
+
+	.page__watch-timaru__video-wrap {		
+		@include position(relative, null);
+		height: 217px;
+		width: 100%;
+	}
+
+
+		.page__watch-timaru__video-filter {
+			@include position(absolute, 0 0 0 0);			
+			background-color: rgba(23,23,23,0.60);
+		}
