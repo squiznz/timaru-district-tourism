@@ -2586,6 +2586,12 @@ h6 {
   display: table;
 }
 
+@media screen and (max-width: 1023px) {
+  .page__in-and-around {
+    position: relative;
+  }
+}
+
 .page__in-and-around h2 {
   background-color: #00132a;
   padding: 15px 21px;
@@ -2596,6 +2602,12 @@ h6 {
 @media screen and (max-width: 1023px) {
   .page__in-and-around h2 {
     width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    line-height: 28px;
     display: block;
   }
 }
@@ -3028,9 +3040,13 @@ h6 {
 /***
 *   Three of the Best
 ***/
+.page__three-best {
+  padding: 50px 0;
+}
+
 @media screen and (min-width: 1281px) {
   .page__three-best {
-    max-width: 1345px;
+    max-width: 1354px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -3047,7 +3063,7 @@ h6 {
 
 @media screen and (max-width: 1023px) {
   .page__three-best__selector-wrap {
-    padding: 40px 45px 21px 45px;
+    padding: 0 45px 15px 45px;
   }
 }
 
@@ -3094,11 +3110,10 @@ h6 {
     float: left;
     margin-right: 39px;
   }
-}
-
-.page__three-best__list-item:nth-child(3) {
-  float: right;
-  margin-right: 0;
+  .page__three-best__list-item:nth-child(3) {
+    float: right;
+    margin-right: 0;
+  }
 }
 
 .page__three-best__info-wrap {
@@ -3146,15 +3161,16 @@ h6 {
 *   Watch Timaru
 ***/
 .page__watch-timaru {
-  padding: 55px 0 21px 0;
+  padding: 40px 0 34px 0;
 }
 
 @media screen and (min-width: 1281px) {
   .page__watch-timaru {
-    max-width: 1205px;
+    max-width: 1354px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
+    padding: 75px 0;
+    position: relative;
   }
   .page__watch-timaru:after {
     content: " ";
@@ -3164,8 +3180,18 @@ h6 {
 }
 
 .page__watch-timaru h2 {
+  padding: 0 21px;
   font-size: 23px;
   font-size: 1.4375rem;
+}
+
+@media screen and (min-width: 1281px) {
+  .page__watch-timaru h2 {
+    padding: 0;
+    font-size: 32.12px;
+    font-size: 2.0075rem;
+    line-height: 73.62px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -3178,13 +3204,12 @@ h6 {
   .page__watch-timaru__list li {
     width: 48.27586%;
     float: left;
-    margin-right: 33px;
+    margin-right: 38px;
   }
-}
-
-.page__watch-timaru__list li:nth-child(2) {
-  float: right;
-  margin-right: 0;
+  .page__watch-timaru__list li:nth-child(2) {
+    float: right;
+    margin-right: 0;
+  }
 }
 
 .page__watch-timaru__list li video {
@@ -3194,24 +3219,48 @@ h6 {
   background-color: #000000;
 }
 
-.page__watch-timaru__list li strong {
-  color: #00d29b;
-  font-size: 18px;
-  font-size: 1.125rem;
-}
-
 .page__watch-timaru__list.slick {
   padding-bottom: 20px !important;
 }
 
 .page__watch-timaru__info-wrap {
-  padding: 36px 21px;
+  padding: 34px 21px;
+}
+
+@media screen and (min-width: 1281px) {
+  .page__watch-timaru__info-wrap {
+    padding: 38px 0;
+  }
+}
+
+.page__watch-timaru__info-wrap strong {
+  color: #00d29b;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+@media screen and (min-width: 1281px) {
+  .page__watch-timaru__info-wrap strong {
+    font-size: 24.09px;
+  }
+}
+
+.page__watch-timaru__info-wrap p {
+  font-size: 21.42px;
+  font-size: 1.33875rem;
+  line-height: 30.79px;
 }
 
 .page__watch-timaru__video-wrap {
   position: relative;
   height: 217px;
   width: 100%;
+}
+
+@media screen and (min-width: 1281px) {
+  .page__watch-timaru__video-wrap {
+    height: 366px;
+  }
 }
 
 .page__watch-timaru__video-filter {
@@ -3221,6 +3270,26 @@ h6 {
   bottom: 0;
   left: 0;
   background-color: rgba(23, 23, 23, 0.6);
+}
+
+.page__watch-timaru__view-all {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width: 1281px) {
+  .page__watch-timaru__view-all {
+    display: inline-block;
+    width: auto;
+    text-align: right;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    font-size: 18.74px;
+    font-size: 1.17125rem;
+    line-height: 29.45px;
+  }
 }
 
 /***
@@ -3288,7 +3357,6 @@ h6 {
 .page__whats-on__event-item {
   float: left;
   border: 1px solid #ececec;
-  margin-left: 39px;
 }
 
 .page__whats-on__event-item::after {
@@ -3301,13 +3369,27 @@ h6 {
   .page__whats-on__event-item {
     width: 376px;
     height: 440px;
+    margin-left: 39px;
   }
 }
 
 .page__whats-on__event-item--featured {
   border: 4px solid #00d29b !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  width: 100%;
   margin-bottom: 25px;
-  width: 800px;
+}
+
+@media screen and (min-width: 1281px) {
+  .page__whats-on__event-item--featured {
+    border: 5.3px solid #00d29b !important;
+    height: 390px !important;
+    width: 800px;
+  }
 }
 
 .page__whats-on__event-item--featured__date-wrap {

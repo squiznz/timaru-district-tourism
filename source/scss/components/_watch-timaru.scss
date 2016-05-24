@@ -3,15 +3,23 @@
 ***/
 
 .page__watch-timaru {
-	padding: 55px 0 21px 0;
+	padding: 40px 0 34px 0;
 
 	@include media-query(desk){
-		@include container(1205px);
-		padding: 0;
+		@include container(1354px);
+		padding: 75px 0;
+		@include position(relative, null);
 	}
 
 	h2 {
+		padding: 0 21px;
 		@include font-size(23px);
+
+		@include media-query(desk){
+			padding: 0;
+			@include font-size(32.12px);
+			line-height: 73.62px;
+		}
 	}
 }
 
@@ -24,11 +32,11 @@
 		li {
 
 			@include media-query(desk){
-				@include span(3 of 6 (gutter-override: 33px));
-			}
-			
-			&:nth-child(2){
-				@include last();
+				@include span(3 of 6 (gutter-override: 38px));
+
+				&:nth-child(2){
+					@include last();
+				}
 			}
 
 			video {
@@ -38,10 +46,6 @@
 				background-color: $black;
 			}
 
-			strong {
-				color: $tdc-green;
-				@include font-size(18px);
-			}
 		}
 
 		&.slick {
@@ -51,14 +55,36 @@
 
 
 	.page__watch-timaru__info-wrap {		
-		padding: $padding * 4.5 21px;
-	}
+		padding: 34px 21px;
+	
+		@include media-query(desk){
+			padding: 38px 0;
+		}
+
+		strong {
+			color: $tdc-green;
+			@include font-size(18px);
+
+			@include media-query(desk){
+				font-size: 24.09px;
+			}
+		}
+
+		p {
+			@include font-size(21.42px);
+			line-height: 30.79px;
+		}
+	}	
 
 
 	.page__watch-timaru__video-wrap {		
 		@include position(relative, null);
 		height: 217px;
 		width: 100%;
+
+		@include media-query(desk){
+			height: 366px;
+		}
 	}
 
 
@@ -66,3 +92,20 @@
 			@include position(absolute, 0 0 0 0);			
 			background-color: rgba(23,23,23,0.60);
 		}
+
+
+
+	.page__watch-timaru__view-all {
+		display: block;
+		width: 100%;
+		text-align: center;
+
+		@include media-query(desk){
+			display: inline-block;
+			width: auto;
+			text-align: right;
+			@include position(absolute, 100px 0 null null);
+			@include font-size(18.74px);
+			line-height: 29.45px;		
+		}
+	}

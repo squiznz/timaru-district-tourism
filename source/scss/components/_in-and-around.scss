@@ -4,6 +4,10 @@
 
 .page__in-and-around {
 	@include clearfix();
+	
+	@include media-query(portable){
+		@include position(relative, null);
+	}
 
 	h2 {
 		background-color: $tdc-dark-navy;
@@ -13,6 +17,9 @@
 
 		@include media-query(portable){
 			width: 100%;
+			@include position(absolute, 0 0 0 null);
+			height: 50px;
+			line-height: 28px;
 			display: block;
 		}
 

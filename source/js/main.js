@@ -82,13 +82,6 @@ $(document).ready(function () {
         }
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
@@ -120,13 +113,6 @@ $(document).ready(function () {
       {
         breakpoint: 1024,
         settings: "unslick"
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
       },
       {
         breakpoint: 480,
@@ -169,28 +155,21 @@ $(document).ready(function () {
   $('.slick-whats-on').slick({
     dots: true,
     infinite: true,
-    arrows: true,
     mobileFirst: true,
     slidesToScroll: 3,
     slidesToShow: 3,
     variableWidth: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
+          arrows: true,
           slidesToScroll: 1
         }
       }
     ]
-  });
-
-  $('.slick-events').slick({
-    dots: true,
-    infinite: true,
-    mobileFirst: true,
-    slidesToScroll: 1,
-    slidesToShow: 4
   });
 
 

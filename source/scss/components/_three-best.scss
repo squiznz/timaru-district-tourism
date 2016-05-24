@@ -3,9 +3,10 @@
 ***/
 
 .page__three-best {
+	padding: 50px 0;
 
 	@include media-query(desk){
-		@include container(1345px);
+		@include container(1354px);
 	}
 }
 
@@ -13,7 +14,7 @@
 		line-height: 27px;
 
 		@include media-query(portable){
-			padding: 40px 45px 21px 45px;
+			padding: 0 45px 15px 45px;
 		}
 
 		@include media-query(desk){
@@ -52,10 +53,10 @@
 
 		@include media-query(desk){
    			@include span(2.96 of 9 (gutter-override: 39px));			
-		}
 
-		&:nth-child(3) {
-			@include last();
+			&:nth-child(3) {
+				@include last();
+			}
 		}
 	}
 
