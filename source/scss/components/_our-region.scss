@@ -27,6 +27,7 @@
 			h2 {
 				@include font-size(32.12px);
 				line-height: 73.62px;
+				display: inline-block;
 			}
 		}
 
@@ -42,6 +43,10 @@
 		   	@include media-query(desk){
 				@include font-size(32.12px);
 				line-height: 73.62px;
+			}
+
+			&:focus {
+				outline: none;
 			}
 		}
 	}
@@ -110,6 +115,6 @@
 			text-align: center;
 
 			@include media-query(desk){
-				@include position(absolute, 0 0 0 null);
+				@include position(absolute, 0 0 null null);
 			}
 		}

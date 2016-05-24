@@ -58,8 +58,6 @@ function globalActions() {
 
 
 
-
-
 $(document).ready(function () {
   $('.slick-center').slick({
     dots: true,
@@ -156,20 +154,9 @@ $(document).ready(function () {
     dots: true,
     infinite: true,
     mobileFirst: true,
-    slidesToScroll: 3,
-    slidesToShow: 3,
-    variableWidth: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          arrows: true,
-          slidesToScroll: 1
-        }
-      }
-    ]
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    arrows: false
   });
 
 

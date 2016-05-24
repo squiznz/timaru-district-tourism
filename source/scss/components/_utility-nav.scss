@@ -3,17 +3,6 @@
 ***/
 
 .utility-nav {
-	z-index: 99998;
-
-	@include media-query(portable){
-		@include position(absolute, 80px 21px null 21px);
-	}
-
-	@include media-query(desk){
-		@include position(absolute, 80px 38px null 38px);
-		@include container();
-	}
-
 	li {
 		display: inline-block;
 		color: $white;
@@ -22,110 +11,116 @@
 			color: inherit;
 		}
 	}
+
+	@include media-query(portable){
+		@include position(absolute, 80px 21px null 21px);
+		z-index: 99998;
+	}
+
+	@include media-query(desk){
+		@include position(absolute, 80px 38px null 38px);
+		@include container();
+	}
 }
 
 
-	.utility-nav__item--logo {
-		float: left;
-		padding-top: 2px;
-		width: 121px;
-
-		@include media-query(desk){
-			width: 155px;
-		}
-	}
-
-
-	.utility-nav__item--search-toggle {
-		float: right;
-		@include font-size(20px);
-
-		@include media-query(desk){
-			display: none !important;
-		}
-	}
-
-
-	.utility-nav__item--primary-toggle {
-		float: right;
-		position: relative;
-		margin: 0;
-		margin-left: 17px;
-		-webkit-transform: rotate(0deg);
-		-moz-transform: rotate(0deg);
-		-o-transform: rotate(0deg);
-		transform: rotate(0deg);
-		-webkit-transition: .5s ease-in-out;
-		-moz-transition: .5s ease-in-out;
-		-o-transition: .5s ease-in-out;
-		transition: .5s ease-in-out;
-		cursor: pointer;		
-		
-		@include media-query(portable){
-			width: 26px;
-			height: 26px;
-		}	
-
-		a {
-			display: block;
-			width: 100%;
-			height: 100%;
-			padding: 4px 0;
+		.utility-nav__item--logo {
+			float: left;
+			padding-top: 2px;
+			width: 121px;
 
 			@include media-query(desk){
-				display: none;
+				width: 155px;
 			}
 		}
 
 
-		hr {
-			display: block;
-			height: 2px;
-			width: 100%;
-			background: $white;
-			border: none;
-			opacity: 1;
+		.utility-nav__item--search-toggle {
 			float: right;
-			margin-bottom: 7px;
-			left: 0;
-		 	-webkit-transform: rotate(0deg);
+			@include font-size(20px);
+
+			@include media-query(desk){
+				display: none !important;
+			}
+		}
+
+
+		.utility-nav__item--primary-toggle {
+			float: right;
+			position: relative;
+			margin: 0;
+			margin-left: 17px;
+			-webkit-transform: rotate(0deg);
 			-moz-transform: rotate(0deg);
 			-o-transform: rotate(0deg);
 			transform: rotate(0deg);
+			-webkit-transition: .5s ease-in-out;
+			-moz-transition: .5s ease-in-out;
+			-o-transition: .5s ease-in-out;
+			transition: .5s ease-in-out;
+			cursor: pointer;		
+			
+			@include media-query(portable){
+				width: 26px;
+				height: 26px;
+			}	
 
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				padding: 4px 0;
 
-		}
-
-		&.close {
-
+				@include media-query(desk){
+					display: none;
+				}
+			}
+			
 			hr {
-				@include position(absolute, null);
-				height: 3px;
+				display: block;
+				height: 2px;
+				width: 100%;
+				background: $white;
+				border: none;
+				opacity: 1;
+				float: right;
+				margin-bottom: 7px;
+				left: 0;
+			 	-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				transform: rotate(0deg);
 			}
 
-			hr:nth-child(1){
-				top: 12px;
-				background: $tdc-green;
-			  	-webkit-transform: rotate(135deg);
-			  	-moz-transform: rotate(135deg);
-			  	-o-transform: rotate(135deg);
-			  	transform: rotate(135deg);
-			}
+			&.close {
+				hr {
+					@include position(absolute, null);
+					height: 3px;
+				}
 
-			hr:nth-child(2){
-				opacity: 0;
-				top: 10px;
-				display: none;
-			}
+				hr:nth-child(1){
+					top: 12px;
+					background: $tdc-green;
+				  	-webkit-transform: rotate(135deg);
+				  	-moz-transform: rotate(135deg);
+				  	-o-transform: rotate(135deg);
+				  	transform: rotate(135deg);
+				}
 
-			hr:nth-child(3){
-				top: 12px;
-				background: $tdc-green;
-			  	-webkit-transform: rotate(-135deg);
-			  	-moz-transform: rotate(-135deg);
-			  	-o-transform: rotate(-135deg);
-			  	transform: rotate(-135deg);
+				hr:nth-child(2){
+					opacity: 0;
+					top: 10px;
+					display: none;
+				}
+
+				hr:nth-child(3){
+					top: 12px;
+					background: $tdc-green;
+				  	-webkit-transform: rotate(-135deg);
+				  	-moz-transform: rotate(-135deg);
+				  	-o-transform: rotate(-135deg);
+				  	transform: rotate(-135deg);
+				}
 			}
 		}
-	}
 

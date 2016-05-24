@@ -59,12 +59,13 @@
 	}
 }
 	
-	.page__cta-banner__wrap {
-		height: 100%;
-		padding: 57px 21px;
+	
+		.page__cta-banner__wrap {
+			height: 100%;
+			padding: 57px 21px;
 
-		@include media-query(desk){
-			@include container(950px);
-			padding: 148px 0 88px 0;
+			@include media-query(desk){
+				@include container(950px);
+				padding: 148px 0 88px 0;
+			}
 		}
-	}

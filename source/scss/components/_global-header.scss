@@ -3,7 +3,6 @@
 ***/
 
 .global-header {
-	
 	@include media-query(desk){
 		@include container();
 		@include position(relative, null);

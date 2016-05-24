@@ -11,7 +11,7 @@
 	@include container;
 	padding: 0 2%;
 
-    @include media-query(note-and-up) {
+    @include media-query(desk) {
         padding: 0 1%;
     }
 }
@@ -61,7 +61,7 @@
 }
 
 .visible-portable {
-    @include media-query(note-and-up) {
+    @include media-query(desk) {
         @include visuallyhidden();
     }
 }
