@@ -63,7 +63,6 @@ function globalActions() {
 $(document).ready(function () {
   $('.slick-center').slick({
     dots: true,
-    autoplay: true,
     infinite: true,
     autoplay: false,
     slidesToShow: 1,
@@ -71,12 +70,12 @@ $(document).ready(function () {
     mobileFirst: true,
     centerMode: true,
     centerPadding: '8.7%',
-    draggable: true,
+    draggable: false,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: true
@@ -102,16 +101,93 @@ $(document).ready(function () {
   $('.slick').slick({
     dots: true,
     infinite: true,
-    autoplay: true,
     mobileFirst: true,
     slidesToScroll: 1,
     slidesToShow: 1
   });
 
+  $('.slick-three-best').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    centerMode: true,
+    centerPadding: '8.7%',
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: "unslick"
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  $('.slick-watch-timaru').slick({
+    dots: true,
+    infinite: true,
+    mobileFirst: true,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: "unslick"
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  $('.slick-whats-on').slick({
+    dots: true,
+    infinite: true,
+    arrows: true,
+    mobileFirst: true,
+    slidesToScroll: 3,
+    slidesToShow: 3,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
   $('.slick-events').slick({
     dots: true,
     infinite: true,
-        autoplay: true,
     mobileFirst: true,
     slidesToScroll: 1,
     slidesToShow: 4

@@ -4,7 +4,10 @@
 
 .global-header {
 	
-
+	@include media-query(desk){
+		@include container();
+		@include position(relative, null);
+	}
 }
 
 
@@ -13,41 +16,81 @@
 		z-index: 99999;
 		background-color: $tdc-navy;
 		padding: 10px 21px 13px 21px;
-		@include position(absolute, 42px 0 null 0);
+
+		@include media-query(portable){
+			@include position(absolute, 42px 0 null 0);
+		}
+
+		@include media-query(desk){
+			color: $white;
+			display: block;
+			background-color: transparent;
+			width: 161px;
+			padding: 0;
+			@include position(absolute, 72px 38px null null);
+		}
 
 		input[type="search"] {
 			background-color: $tdc-navy;
 			width: 90%;
-			padding: 0 0 $padding / 2 0;
+			padding: 0 0 4px 0;
 			border: none;
 			border-bottom: 2px solid $tdc-green;
 
+			@include media-query(desk){
+				width: 116px;
+				font-weight: $semibold;
+				line-height: 28.11px;
+				background-color: transparent;
+				border-bottom: 3px solid $tdc-green;
+			}
+			
 			&::-webkit-input-placeholder {
-			   color: $white;
-			   opacity: 1;
-			   font-weight: $semibold;
-			   @include font-size(13px);
+				color: $white;
+				opacity: 1;
+				font-weight: $semibold;
+				@include font-size(13px);
+				font-family: $font-primary;
+
+			   	@include media-query(desk){
+					@include font-size(17px);
+			   	}
 			}
 
 			&:-moz-placeholder { /* Firefox 18- */
-			   color: $white;
-			   opacity: 1;
-			   font-weight: $semibold;
-			   @include font-size(13px);  
+				color: $white;
+				opacity: 1;
+				font-weight: $semibold;
+				@include font-size(13px); 
+				font-family: $font-primary;
+
+			   	@include media-query(desk){
+					@include font-size(17px);
+			   	} 
 			}
 
 			&::-moz-placeholder {  /* Firefox 19+ */
-			   color: $white;
-			   opacity: 1;
-			   font-weight: $semibold;
-			   @include font-size(13px);  
+				color: $white;
+				opacity: 1;
+				font-weight: $semibold;
+				@include font-size(13px); 
+				font-family: $font-primary;
+
+			   	@include media-query(desk){
+					@include font-size(17px);
+			   	} 
 			}
 
 			&:-ms-input-placeholder {  
-			   color: $white;
-			   opacity: 1;
-			   font-weight: $semibold;
-			   @include font-size(13px);  
+				color: $white;
+				opacity: 1;
+				font-weight: $semibold;
+				@include font-size(13px);
+				font-family: $font-primary;
+
+			   	@include media-query(desk){
+					@include font-size(17px);
+			   	}  
 			}
 		}
 		
@@ -56,7 +99,14 @@
 			border: none;
 			color: $white;
 			@include font-size(18px);
+
+			@include media-query(desk){
+				background-color: transparent;
+				@include font-size(20px);
+				width: 30px;
+				float: right;
+				padding-top: 4px;
+			}
 		}
 	}
-
 

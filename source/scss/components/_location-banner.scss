@@ -6,11 +6,27 @@
   	background-image: url(../img/placeholder1.jpeg);
   	background-size: cover;
 	color: $white;
-	@include position(relative, null null null null);
-	height: 435px;
 
+	@include media-query(portable){
+		@include position(relative, null null null null);
+		height: 435px;
+	}
+
+	@include media-query(desk){
+		height: 746px;
+	}
+	
 	h1 {
 		color: $white;
+	}
+
+	.page__location-banner__wrap {
+		@include media-query(desk){
+			@include container();
+			@include position(relative, null null null null);
+			height: 100%;
+			padding: 0 38px
+		}
 	}
 }
 
@@ -19,13 +35,25 @@
 		color: $tdc-light-blue;
 		text-transform: uppercase;
 		@include position(relative, null null null null);
-		padding-left: 12px;
 		@include clearfix();
-		@include font-size(12px);
+		float: left;
+		display: block;
+		width: 100%;
+		margin-bottom: 12px;
+		padding-left: 12px;
 
+		@include media-query(portable){
+			@include font-size(12px);
+
+		}
+
+		@include media-query(desk){
+			@include font-size(14.39px);
+
+		}
 
 		&:before {
-			@include position(absolute, 0 null null 0);
+			@include position(absolute, 1px null null 0);
 			content: "\f041";
 			font-family: 'FontAwesome';
 			line-height: 1.2em;
@@ -34,10 +62,33 @@
 
 
 	.page__location-banner__info {
-		padding: $padding * 4.5 21px;
-		background-color: $tdc-navy;
-		@include position(absolute, null 0 0 0);
-		@include font-size(22px);
+
+		@include media-query(portable){
+			padding: 28px 21px;
+			@include font-size(22px);
+			background-color: $tdc-navy;
+			@include position(absolute, null 0 0 0);
+		}
+
+		@include media-query(desk){
+			@include position(absolute, 178px 0 148px null);
+			background-color: rgba(0,29,65,0.89);
+			width: 507px;
+			padding: 50px 46px;
+			@include font-size(43.16px);
+		}
+
+		.page__location-banner--right & {
+			@include media-query(desk){
+				@include position(absolute, 178px 38px 148px null);
+			}
+		}
+
+		.page__location-banner--left & {
+			@include media-query(desk){
+				@include position(absolute, 178px null 148px 38px);
+			}
+		}
 	}
 
 
@@ -45,21 +96,29 @@
 		background-color: $tdc-purple;
 		color: $white;
 		text-decoration: none;
-		display: block;
 		margin-top: 20px;
 		text-align: center;
 		@include font-size(17px);
 		text-transform: uppercase;
 		padding: 15px 0;
-		height: 45px;
 		line-height: 1em;
+
+		@include media-query(portable){
+			display: block;
+			padding: 15px 0;
+			height: 45px;
+		}
+
+		@include media-query(desk){
+			height: 50px;
+			padding: 15px 45px 15px 15px;
+		}
 
 		span {
 			@include position(relative, null null null null);	
 			color: $white !important;
 
 			&:after {
-				content: "->";
 				@include position(absolute, 2px -1em 0 null);
 			}
 		}

@@ -5,30 +5,47 @@
 .global-footer {
 	background-color: $tdc-navy;
 	font-weight: $semibold;
+	font-family: $font-primary;
 
 	a {
 		color: $white;
 		text-decoration: none;
-		@include font-size(12px);
 	}
 }
 
 
-
 	.global-footer__wrap {
 		padding: 36px 21px;
+		@include container();
 
+
+		@include media-query(desk){
+			padding: 86px 38px;
+			@include position(relative, null);
+		}
 	}
+
 
 	.global-footer__logo {
 		display: inline-block;
 		float: left;
 		width: 100px;
+		padding-top: 4px;
+
+		@include media-query(desk){
+			width: 155px;
+			padding: 0;
+			margin-right: 35px;
+		}
 	}
 		
 
 	.social-media-links {
 		float: left;
+
+		@include media-query(desk){
+			@include position(absolute, null 38px null null);
+		}
 
 		li {
 			display: inline-block;
@@ -37,6 +54,10 @@
 
 			i {
 				@include font-size(18px);
+
+				@include media-query(desk){
+					@include font-size(25px);
+				}
 			}
 		}
 	}
@@ -46,17 +67,31 @@
 		float: left;
 		margin-top: 20px;
 
-		li {
-			@include span(1 of 2 float inside);
-			@include font-size(15px);
-			line-height: 29px;
 
-			&:nth-child(odd) {
-				padding-left: 0;
+		@include media-query(desk){
+			margin-top: 0;
+		}
+		
+		li {
+			@include media-query(portable){
+				@include span(1 of 2 float inside);
+				@include font-size(15px);
+				line-height: 29px;
+
+				&:nth-child(odd) {
+					padding-left: 0;
+				}
+
+				&:nth-child(even) {
+					padding-right: 0;
+				}
 			}
 
-			&:nth-child(even) {
-				padding-right: 0;
+			@include media-query(desk){
+				display: inline-block;
+				line-height: 1em;
+				padding: 0 25px;
+				@include font-size(20.38px);
 			}
 		}
 	}
@@ -66,20 +101,68 @@
 	.footer-utilities {
 		background-color: $tdc-dark-navy;
 		color: $white;
-		@include font-size(12px);
-
-		li {
-			display: inline-block;
-			padding: 10px 21px;
-			width: 49.4%;
-			border-right: 1px solid $tdc-navy;
-		}
-
 	}
 
 
-		.footer-utilities__tourism-statement {
-			width: 100% !important;
-			border-bottom: 1px solid $tdc-navy;
-		}
+		.footer-utilities__list {
+			@include media-query(desk){
+				@include container();
+				padding: 0 38px;
+			}
+		}	
 
+
+			.footer-utilities__list__item {
+				display: inline-block;
+				border-right: 1px solid $tdc-navy;
+				@include font-size(12px);
+				padding: 10px 21px;
+				width: 49.4%;
+				font-weight: $semibold;
+
+				@include media-query(desk){
+					@include font-size(16.06px);
+					padding: 19px 28px;
+					font-weight: $bold;
+					width: auto;
+				}
+
+				a {
+					font-size: inherit;
+					font-weight: inherit;
+				}
+
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+
+
+			.footer-utilities__list__item--visit {
+				font-weight: $bold;
+			}
+			
+			.footer-utilities__list__item--no-right-border {
+				border-right: none !important;
+			}
+
+			
+			.footer-utilities__list__item--separator {
+				@include media-query(desk){
+					margin-right: 710px;
+				}
+			}
+
+
+			.footer-utilities__tourism-statement {
+				font-weight: $semibold !important;
+
+				@include media-query(portable){
+					width: 100% !important;
+					border-bottom: 1px solid $tdc-navy;
+				}
+
+				@include media-query(desk){
+					padding-left: 0px !important;
+				}
+			}

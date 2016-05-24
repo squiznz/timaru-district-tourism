@@ -3,18 +3,38 @@
 ***/
 
 .primary-nav {
-	@include position(absolute, 42px 0 null 0);
 	background-color: $tdc-purple;
 	z-index: 99997;
 	border-bottom: 3px solid $black;
 	display: none;
 	padding-top: 75px;
 
+	@include media-query(portable){
+		@include position(absolute, 42px 0 null 0);
+	}
+	
+	@include media-query(desk){
+		@include position(absolute, 55px 0 null 0);
+		@include container();
+		display: block !important;
+		padding: 0 38px 0 240px;
+		border: none;
+		background-color: transparent;
+	}
+
+
 	ul {
 		li {
 			color: $white;
 			display: block;
 			border-bottom: 1px solid $black;
+
+			@include media-query(desk){
+				border: none;
+				display: inline-block;
+				padding: 0;
+				line-height: 2.8em;
+			}
 
 			a {
 				color: inherit;
@@ -24,8 +44,11 @@
 				@include font-size(19px);
 				text-decoration: none;
 				font-family: $font-primary;
-			}
 
+				@include media-query(desk){
+					padding: 21px 21px 0 21px;
+				}
+			}
 		}
 	}
 }

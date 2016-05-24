@@ -5,17 +5,32 @@
 .page__watch-timaru {
 	padding: 55px 0 21px 0;
 
+	@include media-query(desk){
+		@include container(1205px);
+		padding: 0;
+	}
+
 	h2 {
-		padding: 0 21px;
 		@include font-size(23px);
 	}
 }
 
 
 	.page__watch-timaru__list {
-		margin-top: 21px;
+		@include media-query(portable){
+			margin-top: 21px;
+		}
 
 		li {
+
+			@include media-query(desk){
+				@include span(3 of 6 (gutter-override: 33px));
+			}
+			
+			&:nth-child(2){
+				@include last();
+			}
+
 			video {
 				width: 100%;
 				display: block;

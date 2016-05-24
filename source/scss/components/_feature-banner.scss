@@ -7,23 +7,34 @@
   	background-size: cover;
 	color: $white;
 	width: 100%;
-	padding-top: 135px;
 	text-align: center;
 	height: 357px;
+	padding-top: 135px;
+
+	@include media-query(desk){
+		padding-top: 180px;
+		height: 850px;
+	}
 
 	h1 {
 		color: $white;
 		@include font-size(33px);
 		text-transform: uppercase;
-		width: 60%;
 		display: block;
 		letter-spacing: 10px;
 		margin: 0 auto;
+
+		@include media-query(desk){
+			@include font-size(80.31px);
+			line-height: 133px;
+		}
 
 		strong {
 			font-family: 'PlutoSansBold';
 		}
 	}
+
+
 }
 
 
@@ -32,6 +43,11 @@
 		padding: 0 77px;
 		width: 100%;
 		height: 100%;
+
+		@include media-query(desk){
+			@include container(592px);
+			padding: 0 38px;
+		}
 	}
 
 
@@ -41,4 +57,10 @@
 			width: 2px;
 			background-color: $white;
 			height: 36px;
+
+
+			@include media-query(desk){
+				height: 50px;
+				width: 3px;
+			}
 		}

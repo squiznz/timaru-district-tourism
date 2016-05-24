@@ -1,19 +1,62 @@
 /***
-*   Our Region
+*   Three of the Best
 ***/
 
 .page__our-region {
+	padding: 50px 0;
+
+	@include media-query(desk){
+		height: 612px;
+		padding: 90px 0;
+		@include position(relative, 0 0 0 null);
+	}
 	
 	h2 {
-		padding: 0 45px;
+		color: $tdc-dark-navy;
 	}
 }
+
+	.page__our-region__selector-wrap {
+		line-height: 27px;
+		padding: 0 45px 15px 45px;
+
+		@include media-query(desk){
+			padding: 0;
+			@include container();
+		
+			h2 {
+				@include font-size(32.12px);
+				line-height: 73.62px;
+			}
+		}
+
+		select {
+			color: $tdc-green;
+			font-family: $font-secondary;
+			font-size: 21px;
+			border: none;
+			outline: none;
+			-webkit-appearance: none;
+		   	background: transparent;
+
+		   	@include media-query(desk){
+				@include font-size(32.12px);
+				line-height: 73.62px;
+			}
+		}
+	}
+
 
 
 	.page__our-region__list-item {
 		margin: 0 15px;
 		height: 345px;
 		background-color: #f7f7f7;
+
+		@include media-query(desk){
+			width: 653px !important;
+			height: 328px;
+		}
 	}
 
 
@@ -46,12 +89,27 @@
 				width: 289px;
 				height: 100%;
 			}
+		
+		   	@include media-query(desk){
+				width: 327px;
+				height: 328px;
+				float: left;
+				margin-right: 38px;
+
+				img {
+					width: 100%;
+					height: 328px;
+				}
+			}
 		}
 
 
-		.page__our-region__view-more {
-			@include font-size(16px);
+
+		.page__our-region__view-all {
 			display: block;
-			width: 100%;
-			margin-bottom: 21px;
+			text-align: center;
+
+			@include media-query(desk){
+				@include position(absolute, 0 0 0 null);
+			}
 		}

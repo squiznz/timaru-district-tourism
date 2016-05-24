@@ -3,8 +3,16 @@
 ***/
 
 .utility-nav {
-	@include position(absolute, 80px 21px null 21px);
 	z-index: 99998;
+
+	@include media-query(portable){
+		@include position(absolute, 80px 21px null 21px);
+	}
+
+	@include media-query(desk){
+		@include position(absolute, 80px 38px null 38px);
+		@include container();
+	}
 
 	li {
 		display: inline-block;
@@ -20,9 +28,10 @@
 	.utility-nav__item--logo {
 		float: left;
 		padding-top: 2px;
+		width: 121px;
 
-		img {
-			width: 50%;
+		@include media-query(desk){
+			width: 155px;
 		}
 	}
 
@@ -30,13 +39,15 @@
 	.utility-nav__item--search-toggle {
 		float: right;
 		@include font-size(20px);
+
+		@include media-query(desk){
+			display: none !important;
+		}
 	}
 
 
 	.utility-nav__item--primary-toggle {
 		float: right;
-		width: 26px;
-		height: 26px;
 		position: relative;
 		margin: 0;
 		margin-left: 17px;
@@ -48,14 +59,24 @@
 		-moz-transition: .5s ease-in-out;
 		-o-transition: .5s ease-in-out;
 		transition: .5s ease-in-out;
-		cursor: pointer;
+		cursor: pointer;		
+		
+		@include media-query(portable){
+			width: 26px;
+			height: 26px;
+		}	
 
 		a {
 			display: block;
 			width: 100%;
 			height: 100%;
 			padding: 4px 0;
+
+			@include media-query(desk){
+				display: none;
+			}
 		}
+
 
 		hr {
 			display: block;
@@ -71,6 +92,8 @@
 			-moz-transform: rotate(0deg);
 			-o-transform: rotate(0deg);
 			transform: rotate(0deg);
+
+
 		}
 
 		&.close {

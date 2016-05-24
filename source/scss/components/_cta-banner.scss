@@ -6,8 +6,12 @@
 	background-color: $tdc-purple;
 	color: $white;
 	background-image: url('../img/swirls-purple.png');
-	padding: $padding * 4.5 21px;
 	text-align: center;
+	height: 260px;
+	
+	@include media-query(desk){
+		height: 400px;
+	}
 
 	&.bgc-tdc-green {
 		background-image: url('../img/swirls-green.png');
@@ -20,10 +24,47 @@
 	a {
 		@include font-size(19px);
 		color: $tdc-green;
+		font-family: $font-primary;
+		font-weight: $semibold;
+		@include position(relative, null);
+		line-height: 55px;
+
+		@include media-query(desk){
+			@include font-size(22.78px);
+			line-height: 65.94px;
+		}
+
+		&:after {
+			@include position(absolute, 6px -1em 0 null);
+			font-family: 'FontAwesome';
+			content: "\f0da";
+			@include font-size(15px);
+			line-height: 15px;
+
+			@include media-query(desk){
+				@include position(absolute, 10px -1em 0 null);
+			}
+		}
 	}
 
 	p {
 		@include font-size(32px);
+		font-family: $font-secondary;
+		line-height: 44px;
+
+		@include media-query(desk){
+			@include font-size(59.94px);
+			line-height: 62px;
+		}
 	}
 }
+	
+	.page__cta-banner__wrap {
+		height: 100%;
+		padding: 57px 21px;
 
+		@include media-query(desk){
+			@include container(950px);
+			padding: 148px 0 88px 0;
+		}
+	}

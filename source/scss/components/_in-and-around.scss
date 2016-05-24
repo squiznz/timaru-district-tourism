@@ -3,17 +3,50 @@
 ***/
 
 .page__in-and-around {
+	@include clearfix();
 
 	h2 {
-		width: 100%;
-		display: block;
 		background-color: $tdc-dark-navy;
 		padding: 15px 21px;
 		color: $white;
+		font-family: $font-secondary;
+
+		@include media-query(portable){
+			width: 100%;
+			display: block;
+		}
+
+		@include media-query(desk){
+			width: 488px;
+			@include position(relative, null);
+
+			&:after {
+				@include position(absolute, 18px 21px 0px null);
+				content: "\f041";
+				font-family: 'FontAwesome';
+				line-height: 1.2em;
+			}
+		}
 	}
-}
+}	
+
+	.page__in-and-around__wrap {
+		@include media-query(desk){
+			background-color: $tdc-purple;
+			float: left;
+			@include clearfix();
+			width: 35%;
+			height: 670px;
+			padding: 65px;
+		}
+	}
+
 
 	.page__in-and-around__list {
+		@include media-query(desk){
+			width: 488px;
+			@include clearfix();
+		}
 
 		li {
 			border-bottom: 1px solid $tdc-grey;
@@ -23,6 +56,11 @@
 			@include position(relative, null);
 			height: 100px;
 			line-height: 21px;
+
+			@include media-query(desk){
+				background-color: $white;
+				width: 488px;
+			}
 
 			strong {
 				color: $tdc-green;
@@ -51,8 +89,18 @@
 
 
 	.page__in-and-around__map {
-		height: 295px;
 		background-color: $black;
+
+		@include media-query(portable){
+			height: 295px;
+		}
+
+		@include media-query(desk){
+			height: 670px;
+			width: 65%;
+			float: left;
+			@include clearfix();
+		}
 	}
 
 
@@ -62,4 +110,8 @@
 		border: none;
 		padding: 15px 21px;
 		border-bottom: 1px solid $tdc-grey;
+
+		@include media-query(desk){
+			display: none;
+		}
 	}
