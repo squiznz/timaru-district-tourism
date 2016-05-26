@@ -2,116 +2,130 @@
 *   Location Banner
 ***/
 
-.page__location-banner {
-  	background-image: url(../img/placeholder1.jpeg);
-  	background-size: cover;
+.location-banner {
+	background-image: url(../img/placeholder1.jpeg);
+  background-size: cover;
 	color: $white;
+	@include clearfix();
 
 	@include media-query(portable){
 		@include position(relative, null null null null);
-		height: 435px;
+		height: 27.188em;
 	}
 
-	@include media-query(desk){
-		height: 746px;
+	@include media-query(note-and-up){
+		height: 46.625em;
 	}
 	
 	h1 {
 		color: $white;
 	}
-
-	.page__location-banner__wrap {
-		@include media-query(desk){
-			@include container();
-			@include position(relative, null null null null);
-			height: 100%;
-			padding: 0 38px
-		}
-	}
 }
 
 
-	.page__location-banner__location {
-		color: $tdc-light-blue;
-		text-transform: uppercase;
-		@include position(relative, null null null null);
-		@include clearfix();
-		float: left;
-		display: block;
-		width: 100%;
-		margin-bottom: 12px;
-		padding-left: 12px;
-
-		@include media-query(portable){
-			@include font-size(12px);
-
+	.location-banner__wrap {
+		@include media-query(note-and-up){
+			@include container();
+			@include position(relative, null null null null);
+			height: 100%;
+			padding: 0 38px;
 		}
-
-		@include media-query(desk){
-			@include font-size(14.39px);
-
-		}
-
-		&:before {
-			@include position(absolute, 1px null null 0);
-			content: "\f041";
-			font-family: 'FontAwesome';
-			line-height: 1.2em;
-		}	
 	}
 
 
-	.page__location-banner__info {
+	.location-banner__info {
+		padding: 28px 1.3125em;
+		@include font-size(22px);
+		font-family: $font-secondary;
 
+		> span {
+			color: $tdc-light-blue;
+			text-transform: uppercase;
+			font-family: $font-primary;
+			@include position(relative, null null null null);
+			@include clearfix();
+			float: left;
+			display: block;
+			width: 100%;
+			margin-bottom: 12px;
+			padding-left: 12px;
+
+			@include media-query(portable){
+				@include font-size(12px);
+			}
+
+			@include media-query(note-and-up){
+				@include font-size(16.06px);
+				line-height: 28.11px;
+				margin-bottom: 1.3125em;
+				padding-left: 20px;
+			}
+
+			&:before {
+				@include position(absolute, 1px null null 0);
+				content: "\f041";
+				font-family: 'FontAwesome';
+				line-height: 1.2em;
+
+				@include media-query(note-and-up){
+					@include position(absolute, 5px null null 0);				
+				}
+			}	
+		}
+
+		
 		@include media-query(portable){
-			padding: 28px 21px;
-			@include font-size(22px);
 			background-color: $tdc-navy;
 			@include position(absolute, null 0 0 0);
 		}
 
-		@include media-query(desk){
-			@include position(absolute, 178px 0 148px null);
+		@include media-query(note-and-up){
 			background-color: rgba(0,29,65,0.89);
-			width: 507px;
+			width: 10.521em;
 			padding: 50px 46px;
-			@include font-size(43.16px);
+			@include font-size(48.19px);
+			line-height: 58.89px;
 		}
 
-		.page__location-banner--right & {
-			@include media-query(desk){
-				@include position(absolute, 178px 38px 148px null);
+		.location-banner--right & {
+			@include media-query(note-and-up){
+				@include position(absolute, 178px 38px null null);
 			}
 		}
 
-		.page__location-banner--left & {
-			@include media-query(desk){
-				@include position(absolute, 178px null 148px 38px);
+		.location-banner--left & {
+			@include media-query(note-and-up){
+				@include position(absolute, 178px null null 38px);
 			}
+		}
+
+		strong {
+			font-weight: $ultrabold;
 		}
 	}
 
 
-	.page__location-banner__cta {
+	.location-banner__cta {
 		background-color: $tdc-purple;
 		color: $white;
 		text-decoration: none;
 		margin-top: 20px;
 		text-align: center;
+		font-family: $font-primary;
 		@include font-size(17px);
 		text-transform: uppercase;
 		padding: 15px 0;
 		line-height: 1em;
+		height: 45px;
+		display: block;
 
-		@include media-query(portable){
-			display: block;
-			padding: 15px 0;
-			height: 45px;
-		}
-
-		@include media-query(desk){
-			height: 50px;
-			padding: 15px 45px 15px 15px;
+		@include media-query(note-and-up){
+			height: 60px;
+			display: inline-block;
+			width: auto;
+			@include font-size(22px);
+			margin-top: 30px;
+			padding: 18px 50px 18px 18px;
 		}
 
 		span {

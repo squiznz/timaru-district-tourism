@@ -15,12 +15,12 @@
 
 
 	.global-footer__wrap {
-		padding: 36px 21px;
+		padding: 2.25em 1.3125em;
 		@include container();
 
 
-		@include media-query(desk){
-			padding: 86px 38px;
+		@include media-query(note-and-up){
+			padding: 5.375em 2.375em;
 			@include position(relative, null);
 		}
 	}
@@ -29,13 +29,13 @@
 	.global-footer__logo {
 		display: inline-block;
 		float: left;
-		width: 100px;
+		width: 6.25em;
 		padding-top: 4px;
 
-		@include media-query(desk){
-			width: 155px;
+		@include media-query(note-and-up){
+			width: 9.6875em;
 			padding: 0;
-			margin-right: 35px;
+			margin-right: 2.1875em;
 		}
 	}
 		
@@ -43,19 +43,19 @@
 	.social-media-links {
 		float: left;
 
-		@include media-query(desk){
+		@include media-query(note-and-up){
 			@include position(absolute, null 38px null null);
 		}
 
 		li {
 			display: inline-block;
-			padding: 0 $padding;
+			padding: 0 8px;
 			text-align: center;
 
 			i {
 				@include font-size(18px);
 
-				@include media-query(desk){
+				@include media-query(note-and-up){
 					@include font-size(25px);
 				}
 			}
@@ -65,18 +65,18 @@
 
 	.footer-nav {
 		float: left;
-		margin-top: 20px;
+		margin-top: 1.3125em;
 
-
-		@include media-query(desk){
+		@include media-query(note-and-up){
 			margin-top: 0;
 		}
 		
 		li {
+			line-height: 29px;
+
 			@include media-query(portable){
 				@include span(1 of 2 float inside);
 				@include font-size(15px);
-				line-height: 29px;
 
 				&:nth-child(odd) {
 					padding-left: 0;
@@ -87,7 +87,7 @@
 				}
 			}
 
-			@include media-query(desk){
+			@include media-query(note-and-up){
 				display: inline-block;
 				line-height: 1em;
 				padding: 0 25px;
@@ -105,7 +105,7 @@
 
 
 		.footer-utilities__list {
-			@include media-query(desk){
+			@include media-query(note-and-up){
 				@include container();
 				padding: 0 38px;
 			}
@@ -116,11 +116,11 @@
 				display: inline-block;
 				border-right: 1px solid $tdc-navy;
 				@include font-size(12px);
-				padding: 10px 21px;
+				padding: 10px 1.3125em;
 				width: 49.4%;
 				font-weight: $semibold;
 
-				@include media-query(desk){
+				@include media-query(note-and-up){
 					@include font-size(16.06px);
 					padding: 19px 28px;
 					font-weight: $bold;
@@ -148,7 +148,7 @@
 
 			
 			.footer-utilities__list__item--separator {
-				@include media-query(desk){
+				@include media-query(note-and-up){
 					margin-right: 710px;
 				}
 			}
@@ -162,7 +162,7 @@
 					border-bottom: 1px solid $tdc-navy;
 				}
 
-				@include media-query(desk){
+				@include media-query(note-and-up){
 					padding-left: 0px !important;
 				}
 			}

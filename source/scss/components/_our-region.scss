@@ -2,47 +2,57 @@
 *   Three of the Best
 ***/
 
-.page__our-region {
-	padding: 50px 0;
-
-	@include media-query(desk){
-		height: 612px;
+.our-region {
+	padding: 50px 0 34px 0;
+	
+	@include media-query(note-and-up){
+		height: 38.250em;
 		padding: 90px 0;
+		margin-bottom: 0;
 		@include position(relative, 0 0 0 null);
 	}
 	
 	h2 {
 		color: $tdc-dark-navy;
+		font-weight: $medium;
 	}
 }
 
-	.page__our-region__selector-wrap {
+
+	.our-region__selector-wrap {
 		line-height: 27px;
 		padding: 0 45px 15px 45px;
+		@include clearfix();
 
-		@include media-query(desk){
+		h2 {
+			display: inline;
+			float: left;
+		}
+
+		@include media-query(note-and-up){
 			padding: 0;
+			margin-bottom: 28px;
 			@include container();
-		
+
 			h2 {
 				@include font-size(32.12px);
-				line-height: 73.62px;
-				display: inline-block;
+				display: block;
 			}
 		}
 
 		select {
 			color: $tdc-green;
 			font-family: $font-secondary;
-			font-size: 21px;
+			float: left;
+			@include font-size(24px);
 			border: none;
 			outline: none;
 			-webkit-appearance: none;
-		   	background: transparent;
+	   	background: transparent;
+			padding-left: 8px;
 
-		   	@include media-query(desk){
+	   	@include media-query(note-and-up){
 				@include font-size(32.12px);
-				line-height: 73.62px;
 			}
 
 			&:focus {
@@ -52,69 +62,99 @@
 	}
 
 
-
-	.page__our-region__list-item {
-		margin: 0 15px;
-		height: 345px;
+	.our-region__list-item {
+		margin: 0 15px 50px 15px;
+		height: 21.563em;
 		background-color: #f7f7f7;
 
-		@include media-query(desk){
+		@include media-query(note-and-up){
 			width: 653px !important;
-			height: 328px;
+			height: 20.5em;
 		}
 	}
 
 
-		.page__our-region__info-wrap {
-			padding: 25px 21px 30px 21px;
-			line-height: 21px;
+		.our-region__info-wrap {
+			padding: 25px 1.3125em 30px 1.3125em;
+			line-height: 1.3125em;
 			@include font-size(16px);
-			
+			color: $tdc-dark-grey;
+
+	   	@include media-query(note-and-up){
+				height: 100%;
+				@include font-size(21.42px);
+				line-height: 29.45px;
+				padding: 65px 38px;
+				@include span(1.10 of 2 (no-gutters));
+				float: left;
+				@include position(relative, null);	
+			}
+
 			h3 {
 				@include font-size(18px);
 				font-weight: $bold;
 				margin-bottom: 10px;
 				font-family: $font-primary;
+
+				@include media-query(note-and-up){
+					@include font-size(24.09px);
+					line-height: 28.11px;
+				}
 			}
 
 			a {
 				color: $tdc-dark-navy;
 				@include font-size(14px);
-				display: block;	
 				margin-top: 10px;
 				font-weight: $bold;
-			}
-		}
+				@include position(relative, null);
+				display: inline-block;
 
+		   	@include media-query(note-and-up){
+					@include font-size(18.74px);
+					@include position(absolute, null null 55px 38px);
+				}
 
-		.page__our-region__image-wrap {
-			height: 188px;
-
-			img {
-				width: 289px;
-				height: 100%;
-			}
-		
-		   	@include media-query(desk){
-				width: 327px;
-				height: 328px;
-				float: left;
-				margin-right: 38px;
-
-				img {
-					width: 100%;
-					height: 328px;
+				&:after {
+					content: "\f0da";
+					font-family: 'FontAwesome';
+					@include font-size(11px);
+					@include position(absolute, 1px -1em 0 null);
 				}
 			}
 		}
 
 
+		.our-region__image-wrap {
+			height: 11.75em;
 
-		.page__our-region__view-all {
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		
+	   	@include media-query(note-and-up){
+				height: 100%;
+				@include span(1.1 of 2 (no-gutters));
+				float: left;
+
+				img {
+					width: 100%;
+					height: 20.5em;
+				}
+			}
+		}
+
+
+		.our-region__view-all {
 			display: block;
 			text-align: center;
+			width: 100%;
 
-			@include media-query(desk){
-				@include position(absolute, 0 0 null null);
+			@include media-query(note-and-up){
+				@include font-size(18.74px);
+				line-height: 29.45px;
+				float: right;
+				width: auto;
 			}
 		}

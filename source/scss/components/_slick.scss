@@ -12,10 +12,7 @@
     user-select: none;
     -ms-touch-action: pan-y;
     touch-action: pan-y;
-    // overflow: hidden;
     -webkit-tap-highlight-color: transparent;
-    // padding-bottom: 50px;
-    // margin-bottom: 50px;
 }
 .slick-list {
     position: relative;
@@ -64,7 +61,7 @@
         visibility: hidden;
     }
 
-    // .page__whats-on & {
+    // whats-on & {
     //     width: 100% !important;
     // }
 }
@@ -128,9 +125,9 @@ $slick-prev-character: "\f177" !default;
 $slick-next-character: "\f178" !default;
 $slick-dot-character: "\2022" !default;
 $slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
+$slick-opacity-default: 1 !default;
 $slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: 0.25 !default;
+$slick-opacity-not-active: 1 !default;
 
 @function slick-image-url($url) {
     @if function-exists(image-url) {
@@ -209,6 +206,10 @@ $slick-opacity-not-active: 0.25 !default;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+
+    @include media-query(portable){
+      display: none !important;
+    }
 }
 
 .slick-prev {
@@ -225,8 +226,12 @@ $slick-opacity-not-active: 0.25 !default;
     }
 
     .slick-whats-on & {
-        left: 0;
-        top: 440px;
+      left: 0;
+      top: 460px;
+
+      &:before {
+        @include font-size(26px);
+      }
     }
 }
 
@@ -244,13 +249,16 @@ $slick-opacity-not-active: 0.25 !default;
     }
 
     .slick-whats-on & {
-        right: 0;
-        top: 440px;
+      right: 0;
+      top: 460px;
+
+      &:before {
+        @include font-size(26px);
+      }
     }
 }
 
 /* Dots */
-
 .slick-dots {
     position: absolute;
     bottom: 0;
@@ -308,6 +316,13 @@ $slick-opacity-not-active: 0.25 !default;
         &.slick-active button:before {
             color: $slick-dot-color-active;
             opacity: $slick-opacity-default;
+            border: 1px solid $black;
+            border-radius: 50%;
+            top: 0.4em;
+            padding-bottom: 10px;
+            width: 12px;
+            height: 12px;
+            line-height: 2em;
         }
     }
 }

@@ -1,24 +1,17 @@
 /***
-*   Feature Banner
+*   Call to Action Banner
 ***/
 
-.page__cta-banner {
+.cta-banner {
 	background-color: $tdc-purple;
 	color: $white;
 	background-image: url('../img/swirls-purple.png');
 	text-align: center;
-	height: 260px;
-	
-	@include media-query(desk){
-		height: 400px;
-	}
+	height: 16.250em;
+	font-weight: $medium;
 
-	&.bgc-tdc-green {
-		background-image: url('../img/swirls-green.png');
-
-		a {
-			color: $white !important;
-		}
+	@include media-query(note-and-up){
+		height: 25em;
 	}
 
 	a {
@@ -27,11 +20,9 @@
 		font-family: $font-primary;
 		font-weight: $semibold;
 		@include position(relative, null);
-		line-height: 55px;
 
-		@include media-query(desk){
-			@include font-size(22.78px);
-			line-height: 65.94px;
+		@include media-query(note-and-up){
+			@include font-size(25px);
 		}
 
 		&:after {
@@ -41,7 +32,7 @@
 			@include font-size(15px);
 			line-height: 15px;
 
-			@include media-query(desk){
+			@include media-query(note-and-up){
 				@include position(absolute, 10px -1em 0 null);
 			}
 		}
@@ -52,20 +43,30 @@
 		font-family: $font-secondary;
 		line-height: 44px;
 
-		@include media-query(desk){
-			@include font-size(59.94px);
-			line-height: 62px;
+		@include media-query(note-and-up){
+			@include font-size(66px);
+			line-height: 69px;
 		}
 	}
 }
-	
-	
-		.page__cta-banner__wrap {
-			height: 100%;
-			padding: 57px 21px;
 
-			@include media-query(desk){
-				@include container(950px);
-				padding: 148px 0 88px 0;
+
+.cta-banner--green {
+	background-image: url('../img/swirls-green.png');
+
+	a {
+		color: $white !important;
+	}
+}	
+
+
+		.cta-banner__wrap {
+			height: 100%;
+			padding: 57px 1.3125em;
+
+			@include media-query(note-and-up){
+				@include container(930px);
+				padding: 140px 0 90px 0;
+				vertical-align: center;
 			}
 		}

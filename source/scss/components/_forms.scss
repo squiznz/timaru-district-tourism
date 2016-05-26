@@ -1,0 +1,44 @@
+// Forms
+
+
+.ui-selectmenu-text, .ui-menu-item {
+	color: $tdc-green;
+	font-family: $font-secondary;
+	@include font-size(24px);
+	border: none;
+	cursor: pointer;
+	outline: none;
+	-webkit-appearance: none;
+  background: transparent;
+  list-style: none;
+  @include position(relative, null);
+	padding-left: 8px;
+
+ 	@include media-query(note-and-up){
+		@include font-size(32.12px);
+	}
+
+	&:focus {
+		outline: none !important;
+		-webkit-appearance: none;
+	}
+
+	&:after {
+		content: "\f0d7";
+	  @include position(absolute, 5px -1em 0 null);
+		font-family: 'FontAwesome';
+		@include font-size(20px);
+	}
+}
+
+.ui-selectmenu-menu {
+	display: none;
+}
+
+.ui-selectmenu-menu.ui-selectmenu-open {
+	display: block;
+}
+
+.ui-selectmenu-button {
+	display: inline-block;
+}

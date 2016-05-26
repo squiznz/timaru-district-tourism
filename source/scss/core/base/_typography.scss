@@ -5,43 +5,111 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic');
 @import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css');
 
-@font-face {font-family: 'PlutoSansBold';src: url('../fonts/312681_0_0.eot');src: url('../fonts/312681_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_0_0.woff2') format('woff2'),url('../fonts/312681_0_0.woff') format('woff'),url('../fonts/312681_0_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansBlack';src: url('../fonts/312681_1_0.eot');src: url('../fonts/312681_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_1_0.woff2') format('woff2'),url('../fonts/312681_1_0.woff') format('woff'),url('../fonts/312681_1_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansCondBlack';src: url('../fonts/312681_2_0.eot');src: url('../fonts/312681_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_2_0.woff2') format('woff2'),url('../fonts/312681_2_0.woff') format('woff'),url('../fonts/312681_2_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansCondBold';src: url('../fonts/312681_3_0.eot');src: url('../fonts/312681_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_3_0.woff2') format('woff2'),url('../fonts/312681_3_0.woff') format('woff'),url('../fonts/312681_3_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansCondExLight';src: url('../fonts/312681_4_0.eot');src: url('../fonts/312681_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_4_0.woff2') format('woff2'),url('../fonts/312681_4_0.woff') format('woff'),url('../fonts/312681_4_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansCondHeavy';src: url('../fonts/312681_5_0.eot');src: url('../fonts/312681_5_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_5_0.woff2') format('woff2'),url('../fonts/312681_5_0.woff') format('woff'),url('../fonts/312681_5_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansCondLight';src: url('../fonts/312681_6_0.eot');src: url('../fonts/312681_6_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_6_0.woff2') format('woff2'),url('../fonts/312681_6_0.woff') format('woff'),url('../fonts/312681_6_0.ttf') format('truetype');} 
-@font-face {font-family: 'PlutoSansCondMedium';src: url('../fonts/312681_7_0.eot');src: url('../fonts/312681_7_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_7_0.woff2') format('woff2'),url('../fonts/312681_7_0.woff') format('woff'),url('../fonts/312681_7_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansCondRegular';src: url('../fonts/312681_8_0.eot');src: url('../fonts/312681_8_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_8_0.woff2') format('woff2'),url('../fonts/312681_8_0.woff') format('woff'),url('../fonts/312681_8_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansCondThin';src: url('../fonts/312681_9_0.eot');src: url('../fonts/312681_9_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_9_0.woff2') format('woff2'),url('../fonts/312681_9_0.woff') format('woff'),url('../fonts/312681_9_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansExtraLight';src: url('../fonts/312681_A_0.eot');src: url('../fonts/312681_A_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_A_0.woff2') format('woff2'),url('../fonts/312681_A_0.woff') format('woff'),url('../fonts/312681_A_0.ttf') format('truetype');}  
-@font-face {font-family: 'PlutoSansHeavy';src: url('../fonts/312681_B_0.eot');src: url('../fonts/312681_B_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_B_0.woff2') format('woff2'),url('../fonts/312681_B_0.woff') format('woff'),url('../fonts/312681_B_0.ttf') format('truetype');}  
-@font-face {font-family: 'PlutoSansLight';src: url('../fonts/312681_C_0.eot');src: url('../fonts/312681_C_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_C_0.woff2') format('woff2'),url('../fonts/312681_C_0.woff') format('woff'),url('../fonts/312681_C_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansMedium';src: url('../fonts/312681_D_0.eot');src: url('../fonts/312681_D_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_D_0.woff2') format('woff2'),url('../fonts/312681_D_0.woff') format('woff'),url('../fonts/312681_D_0.ttf') format('truetype');}
-@font-face {font-family: 'PlutoSansRegular';src: url('../fonts/312681_E_0.eot');src: url('../fonts/312681_E_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_E_0.woff2') format('woff2'),url('../fonts/312681_E_0.woff') format('woff'),url('../fonts/312681_E_0.ttf') format('truetype');} 
-@font-face {font-family: 'PlutoSansThin';src: url('../fonts/312681_F_0.eot');src: url('../fonts/312681_F_0.eot?#iefix') format('embedded-opentype'),url('../fonts/312681_F_0.woff2') format('woff2'),url('../fonts/312681_F_0.woff') format('woff'),url('../fonts/312681_F_0.ttf') format('truetype');}
-
 $font-primary: 'Source Sans Pro', sans-serif;
-$font-secondary: 'PlutoSansRegular', sans-serif;
+$font-secondary: 'Pluto', sans-serif;
 
 // Font Weights
+$thin       :  200;
 $light      :  300;
 $normal     :  400;
 $medium     :  500;
-$semibold	:  600; 
+$semibold	  :  600; 
 $bold       :  700;
 $ultrabold  :  900;
 
 //Fonts
 @include headings(){
     font-family: $font-secondary;
-    font-weight: normal;
-    color: $grey-800;
+    font-weight: $medium;
+    color: $tdc-dark-navy;
     font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -webkit-font-smoothing: subpixel-antialiased;
     margin: 0;
     padding: 0;
+}
+
+@font-face {
+    font-family: 'Pluto';
+    src: url('../fonts/plutoblack.eot');
+    src: url('../fonts/plutoblack.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/plutoblack.woff2') format('woff2'),
+         url('../fonts/plutoblack.woff') format('woff'),
+         url('../fonts/plutoblack.ttf') format('truetype'),
+         url('../fonts/plutoblack.svg#plutoblack') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pluto';
+  src: url('../fonts/plutobold.eot');
+  src: url('../fonts/plutobold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/plutobold.woff2') format('woff2'),
+      url('../fonts/plutobold.woff') format('woff'),
+      url('../fonts/plutobold.ttf') format('truetype'),
+      url('../fonts/plutobold.svg#plutobold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pluto';
+    src: url('../fonts/plutoheavy.eot');
+    src: url('../fonts/plutoheavy.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/plutoheavy.woff2') format('woff2'),
+         url('../fonts/plutoheavy.woff') format('woff'),
+         url('../fonts/plutoheavy.ttf') format('truetype'),
+         url('../fonts/plutoheavy.svg#plutoheavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pluto';
+    src: url('../fonts/plutolight.eot');
+    src: url('../fonts/plutolight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/plutolight.woff2') format('woff2'),
+         url('../fonts/plutolight.woff') format('woff'),
+         url('../fonts/plutolight.ttf') format('truetype'),
+         url('../fonts/plutolight.svg#plutolight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pluto';
+    src: url('../fonts/plutomedium.eot');
+    src: url('../fonts/plutomedium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/plutomedium.woff2') format('woff2'),
+         url('../fonts/plutomedium.woff') format('woff'),
+         url('../fonts/plutomedium.ttf') format('truetype'),
+         url('../fonts/plutomedium.svg#plutomedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pluto';
+    src: url('../fonts/plutoregular.eot');
+    src: url('../fonts/plutoregular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/plutoregular.woff2') format('woff2'),
+         url('../fonts/plutoregular.woff') format('woff'),
+         url('../fonts/plutoregular.ttf') format('truetype'),
+         url('../fonts/plutoregular.svg#pluto_regularregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'plutothin';
+    src: url('../fonts/plutothin.eot');
+    src: url('../fonts/plutothin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/plutothin.woff2') format('woff2'),
+         url('../fonts/plutothin.woff') format('woff'),
+         url('../fonts/plutothin.ttf') format('truetype'),
+         url('../fonts/plutothin.svg#plutothin') format('svg');
+    font-weight: 200;
+    font-style: normal;
 }

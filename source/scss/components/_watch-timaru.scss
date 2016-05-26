@@ -2,32 +2,37 @@
 *   Watch Timaru
 ***/
 
-.page__watch-timaru {
-	padding: 40px 0 34px 0;
+.watch-timaru {
+	padding: 3.125em 0 2.125em 0;
 
-	@include media-query(desk){
-		@include container(1354px);
-		padding: 75px 0;
+	@include media-query(note-and-up){
+		@include container(84.063em);
+		padding: 4.6875em 0;
 		@include position(relative, null);
 	}
 
 	h2 {
-		padding: 0 21px;
-		@include font-size(23px);
+		padding: 0 1.3125em;
+		margin-bottom: 10px;
+		color: $tdc-dark-navy;
+		font-weight: $medium;
 
-		@include media-query(desk){
+		@include media-query(note-and-up){
 			padding: 0;
 			@include font-size(32.12px);
-			line-height: 73.62px;
+			line-height: 2.292em;
 		}
 	}
 }
 
 
-		.page__watch-timaru__list {
+		.watch-timaru__list {
 			li {
-				@include media-query(desk){
-					@include span(3 of 6 (gutter-override: 38px));
+				padding-bottom: 1.875em;
+
+				@include media-query(note-and-up){
+					@include span(3 of 6 (gutter-override: 2.375em));
+					padding-bottom: 0;
 
 					&:nth-child(2){
 						@include last();
@@ -41,63 +46,63 @@
 					background-color: $black;
 				}
 			}
-
-			@include media-query(portable){
-				margin-top: 21px;
-			}
 		}
 
 
-			.page__watch-timaru__info-wrap {		
-				padding: 34px 21px;
+			.watch-timaru__info-wrap {		
+				padding: 2.125em 1.3125em;
 			
-				@include media-query(desk){
-					padding: 38px 0;
+				@include media-query(note-and-up){
+					padding: 2.375em 0;
 				}
 
 				strong {
 					color: $tdc-green;
 					@include font-size(18px);
 
-					@include media-query(desk){
-						font-size: 24.09px;
+					@include media-query(note-and-up){
+						@include font-size(24.09px);
 					}
 				}
 
 				p {
-					@include font-size(21.42px);
-					line-height: 30.79px;
+					line-height: 1.4375em;
+
+					@include media-query(note-and-up){
+						@include font-size(21.42px);
+						line-height: 30.79px;
+					}
 				}
 			}	
 
 
-			.page__watch-timaru__video-wrap {		
+			.watch-timaru__video-wrap {		
 				@include position(relative, null);
-				height: 217px;
+				height: 13.5625em;
 				width: 100%;
 
-				@include media-query(desk){
-					height: 366px;
+				@include media-query(note-and-up){
+					height: 22.875em;
 				}
 			}
 
 
-			.page__watch-timaru__video-filter {
+			.watch-timaru__video-filter {
 				@include position(absolute, 0 0 0 0);			
 				background-color: rgba(23,23,23,0.60);
 			}
 
 			
-			.page__watch-timaru__view-all {
+			.watch-timaru__view-all {
 				display: block;
 				width: 100%;
 				text-align: center;
 
-				@include media-query(desk){
+				@include media-query(note-and-up){
 					display: inline-block;
 					width: auto;
 					text-align: right;
-					@include position(absolute, 100px 0 null null);
+					@include position(absolute, 6.25em 0 null null);
 					@include font-size(18.74px);
 					line-height: 29.45px;		
 				}

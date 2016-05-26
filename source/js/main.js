@@ -45,14 +45,12 @@ function globalActions() {
     
     $('.primary-nav').toggle().toggleClass('open');
     $('.utility-nav__item--primary-toggle').toggleClass('close');
-
   });
   
   $('.utility-nav__item--search-toggle a').click(function(e) {
     e.preventDefault();
     
     $('.site-search').toggle().toggleClass('open');
-
   });
 }; // globalActions()
 
@@ -69,6 +67,7 @@ $(document).ready(function () {
     centerMode: true,
     centerPadding: '8.7%',
     draggable: false,
+    // fade: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -77,13 +76,6 @@ $(document).ready(function () {
           slidesToScroll: 1,
           infinite: true,
           dots: true
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
         }
       }
     ]
@@ -127,6 +119,7 @@ $(document).ready(function () {
     infinite: true,
     mobileFirst: true,
     slidesToScroll: 1,
+    fade: true,
     slidesToShow: 1,
     responsive: [
       {
@@ -156,9 +149,12 @@ $(document).ready(function () {
     mobileFirst: true,
     slidesToScroll: 1,
     slidesToShow: 1,
-    arrows: false
+    arrows: true,
+    fade: true,
+
   });
 
+  $( "select" ).selectmenu();
 
   detectScrolling();
   globalActions();

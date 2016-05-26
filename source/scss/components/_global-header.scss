@@ -3,7 +3,7 @@
 ***/
 
 .global-header {
-	@include media-query(desk){
+	@include media-query(note-and-up){
 		@include container();
 		@include position(relative, null);
 	}
@@ -14,13 +14,13 @@
 		display: none;
 		z-index: 99999;
 		background-color: $tdc-navy;
-		padding: 10px 21px 13px 21px;
+		padding: 10px 1.3125em 13px 1.3125em;
 
 		@include media-query(portable){
 			@include position(absolute, 42px 0 null 0);
 		}
 
-		@include media-query(desk){
+		@include media-query(note-and-up){
 			color: $white;
 			display: block;
 			background-color: transparent;
@@ -36,7 +36,7 @@
 			border: none;
 			border-bottom: 2px solid $tdc-green;
 
-			@include media-query(desk){
+			@include media-query(note-and-up){
 				width: 116px;
 				font-weight: $semibold;
 				line-height: 28.11px;
@@ -51,7 +51,7 @@
 				@include font-size(13px);
 				font-family: $font-primary;
 
-			   	@include media-query(desk){
+			   	@include media-query(note-and-up){
 					@include font-size(17px);
 			   	}
 			}
@@ -63,7 +63,7 @@
 				@include font-size(13px); 
 				font-family: $font-primary;
 
-			   	@include media-query(desk){
+			   	@include media-query(note-and-up){
 					@include font-size(17px);
 			   	} 
 			}
@@ -75,7 +75,7 @@
 				@include font-size(13px); 
 				font-family: $font-primary;
 
-			   	@include media-query(desk){
+			   	@include media-query(note-and-up){
 					@include font-size(17px);
 			   	} 
 			}
@@ -87,7 +87,7 @@
 				@include font-size(13px);
 				font-family: $font-primary;
 
-			   	@include media-query(desk){
+			   	@include media-query(note-and-up){
 					@include font-size(17px);
 			   	}  
 			}
@@ -99,7 +99,7 @@
 			color: $white;
 			@include font-size(18px);
 
-			@include media-query(desk){
+			@include media-query(note-and-up){
 				background-color: transparent;
 				@include font-size(20px);
 				width: 30px;

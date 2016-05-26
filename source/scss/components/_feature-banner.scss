@@ -2,18 +2,18 @@
 *   Feature Banner
 ***/
 
-.page__feature-banner {
+.feature-banner {
 	background: linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)), url(../img/placeholder1.jpeg);
 	background-size: cover;
 	color: $white;
 	width: 100%;
 	text-align: center;
-	height: 357px;
-	padding-top: 135px;
+	height: 22.313em;
+	padding-top: 8.438em;
 
-	@include media-query(desk){
-		padding-top: 180px;
-		height: 850px;
+	@include media-query(note-and-up){
+		padding-top: 11.250em;
+		height: 53.125em;
 	}
 
 	h1 {
@@ -24,41 +24,37 @@
 		letter-spacing: 10px;
 		margin: 0 auto;
 
-		@include media-query(desk){
+		@include media-query(note-and-up){
 			@include font-size(80.31px);
 			line-height: 133px;
-		}
-
-		strong {
-			font-family: 'PlutoSansBold';
 		}
 	}
 }
 
 
-	.page__feature-banner__wrap {
+	.feature-banner__wrap {
 		@include position(relative, null);
-		padding: 0 77px;
 		width: 100%;
 		height: 100%;
+		@include container(15.625em);
 
-		@include media-query(desk){
-			@include container(592px);
+		@include media-query(note-and-up){
+			@include container(37em);
 			padding: 0 38px;
 		}
 	}
 
 
-		.page__feature-banner__scroll-indicator {
-			@include position(absolute, null 50% 0 null);
-			display: block;
-			width: 2px;
-			background-color: $white;
-			height: 36px;
+	.feature-banner__scroll-indicator {
+		@include position(absolute, null 50% 0 null);
+		display: block;
+		width: 2px;
+		background-color: $white;
+		height: 2.25em;
 
 
-			@include media-query(desk){
-				height: 50px;
-				width: 3px;
-			}
+		@include media-query(note-and-up){
+			height: 3.125em;
+			width: 3px;
 		}
+	}

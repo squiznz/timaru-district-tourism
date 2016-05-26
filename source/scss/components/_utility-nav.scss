@@ -3,6 +3,8 @@
 ***/
 
 .utility-nav {
+	@include position(absolute, 80px 1.3125em null 1.3125em);
+		
 	li {
 		display: inline-block;
 		color: $white;
@@ -13,11 +15,10 @@
 	}
 
 	@include media-query(portable){
-		@include position(absolute, 80px 21px null 21px);
 		z-index: 99998;
 	}
 
-	@include media-query(desk){
+	@include media-query(note-and-up){
 		@include position(absolute, 80px 38px null 38px);
 		@include container();
 	}
@@ -27,10 +28,10 @@
 		.utility-nav__item--logo {
 			float: left;
 			padding-top: 2px;
-			width: 121px;
+			width: 7.563em;
 
-			@include media-query(desk){
-				width: 155px;
+			@include media-query(note-and-up){
+				width: 9.688em;
 			}
 		}
 
@@ -39,7 +40,7 @@
 			float: right;
 			@include font-size(20px);
 
-			@include media-query(desk){
+			@include media-query(note-and-up){
 				display: none !important;
 			}
 		}
@@ -71,7 +72,7 @@
 				height: 100%;
 				padding: 4px 0;
 
-				@include media-query(desk){
+				@include media-query(note-and-up){
 					display: none;
 				}
 			}

@@ -13,7 +13,7 @@
 		@include position(absolute, 42px 0 null 0);
 	}
 	
-	@include media-query(desk){
+	@include media-query(note-and-up){
 		@include position(absolute, 55px 0 null 0);
 		@include container();
 		display: block !important;
@@ -29,7 +29,7 @@
 			display: block;
 			border-bottom: 1px solid $black;
 
-			@include media-query(desk){
+			@include media-query(note-and-up){
 				border: none;
 				display: inline-block;
 				padding: 0;
@@ -39,14 +39,14 @@
 			a {
 				color: inherit;
 				display: block;
-				padding: 21px 21px;
+				padding: 17px 1.3125em;
 				font-weight: $semibold;
 				@include font-size(19px);
 				text-decoration: none;
 				font-family: $font-primary;
 
-				@include media-query(desk){
-					padding: 21px 21px 0 21px;
+				@include media-query(note-and-up){
+					padding: 1.3125em 1.3125em 0 1.3125em;
 				}
 			}
 		}

@@ -2,18 +2,19 @@
 *   In & Around
 ***/
 
-.page__in-and-around {
+.in-and-around {
 	@include clearfix();
-	
+	height: 41.875em;
+
 	@include media-query(portable){
 		@include position(relative, null);
 	}
 
 	h2 {
 		background-color: $tdc-dark-navy;
-		padding: 15px 21px;
+		padding: 15px 1.3125em;
 		color: $white;
-		font-family: $font-secondary;
+		font-weight: $medium;
 
 		@include media-query(portable){
 			width: 100%;
@@ -23,35 +24,50 @@
 			display: block;
 		}
 
-		@include media-query(desk){
-			width: 488px;
+		@include media-query(note-and-up){
+			@include font-size(30.79px);
+			width: 17.538em;
 			@include position(relative, null);
 
 			&:after {
-				@include position(absolute, 18px 21px 0px null);
+				@include position(absolute, 18px 1.3125em 0px null);
 				content: "\f041";
 				font-family: 'FontAwesome';
-				line-height: 1.2em;
+				line-height: 1.6em;
+				@include font-size(24px);
 			}
 		}
 	}
 }	
 
-	.page__in-and-around__wrap {
-		@include media-query(desk){
+	.in-and-around__wrap {
+		@include media-query(note-and-up){
 			background-color: $tdc-purple;
 			float: left;
 			@include clearfix();
 			width: 35%;
-			height: 670px;
+			height: 100%;
 			padding: 65px;
+		}
+
+		select {
+			width: 100%;
+			@include font-size(18px);
+			border: none;
+			color: $tdc-dark-navy;
+			padding: 15px 1.3125em;
+			border-bottom: 1px solid $tdc-grey;
+
+			@include media-query(note-and-up){
+				display: none;
+			}
 		}
 	}
 
 
-	.page__in-and-around__list {
-		@include media-query(desk){
-			width: 488px;
+	.in-and-around__list {
+		@include media-query(note-and-up){
+			width: 33.750em;
 			@include clearfix();
 		}
 
@@ -59,66 +75,85 @@
 			border-bottom: 1px solid $tdc-grey;
 			@include font-size(18px);
 			cursor: pointer;
-			padding: 17px 70px 17px 21px;
+			padding: 17px 70px 17px 1.3125em;
 			@include position(relative, null);
-			height: 100px;
-			line-height: 21px;
+			line-height: 1.3125em;
 
-			@include media-query(desk){
+			@include media-query(note-and-up){
 				background-color: $white;
-				width: 488px;
+				width: 30em;
+				height: auto;
+				padding: 1.3125em 100px 1.3125em 1.3125em;
+			}
+
+			span {
+				color: $tdc-dark-navy;
+				line-height: 28.11px;
+
+				@include media-query(note-and-up){
+					@include font-size(24.09px);
+				}
 			}
 
 			strong {
 				color: $tdc-green;
+
+				@include media-query(note-and-up){
+					@include font-size(24.09px);
+					line-height: 28.11px;
+				}
 			}
 
 			p {
 				margin-top: 5px;
+				@include font-size(15px);
+				line-height: 1.3125em;
+				color: #535353;
+
+				@include media-query(note-and-up){
+					@include font-size(20.08px);
+					line-height: 28.11px;
+				}
 			}
 
 			i {
-				@include position(absolute, 40px 21px null null);
+				@include position(absolute, 40px 1.3125em null null);
 				color: $tdc-green;
 
+				@include media-query(note-and-up){
+					right: 38px;
+					top: 50px;
+				}
 			}
 
 			&:hover, &:focus {
 				background-color: $tdc-green;
 
-				> * { 
-					color: $white;
+				@include media-query(note-and-up){
+					background-color: #f7f7f7;
+				}
+
+				@include media-query(portable){
+					> * { 
+						color: $white;
+					}
 				}
 			}
 		}
-
 	}
 
 
-	.page__in-and-around__map {
+	.in-and-around__map {
 		background-color: $black;
 
 		@include media-query(portable){
-			height: 295px;
+			height: 21.250em;
 		}
 
-		@include media-query(desk){
-			height: 670px;
+		@include media-query(note-and-up){
+			height: 41.875em;
 			width: 65%;
 			float: left;
 			@include clearfix();
-		}
-	}
-
-
-	.page__in-and-around__selector {
-		width: 100%;
-		@include font-size(18px);
-		border: none;
-		padding: 15px 21px;
-		border-bottom: 1px solid $tdc-grey;
-
-		@include media-query(desk){
-			display: none;
 		}
 	}

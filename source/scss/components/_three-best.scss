@@ -2,27 +2,33 @@
 *   Three of the Best
 ***/
 
-.page__three-best {
-	padding: 50px 0;
+.three-best {
+	padding: 50px 0 1.3125em 0;
 
-	@include media-query(desk){
-		@include container(1354px);
+	@include media-query(note-and-up){
+		@include container(84.063em);
+		padding: 90px 0;
 	}
 }
 
-	.page__three-best__selector-wrap {
+	.three-best__selector-wrap {
 		line-height: 27px;
+		@include clearfix();
+		padding: 0 45px 15px 45px;
 
-		@include media-query(portable){
-			padding: 0 45px 15px 45px;
+		h2 {
+			float: left;
+			display: inline;
+			color: $tdc-dark-navy;
+			font-weight: $medium;
 		}
 
-		@include media-query(desk){
-			padding: 40px 0 21px 0;
+		@include media-query(note-and-up){
+			margin-bottom: 1.3125em;
+			padding: 0;
 		
 			h2 {
 				@include font-size(32.12px);
-				line-height: 73.62px;
 				display: inline-block;
 			}
 		}
@@ -30,30 +36,34 @@
 		select {
 			color: $tdc-green;
 			font-family: $font-secondary;
-			font-size: 21px;
+			float: left;
+			@include font-size(24px);
 			border: none;
 			outline: none;
 			-webkit-appearance: none;
-		   	background: transparent;
+	   	background: transparent;
+			padding-left: 8px;
 
-		   	@include media-query(desk){
+	   	@include media-query(note-and-up){
 				@include font-size(32.12px);
-				line-height: 73.62px;
+			}
+
+			&:focus {
+				outline: none;
 			}
 		}
 	}
 
 
-	.page__three-best__list-item {
-
+	.three-best__list-item {		
 		@include media-query(portable){
-			margin: 0 15px;
-			height: 345px;
-			background-color: #f7f7f7;
+			margin: 0 15px 50px 15px;
 		}
 
-		@include media-query(desk){
-   			@include span(2.96 of 9 (gutter-override: 39px));			
+		@include media-query(note-and-up){
+ 			@include span(2.966 of 9 (gutter-override: 38px));			
+			height: 24.375em;
+			background-color: #f7f7f7;
 
 			&:nth-child(3) {
 				@include last();
@@ -62,18 +72,21 @@
 	}
 
 
-		.page__three-best__info-wrap {
-			padding: 25px 21px 30px 21px;
-			line-height: 21px;
+		.three-best__info-wrap {
+			padding: 1.3125em 0 1.3125em 0;
+			line-height: 1.3125em;
 			@include font-size(16px);
-			
-
 
 			h3 {
 				@include font-size(18px);
 				font-weight: $bold;
 				margin-bottom: 10px;
 				font-family: $font-primary;
+
+				@include media-query(note-and-up){
+					@include font-size(24.09px);
+					line-height: 28.11px;
+				}
 			}
 
 			a {
@@ -83,17 +96,20 @@
 				margin-top: 10px;
 				font-weight: $bold;
 			}
+
+			@include media-query(note-and-up){
+				padding: 38px 1.3125em;
+				@include font-size(21.42px);
+				line-height: 29.45px;
+			}
 		}
 
 
-		.page__three-best__image-wrap {
-
-			@include media-query(portable){
-				height: 188px;
-			}
-
-			@include media-query(desk){
-				height: 215px;
+		.three-best__image-wrap {
+			height: 11.75em;
+			
+			@include media-query(note-and-up){
+				height: 13.438em;
 			}
 
 			img {
