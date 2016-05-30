@@ -52,6 +52,12 @@ function globalActions() {
     
     $('.site-search').toggle().toggleClass('open');
   });
+
+  $('.in-this-section h2').click(function(e) {
+    e.preventDefault();
+    
+    $(this).next('ul').toggle();  
+  });
 }; // globalActions()
 
 
@@ -154,7 +160,7 @@ $(document).ready(function () {
 
   });
 
-  $( "select" ).selectmenu();
+  // $( "select" ).selectmenu();
 
   detectScrolling();
   globalActions();

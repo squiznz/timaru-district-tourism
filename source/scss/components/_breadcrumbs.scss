@@ -1,0 +1,38 @@
+/***
+*   Breadcrumbs
+***/
+
+.breadcrumbs {
+	width: 66.8125em;
+	padding: 0 100px 10px 100px;
+	float: left;
+	@include clearfix();
+	display: none;
+
+	@include media-query(lap-and-up){
+		display: block;
+	}
+
+	li {
+		display: inline-block;
+		text-transform: uppercase;
+		color: $tdc-mid-grey;
+		font-weight: $semibold;
+		@include font-size(14.72px);
+		line-height: 29px;
+		letter-spacing: 2px;
+
+		a {
+			color: inherit;
+		}
+
+		&:not(:last-child):after {
+			content: ". ";
+			color: $tdc-mid-grey;
+		}
+		
+		&:first-child {
+			color: $tdc-dark-navy !important;
+		}
+	}
+}

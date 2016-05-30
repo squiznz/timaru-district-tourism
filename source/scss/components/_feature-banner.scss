@@ -9,7 +9,7 @@
 	width: 100%;
 	text-align: center;
 	height: 22.313em;
-	padding-top: 8.438em;
+	padding-top: 7.25em;
 
 	@include media-query(note-and-up){
 		padding-top: 11.250em;
@@ -30,6 +30,26 @@
 		}
 	}
 }
+
+
+.feature-banner--no-image {
+	background: none;
+	background-color: $tdc-purple;
+	height: 16.25em;
+
+	@include media-query(note-and-up){
+		height: 34.75em;
+	}
+	
+	h1 {
+		line-height: 1em;
+	}
+}
+
+
+
+
+
 
 
 	.feature-banner__wrap {

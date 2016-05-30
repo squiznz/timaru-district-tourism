@@ -4,7 +4,7 @@
 
 .utility-nav {
 	@include position(absolute, 80px 1.3125em null 1.3125em);
-		
+
 	li {
 		display: inline-block;
 		color: $white;
@@ -19,7 +19,7 @@
 	}
 
 	@include media-query(note-and-up){
-		@include position(absolute, 80px 38px null 38px);
+		@include position(absolute, 86px 38px null 38px);
 		@include container();
 	}
 }
@@ -124,4 +124,3 @@
 				}
 			}
 		}
-

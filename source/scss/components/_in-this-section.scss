@@ -1,0 +1,94 @@
+/***
+*   In this section 
+***/
+
+.in-this-section {
+	@include clearfix();
+	width: 100%;
+	float: left;
+	
+	@include media-query(note-and-up){
+		width: 14.6875em;
+		margin-right: 38px;
+	}
+
+	h2 {
+		color: $tdc-dark-navy;
+		@include font-size(18px);
+		line-height: 21px;
+		font-family: $font-primary;
+		padding-bottom: 21px;
+		font-weight: bold;
+		display: block;
+		border-bottom: 2px dotted $tdc-mid-grey;
+		@include position(relative, null);
+		cursor: pointer;
+
+		@include media-query(note-and-up){
+			border-bottom: 0;
+			padding-bottom: 8px;
+			margin-bottom: 0;
+			@include font-size(24.09px);
+		}
+		
+		&:after {
+			@include position(absolute, 0 0 0 null);
+			font-family: 'FontAwesome';
+			content: "\f0d7";
+			@include font-size(12px);
+
+			@include media-query(note-and-up){
+				display: none;
+			}
+		}
+	}
+
+	ul {
+		display: none;
+	
+		@include media-query(note-and-up){
+			display: block;
+		}
+
+		li {
+			color: $tdc-light-blue;
+
+			@include media-query(note-and-up){
+				@include font-size(21.42px);
+			}
+
+			a {
+				display: block;
+				padding: 8px 0;
+				color: inherit;
+			}
+			
+			&.active {
+				padding-left: 12px;
+				color: $tdc-dark-navy;
+				@include position(relative, null);
+
+				&:before {
+					display: block;
+					color: inherit;
+					font-family: "FontAwesome";
+					content: "\f0da";
+					line-height: inherit;
+					@include font-size(14px);
+					@include position(absolute, 15px null 0 0);
+				}
+			}
+		}
+
+		> ul {
+			padding-left: 12px;
+			border-bottom: 1px dotted $tdc-mid-grey;
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+
+			li {
+				@include font-size(18.74px);
+			}
+		}
+	}
+}
