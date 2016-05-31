@@ -3,12 +3,8 @@
 ***/
 
 .global-header {
-	@include media-query(note-and-up){
-		@include container();
-		@include position(relative, null);
-	}
+	background-color: $tdc-purple;
 }
-
 
 	.site-search {
 		display: none;
@@ -17,16 +13,23 @@
 		padding: 10px 1.3125em 13px 1.3125em;
 
 		@include media-query(portable){
-			@include position(absolute, 42px 0 null 0);
+			@include position(absolute, 45px 0 null 0);
+			z-index: 99999;
 		}
 
 		@include media-query(note-and-up){
 			color: $white;
-			display: block;
+			@include container();
+			@include position(absolute, 30px 0 null 0);
 			background-color: transparent;
-			width: 161px;
 			padding: 0;
-			@include position(absolute, 72px 38px null null);
+		}
+		
+		fieldset {
+			width: 160px;
+			border: none;
+			@include position(absolute, 0 38px null null);
+
 		}
 
 		input[type="search"] {
@@ -88,7 +91,7 @@
 				font-family: $font-primary;
 
 			   	@include media-query(note-and-up){
-					@include font-size(17px);
+						@include font-size(17px);
 			   	}  
 			}
 		}
@@ -109,3 +112,15 @@
 		}
 	}
 
+
+
+
+.global-header__wrap {
+	@include position(relative, null);
+	width: 100%;
+	height: 70px;
+	
+	@include media-query(note-and-up){
+		height: 100px;
+	}
+}

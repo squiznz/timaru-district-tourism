@@ -23,8 +23,8 @@ a {
 }
 
 
-.page__content-wrap {
-	@include media-query(note-and-up){
+.page--inside__content-wrap {
+		@include media-query(note-and-up){
 		width: 66.8125em;
 		padding: 0 100px;
 		float: left;
@@ -221,7 +221,7 @@ ol {
 }
 
 .popular-categories {
-	margin: 50px 0;
+	margin: 50px 0 0 0;
 	@include clearfix();
 
 	h2 {
@@ -318,3 +318,109 @@ video {
 		}	
 	}
 }
+
+
+
+
+
+
+.activity-search {
+	background-color: #f7f7f7;
+	margin-bottom: 100px;
+
+	fieldset {
+		@include container(1345px);
+		display: block;
+		border: none;
+		padding: 45px 50px;
+	}
+
+	label {
+		color: $tdc-dark-navy;
+		font-weight: $bold;
+		@include font-size(21.42px);
+		width: 276px;
+		float: left;
+		line-height: 60px;
+	}
+
+	input, select {
+		display: block;
+		line-height: 1em;
+		padding: 15px 18px;
+		float: left;
+		border: 1px solid $tdc-grey;
+		width: 373px;
+		height: 60px;
+		margin-right: 38px;
+	}
+
+	button {
+		background-color: $tdc-purple;
+		color: $white;
+		padding: 15px 42px 15px 21px;
+		line-height: 1em;
+		border: none;
+		-webkit-appearance: none;
+		width: 146px;
+		@include font-size(22.76px);
+	}
+}
+
+
+.pagination {
+	list-style: none;
+	text-align: center;
+  @include font-size(18.74px);
+  line-height: 28.11px;
+
+	li {
+		display: inline-block;
+		text-indent: 0;
+		width: 30px;
+		height: 30px;
+		color: $tdc-light-blue;
+		font-weight: $semibold;
+
+		&:before {
+			display: none;
+		}	
+
+		a {
+			color: inherit;
+		}
+
+		&.pagination__active {
+			background-color: $tdc-light-blue;
+			color: $white;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			line-height: 30px;
+		}
+		
+		&.pagination__next {
+			padding-right: 1em;
+			background-repeat: no-repeat;
+			background-position: center right;
+			@include position(relative, null);
+			width: 80px;
+
+			&:after {
+				@include position(absolute, 0 0 0 null);
+				background-image: url('../img/arrow-right-blue.png');
+				content: "";
+				background-size: 100%;
+				width: 20px;
+				background-position: 0px 7px;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}
+
+
+// .page--landing__wrap, .page--topic__wrap {
+// 	@include container(1147px);
+// 	padding: 0 38px 100px 38px;
+// }

@@ -2,26 +2,29 @@
 
 .tertiary-nav {
 	@include font-size(12.99px);
-	height: 42px;
 	font-family: $font-primary;
 	font-weight: $semibold;
-	@include position(relative, null);
+	height: 42px;
+	background-color: $white;
 
-	@include media-query(desk){
+	@include media-query(note-and-up){
 		height: 55px;
-		@include container();
-		padding: 0 38px;
-		@include font-size(16px);
 	}
 
 	ul {
 		@include position(absolute, null);
 		right: 0;
 		width: 280px;
-		
+		color: $tdc-dark-navy;
+		height: 42px;
+
 		@include media-query(desk){
 			width: 100%;
+			height: 55px;
 			padding: 0 38px;
+			@include font-size(16px);
+			@include container();
+			@include position(static, null);
 		}
 
 		li {

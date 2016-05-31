@@ -43,7 +43,7 @@ function globalActions() {
   $('.utility-nav__item--primary-toggle a').click(function(e) {
     e.preventDefault();
     
-    $('.primary-nav').toggle().toggleClass('open');
+    $('.primary-nav ul').toggle().toggleClass('open');
     $('.utility-nav__item--primary-toggle').toggleClass('close');
   });
   

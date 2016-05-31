@@ -3,7 +3,25 @@
 ***/
 
 .utility-nav {
-	@include position(absolute, 80px 1.3125em null 1.3125em);
+	height: 70px;
+
+	@include media-query(note-and-up){
+		height: 100px;
+		@include container();
+		@include position(relative, 0 38px null 38px);
+		padding: 0 38px;
+	}
+
+	ul {
+		padding: 21px;
+
+		@include media-query(note-and-up){
+			width: 200px;
+			@include position(absolute, 0 null 0 0);
+			padding: 35px 0;
+			z-index: 99999;
+		}
+	}
 
 	li {
 		display: inline-block;
@@ -16,11 +34,6 @@
 
 	@include media-query(portable){
 		z-index: 99998;
-	}
-
-	@include media-query(note-and-up){
-		@include position(absolute, 86px 38px null 38px);
-		@include container();
 	}
 }
 

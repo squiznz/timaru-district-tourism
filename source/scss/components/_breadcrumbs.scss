@@ -3,9 +3,7 @@
 ***/
 
 .breadcrumbs {
-	width: 66.8125em;
-	padding: 0 100px 10px 100px;
-	float: left;
+	padding: 0 0 10px 0;
 	@include clearfix();
 	display: none;
 
@@ -34,5 +32,16 @@
 		&:first-child {
 			color: $tdc-dark-navy !important;
 		}
+	}
+
+	.page--inside & {
+		padding: 0 100px 10px 100px;
+		float: left;
+		width: 66.8125em;
+	}
+
+	.page--landing &, .page--topic & {
+		@include container(1069px);
+		margin-top: 100px;
 	}
 }

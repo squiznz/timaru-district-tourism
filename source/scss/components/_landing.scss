@@ -1,0 +1,49 @@
+/***
+*  Landing Template
+***/
+
+.landing-list {
+	@include container(1345px);
+
+	li {
+		@include span(4.133 of 12 no-gutters);
+		height: 830px;
+		margin-bottom: 38px;
+		
+		img {
+			height: 450px;
+		}
+
+		div {
+			border: 1px solid $tdc-grey;
+			border-top: none;
+			height: 380px;
+			@include position(relative, null);
+			padding: 65px 44px;
+		}
+
+		strong {
+			font-weight: $medium;
+			font-family: 'Pluto';
+			color: $tdc-dark-navy;
+			@include font-size(32px);
+			line-height: 73px;
+		}
+
+		p {
+			@include font-size(21.42px);
+			height: 155px;
+			line-height: 29px;
+		}
+
+		a {
+			color: $tdc-light-blue;
+			font-weight: $bold;
+			@include font-size(18.74px);
+		}
+	}
+}
+
+.page--landing__description {
+	@include font-size(21.42px);
+}
