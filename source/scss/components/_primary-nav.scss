@@ -46,6 +46,10 @@
 					padding: 1.3125em 1.3125em 0 1.3125em;
 				}
 			}
+		
+			.home & {
+				background-color: transparent;
+			}
 		}
 	}
 }

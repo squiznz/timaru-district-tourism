@@ -5,6 +5,7 @@
 .in-this-section {
 	@include clearfix();
 	width: 100%;
+	padding: 0 21px;
 	float: left;
 	
 	@include media-query(note-and-up){

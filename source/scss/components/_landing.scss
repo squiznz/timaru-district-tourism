@@ -45,5 +45,7 @@
 }
 
 .page--landing__description {
-	@include font-size(21.42px);
+	@include media-query(note-and-up){
+		@include font-size(21.42px);
+	}
 }

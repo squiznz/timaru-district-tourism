@@ -8,9 +8,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
+		@include clearfix();
 
     li {
     	text-indent: 0;
+
     	&:before {
 	    	display: none;
 	    	content: "";

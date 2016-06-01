@@ -9,10 +9,10 @@
 // Container
 .container {
 	@include container;
-	padding: 0 2%;
+	padding: 0 21px;
 
-    @include media-query(desk) {
-        padding: 0 1%;
+    @include media-query(note-and-up) {
+        padding: 0 38px;
     }
 }
 

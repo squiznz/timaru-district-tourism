@@ -6,10 +6,9 @@
 	background-size: cover;
 	color: $white;
 	width: 100%;
-	height: 34.6875em;
+	height: 15em;
 	background: none;
 	text-align: center;
-	padding-top: 7.25em;
 
 	@include media-query(note-and-up){
 		padding-top: 11.250em;
@@ -17,12 +16,14 @@
 	}
 
 	h1 {
-		color: $white;
+		color: inherit;
 		@include font-size(33px);
 		text-transform: uppercase;
 		display: block;
 		letter-spacing: 10px;
 		margin: 0 auto;
+		font-weight: inherit;
+		line-height: 56px;
 
 		@include media-query(note-and-up){
 			@include font-size(80.31px);
@@ -31,28 +32,15 @@
 	}
 }
 
-
-.feature-banner--no-image {
-	background: none;
-	background-color: $tdc-purple;
-	height: 16.25em;
-
-	@include media-query(note-and-up){
-		height: 34.75em;
-	}
-	
-	h1 {
-		line-height: 1em;
-	}
-}
-
-
-.feature-banner--image {
-	
+.feature-banner--whats-on {
+	color: $black;
+	font-weight: $bold;
+	background-color: $white;
 }
 
 
 .feature-banner--home {
+	padding-top: 7.25em;
 	background: linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)), url(../img/placeholder1.jpeg);
 	height: 22.313em;
 
@@ -62,6 +50,15 @@
 	}
 }
 
+
+.feature-banner--activity {
+	background-image: url(../img/placeholder1.jpeg);
+	background-size: 100%;
+
+	.feature-banner__wrap {
+		display: none;
+	}
+}
 
 
 

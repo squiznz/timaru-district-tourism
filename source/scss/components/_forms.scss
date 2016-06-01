@@ -42,3 +42,51 @@
 // .ui-selectmenu-button {
 // 	display: inline-block;
 // }
+
+
+
+
+
+
+
+
+form {
+	input, select {
+		padding: 5px 15px;
+		height: 40px;
+		width: 100%;
+		border: 1px solid $tdc-grey;
+		margin-bottom: 15px;
+
+		&::-webkit-input-placeholder {
+			color: $tdc-dark-grey;
+			opacity: 1;
+		}
+
+		&:-moz-placeholder {
+			color: $tdc-dark-grey;
+			opacity: 1;
+		}
+
+		&::-moz-placeholder {
+			color: $tdc-dark-grey;
+			opacity: 1;
+		}
+
+		&:-ms-input-placeholder {  
+			color: $tdc-dark-grey;
+			opacity: 1;
+		}
+	}
+
+	input[type="submit"], button[type="submit"] {
+		background-color: $tdc-purple;
+		color: $white;
+		border: none;
+		height: 40px;
+		line-height: auto;
+		letter-spacing: 0.02em;
+		padding: 0;
+		width: 100%;
+	}
+}

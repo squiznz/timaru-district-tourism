@@ -3,24 +3,27 @@
 ***/
 
 .utility-nav {
-	height: 70px;
+	// height: 70px;
+	padding: 23px 21px;
 
 	@include media-query(note-and-up){
 		height: 100px;
 		@include container();
-		@include position(relative, 0 38px null 38px);
+		@include position(relative, 0 0 null 0);
 		padding: 0 38px;
 	}
 
 	ul {
-		padding: 21px;
-
 		@include media-query(note-and-up){
 			width: 200px;
-			@include position(absolute, 0 null 0 0);
-			padding: 35px 0;
+			@include position(absolute, 0);
+			padding: 35px 38px;
 			z-index: 99999;
 		}
+	}
+
+	.home & {
+		@include position(absolute, 0 0 null 0);
 	}
 
 	li {
