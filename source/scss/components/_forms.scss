@@ -1,55 +1,5 @@
 // Forms
 
-
-// .ui-selectmenu-text, .ui-menu-item {
-// 	color: $tdc-green;
-// 	font-family: $font-secondary;
-// 	@include font-size(24px);
-// 	border: none;
-// 	cursor: pointer;
-// 	outline: none;
-// 	-webkit-appearance: none;
-//   background: transparent;
-//   list-style: none;
-//   @include position(relative, null);
-// 	padding-left: 8px;
-
-//  	@include media-query(note-and-up){
-// 		@include font-size(32.12px);
-// 	}
-
-// 	&:focus {
-// 		outline: none !important;
-// 		-webkit-appearance: none;
-// 	}
-
-// 	&:after {
-// 		content: "\f0d7";
-// 	  @include position(absolute, 5px -1em 0 null);
-// 		font-family: 'FontAwesome';
-// 		@include font-size(20px);
-// 	}
-// }
-
-// .ui-selectmenu-menu {
-// 	display: none;
-// }
-
-// .ui-selectmenu-menu.ui-selectmenu-open {
-// 	display: block;
-// }
-
-// .ui-selectmenu-button {
-// 	display: inline-block;
-// }
-
-
-
-
-
-
-
-
 form {
 	input, select {
 		padding: 5px 15px;
@@ -83,10 +33,60 @@ form {
 		background-color: $tdc-purple;
 		color: $white;
 		border: none;
-		height: 40px;
+		min-height: 40px;
 		line-height: auto;
 		letter-spacing: 0.02em;
 		padding: 0;
 		width: 100%;
+	}
+}
+
+
+.select-wrap {
+	@include position(relative, null);
+	width: auto;
+	@include clearfix();
+	float: left;
+	cursor: pointer;
+	
+	select {
+		color: $tdc-green;
+		font-family: $font-secondary;
+		float: left;
+		font-size: inherit;
+		line-height: 21px;
+		border: none;
+		outline: none;
+   	background: transparent;
+		-moz-appearance: none;
+		@include position(relative, null);
+		-webkit-appearance: textfield;
+		text-indent: 0.01px;
+		text-overflow: "";
+    appearance: none;
+    padding-right: 1em;
+
+    &:focus {
+    	outline: none; 
+    	border: none;
+    }
+	}
+
+	&:after {
+		@include position(absolute, 5% 0.5em 0 null);
+		content: "\f0d7";
+		color: $tdc-green;
+		cursor: pointer;
+		font-size: 70%;
+		pointer-events: none;
+		font-family: 'FontAwesome';
+
+		@include media-query(note-and-up){
+			@include position(absolute, 20% 0.5em 0 null);
+		}
+	}
+
+  &::-ms-expand {
+    display: none;
 	}
 }

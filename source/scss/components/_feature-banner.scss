@@ -3,7 +3,7 @@
 ***/
 
 .feature-banner {
-	background-size: cover;
+	background-size: cover !important;
 	color: $white;
 	width: 100%;
 	height: 15em;
@@ -61,7 +61,6 @@
 }
 
 
-
 	.feature-banner__wrap {
 		@include position(relative, null);
 		width: 100%;
@@ -71,21 +70,16 @@
 		@include media-query(note-and-up){
 			@include container(37em);
 			padding: 0 38px;
+			@include position(relative, null null null null);
 		}
-	}
 
-
-	.feature-banner__scroll-indicator {
-		@include position(absolute, null 50% 0 null);
-		display: block;
-		width: 2px;
-		background-color: $white;
-		height: 2.25em;
-
-
-		@include media-query(note-and-up){
-			height: 3.125em;
+		.feature-banner--home &:after {
+			content: "";
 			width: 3px;
+			height: 50px;
+			background-color: $white;
+			@include position(absolute, null 50% 0 null);
+
 		}
 	}
 
@@ -96,50 +90,6 @@
 		background-image: url(../img/placeholder1.jpeg);
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.feature-banner__wrap {
-	@include media-query(note-and-up){
-		@include container(1423px);
-		@include position(relative, null null null null);
-		height: 100%;
-		padding: 0 38px;
-	}
-}
 
 
 .feature-banner__info {
@@ -183,7 +133,6 @@
 		}	
 	}
 
-	
 	@include media-query(portable){
 		background-color: $tdc-navy;
 		@include position(absolute, null 0 0 0);

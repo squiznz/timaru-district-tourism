@@ -4,15 +4,18 @@
 
 .in-and-around {
 	@include clearfix();
-	height: 41.875em;
 
 	@include media-query(portable){
 		@include position(relative, null);
 	}
 
+	@include media-query(note-and-up){
+		height: 41.875em;
+	}
+
 	h2 {
-		background-color: $tdc-dark-navy;
-		padding: 15px 1.3125em;
+		background-color: $tdc-navy;
+		padding: 0 21px;
 		color: $white;
 		font-weight: $medium;
 
@@ -20,22 +23,51 @@
 			width: 100%;
 			@include position(absolute, 0 0 0 null);
 			height: 50px;
-			line-height: 28px;
+			line-height: 50px;
 			display: block;
 		}
 
 		@include media-query(note-and-up){
 			@include font-size(30.79px);
 			width: 17.538em;
+			line-height: 60px;
+			height: 60px;
 			@include position(relative, null);
 
 			&:after {
-				@include position(absolute, 18px 1.3125em 0px null);
+				@include position(absolute, 0 1.3125em 0px null);
 				content: "\f041";
 				font-family: 'FontAwesome';
-				line-height: 1.6em;
+				line-height: inherit;
 				@include font-size(24px);
 			}
+		}
+	}
+
+	.select-wrap {
+		width: 100%;
+		
+		@include media-query(note-and-up){
+			display: none;
+		}
+		
+		select {
+			width: 100%;
+			padding: 0 21px;
+			border-bottom: 1px solid $tdc-grey;
+			color: $tdc-dark-navy;
+			font-family: $font-primary;
+			@include font-size(18px);
+
+			option {
+				padding: 21px;
+			}
+		}
+
+		&:after {
+			right: 21px;
+			top: 21px;
+			color: $tdc-dark-navy;
 		}
 	}
 }	
@@ -49,23 +81,12 @@
 			height: 100%;
 			padding: 65px;
 		}
-
-		select {
-			width: 100%;
-			@include font-size(18px);
-			border: none;
-			color: $tdc-dark-navy;
-			padding: 15px 1.3125em;
-			border-bottom: 1px solid $tdc-grey;
-
-			@include media-query(note-and-up){
-				display: none;
-			}
-		}
 	}
 
 
 	.in-and-around__list {
+		float: left;
+
 		@include media-query(note-and-up){
 			width: 33.750em;
 			@include clearfix();
@@ -145,15 +166,15 @@
 
 	.in-and-around__map {
 		background-color: $black;
-
-		@include media-query(portable){
-			height: 21.250em;
-		}
+		height: 18.375em;
+		margin-top: 50px;
+		float: left;
+		@include clearfix();
+		width: 100%;
 
 		@include media-query(note-and-up){
 			height: 41.875em;
 			width: 65%;
-			float: left;
-			@include clearfix();
+			margin: 0;
 		}
 	}

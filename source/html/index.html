@@ -124,8 +124,6 @@
     <section class="feature-banner feature-banner--home">
       <div class="feature-banner__wrap">
         <h1><strong>Always</strong> more to uncover</h1>
-
-        <a class="feature-banner__scroll-indicator" href=""></a>
       </div>
     </section>
 
@@ -136,7 +134,7 @@
         <div class="location-banner__info">
           <span>Caroline Bay / Timaru, NZ</span>
           <p><strong>The Bay: </strong>things here</p>
-          <a class="location-banner__cta" href="#">
+          <a class="location-banner__cta cta-button" href="#">
             <span>Explore Caroline Bay</span>
           </a>
         </div>
@@ -146,45 +144,47 @@
     <section class="our-region">
       <div class="our-region__selector-wrap">
         <h2>Our Region: </h2>
-        <select class="our-region__selector">
-          <option value="">What to do</option>
-          <option value="">What to do</option>
-          <option value="">What to do</option>
-        </select>
+
+        <div class="select-wrap">
+          <select>
+            <option value="">What to do</option>
+            <option value="">What to do</option>
+            <option value="">What to do</option>
+          </select>
+        </div>
+
         <a href="" class="our-region__view-all hidden-portable">View all videos</a>
       </div>
-      <ul class="our-region__list bare-list slick-center">
-        <li class="our-region__list-item">
-          <div class="our-region__image-wrap">
-            <img src="../img/placeholder1.jpeg" alt="">
-          </div>
+      <ul class="our-region__list slick-center">
+        <li>
+          <img src="../img/placeholder1.jpeg" alt="">
           <div class="our-region__info-wrap">
-            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <strong>Lorem Ipsum</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
             <a href="">View all activities</a>
           </div>
         </li>
-        <li class="our-region__list-item">
-          <div class="our-region__image-wrap">
-            <img src="../img/placeholder1.jpeg" alt="">
-          </div>
+        <li>
+          <img src="../img/placeholder1.jpeg" alt="">
           <div class="our-region__info-wrap">
-            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <strong>Lorem Ipsum</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
             <a href="">View all activities</a>
           </div>
         </li>
-        <li class="our-region__list-item">
-          <div class="our-region__image-wrap">
-            <img src="../img/placeholder1.jpeg" alt="">
-          </div>
+        <li>
+          <img src="../img/placeholder1.jpeg" alt="">
           <div class="our-region__info-wrap">
-            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <strong>Lorem Ipsum</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
             <a href="">View all activities</a>
           </div>
         </li>
       </ul>
+      <div class="slider-tools">
+        <div class="slider-dots">
+        </div>
+      </div>
       <a href="" class="our-region__view-all visible-portable">View all videos</a>
 
     </section>
@@ -200,36 +200,35 @@
 
       <div class="three-best__selector-wrap">
         <h2>Three of the best: </h2>
-        <select class="three-best__selector">
-          <option value="">Places to get coffee</option>
-        </select>
+
+        <div class="select-wrap">
+          <select>
+            <option value="">Places to get coffee</option>
+            <option value="">Places to get coffee</option>
+            <option value="">Places to get coffee</option>
+          </select>
+        </div>
       </div>
 
-      <ul class="three-best__list bare-list slick-three-best">
-        <li class="three-best__list-item">
-          <div class="three-best__image-wrap">
-            <img src="../img/placeholder1.jpeg" alt="">
-          </div>
+      <ul class="three-best__list slick-three-best">
+        <li>
+          <img src="../img/placeholder1.jpeg" alt="">
           <div class="three-best__info-wrap">
-            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <strong>Lorem Ipsum</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
           </div>
         </li>
-        <li class="three-best__list-item">
-          <div class="three-best__image-wrap">
-            <img src="../img/placeholder1.jpeg" alt="">
-          </div>
+        <li>
+          <img src="../img/placeholder1.jpeg" alt="">
           <div class="three-best__info-wrap">
-            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <strong>Lorem Ipsum</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
           </div>
         </li>
-        <li class="three-best__list-item">
-          <div class="three-best__image-wrap">
-            <img src="../img/placeholder1.jpeg" alt="">
-          </div>
+        <li>
+          <img src="../img/placeholder1.jpeg" alt="">
           <div class="three-best__info-wrap">
-            <h3 class="tc-tdc-green">Lorem Ipsum</h3>
+            <strong>Lorem Ipsum</strong>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
           </div>
         </li>
@@ -241,7 +240,7 @@
         <div class="location-banner__info">
           <span>Caroline Bay / Timaru, NZ</span>
           <p><strong>The Bay: </strong>things here</p>
-          <a class="location-banner__cta" href="#">
+          <a class="location-banner__cta cta-button" href="#">
             <span>Explore Caroline Bay</span>
           </a>
         </div>
@@ -283,9 +282,11 @@
       <div id="map" class="in-and-around__map"></div>
       <div class="in-and-around__wrap">
         <h2>In and Around Timaru</h2>
-        <select class="in-and-around__selector">
-          <option value="">Select option</option>
-        </select>
+        <div class="select-wrap">
+          <select>
+            <option value="">Select option</option>
+          </select>
+        </div>
         <ul class="in-and-around__list bare-list">
             <li class="in-and-around__list__item">
               <strong>Local favourites</strong>
@@ -309,171 +310,85 @@
       </div>
     </section>
 
-    <section class="whats-on">
+    <section class="whats-on-slider">
       <h2>What's on</h2>
-      <ul class="events-listing bare-list slick-whats-on">
-        <li class="events-listing__events-list-item events-listing__events-list-item--first">
-          <div class="events-listing__event events-listing__event--featured">   
-           <div class="events-listing__event-wrap">
-              <a class="events-listing__topic" href="">
-                <span>Featured</span>    
-                <span>Health</span>
-              </a>
-              <h3>
-                <strong>Jun</strong> 03
-              </h3>
-            </div> 
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit sunt porro pariatur aspernatur distinctio architecto iste qui ducimus.</p>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
+      <ul class="listing--events">
+        <li>
+          <div class="listing--events__feature-wrap">
+            <span class="tc-tdc-green">Featured </span>
+            <span class="listing--events__topic">Local Festivals</span>
+            <h3><strong>Jun</strong> 11</h3>
           </div>
-
-          <div class="events-listing__event">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>
-            <h3>
-              <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
-          </div>
-
-          <div class="events-listing__event mr0">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>            <h3>
-            <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
-          </div>
-
-          <div class="events-listing__event">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>            <h3>
-            <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
-          </div>
-
-          <div class="events-listing__event mr0">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>
-            <h3>
-              <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
-          </div>
-
-        </li>
-        
-        <li class="events-listing__events-list-item">
-
-          <div class="events-listing__event">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>
-            <h3>
-              <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
-          </div>
-
-          <div class="events-listing__event mr0">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>
-            <h3>
-              <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
-          </div>
-
-          <div class="events-listing__event">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>
-            <h3>
-              <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
-          </div>
-
-          <div class="events-listing__event mr0">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>
-            <h3>
-              <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
-          </div>
-
-          <div class="events-listing__event">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>
-            <h3>
-              <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
-          </div>
-          
-          <div class="events-listing__event mr0">
-            <a class="events-listing__topic" href="">
-              <span>Health</span>
-            </a>
-            <h3>
-              <strong>Jun</strong> 03
-            </h3>
-            <span class="whats-on-location tc-tdc-green">Caroline Bay Soundshell</span>
-            <h4>Timaru Farmer's Market</h4>
-            <a class="events-listing__view" href="">
-              <span>View event</span>
-            </a>
+          <div class="listing--events__info-wrap">
+            <span>Timaru Rose Gardens</span>
+            <h4>Timaru Festival of Roses</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente animi, porro. Dicta excepturi optio consequatur non quaerat dolorem, alias eaque, ullam quibusdam mollitia recusandae accusamus ex quisquam sed ea impedit.</p>
+            <a href="" class="more">View event</a>
           </div>
         </li>
+        <li>
+          <span class="listing--events__topic">Local Festivals</span>
+          <h3><strong>Jun</strong> 11</h3>
+          <div class="listing--events__info-wrap">
+            <span>Timaru Rose Gardens</span>
+            <h4>Timaru Festival of Roses</h4>
+            <a href="" class="more">View event</a>
+          </div>
+        </li>
+        <li>
+          <span class="listing--events__topic">Local Festivals</span>
+          <h3><strong>Jun</strong> 11</h3>
+          <div class="listing--events__info-wrap">
+            <span>Timaru Rose Gardens</span>
+            <h4>Timaru Festival of Roses</h4>
+            <a href="" class="more">View event</a>
+          </div>
+        </li>
+        <li>
+          <span class="listing--events__topic">Local Festivals</span>
+          <h3><strong>Jun</strong> 11</h3>
+          <div class="listing--events__info-wrap">
+            <span>Timaru Rose Gardens</span>
+            <h4>Timaru Festival of Roses</h4>
+            <a href="" class="more">View event</a>
+          </div>
+        </li>
+        <li>
+          <span class="listing--events__topic">Local Festivals</span>
+          <h3><strong>Jun</strong> 11</h3>
+          <div class="listing--events__info-wrap">
+            <span>Timaru Rose Gardens</span>
+            <h4>Timaru Festival of Roses</h4>
+            <a href="" class="more">View event</a>
+          </div>
+        </li>
+        <li>
+          <span class="listing--events__topic">Local Festivals</span>
+          <h3><strong>Jun</strong> 11</h3>
+          <div class="listing--events__info-wrap">
+            <span>Timaru Rose Gardens</span>
+            <h4>Timaru Festival of Roses</h4>
+            <a href="" class="more">View event</a>
+          </div>
+        </li>
+        <li>
+          <span class="listing--events__topic">Local Festivals</span>
+          <h3><strong>Jun</strong> 11</h3>
+          <div class="listing--events__info-wrap">
+            <span>Timaru Rose Gardens</span>
+            <h4>Timaru Festival of Roses</h4>
+            <a href="" class="more">View event</a>
+          </div>
+        <li>
+          <span class="listing--events__topic">Local Festivals</span>
+          <h3><strong>Jun</strong> 11</h3>
+          <div class="listing--events__info-wrap">
+            <span>Timaru Rose Gardens</span>
+            <h4>Timaru Festival of Roses</h4>
+            <a href="" class="more">View event</a>
+          </div>
       </ul>
+
       <a href="" class="events-listing__view-all">View all events</a>
     </section>
 
@@ -551,15 +466,15 @@
 
   <script src="../js/min/core.min.js"></script>
   <script src="../js/min/main.min.js"></script>
-  <!--<script src='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
-  <script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
+   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoibGRvcmdhbiIsImEiOiJjaW9vMHNrd3gwMDJidjlrdnJ0YzZ5cjRsIn0.-kQIw3xb7fNgSVaOJ43O6A';
     
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v8'
     });
-  </script>-->
+  </script>
         
 </body>
 </html>

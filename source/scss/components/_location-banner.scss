@@ -37,14 +37,19 @@
 		padding: 28px 1.3125em;
 		@include font-size(22px);
 		font-family: $font-secondary;
+		@include clearfix();
+
+		p {
+			@include media-query(portable){
+				font-weight: $light;
+			}
+		}
 
 		> span {
 			color: $tdc-light-blue;
 			text-transform: uppercase;
 			font-family: $font-primary;
 			@include position(relative, null null null null);
-			@include clearfix();
-			float: left;
 			display: block;
 			width: 100%;
 			margin-bottom: 12px;
@@ -62,7 +67,7 @@
 			}
 
 			&:before {
-				@include position(absolute, 1px null null 0);
+				@include position(absolute, 2px null null 0);
 				content: "\f041";
 				font-family: 'FontAwesome';
 				line-height: 1.2em;
@@ -73,7 +78,7 @@
 			}	
 		}
 
-		
+
 		@include media-query(portable){
 			background-color: $tdc-navy;
 			@include position(absolute, null 0 0 0);

@@ -73,7 +73,8 @@ $(document).ready(function () {
     centerMode: true,
     centerPadding: '8.7%',
     draggable: false,
-    // fade: true,
+    appendArrows: $('.slider-tools'),
+    appendDots: $('.slider-dots'),
     responsive: [
       {
         breakpoint: 1024,
@@ -149,18 +150,20 @@ $(document).ready(function () {
     ]
   });
 
-  $('.slick-whats-on').slick({
-    dots: true,
-    infinite: true,
-    mobileFirst: true,
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    arrows: true,
-    fade: true,
+  // $('.whats-on-slider .listing--events').slick({
+  //   // // dots: true,
+  //   // infinite: true,
+  //   // mobileFirst: true,
+  //   // slidesToScroll: 5,
+  //   // slidesToShow: 5,
+  //   // rows: 3,
+  //   // slidesPerRow: 2,
+  //   // // variableWidth: true,
+  //   // // draggable: true,
+  //   // // arrows: true,
+  //   // // fade: true,
+  // });
 
-  });
-
-  // $( "select" ).selectmenu();
 
   detectScrolling();
   globalActions();

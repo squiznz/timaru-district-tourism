@@ -21,8 +21,9 @@
 			color: $white;
 			padding: 0 38px;
 			display: block;
+			z-index: 99997;
 			@include container();
-			@include position(absolute, 0 38px null 0);
+			@include position(absolute, 0 0 null 0);
 		}
 		
 		.site-search__form {

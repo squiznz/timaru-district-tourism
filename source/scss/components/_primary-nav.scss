@@ -9,10 +9,12 @@
 	ul {
 		@include container();
 		z-index: 99997;
-		@include position(absolute, 70px 0 null 0)
+		@include position(absolute, 0px 0 null 0);
+		padding-top: 70px;
 		border-bottom: 3px solid $black;
 		display: none;
-	
+		background-color: $tdc-purple;
+
 		@include media-query(note-and-up){
 			display: block !important;
 			border: none;
@@ -43,12 +45,14 @@
 				font-family: $font-primary;
 
 				@include media-query(note-and-up){
-					padding: 1.3125em 1.3125em 0 1.3125em;
+					padding: 1.4em 1.3125em 0 1.3125em;
 				}
 			}
 		
 			.home & {
-				background-color: transparent;
+				@include media-query(note-and-up){
+					background-color: transparent;
+				}
 			}
 		}
 	}

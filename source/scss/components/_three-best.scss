@@ -15,58 +15,55 @@
 		line-height: 27px;
 		@include clearfix();
 		padding: 0 45px 15px 45px;
+		@include position(relative, null);
+		@include font-size(23px);
+
+		@include media-query(note-and-up){
+			margin-bottom: 1.3125em;
+			padding: 0;
+			@include font-size(32.12px);
+		}
 
 		h2 {
 			float: left;
 			display: inline;
 			color: $tdc-dark-navy;
 			font-weight: $medium;
-		}
+			line-height: inherit;
+			font-size: inherit;
 
-		@include media-query(note-and-up){
-			margin-bottom: 1.3125em;
-			padding: 0;
-		
-			h2 {
-				@include font-size(32.12px);
+			@include media-query(note-and-up){
 				display: inline-block;
-			}
-		}
-
-		select {
-			color: $tdc-green;
-			font-family: $font-secondary;
-			float: left;
-			@include font-size(24px);
-			border: none;
-			outline: none;
-			-webkit-appearance: none;
-	   	background: transparent;
-			padding-left: 8px;
-
-	   	@include media-query(note-and-up){
-				@include font-size(32.12px);
-			}
-
-			&:focus {
-				outline: none;
+				line-height: 41px;
 			}
 		}
 	}
 
 
-	.three-best__list-item {		
-		@include media-query(portable){
-			margin: 0 15px 50px 15px;
-		}
+	.three-best__list {		
+		@extend .bare-list;
 
-		@include media-query(note-and-up){
- 			@include span(2.966 of 9 (gutter-override: 38px));			
-			height: 24.375em;
-			background-color: #f7f7f7;
+		li {
+			@include media-query(portable){
+				margin: 0 15px 50px 15px;
+			}
 
-			&:nth-child(3) {
-				@include last();
+			@include media-query(note-and-up){
+	 			@include span(2.966 of 9 (gutter-override: 38px));			
+				height: 24.375em;
+
+				&:nth-child(3) {
+					@include last();
+				}
+			}
+
+			img {
+				height: 11.75em;
+				width: 100%;
+				
+				@include media-query(note-and-up){
+					height: 13.438em;
+				}
 			}
 		}
 	}
@@ -76,16 +73,25 @@
 			padding: 1.3125em 0 1.3125em 0;
 			line-height: 1.3125em;
 			@include font-size(16px);
-
-			h3 {
+		
+			@include media-query(note-and-up){
+				padding: 28px 0;
+				@include font-size(21.42px);
+				line-height: 29.45px;
+			}
+		
+			strong {
+				color: $tdc-green;
 				@include font-size(18px);
 				font-weight: $bold;
+				display: block;
 				margin-bottom: 10px;
 				font-family: $font-primary;
 
 				@include media-query(note-and-up){
 					@include font-size(24.09px);
 					line-height: 28.11px;
+					padding: 0;
 				}
 			}
 
@@ -97,23 +103,7 @@
 				font-weight: $bold;
 			}
 
-			@include media-query(note-and-up){
-				padding: 38px 1.3125em;
-				@include font-size(21.42px);
-				line-height: 29.45px;
-			}
+
 		}
 
 
-		.three-best__image-wrap {
-			height: 11.75em;
-			
-			@include media-query(note-and-up){
-				height: 13.438em;
-			}
-
-			img {
-				width: 100%;
-				height: 100%;
-			}
-		}

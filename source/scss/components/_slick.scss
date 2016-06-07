@@ -67,6 +67,8 @@
 }
 
 .slick-slide {
+    @extend .bare-list;
+
     float: left;
     height: 100%;
     min-height: 1px;
@@ -106,14 +108,8 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
 @charset "UTF-8";
-
-// Default Variables
-
-// Slick icon entity codes outputs the following
-// "\2190" outputs ascii character "←"
-// "\2192" outputs ascii character "→"
-// "\2022" outputs ascii character "•"
 
 $slick-font-path: "../fonts/" !default;
 $slick-font-family: "slick" !default;
@@ -149,6 +145,7 @@ $slick-opacity-not-active: 1 !default;
 
 /* Slider */
 
+
 .slick-list {
     .slick-loading & {
         background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
@@ -179,13 +176,19 @@ $slick-opacity-not-active: 1 !default;
     cursor: pointer;
     background: transparent;
     color: transparent;
-    top: 50%;
+    bottom: 0 !important;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
     padding: 0;
     border: none;
     outline: none;
+    background-image: url('../img/arrow-black.png');
+    background-size: 100%;
+    // display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+
     &:hover, &:focus {
         outline: none;
         background: transparent;
@@ -213,17 +216,15 @@ $slick-opacity-not-active: 1 !default;
 }
 
 .slick-prev {
-    left: -25px;
+    left: 0;
     [dir="rtl"] & {
         left: auto;
         right: -25px;
     }
-    &:before {
-        content: $slick-prev-character;
-        [dir="rtl"] & {
-            content: $slick-next-character;
-        }
-    }
+    transform: rotate(180deg);
+    background-position: center -1px;
+
+    top: 5px;
 
     .slick-whats-on & {
       left: 0;
@@ -236,16 +237,12 @@ $slick-opacity-not-active: 1 !default;
 }
 
 .slick-next {
-    right: -25px;
+    right: 0;
+    bottom: 5px;
+
     [dir="rtl"] & {
         left: -25px;
         right: auto;
-    }
-    &:before {
-        content: $slick-next-character;
-        [dir="rtl"] & {
-            content: $slick-prev-character;
-        }
     }
 
     .slick-whats-on & {
@@ -258,8 +255,14 @@ $slick-opacity-not-active: 1 !default;
     }
 }
 
+.slick-active {
+  opacity: 1 !important;
+}
+
 /* Dots */
 .slick-dots {
+  @extend .bare-list;
+
     position: absolute;
     bottom: 0;
     list-style: none;
@@ -271,10 +274,10 @@ $slick-opacity-not-active: 1 !default;
     li {
         position: relative;
         display: inline-block;
-        height: 20px !important;
-        width: 20px !important;
-        margin: 0 5px;
-        padding: 0;
+        height: 22px !important;
+        width: 22px !important;
+        margin: 0 5px !important;
+        padding: 0 !important;
         cursor: pointer;
         outline: none;
 
@@ -326,4 +329,3 @@ $slick-opacity-not-active: 1 !default;
         }
     }
 }
-

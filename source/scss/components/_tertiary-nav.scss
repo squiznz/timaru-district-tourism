@@ -83,9 +83,13 @@
 	.tertiary-nav__item--visit {
 		font-weight: $bold;
 		text-align: right;
+		
+		@include media-query(lap-and-up){
+			width: 55.8%;
+		}
 
-		@include media-query(note-and-up){
-			margin-left: 900px;
+		@include media-query(desk){
+			width: 63.6%;
 		}
 	}
 
@@ -93,4 +97,4 @@
 	.tertiary-nav__item--tourism-statement {
 		line-height: 1.5em;
 		padding: 15px 20px 20px 0px;
-}
+	}
