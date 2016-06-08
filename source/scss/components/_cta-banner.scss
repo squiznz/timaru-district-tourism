@@ -20,9 +20,11 @@
 		font-family: $font-primary;
 		font-weight: $semibold;
 		@include position(relative, null);
+		display: inline-block;
 
 		@include media-query(note-and-up){
 			@include font-size(25px);
+			margin-top: 1em;
 		}
 
 		&:after {

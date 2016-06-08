@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>TDC - Landing</title>
+  <title>TDC - Home</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
@@ -13,7 +13,8 @@
   <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
-<body>
+<body class="landing">
+
   <!-- Begin Global Header -->
   <header class="global-header">
     
@@ -35,8 +36,8 @@
             </a>
           </li>
           <li class="tertiary-nav__item">
-            <a href="">
-              <img src="../img/tripadvisor-logo.png" alt="Tripadvisor">
+            <a href=""> 
+              <span class="visuallyhidden">Visit Tripadvisor's site</span>
             </a>
           </li>
         </ul>
@@ -92,22 +93,22 @@
         <nav id="primary-nav" class="primary-nav">
           <span class="visuallyhidden">Primary navigation</span>
           <ul class="bare-list">
-            <li class="primary-nav__item">
+            <li>
               <a href="inside.html">Explore</a>
             </li>
-            <li class="primary-nav__item">
+            <li>
               <a href="landing.html">Where to go</a>
             </li>
-            <li class="primary-nav__item">
+            <li>
               <a href="">Accommodation</a>
             </li>
-            <li class="primary-nav__item">
+            <li>
               <a href="whats-on.html">What's on</a>
             </li>
-            <li class="primary-nav__item">
+            <li>
               <a href="topic.html">Eat &amp; Drink</a>
             </li>
-            <li class="primary-nav__item">
+            <li>
               <a href="">Plan your trip</a>
             </li>
           </ul>
@@ -119,10 +120,14 @@
   <!-- End Global Header -->
   
   <!-- Begin Page Contents -->
-  <main id="page" class="page page--landing page--inside-image clearfix">
-    <section class="feature-banner feature-banner--inside-image">
+  <main id="page" class="page page--landing clearfix">
+    
+    <section class="feature-banner feature-banner--location">
       <div class="feature-banner__wrap">
-        <h1><strong>Always</strong> more to uncover</h1>
+        <div class="feature-banner__info">
+          <span>Caroline Bay / Timaru, NZ</span>
+          <p><strong>The Bay: </strong>things here</p>
+        </div>
       </div>
     </section>
 
@@ -143,7 +148,7 @@
       <p class="page--landing__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ipsam porro aut eum officia. Harum voluptates consectetur mollitia ut eius et dolorem numquam ex exercitationem. Reprehenderit, totam mollitia veritatis perspiciatis.</p>
     </div>
 
-    <form class="landing-search" action="">
+    <form class="activity-search" action="">
       <fieldset>
         <label for="">Search for an activity</label>
         <input type="text" placeholder="Keywords">
@@ -209,17 +214,6 @@
       </li>
     </ul>
 
-    <section class="location-banner location-banner--left">
-      <div class="location-banner__wrap">
-        <div class="location-banner__info">
-          <span>Caroline Bay / Timaru, NZ</span>
-          <p><strong>The Bay: </strong>things here</p>
-          <a class="location-banner__cta" href="#">
-            <span>Explore Caroline Bay</span>
-          </a>
-        </div>
-      </div>
-    </section>
 
     <section class="cta-banner cta-banner--green">
       <div class="cta-banner__wrap">
@@ -227,9 +221,10 @@
         <a href="">World Class in Timaru. Find out more</a>
       </div>
     </section>
+
   </main>
   <!-- End Page Contents -->
-    
+
   <!-- Begin Global Footer -->
   <footer class="global-footer">
     <div class="global-footer__wrap">
@@ -294,6 +289,15 @@
 
   <script src="../js/min/core.min.js"></script>
   <script src="../js/min/main.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
+   <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibGRvcmdhbiIsImEiOiJjaW9vMHNrd3gwMDJidjlrdnJ0YzZ5cjRsIn0.-kQIw3xb7fNgSVaOJ43O6A';
+    
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v8'
+    });
+  </script>
         
 </body>
 </html>

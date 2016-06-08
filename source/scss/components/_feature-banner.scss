@@ -9,10 +9,11 @@
 	height: 15em;
 	background: none;
 	text-align: center;
+	padding-top: 112px;
 
 	@include media-query(note-and-up){
-		padding-top: 11.250em;
-		height: 34.6875em;
+		height: 35.3175em;
+		padding-top: 155px;
 	}
 
 	h1 {
@@ -32,64 +33,89 @@
 	}
 }
 
-.feature-banner--whats-on {
-	color: $black;
-	font-weight: $bold;
-	background-color: $white;
-}
-
-
 .feature-banner--home {
-	padding-top: 7.25em;
 	background: linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)), url(../img/placeholder1.jpeg);
-	height: 22.313em;
+	height: 24.875em;
 
 	@include media-query(note-and-up){
-		padding-top: 11.250em;
-		height: 53.125em;
+		height: 56.4375em;
 	}
 }
 
 
-.feature-banner--activity {
+
+
+.feature-banner--location {
 	background-image: url(../img/placeholder1.jpeg);
 	background-size: 100%;
-
+	
 	.feature-banner__wrap {
-		display: none;
+		@include container();
+		text-align: left;
+	}
+
+	@include media-query(portable){
+		.feature-banner__wrap {
+			@include position(relative, null);
+		}
+
+		.feature-banner__info {
+			width: 35px;
+			height: 35px;
+			padding: 0;
+			border-radius: 50%;
+			line-height: 35px;
+			@include position(absolute, null 21px 21px 85%);
+
+			p, span {
+				text-indent: -99999px;
+				padding: 0;
+				margin: 0;
+
+				&:before {
+					text-indent: 0;
+					@include font-size(20px);
+					text-align: center;
+					right: 0;
+					top: 5px;
+				}
+			}
+		}
+	}
+
+	@include media-query(note-and-up){
+		.feature-banner__info {
+			@include position(absolute, null 38px 80px null);
+		}
 	}
 }
 
 
-	.feature-banner__wrap {
-		@include position(relative, null);
-		width: 100%;
-		height: 100%;
-		@include container(15.625em);
+.feature-banner__wrap {
+	@include position(relative, null);
+	width: 100%;
+	height: 100%;
+	@include container(15.625em);
+	padding-top: 3.25em;
+
+	@include media-query(note-and-up){
+		@include container(37em);
+		padding: 8.8125em 38px 0 38px;
+		@include position(relative, null null null null);
+	}
+
+	.feature-banner--home &:after {
+		content: "";
+		width: 3px;
+		height: 35px;
+		background-color: $white;
+		@include position(absolute, null 50% 0 null);
 
 		@include media-query(note-and-up){
-			@include container(37em);
-			padding: 0 38px;
-			@include position(relative, null null null null);
-		}
-
-		.feature-banner--home &:after {
-			content: "";
-			width: 3px;
 			height: 50px;
-			background-color: $white;
-			@include position(absolute, null 50% 0 null);
-
 		}
 	}
-
-
-
-
-	.feature-banner--image {
-		background-image: url(../img/placeholder1.jpeg);
-	}
-
+}
 
 
 .feature-banner__info {
@@ -150,3 +176,12 @@
 		font-weight: $ultrabold;
 	}
 }
+
+
+
+.feature-banner--whats-on {
+	color: $black;
+	font-weight: $bold;
+	background-color: $white;
+}
+

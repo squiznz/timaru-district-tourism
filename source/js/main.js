@@ -58,6 +58,16 @@ function globalActions() {
     
     $(this).next('ul').toggle();  
   });
+
+
+  $('.site-search input[type=search]').focus(function(e){
+    $(this).parent('fieldset').parent('form').parent('.site-search').addClass('site-search--expanded');
+  });
+
+  $('.site-search input[type=search]').focusout(function(e){
+    $(this).parent('fieldset').parent('form').parent('.site-search').blur().removeClass('site-search--expanded');
+  });
+
 }; // globalActions()
 
 

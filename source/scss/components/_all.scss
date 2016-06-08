@@ -33,6 +33,17 @@ a {
 }
 
 
+.page--inside__wrap {
+	@include container();
+	padding: 0 21px;
+	
+	@include media-query(note-and-up){
+		@include container(1700px);
+		padding: 90px 38px;
+		@include clearfix();
+	}
+}
+
 .subheading {
 	@include font-size(19px);
 	line-height: 26px;
@@ -464,15 +475,6 @@ video {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
 
 
 .filters {

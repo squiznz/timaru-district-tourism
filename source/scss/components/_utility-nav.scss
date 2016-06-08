@@ -3,28 +3,14 @@
 ***/
 
 .utility-nav {
-	// height: 70px;
-	padding: 23px 21px;
+	margin-top: 25px;
 
 	@include media-query(note-and-up){
 		height: 100px;
-		@include container();
-		@include position(relative, 0 0 null 0);
-		padding: 0 38px;
-	}
-
-	ul {
-		@include media-query(note-and-up){
-			width: 200px;
-			@include position(absolute, 0);
-			padding: 35px 38px;
-			z-index: 99999;
-		}
-	}
-
-	.home & {
-		@include position(absolute, 0 0 null 0);
-	}
+		width: 200px;
+		margin-top: 35px;
+		float: left;
+  }
 
 	li {
 		display: inline-block;
@@ -33,10 +19,6 @@
 		a {
 			color: inherit;
 		}
-	}
-
-	@include media-query(portable){
-		z-index: 99998;
 	}
 }
 
@@ -47,6 +29,10 @@
 			width: 7.563em;
 
 			@include media-query(note-and-up){
+				width: 7.688em;
+			}
+
+			@include media-query(desk){
 				width: 9.688em;
 			}
 		}

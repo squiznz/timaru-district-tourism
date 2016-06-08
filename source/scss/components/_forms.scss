@@ -41,6 +41,9 @@ form {
 	}
 }
 
+*:focus {
+  outline: none;
+}
 
 .select-wrap {
 	@include position(relative, null);

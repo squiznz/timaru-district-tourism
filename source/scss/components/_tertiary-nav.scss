@@ -6,51 +6,56 @@
 	font-weight: $semibold;
 	height: 42px;
 	background-color: $white;
+	@include position(relative, null);
 
 	@include media-query(note-and-up){
 		height: 55px;
 	}
 
 	ul {
-		@include position(absolute, null);
-		right: 0;
-		width: 280px;
+		@include position(absolute, null 0 null null);
+		width: 100%;
 		color: $tdc-dark-navy;
 		height: 42px;
+		text-align: right;
 
-		@include media-query(lap-and-up){
+		@include media-query(note-and-up){
 			@include font-size(14px);	
-			width: 100%;
-			padding: 0 38px;
+			padding: 0 21px;
 			height: 55px;
 			@include container();
 			line-height: 1.5em;
-			@include position(static, null);
+			@include position(relative, null);
 		}
+
 
 		@include media-query(desk){
 			@include font-size(16px);
+			padding: 0 38px;
 		}
+
 
 		li {
 			display: inline-block;
-			float: left;
-			height: 42px;
+			height: 100%;
 			border-right: 1px solid $tdc-grey;
 
 			@include media-query(note-and-up){
 				line-height: 1.5em;
-				height: 55px;
 			}
 
 			a {
 				color: $black;
-				padding: 13px 16px;
+				padding: 0 16px;
 				display: block;
+				height: 100%;
+				width: 100%;
+				line-height: 3.5em;
 				text-decoration: none;
 
 				@include media-query(note-and-up){
-					padding: 14px 21px;
+					padding: 0 21px;
+					line-height: 3.95em;
 				}
 			}
 			
@@ -64,15 +69,20 @@
 
 			&:last-of-type {
 				border-right: none;
-				width: 55px;
+				float: right;
+				height: 100%;
+				width: 50px;
+				background-image: url('../img/tripadvisor-logo.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 20px;
+			}
 
-				@include media-query(note-and-up){
-					width: auto;
-				}
+			&:first-of-type {
+				@include position(absolute, 0 null 0 21px);
 
-				img {
-					margin: 4px auto;
-					width: 80%;
+				@include media-query(desk){
+					@include position(absolute, 0 null 0 38px);
 				}
 			}
 		}
@@ -82,19 +92,9 @@
 
 	.tertiary-nav__item--visit {
 		font-weight: $bold;
-		text-align: right;
-		
-		@include media-query(lap-and-up){
-			width: 55.8%;
-		}
-
-		@include media-query(desk){
-			width: 63.6%;
-		}
 	}
 
 
 	.tertiary-nav__item--tourism-statement {
-		line-height: 1.5em;
 		padding: 15px 20px 20px 0px;
 	}

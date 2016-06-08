@@ -18,10 +18,13 @@
 		padding: 2.25em 1.3125em;
 		@include container();
 
-
 		@include media-query(note-and-up){
-			padding: 5.375em 2.375em;
+			padding: 5.375em 1.3125em;
 			@include position(relative, null);
+		}
+
+		@include media-query(desk){
+			padding: 5.375em 2.375em;
 		}
 	}
 
@@ -41,7 +44,7 @@
 		
 
 	.social-media-links {
-		float: left;
+		float: right;
 
 		@include media-query(note-and-up){
 			@include position(absolute, null 38px null null);
@@ -64,6 +67,7 @@
 
 
 	.footer-nav {
+		@extend .bare-list;
 		float: left;
 		margin-top: 1.3125em;
 
@@ -73,10 +77,10 @@
 		
 		li {
 			line-height: 29px;
+			@include font-size(15px);
 
 			@include media-query(portable){
 				@include span(1 of 2 float inside);
-				@include font-size(15px);
 
 				&:nth-child(odd) {
 					padding-left: 0;
@@ -91,6 +95,10 @@
 				display: inline-block;
 				line-height: 1em;
 				padding: 0 25px;
+				@include font-size(16px);
+			}
+	
+			@include media-query(desk){
 				@include font-size(20.38px);
 			}
 		}
@@ -105,14 +113,14 @@
 
 
 		.footer-utilities__list {
-			@include media-query(note-and-up){
+
+			@include media-query(desk){
 				@include container();
 				padding: 0 38px;
+				@include position(relative, null);
 			}
-		}	
 
-
-			.footer-utilities__list__item {
+			li {
 				display: inline-block;
 				border-right: 1px solid $tdc-navy;
 				@include font-size(12px);
@@ -132,10 +140,28 @@
 					font-weight: inherit;
 				}
 
-				&:last-child {
-					padding-right: 0;
+				&:nth-child(4) {
+
+					// @include media-query(note-and-up){
+					// 	@include position(absolute, 0 21px 0 null);
+					// }	
+
+					@include media-query(desk){
+						@include position(absolute, 0 200px 0 null);
+					}
+				}
+
+				&:nth-child(5) {
+
+					@include media-query(desk){
+						@include position(absolute, 0 38px 0 null);
+					}
 				}
 			}
+		}	
+
+
+
 
 
 			.footer-utilities__list__item--visit {
@@ -145,14 +171,6 @@
 			.footer-utilities__list__item--no-right-border {
 				border-right: none !important;
 			}
-
-			
-			.footer-utilities__list__item--separator {
-				@include media-query(note-and-up){
-					margin-right: 710px;
-				}
-			}
-
 
 			.footer-utilities__tourism-statement {
 				font-weight: $semibold !important;

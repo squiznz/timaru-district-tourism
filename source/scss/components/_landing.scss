@@ -4,22 +4,31 @@
 
 .landing-list {
 	@include container(1345px);
+	margin-top: 90px;
 
 	li {
-		@include span(4.133 of 12 no-gutters);
-		height: 830px;
-		margin-bottom: 38px;
+		@include span(1 of 1);
+		margin-bottom: 21px;
+		
+		@include media-query(note-and-up){
+			@include span(4.133 of 12 no-gutters);
+			margin-bottom: 38px;
+		}
 		
 		img {
-			height: 450px;
+			height: 30em;
 		}
 
 		div {
-			border: 1px solid $tdc-grey;
 			border-top: none;
 			height: 380px;
 			@include position(relative, null);
 			padding: 65px 44px;
+
+			@include media-query(note-and-up){
+				border: 1px solid $tdc-grey;
+				border-left: none;
+			}
 		}
 
 		strong {
@@ -41,6 +50,10 @@
 			font-weight: $bold;
 			@include font-size(18.74px);
 		}
+
+		&:nth-child(3n+1){
+			border-left: 1px solid $tdc-grey;
+		}
 	}
 }
 
@@ -48,4 +61,10 @@
 	@include media-query(note-and-up){
 		@include font-size(21.42px);
 	}
+}
+
+.page--landing__wrap {
+	@include container(71.6875em);
+	padding: 0 38px;
+	margin-bottom: 90px;
 }
