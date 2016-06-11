@@ -140,13 +140,22 @@
 					font-size: inherit;
 					font-weight: inherit;
 				}
+				
+				&:first-child {
+					font-weight: $semibold !important;
+
+					@include media-query(portable){
+						width: 100% !important;
+						border-bottom: 1px solid $tdc-navy;
+					}
+
+					@include media-query(note-and-up){
+						padding-left: 0px !important;
+					}
+				}
+
 
 				&:nth-child(4) {
-
-					// @include media-query(note-and-up){
-					// 	@include position(absolute, 0 21px 0 null);
-					// }	
-
 					@include media-query(desk){
 						@include position(absolute, 0 210px 0 null);
 					}
@@ -159,29 +168,4 @@
 					}
 				}
 			}
-		}	
-
-
-
-
-
-			.footer-utilities__list__item--visit {
-				font-weight: $bold;
-			}
-			
-			.footer-utilities__list__item--no-right-border {
-				border-right: none !important;
-			}
-
-			.footer-utilities__tourism-statement {
-				font-weight: $semibold !important;
-
-				@include media-query(portable){
-					width: 100% !important;
-					border-bottom: 1px solid $tdc-navy;
-				}
-
-				@include media-query(note-and-up){
-					padding-left: 0px !important;
-				}
-			}
+		}

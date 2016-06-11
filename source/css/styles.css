@@ -2730,6 +2730,23 @@ video {
   font-weight: inherit;
 }
 
+.footer-utilities__list li:first-child {
+  font-weight: 600 !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .footer-utilities__list li:first-child {
+    width: 100% !important;
+    border-bottom: 1px solid #001d41;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-utilities__list li:first-child {
+    padding-left: 0px !important;
+  }
+}
+
 @media screen and (min-width: 1281px) {
   .footer-utilities__list li:nth-child(4) {
     position: absolute;
@@ -2745,31 +2762,6 @@ video {
     top: 0;
     right: 38px;
     bottom: 0;
-  }
-}
-
-.footer-utilities__list__item--visit {
-  font-weight: 700;
-}
-
-.footer-utilities__list__item--no-right-border {
-  border-right: none !important;
-}
-
-.footer-utilities__tourism-statement {
-  font-weight: 600 !important;
-}
-
-@media screen and (max-width: 1023px) {
-  .footer-utilities__tourism-statement {
-    width: 100% !important;
-    border-bottom: 1px solid #001d41;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .footer-utilities__tourism-statement {
-    padding-left: 0px !important;
   }
 }
 
