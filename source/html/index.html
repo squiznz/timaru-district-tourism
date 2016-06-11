@@ -21,25 +21,11 @@
     <!-- Begin Tertiary Navigation -->
       <nav class="tertiary-nav">
         <span class="visuallyhidden">Tertiary navigation</span>
-        <ul class="bare-list">
-          <li class="tertiary-nav__item tertiary-nav__item--tourism-statement hidden-portable">
-            The official tourism website of the Timaru District
-          </li>
-          <li class="tertiary-nav__item tertiary-nav__item--visit">
-            <a href="">
-              Visit Timaru
-            </a>
-          </li>
-          <li class="tertiary-nav__item">
-            <a href="">
-              Live, Work, Play
-            </a>
-          </li>
-          <li class="tertiary-nav__item">
-            <a href=""> 
-              <span class="visuallyhidden">Visit Tripadvisor's site</span>
-            </a>
-          </li>
+        <ul>
+          <li>The official tourism website of the Timaru District</li>
+          <li class="text--bold"><a href="">Visit Timaru</a></li>
+          <li><a href="">Live, Work, Play</a></li>
+          <li><a href=""><span class="visuallyhidden">Visit Tripadvisor's site</span></a></li>
         </ul>
       </nav>
       <!-- End Tertiary Navigation -->
@@ -50,28 +36,26 @@
         <nav class="utility-nav">
           <span class="visuallyhidden">Utility navigation</span>
           <ul class="bare-list">
-            <li class="utility-nav__item utility-nav__item--logo">
+            <li class="utility-nav__item--logo">
               <a href="/">
                 <img src="../img/logo.png" alt="Timaru Tourism logo. ">
               </a>
             </li>
-            <li class="utility-nav__item utility-nav__item--primary-toggle">
+            <li class="utility-nav__item--primary-toggle">
               <a href="#primary-nav">
-                <hr>
-                <hr>
-                <hr>
+                <hr><hr><hr>
               </a>
               <span class="visuallyhidden">Skip to primary navigation. </span>
             </li>   
-            <li class="utility-nav__item utility-nav__item--search-toggle">
+            <li class="utility-nav__item--search-toggle">
               <a href="#search">
                 <i class="fa fa-search"></i>
                 <span class="hidden-portable">Search this site. </span>
               </a>
               <span class="visuallyhidden">Skip to search. </span>
             </li>
-            <li class="utility-nav__item visuallyhidden">
-              <a href="#page">Skip to content. </a>
+            <li class="visuallyhidden">
+              <a href="#content">Skip to content. </a>
             </li>
           </ul>
         </nav>
@@ -93,24 +77,12 @@
         <nav id="primary-nav" class="primary-nav">
           <span class="visuallyhidden">Primary navigation</span>
           <ul class="bare-list">
-            <li>
-              <a href="inside.html">Explore</a>
-            </li>
-            <li>
-              <a href="landing.html">Where to go</a>
-            </li>
-            <li>
-              <a href="">Accommodation</a>
-            </li>
-            <li>
-              <a href="whats-on.html">What's on</a>
-            </li>
-            <li>
-              <a href="topic.html">Eat &amp; Drink</a>
-            </li>
-            <li>
-              <a href="">Plan your trip</a>
-            </li>
+            <li><a href="inside.html">Explore</a></li>
+            <li><a href="landing.html">Where to go</a></li>
+            <li><a href="">Accommodation</a></li>
+            <li><a href="whats-on.html">What's on</a></li>
+            <li><a href="topic.html">Eat &amp; Drink</a></li>
+            <li><a href="">Plan your trip</a></li>
           </ul>
         </nav>
 
@@ -120,7 +92,7 @@
   <!-- End Global Header -->
   
   <!-- Begin Page Contents -->
-  <main id="page" class="page page--index clearfix">
+  <main id="content">
     <section class="feature-banner feature-banner--home">
       <div class="feature-banner__wrap">
         <h1><strong>Always</strong> more to uncover</h1>
@@ -141,7 +113,7 @@
       </div>
     </section>
 
-    <section class="our-region">
+    <section class="our-region slick-center">
       <div class="our-region__selector-wrap">
         <h2>Our Region: </h2>
 
@@ -155,7 +127,7 @@
 
         <a href="" class="our-region__view-all hidden-portable">View all videos</a>
       </div>
-      <ul class="our-region__list slick-center">
+      <ul class="our-region__list">
         <li>
           <img src="../img/placeholder1.jpeg" alt="">
           <div class="our-region__info-wrap">
@@ -288,19 +260,25 @@
           </select>
         </div>
         <ul class="in-and-around__list bare-list">
-            <li class="in-and-around__list__item">
+            <li>
               <strong>Local favourites</strong>
               <span>(9)</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               <i class="fa fa-heart"></i>
             </li> 
-            <li class="in-and-around__list__item">
+            <li>
               <strong>Local favourites</strong>
               <span>(6)</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               <i class="fa fa-heart"></i>
             </li>
-            <li class="in-and-around__list__item">
+            <li>
+              <strong>Local favourites</strong>
+              <span>(12)</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <i class="fa fa-heart"></i>
+            </li>
+            <li>
               <strong>Local favourites</strong>
               <span>(12)</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -313,7 +291,7 @@
     <section class="whats-on-slider">
       <h2>What's on</h2>
       <ul class="listing--events">
-        <li>
+        <li class="listing--events__feature">
           <div class="listing--events__feature-wrap">
             <span class="tc-tdc-green">Featured </span>
             <span class="listing--events__topic">Local Festivals</span>
@@ -379,6 +357,7 @@
             <h4>Timaru Festival of Roses</h4>
             <a href="" class="more">View event</a>
           </div>
+        </li>
         <li>
           <span class="listing--events__topic">Local Festivals</span>
           <h3><strong>Jun</strong> 11</h3>
@@ -387,9 +366,15 @@
             <h4>Timaru Festival of Roses</h4>
             <a href="" class="more">View event</a>
           </div>
-      </ul>
+        </li>
+     </ul>
 
-      <a href="" class="events-listing__view-all">View all events</a>
+      <div class="slider-tools">
+        <div class="slider-dots">
+        </div>
+      </div>
+
+      <a href="" class="whats-on-slider__view-all">View all events</a>
     </section>
 
     <section class="cta-banner cta-banner--green">
@@ -404,6 +389,8 @@
 
   <!-- Begin Global Footer -->
   <footer class="global-footer">
+
+    <!-- Begin Global Footer Wrap -->
     <div class="global-footer__wrap">
       <a href="/" class="global-footer__logo float--left">
         <img src="../img/logo.png" alt="Timaru Tourism Logo. ">
@@ -446,19 +433,21 @@
         </ul>
       </nav>
       <!-- End Footer Navigation -->
+
     </div>
-    
+    <!-- End Global Footer Wrap -->
+
+    <!-- Begin Footer Utilities -->
     <div class="footer-utilities">
-      <!-- Begin Footer Utilities -->
-      <ul class="footer-utilities__list bare-list">
-        <li class="footer-utilities__list__item footer-utilities__tourism-statement">The official Timaru Tourism website</li>
-        <li class="footer-utilities__list__item footer-utilities__list__item--visit"><a href="">Visit Timaru</a></li>
-        <li class="footer-utilities__list__item footer-utilities__list__item--no-right-border footer-utilities__list__item--separator"><a href="">Live, Work, Play</a></li>
-        <li class="footer-utilities__list__item hidden-portable">&copy; 2016 Timaru</li>
-        <li class="footer-utilities__list__item footer-utilities__list__item--no-right-border hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
+      <ul class="footer-utilities__list">
+        <li>The official Timaru Tourism website</li>
+        <li class="text--bold"><a href="">Visit Timaru</a></li>
+        <li class="no-border"><a href="">Live, Work, Play</a></li>
+        <li class="hidden-portable">&copy; 2016 Timaru</li>
+        <li class="no-border hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
       </ul>
-      <!-- End Footer Utilities -->
-   </div>
+    </div>
+    <!-- End Footer Utilities -->
 
   </footer>
   <!-- End Global Footer -->

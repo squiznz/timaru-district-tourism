@@ -12,7 +12,7 @@
 	padding-top: 112px;
 
 	@include media-query(note-and-up){
-		height: 35.3175em;
+		height: 44.875em;
 		padding-top: 155px;
 	}
 
@@ -84,6 +84,8 @@
 	}
 
 	@include media-query(note-and-up){
+		margin-bottom: 6.25em;
+		
 		.feature-banner__info {
 			@include position(absolute, null 38px 80px null);
 		}

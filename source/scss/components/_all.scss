@@ -2,14 +2,12 @@
 *   Components
 ***/
 
-.page {
+html {
 	font-family: $font-primary;
 }
 
-
-a {
-	color: #0093d0;
-	text-decoration: none;
+.page {
+	font-family: $font-primary;
 }
 
 
@@ -24,11 +22,14 @@ a {
 
 
 .page--inside__content-wrap {
-		@include media-query(note-and-up){
+	margin-bottom: 21px;
+
+	@include media-query(note-and-up){
 		width: 66.8125em;
 		padding: 0 100px;
 		float: left;
 		@include clearfix();
+		margin: 0;
 	}
 }
 
@@ -36,7 +37,7 @@ a {
 .page--inside__wrap {
 	@include container();
 	padding: 0 21px;
-	
+
 	@include media-query(note-and-up){
 		@include container(1700px);
 		padding: 90px 38px;
@@ -65,33 +66,37 @@ video {
 
 .cta-button {
 	display: block;
-	padding: 15px;
 	text-transform: uppercase;
 	padding-right: 1em;
 	letter-spacing: 0.01em;
-	height: 60px;
+	height: 45px;
 	text-indent: -1em;
+	padding: 10px;
 	@include position(relative, null);
 
 	@include media-query(note-and-up){
-		text-indent: 0;
+		padding: 15px;
+		height: 60px;
+		text-align: left;
 	}
 
 	&:after {
 		font-family: 'FontAwesome';
 		content: "";
-		width: 60px;
-		height: 60px;
 		background-repeat: no-repeat;
 		background-size: 15px;
 		background-image: url('../img/arrow-right-white.png');
-		background-position: center 19px;
+		background-position: center;
+		float: right;
+		height: 45px;
+		width: 20px;
 		@include position(absolute, 0 30px 0 null);
 
 		@include media-query(note-and-up){
-			@include position(absolute, 0 0 0 null);
+			@include position(absolute, 0 10px 0 null);
 			background-size: 21px;
-			background-position: center 23px;
+			height: 60px;
+			background-position: 70% 23px;
 		}
 	}
 }
@@ -149,42 +154,68 @@ figure {
 
 	&.featured-activity {
 		figcaption {
-			padding: 70px 38px;
 			width: 100%;
+			padding: 30px 21px;
 			@include position(static, null);
 			
+			@include media-query(note-and-up){
+				padding: 70px 38px;
+			}
+
 			strong {
 				line-height: 65px;
 			}
 
 			p, a {
-				@include font-size(21.42px);
+				@include font-size(16px);
 				font-family: $font-primary;
 				font-weight: $normal;
 				line-height: 29px;
+
+				@include media-query(note-and-up){
+					@include font-size(21.42px);
+				}
 			}
 			
 			a {
 				font-weight: $bold;
+				color: $tdc-light-blue;
 				margin-top: 21px;
+
+				&:after {
+					bottom: 0;
+				}
 			}
 
 			ul {
-				margin-bottom: 20px;
 
+				@include media-query(note-and-up){
+					margin-bottom: 20px;
+				}
+				
 				li {
 					background-color: $white;
-					width: 44px;
-					height: 44px;
+					width: 30px;
+					height: 30px;
 					border-radius: 50%;
+					line-height: 30px;
 					display: inline-block;
-					line-height: 44px;
 					text-align: center;
 
+					@include media-query(note-and-up){
+						width: 44px;
+						height: 44px;
+						line-height: 44px;
+					}
+					
 					i {
 						color: $tdc-navy;
 						line-height: inherit;
-						@include font-size(21px);
+						@include font-size(16px);
+
+						@include media-query(note-and-up){
+							@include font-size(21px);
+						}
 					}
 				}
 			}
@@ -244,7 +275,7 @@ ol {
 }
 
 .popular-categories {
-	margin: 50px 0 0 0;
+	margin: 50px 0;
 	@include clearfix();
 
 	h2 {

@@ -7,6 +7,7 @@ form {
 		width: 100%;
 		border: 1px solid $tdc-grey;
 		margin-bottom: 15px;
+		@include font-size(16px);
 
 		&::-webkit-input-placeholder {
 			color: $tdc-dark-grey;

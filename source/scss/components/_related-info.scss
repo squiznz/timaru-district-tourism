@@ -3,19 +3,22 @@
 ***/
 
 .related-info {
-	
+	margin: 21px 0;
+	float: left;
+
 	@include media-query(note-and-up){
 		width: 14.875em;
-		padding: 45px 0;
 		float: right;
+		margin: 0;
 	}
 
 	h2 {
-		color: $tdc-mid-grey;
+		color: $tdc-dark-grey;
 		text-transform: uppercase;
 		border-bottom: 1px dotted $tdc-mid-grey;
 		font-family: $font-primary;
 		@include font-size(12px);
+		padding-bottom: 15px;
 
 		@include media-query(note-and-up){
 			padding-bottom: 21px;
@@ -26,11 +29,13 @@
 
 	ul {
 		@include font-size(15px);
-		margin: 8px 0 50px 0;
 		float: left;
+		width: 100%;
+		margin: 21px 0 21px 0;
 
 		@include media-query(note-and-up){
 			@include font-size(20.08px);
+			margin: 21px 0 50px 0;
 		}
 		
 		a {
@@ -55,14 +60,24 @@
 		
 		strong {
 			font-weight: $bold;
-			@include font-size(24.09px);
 			margin-bottom: 8px;
 			display: block;
+			@include font-size(18px);
+
+			@include media-query(note-and-up){
+				@include font-size(24.09px);
+			}
 		}
 
 		.cta-button {
 			color: $white;
-			margin-top: 40px;
+			text-align: center;
+			text-indent: -20px;
+			margin-top: 21px;
+
+			@include media-query(note-and-up){
+				margin-top: 40px;
+			}
 		}
 	}
 

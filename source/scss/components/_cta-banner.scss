@@ -24,7 +24,7 @@
 
 		@include media-query(note-and-up){
 			@include font-size(25px);
-			margin-top: 1em;
+			margin-top: 0.5em;
 		}
 
 		&:after {
@@ -70,7 +70,7 @@
 
 	@include media-query(note-and-up){
 		@include container(58.125em);
-		padding: 140px 0 90px 0;
+		padding: 120px 0 90px 0;
 		vertical-align: center;
 	}
 }

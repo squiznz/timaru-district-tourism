@@ -3,47 +3,42 @@
 ***/
 
 .whats-on-slider {
-	padding: 0 21px;
+	padding: 60px 21px;
 
 	@include media-query(note-and-up){
-		@include container();
-		padding: 0 38px;
-	}
-
-	h2 {
-		color: $tdc-dark-navy;
+		padding: 80px 0;
+		@include position(relative, null);
 	}
 	
+	h2 {
+		color: $tdc-dark-navy;
+		@include font-size(22.5px);
+
+		@include media-query(note-and-up){
+			padding: 0 38px;
+			@include container(1700px);
+		}
+	}
+
 	.listing--events {
-		overflow: hidden;
-		height: 440px;
-		display: block !important;
-
 		li {
-			float: left;
-			@include clearfix();
-			width: 370px;
-			margin-right: 38px !important; 
-
-			&:first-of-type {
-				width: 790px;
-			}
-
-			&:nth-child(2){
-				margin-right: 38px;
-			}
-
-			&:nth-child(3n+3),&:nth-child(3){
-				margin-right: 0 !important;
-			}
-
-			&:nth-child(2n+3){
-				margin-right: 38px;
+			@include media-query(portable){
+				flex-basis: 46%;
+				max-width: 46%;
 			}
 		}
-	}	
+	}
+
 }
-			
+
+
+.whats-on-slider__view-all {
+	@include media-query(note-and-up){
+		@include font-size(19px);
+		@include position(absolute, 115px 38px null null);
+	}
+}
+
 
 .whats-on {
 	background-color: #f7f7f7;
@@ -51,8 +46,10 @@
 
 
 	.whats-on__wrap {
+		padding: 0 21px;
+
 		@include media-query(note-and-up){
-			@include container(1423px);
+			@include container(1461px);
 		}
 	}
 
@@ -60,9 +57,13 @@
 		.whats-on__search {
 			border-bottom: 1px solid $tdc-grey;
 			@include clearfix();
-			padding: 62px 0;
+			padding: 62px 21px;
+
 
 			@include media-query(note-and-up){
+				@include container(1423px);
+				padding: 62px 19px;
+
 				select {
 					width: 376px !important;
 					margin-right: 38px;	

@@ -1,6 +1,7 @@
-
+//Tertiary Nav
 
 .tertiary-nav {
+	@extend .bare-list;
 	@include font-size(12.99px);
 	font-family: $font-primary;
 	font-weight: $semibold;
@@ -10,6 +11,7 @@
 
 	@include media-query(note-and-up){
 		height: 55px;
+		@include font-size(16px);	
 	}
 
 	ul {
@@ -19,45 +21,31 @@
 		height: 42px;
 		text-align: right;
 
-		@include media-query(note-and-up){
-			@include font-size(14px);	
-			padding: 0 21px;
-			height: 55px;
+		@include media-query(desk){
+			padding: 0 38px;
 			@include container();
-			line-height: 1.5em;
 			@include position(relative, null);
 		}
 
-
-		@include media-query(desk){
-			@include font-size(16px);
-			padding: 0 38px;
-		}
-
-
 		li {
 			display: inline-block;
-			height: 100%;
 			border-right: 1px solid $tdc-grey;
-
-			@include media-query(note-and-up){
-				line-height: 1.5em;
-			}
 
 			a {
 				color: $black;
 				padding: 0 16px;
 				display: block;
-				height: 100%;
+				height: 42px;
 				width: 100%;
-				line-height: 3.5em;
+				line-height: 3.3em;
 				text-decoration: none;
 
 				@include media-query(note-and-up){
 					padding: 0 21px;
-					line-height: 3.95em;
+					height: 55px;
+					line-height: 3.4em;
 				}
-			}
+			}			
 			
 			&:nth-child(3) {
 				width: 122px;
@@ -80,21 +68,14 @@
 
 			&:first-of-type {
 				@include position(absolute, 0 null 0 21px);
+				padding: 15px 20px 20px 0px;
+				display: none;
 
-				@include media-query(desk){
+				@include media-query(note-and-up){
 					@include position(absolute, 0 null 0 38px);
+					display: inline-block;
 				}
 			}
 		}
 	}
 }
-
-
-	.tertiary-nav__item--visit {
-		font-weight: $bold;
-	}
-
-
-	.tertiary-nav__item--tourism-statement {
-		padding: 15px 20px 20px 0px;
-	}

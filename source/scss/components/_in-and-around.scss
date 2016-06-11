@@ -10,7 +10,7 @@
 	}
 
 	@include media-query(note-and-up){
-		height: 41.875em;
+		height: 750px;
 	}
 
 	h2 {
@@ -103,8 +103,10 @@
 			@include media-query(note-and-up){
 				background-color: $white;
 				width: 30em;
+							@include position(relative, null);
+
 				height: auto;
-				padding: 1.3125em 100px 1.3125em 1.3125em;
+				padding: 21px 100px 21px 21px;
 			}
 
 			span {
@@ -152,6 +154,16 @@
 
 				@include media-query(note-and-up){
 					background-color: #f7f7f7;
+
+					&:after {
+						content: "";
+						@include position(absolute, 45% null null -10px);
+					  width: 0; 
+					  height: 0; 
+					  border-top: 10px solid transparent;
+					  border-bottom: 10px solid transparent; 
+					  border-right: 10px solid #f7f7f7; 
+					}
 				}
 
 				@include media-query(portable){
@@ -173,7 +185,7 @@
 		width: 100%;
 
 		@include media-query(note-and-up){
-			height: 41.875em;
+			height: 100%;
 			width: 65%;
 			margin: 0;
 		}

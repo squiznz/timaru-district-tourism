@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>TDC - Home</title>
+  <title>TDC - Topic</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
-<body class="topic">
+<body class="landing">
 
   <!-- Begin Global Header -->
   <header class="global-header">
@@ -21,25 +21,11 @@
     <!-- Begin Tertiary Navigation -->
       <nav class="tertiary-nav">
         <span class="visuallyhidden">Tertiary navigation</span>
-        <ul class="bare-list">
-          <li class="tertiary-nav__item tertiary-nav__item--tourism-statement hidden-portable">
-            The official tourism website of the Timaru District
-          </li>
-          <li class="tertiary-nav__item tertiary-nav__item--visit">
-            <a href="">
-              Visit Timaru
-            </a>
-          </li>
-          <li class="tertiary-nav__item">
-            <a href="">
-              Live, Work, Play
-            </a>
-          </li>
-          <li class="tertiary-nav__item">
-            <a href=""> 
-              <span class="visuallyhidden">Visit Tripadvisor's site</span>
-            </a>
-          </li>
+        <ul>
+          <li>The official tourism website of the Timaru District</li>
+          <li class="text--bold"><a href="">Visit Timaru</a></li>
+          <li><a href="">Live, Work, Play</a></li>
+          <li><a href=""><span class="visuallyhidden">Visit Tripadvisor's site</span></a></li>
         </ul>
       </nav>
       <!-- End Tertiary Navigation -->
@@ -50,28 +36,26 @@
         <nav class="utility-nav">
           <span class="visuallyhidden">Utility navigation</span>
           <ul class="bare-list">
-            <li class="utility-nav__item utility-nav__item--logo">
+            <li class="utility-nav__item--logo">
               <a href="/">
                 <img src="../img/logo.png" alt="Timaru Tourism logo. ">
               </a>
             </li>
-            <li class="utility-nav__item utility-nav__item--primary-toggle">
+            <li class="utility-nav__item--primary-toggle">
               <a href="#primary-nav">
-                <hr>
-                <hr>
-                <hr>
+                <hr><hr><hr>
               </a>
               <span class="visuallyhidden">Skip to primary navigation. </span>
             </li>   
-            <li class="utility-nav__item utility-nav__item--search-toggle">
+            <li class="utility-nav__item--search-toggle">
               <a href="#search">
                 <i class="fa fa-search"></i>
                 <span class="hidden-portable">Search this site. </span>
               </a>
               <span class="visuallyhidden">Skip to search. </span>
             </li>
-            <li class="utility-nav__item visuallyhidden">
-              <a href="#page">Skip to content. </a>
+            <li class="visuallyhidden">
+              <a href="#content">Skip to content. </a>
             </li>
           </ul>
         </nav>
@@ -93,24 +77,12 @@
         <nav id="primary-nav" class="primary-nav">
           <span class="visuallyhidden">Primary navigation</span>
           <ul class="bare-list">
-            <li>
-              <a href="inside.html">Explore</a>
-            </li>
-            <li>
-              <a href="landing.html">Where to go</a>
-            </li>
-            <li>
-              <a href="">Accommodation</a>
-            </li>
-            <li>
-              <a href="whats-on.html">What's on</a>
-            </li>
-            <li>
-              <a href="topic.html">Eat &amp; Drink</a>
-            </li>
-            <li>
-              <a href="">Plan your trip</a>
-            </li>
+            <li><a href="inside.html">Explore</a></li>
+            <li><a href="landing.html">Where to go</a></li>
+            <li><a href="">Accommodation</a></li>
+            <li><a href="whats-on.html">What's on</a></li>
+            <li><a href="topic.html">Eat &amp; Drink</a></li>
+            <li><a href="">Plan your trip</a></li>
           </ul>
         </nav>
 
@@ -120,7 +92,7 @@
   <!-- End Global Header -->
   
   <!-- Begin Page Contents -->
-  <main id="page" class="page page--topic clearfix">
+  <main id="content" class="page page--topic">
     
     <section class="feature-banner feature-banner--location">
       <div class="feature-banner__wrap">
@@ -380,11 +352,14 @@
       </div>
     </section>
 
+
   </main>
   <!-- End Page Contents -->
 
   <!-- Begin Global Footer -->
   <footer class="global-footer">
+
+    <!-- Begin Global Footer Wrap -->
     <div class="global-footer__wrap">
       <a href="/" class="global-footer__logo float--left">
         <img src="../img/logo.png" alt="Timaru Tourism Logo. ">
@@ -427,19 +402,21 @@
         </ul>
       </nav>
       <!-- End Footer Navigation -->
+
     </div>
-    
+    <!-- End Global Footer Wrap -->
+
+    <!-- Begin Footer Utilities -->
     <div class="footer-utilities">
-      <!-- Begin Footer Utilities -->
-      <ul class="footer-utilities__list bare-list">
-        <li class="footer-utilities__list__item footer-utilities__tourism-statement">The official Timaru Tourism website</li>
-        <li class="footer-utilities__list__item footer-utilities__list__item--visit"><a href="">Visit Timaru</a></li>
-        <li class="footer-utilities__list__item footer-utilities__list__item--no-right-border footer-utilities__list__item--separator"><a href="">Live, Work, Play</a></li>
-        <li class="footer-utilities__list__item hidden-portable">&copy; 2016 Timaru</li>
-        <li class="footer-utilities__list__item footer-utilities__list__item--no-right-border hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
+      <ul class="footer-utilities__list">
+        <li>The official Timaru Tourism website</li>
+        <li class="text--bold"><a href="">Visit Timaru</a></li>
+        <li class="no-border"><a href="">Live, Work, Play</a></li>
+        <li class="hidden-portable">&copy; 2016 Timaru</li>
+        <li class="no-border hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
       </ul>
-      <!-- End Footer Utilities -->
-   </div>
+    </div>
+    <!-- End Footer Utilities -->
 
   </footer>
   <!-- End Global Footer -->

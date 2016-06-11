@@ -40,6 +40,7 @@
 		display: none;
 		width: 100%;
 		@include position(absolute, 0 0 null 0);
+		z-index: 99999;
 
 		@include media-query(note-and-up){
 			color: $white;
@@ -71,13 +72,8 @@
 				width: 160px;
 				background-color: transparent;
 				padding: 30px 0 0 0;
-
-				// &.expanded {
-				// 	width: 300px;
-				// }
 			}
 		}
-
 
 		input[type="search"] {
 			background-color: $tdc-navy;
@@ -163,7 +159,7 @@
 				@include font-size(20px);
 				width: 30px;
 				float: right;
-				padding-top: 4px;
+				margin-top: -6px;
 			}
 		}
 	}

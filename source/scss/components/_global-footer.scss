@@ -113,6 +113,7 @@
 
 
 		.footer-utilities__list {
+			@extend .bare-list;
 
 			@include media-query(desk){
 				@include container();
@@ -147,7 +148,7 @@
 					// }	
 
 					@include media-query(desk){
-						@include position(absolute, 0 200px 0 null);
+						@include position(absolute, 0 210px 0 null);
 					}
 				}
 

@@ -5,33 +5,37 @@
 .primary-nav {
 	width: 100%;
 	background-color: $tdc-purple;
+	display: none;
 	
+	@include media-query(note-and-up){
+		display: block;
+	}
+
 	ul {
 		@extend .bare-list;
-
 		@include container();
 		z-index: 99997;
 		@include position(absolute, 0px 0 null 0);
 		padding-top: 70px;
 		border-bottom: 3px solid $black;
-		display: none;
+		background-color: $tdc-purple;
 
 		@include media-query(note-and-up){
-			display: block !important;
 			border: none;
-			@include position(absolute, 0 240px 0 240px);
+			@include position(absolute, 0 240px 0 250px);
 			padding: 0;
+			background-color: transparent;
 		}
 
 		li {
 			color: $white;
 			display: block;
 			border-bottom: 1px solid $black;
-			border: none;
 
 			@include media-query(note-and-up){
 				display: inline-block;
 				padding: 0;
+				border: none;
 			}
 
 			a {
@@ -43,24 +47,16 @@
 				text-decoration: none;
 				font-family: $font-primary;
 
-				@include media-query(note-and-up){
-					line-height: 28px;
-					@include font-size(16px);
-					padding: 35px 0.8em 0 0.8em;
-				}
-
 				@include media-query(desk){
-					line-height: 75px;
-					padding: 16px 1.3125em;
-					@include font-size(19px);
+					line-height: 65px;
+					padding: 16px 24px;
+					@include font-size(22.75px);
 				}
 			}
-		
-			.home & {
-				@include media-query(note-and-up){
-					background-color: transparent;
-				}
-			}
+		}
+
+		&.open {
+			display: block;
 		}
 	}
 }

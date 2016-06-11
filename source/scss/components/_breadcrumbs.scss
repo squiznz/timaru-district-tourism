@@ -7,6 +7,9 @@
 	padding: 0 0 10px 0;
 	@include clearfix();
 	display: none;
+	height: 2em;
+	// float: left;
+	margin-bottom: 1em;
 
 	@include media-query(lap-and-up){
 		display: block;
@@ -35,14 +38,11 @@
 		}
 	}
 
-	.page--inside & {
-		padding: 0 100px 10px 100px;
-		float: left;
-		width: 66.8125em;
-	}
+	// .page & {
+	// 	@include container(66.8125em);
+	// }
 
-	.page--landing &, .page--topic & {
-		@include container(1069px);
-		margin-top: 100px;
-	}
+	// .inside & {
+	// 	padding-left: 100px;
+	// }
 }

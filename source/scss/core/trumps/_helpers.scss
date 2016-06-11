@@ -40,9 +40,24 @@
 .text--right    { text-align: right  !important; }
 
 
+// Text weightings
+.text--bold     { font-weight: $bold       !important; }
+.text--semibold { font-weight: $semibold   !important; }
+.text--normal   { font-weight: $normal     !important; }
+.text--medium   { font-weight: $medium     !important; }
+.text--light    { font-weight: $light      !important; }
+
+
 // Text transforms
-.text--uppercase  { text-transform: uppercase; }
-.text--capitalize  { text-transform: capitalize; }
+.text--uppercase   { text-transform: uppercase;    }
+.text--capitalize  { text-transform: capitalize;  }
+
+
+//Border management 
+.border--none     { border: none !important;          }
+.border--green    { border: 1px solid $tdc-green;     }
+.border--grey     { border: 1px solid $tdc-grey;      }
+.border--featured { border: 4px solid $tdc-green;     }
 
 
 // Mouse managment.

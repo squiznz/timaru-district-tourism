@@ -6,7 +6,6 @@
 	padding: 50px 0 34px 0;
 	
 	@include media-query(note-and-up){
-		height: 38.250em;
 		padding: 90px 0;
 		margin-bottom: 0;
 		@include position(relative, 0 0 0 null);
@@ -16,7 +15,7 @@
 
 	.our-region__selector-wrap {
 		line-height: 27px;
-		padding: 0 45px 15px 45px;
+		padding: 0 21px 15px 21px;
 		@include clearfix();
 		@include font-size(23px);
 
@@ -49,13 +48,14 @@
 		@extend .bare-list;
 
 		li {
-			margin: 0 15px 21px 15px;
+			margin: 0 11px 0 11px;
 			height: 21.563em;
 			background-color: #f7f7f7;
 
 			@include media-query(note-and-up){
 				width: 653px !important;
 				height: 20.5em;
+				margin: 0 38px 0 0;
 
 				img {
 					float: left;
@@ -132,9 +132,3 @@
 			}
 		}
 
-
-		.slider-tools {
-			@include position(relative, null);
-			@include container();
-			height: 40px;
-		}
