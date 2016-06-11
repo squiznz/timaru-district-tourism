@@ -102,8 +102,6 @@ ul.listing--events {
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 
-	
-
 	* {
 		color: $tdc-dark-navy;
 		font-family: $font-primary;
@@ -134,12 +132,6 @@ ul.listing--events {
 			}
 		}
 
-		.home & {
-			@include media-query(note-and-up){
-				min-width: 376px;
-			}
-		}
-
 		.inside & {
 	  	flex-basis: 47.6%;
 			max-width: 47.6%;
@@ -160,10 +152,6 @@ ul.listing--events {
 				flex-basis: 63%;	
 				max-width:  63%;
 	  	}
-			
-			.home & {
-				max-width: 790px;
-			}
 	
 			.inside & {
 				flex-basis: 100%;	
@@ -285,5 +273,5 @@ ul.listing--events {
 				margin-right: 3px;
 			}
 		}
-		}
+	}
 }

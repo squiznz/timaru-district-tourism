@@ -17,6 +17,7 @@
 		@include media-query(note-and-up){
 			padding: 0 38px;
 			@include container(1700px);
+			@include font-size(22.5px);
 		}
 	}
 
@@ -26,10 +27,25 @@
 				flex-basis: 46%;
 				max-width: 46%;
 			}
+
+			@include media-query(note-and-up){
+				min-width: 376px;
+			}
+
+			&.listing--events__feature {
+				max-width: 790px;
+			}	
 		}
 	}
-
 }
+
+
+
+
+
+
+
+
 
 
 .whats-on-slider__view-all {
@@ -41,7 +57,7 @@
 
 
 .whats-on {
-	background-color: #f7f7f7;
+	background-color: $tdc-bg-grey;
 }
 
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>TDC - What's on</title>
+  <title>TDC - Itineraries</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
-<body class="landing">
+<body class="itineraries">
 
   <!-- Begin Global Header -->
   <header class="global-header">
@@ -92,23 +92,23 @@
   <!-- End Global Header -->
   
   <!-- Begin Page Contents -->
-  <main id="content" class="page page--whats-on">
-    
+  <main id="content">
+
     <section class="feature-banner feature-banner--white">
       <div class="feature-banner__wrap">
-        <h1>What's on</h1>
+        <h1>Itineraries</h1>
       </div>
     </section>
 
-    <div class="whats-on__wrap">
-      <form action="" class="whats-on__search">
+
+    <div class="itineraries__wrap">
+      <form action="" class="itineraries__search">
         <select name="" id="">
           <option value="">Event type</option>
         </select>
         <select name="" id="">
           <option value="">When</option>
         </select>
-        <input type="text" placeholder="Keywords">
         <button type="submit" class="cta-button">Search</button> 
       </form>
       
@@ -127,86 +127,66 @@
         </ul>
       </div>
 
-       <ul class="listing--events">
-          <li class="listing--events__feature">
-            <div class="listing--events__feature-wrap">
-              <span class="tc-tdc-green">Featured </span>
-              <span class="listing--events__topic">Local Festivals</span>
-              <h3><strong>Jun</strong> 11</h3>
-            </div>
-            <div class="listing--events__info-wrap">
-              <span>Timaru Rose Gardens</span>
-              <h4>Timaru Festival of Roses</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente animi, porro. Dicta excepturi optio consequatur non quaerat dolorem, alias eaque, ullam quibusdam mollitia recusandae accusamus ex quisquam sed ea impedit.</p>
-              <a href="" class="more">View event</a>
-            </div>
-          </li>
-          <li>
-            <span class="listing--events__topic">Local Festivals</span>
-            <h3><strong>Jun</strong> 11</h3>
-            <div class="listing--events__info-wrap">
-              <span>Timaru Rose Gardens</span>
-              <h4>Timaru Festival of Roses</h4>
-              <a href="" class="more">View event</a>
-            </div>
-          </li>
-          <li>
-            <span class="listing--events__topic">Local Festivals</span>
-            <h3><strong>Jun</strong> 11</h3>
-            <div class="listing--events__info-wrap">
-              <span>Timaru Rose Gardens</span>
-              <h4>Timaru Festival of Roses</h4>
-              <a href="" class="more">View event</a>
-            </div>
-          </li>
-          <li>
-            <span class="listing--events__topic">Local Festivals</span>
-            <h3><strong>Jun</strong> 11</h3>
-            <div class="listing--events__info-wrap">
-              <span>Timaru Rose Gardens</span>
-              <h4>Timaru Festival of Roses</h4>
-              <a href="" class="more">View event</a>
-            </div>
-          </li>
-          <li>
-            <span class="listing--events__topic">Local Festivals</span>
-            <h3><strong>Jun</strong> 11</h3>
-            <div class="listing--events__info-wrap">
-              <span>Timaru Rose Gardens</span>
-              <h4>Timaru Festival of Roses</h4>
-              <a href="" class="more">View event</a>
-            </div>
-          </li>
-          <li>
-            <span class="listing--events__topic">Local Festivals</span>
-            <h3><strong>Jun</strong> 11</h3>
-            <div class="listing--events__info-wrap">
-              <span>Timaru Rose Gardens</span>
-              <h4>Timaru Festival of Roses</h4>
-              <a href="" class="more">View event</a>
-            </div>
-          </li>
-          <li>
-            <span class="listing--events__topic">Local Festivals</span>
-            <h3><strong>Jun</strong> 11</h3>
-            <div class="listing--events__info-wrap">
-              <span>Timaru Rose Gardens</span>
-              <h4>Timaru Festival of Roses</h4>
-              <a href="" class="more">View event</a>
-            </div>
-          </li>
-      </ul>
 
-
-      <ul class="pagination">
-        <li class="pagination__active"><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li> 
-        <li><a href="">4</a></li>  
-        <li><a href="">3</a></li>  
-        <li class="pagination__next"><a href="">Next</a></li>  
-      </ul>
+      <div class="sort-select">
+        <strong>Sort by: </strong>
+        <select>
+          <option value="">Stuff</option>
+        </select>
+      </div>
     </div>
+
+
+    <ul class="itineraries__list">
+      <li>
+        <header class="itineraries__list__image">
+          <h2>Tekapo Discovery</h2>
+        </header>
+        <div class="itineraries__list__wrap">
+          <ul class="itineraries__list__info">
+            <li>10,000 days</li>
+            <li>200kms</li>
+            <li>tags here</li>
+          </ul>
+          <div class="itineraries__list__description">
+            <h3>Overview</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
+          </div>
+          <div class="itineraries__list__highlights">
+            <h4>Highlights</h4>
+            <ul>
+              <li><a href="">things</a></li>
+              <li><a href="">things</a></li>
+              <li><a href="">things</a></li>
+            </ul>           
+          </div>
+        </div>
+        <div class="itineraries__list__map"></div>
+      </li>      
+
+
+
+
+
+
+    </ul>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <section class="cta-banner cta-banner--green">
@@ -215,7 +195,6 @@
         <a href="">World Class in Timaru. Find out more</a>
       </div>
     </section>
-
 
   </main>
   <!-- End Page Contents -->
@@ -277,7 +256,7 @@
         <li class="text--bold"><a href="">Visit Timaru</a></li>
         <li class="no-border"><a href="">Live, Work, Play</a></li>
         <li class="hidden-portable">&copy; 2016 Timaru</li>
-        <li class="no-border hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
+        <li class="no--border hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
       </ul>
     </div>
     <!-- End Footer Utilities -->
@@ -293,7 +272,7 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoibGRvcmdhbiIsImEiOiJjaW9vMHNrd3gwMDJidjlrdnJ0YzZ5cjRsIn0.-kQIw3xb7fNgSVaOJ43O6A';
     
     var map = new mapboxgl.Map({
-        container: 'map',
+        container: 'itineraries__list__map',
         style: 'mapbox://styles/mapbox/streets-v8'
     });
   </script>

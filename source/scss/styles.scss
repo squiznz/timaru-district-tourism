@@ -3,7 +3,7 @@
 	Dev: Lilly Dorgan
 ***/
 
-// Main Components
+// Document Components
 @import "core/core";
 @import "components/all";
 @import "components/global-header";
@@ -12,9 +12,10 @@
 @import "components/utility-nav";
 @import "components/tertiary-nav";
 @import "components/slick";
+@import "components/breadcrumbs";
 
 
-// Page Sections
+// Content Templates
 @import "components/cta-banner";
 @import "components/in-and-around";
 @import "components/location-banner";
@@ -30,11 +31,19 @@
 //Elements 
 @import "components/forms";
 @import "components/listings";
-@import "components/breadcrumbs";
 
-//idk
+
+// Content Types
 @import "components/landing";
 @import "components/inside";
 @import "components/topic";
+@import "components/itineraries-list";
+@import "components/itinerary-details";
 
-@import "components/content-components";
+
+
+
+
+
+
+// @import "components/content-components";

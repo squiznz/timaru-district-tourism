@@ -507,11 +507,26 @@ video {
 	}
 }
 
+.sort-select {
+	padding: 1em 0;
+	
+	strong {
+		font-weight: $bold;
+		color: $tdc-dark-navy;
+		display: inline-block;
+		float: left;
+		margin-right: 15px;
+
+		@include media-query(note-and-up){
+			@include font-size(21.42px);
+		}
+	}
+}
 
 .filters {
 	margin-bottom: 21px;
 	padding: 1em 0;
-	@include container(1345px);
+	// @include container(1345px);
 
 	strong {
 		font-weight: $bold;

@@ -85,7 +85,7 @@
 
 	@include media-query(note-and-up){
 		margin-bottom: 6.25em;
-		
+
 		.feature-banner__info {
 			@include position(absolute, null 38px 80px null);
 		}
@@ -181,9 +181,14 @@
 
 
 
-.feature-banner--whats-on {
+.feature-banner--white {
 	color: $black;
 	font-weight: $bold;
 	background-color: $white;
+
+
+	.feature-banner__wrap {
+		max-width: 50em;
+  }
 }
 

@@ -70,10 +70,12 @@
 				@include position(absolute, 0 null 0 21px);
 				padding: 15px 20px 20px 0px;
 				display: none;
+				height: 44px;
 
 				@include media-query(note-and-up){
 					@include position(absolute, 0 null 0 38px);
 					display: inline-block;
+					height: 55px;
 				}
 			}
 		}

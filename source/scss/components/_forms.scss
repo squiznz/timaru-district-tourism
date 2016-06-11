@@ -1,14 +1,21 @@
 // Forms
 
+input, select {
+	padding: 5px 15px;
+	height: 40px;
+	border: 1px solid $tdc-grey;
+	background-color: $white;
+	border-radius: 0px;
+	@include font-size(16px);
+	-webkit-border-radius: 0px;
+	-webkit-appearance: none;
+	margin-bottom: 15px;
+}
+
 form {
 	input, select {
-		padding: 5px 15px;
-		height: 40px;
 		width: 100%;
-		border: 1px solid $tdc-grey;
-		margin-bottom: 15px;
-		@include font-size(16px);
-
+		
 		&::-webkit-input-placeholder {
 			color: $tdc-dark-grey;
 			opacity: 1;
