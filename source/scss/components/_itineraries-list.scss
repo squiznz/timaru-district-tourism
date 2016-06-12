@@ -80,47 +80,31 @@
 				float: left;
 				@include font-size(19px);
 
-				h3, h4 {
-					color: $tdc-green;
-					@include font-size(14px);
-					letter-spacing: 0.12em;
-					font-weight: $semibold;
-					text-transform: uppercase;
-					font-family: $font-primary;
-				}	
-
-				// > div {
-				// 	float: left;
-				// 	padding: 38px;
-				// 	height: 300px;
-
-				// }
+				h2 {
+					color: $white;
+					display: block;
+					width: 100%;
+					padding: 0 38px;
+					background-color: $tdc-navy;
+				}
 			}
 		}
 
+		// header {
+		// 	// @include position(relative, null);
+		// 	height: 400px;
+		// 	background: linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84)), url(../img/placeholder1.jpeg);
+		// 	background-size: 100%;
 
-
-
-
-
-
-
-
-
-				.itineraries__list__image {
-					@include position(relative, null);
-					height: 400px;
-					background: linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84)), url(../img/placeholder1.jpeg);
-					background-size: 100%;
-
-					h2 {
-						@include position(absolute, 80px 0 0 0);
-						text-align: center;
-						color: $white;
-						vertical-align: center;
-					}
-				}
-
+		// 	h2 {
+		// 		// @include position(absolute, 80px 0 0 0);
+		// 		padding: 10% 0;
+		// 		display: block;
+		// 		width: 100%;
+		// 		text-align: center;
+		// 		background-color: transparent !important;
+		// 	}
+		// }
 
 
 .itineraries__list__wrap {
@@ -161,7 +145,7 @@
 					padding: 38px;
 					float: left;
 					width: 30%;
-					
+
 					ul {
 						padding: 0;
 					}
@@ -175,3 +159,74 @@
 					height: 300px;
 					background-color: $black;
 				}		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				.itineraries__list__info__drive {
+					@include position(relative, null);
+
+					&:after {
+						font-family: 'Fontawesome';
+						content: "\f1b9";
+						@include position(absolute, 0 0 0 0);
+					}
+				}
+
+
+				.itineraries__list__info__walk {
+					@include position(relative, null);
+
+					&:after {
+						font-family: 'Fontawesome';
+						content: "\f21c";
+						@include position(absolute, 0 0 0 0);
+					}
+				}
+
+				.itineraries__list__info__bike {
+					@include position(relative, null);
+
+					&:after {
+						font-family: 'Fontawesome';
+						content: "\f206";
+						@include position(absolute, 0 0 0 0);
+					}
+				}

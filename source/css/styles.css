@@ -952,6 +952,24 @@ a {
   }
 }
 
+.heading--green-small {
+  color: #00d29b;
+  font-size: 11px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@media screen and (min-width: 1024px) {
+  .heading--green-small {
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+}
+
 .display--block {
   display: block;
 }
@@ -1595,23 +1613,23 @@ a {
 /***
 *   Objects - Bare List
 ***/
-.bare-list, .footer-nav, .footer-utilities__list, .primary-nav ul, .tertiary-nav, .slick-slide, .slick-dots, .breadcrumbs, .our-region__list, .three-best__list, ul.listing, ul.listing--images, ul.listing--events, .itineraries__list {
+.bare-list, .footer-nav, .footer-utilities__list, .primary-nav ul, .tertiary-nav, .slick-slide, .slick-dots, .breadcrumbs, .our-region__list, .three-best__list, ul.listing, ul.listing--images, ul.listing--events, .landing-list, .itineraries__list, .itinerary-details-list, .itinerary-day__highlights ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.bare-list::after, .footer-nav::after, .footer-utilities__list::after, .primary-nav ul::after, .tertiary-nav::after, .slick-slide::after, .slick-dots::after, .breadcrumbs::after, .our-region__list::after, .three-best__list::after, ul.listing::after, ul.listing--images::after, ul.listing--events::after, .itineraries__list::after {
+.bare-list::after, .footer-nav::after, .footer-utilities__list::after, .primary-nav ul::after, .tertiary-nav::after, .slick-slide::after, .slick-dots::after, .breadcrumbs::after, .our-region__list::after, .three-best__list::after, ul.listing::after, ul.listing--images::after, ul.listing--events::after, .landing-list::after, .itineraries__list::after, .itinerary-details-list::after, .itinerary-day__highlights ul::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.bare-list li, .footer-nav li, .footer-utilities__list li, .primary-nav ul li, .tertiary-nav li, .slick-slide li, .slick-dots li, .breadcrumbs li, .our-region__list li, .three-best__list li, ul.listing li, ul.listing--images li, ul.listing--events li, .itineraries__list li {
+.bare-list li, .footer-nav li, .footer-utilities__list li, .primary-nav ul li, .tertiary-nav li, .slick-slide li, .slick-dots li, .breadcrumbs li, .our-region__list li, .three-best__list li, ul.listing li, ul.listing--images li, ul.listing--events li, .landing-list li, .itineraries__list li, .itinerary-details-list li, .itinerary-day__highlights ul li {
   text-indent: 0;
 }
 
-.bare-list li:before, .footer-nav li:before, .footer-utilities__list li:before, .primary-nav ul li:before, .tertiary-nav li:before, .slick-slide li:before, .slick-dots li:before, .breadcrumbs li:before, .our-region__list li:before, .three-best__list li:before, ul.listing li:before, ul.listing--images li:before, ul.listing--events li:before, .itineraries__list li:before {
+.bare-list li:before, .footer-nav li:before, .footer-utilities__list li:before, .primary-nav ul li:before, .tertiary-nav li:before, .slick-slide li:before, .slick-dots li:before, .breadcrumbs li:before, .our-region__list li:before, .three-best__list li:before, ul.listing li:before, ul.listing--images li:before, ul.listing--events li:before, .landing-list li:before, .itineraries__list li:before, .itinerary-details-list li:before, .itinerary-day__highlights ul li:before {
   display: none;
   content: "";
   width: 1px;
@@ -4849,6 +4867,10 @@ video {
   max-width: 50em;
 }
 
+.feature-banner--itinerary {
+  background-image: url(../img/placeholder3.jpeg);
+}
+
 /***
 *   In this section 
 ***/
@@ -5977,32 +5999,12 @@ ul.listing--events .listing--events__feature-wrap span:last-of-type:before {
   font-size: 1.1875rem;
 }
 
-.itineraries__list > li h3, .itineraries__list > li h4 {
-  color: #00d29b;
-  font-size: 14px;
-  font-size: 0.875rem;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.itineraries__list__image {
-  position: relative;
-  height: 400px;
-  background: linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84)), url(../img/placeholder1.jpeg);
-  background-size: 100%;
-}
-
-.itineraries__list__image h2 {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
+.itineraries__list > li h2 {
   color: #FFFFFF;
-  vertical-align: center;
+  display: block;
+  width: 100%;
+  padding: 0 38px;
+  background-color: #001d41;
 }
 
 .itineraries__list__wrap {
@@ -6054,6 +6056,111 @@ ul.listing--events .listing--events__feature-wrap span:last-of-type:before {
   background-color: #000000;
 }
 
+.itineraries__list__info__drive {
+  position: relative;
+}
+
+.itineraries__list__info__drive:after {
+  font-family: 'Fontawesome';
+  content: "\f1b9";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.itineraries__list__info__walk {
+  position: relative;
+}
+
+.itineraries__list__info__walk:after {
+  font-family: 'Fontawesome';
+  content: "\f21c";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.itineraries__list__info__bike {
+  position: relative;
+}
+
+.itineraries__list__info__bike:after {
+  font-family: 'Fontawesome';
+  content: "\f206";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 /***
 *   Itinerary Details
 ***/
+.itinerary-details {
+  max-width: 1423px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.itinerary-details:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.itinerary-day {
+  margin-bottom: 38px;
+  border: 1px solid #ececec;
+}
+
+.itinerary-day::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.itinerary-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84)), url(../img/placeholder1.jpeg);
+  height: 400px;
+  background-size: 100%;
+}
+
+.itinerary-image h2 {
+  color: #FFFFFF;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10% 0 !important;
+  background-color: transparent !important;
+}
+
+.itinerary-details-list li {
+  display: inline-block;
+  color: #00132a;
+}
+
+.itinerary-details-list li * {
+  color: inherit;
+}
+
+.itinerary-day__info {
+  padding: 38px;
+  float: left;
+  width: 80%;
+}
+
+.itinerary-day__highlights {
+  background-color: #f7f7f7;
+  padding: 38px;
+  width: 20%;
+  float: right;
+}
+
+.itinerary-map {
+  height: 580px;
+}

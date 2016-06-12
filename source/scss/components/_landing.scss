@@ -3,6 +3,7 @@
 ***/
 
 .landing-list {
+	@extend .bare-list;
 	@include container();
 	padding: 21px;
 	
