@@ -10,9 +10,15 @@ input, select {
 	-webkit-border-radius: 0px;
 	-webkit-appearance: none;
 	margin-bottom: 15px;
+	-moz-appearance: none;
+	-webkit-appearance: textfield;
 }
 
 form {
+	label {
+		color: $tdc-dark-navy;
+	}
+	
 	input, select {
 		width: 100%;
 		
@@ -44,8 +50,6 @@ form {
 		min-height: 40px;
 		line-height: auto;
 		letter-spacing: 0.02em;
-		padding: 0;
-		width: 100%;
 	}
 }
 
@@ -65,17 +69,16 @@ form {
 		font-family: $font-secondary;
 		float: left;
 		font-size: inherit;
-		line-height: 21px;
 		border: none;
+		height: auto;
 		outline: none;
+		margin: 2px 0 0 0;
    	background: transparent;
-		-moz-appearance: none;
 		@include position(relative, null);
-		-webkit-appearance: textfield;
 		text-indent: 0.01px;
 		text-overflow: "";
     appearance: none;
-    padding-right: 1em;
+    padding: 0 1em 0 0;
 
     &:focus {
     	outline: none; 
@@ -101,3 +104,45 @@ form {
     display: none;
 	}
 }
+
+
+
+.landing__search {
+	padding: 58px 0;
+	float: left;
+	width: 100%;
+	@include font-size(21.42px);
+	border-bottom: 1px solid $tdc-grey;
+
+	button {
+		text-indent: 0;
+		padding: 21px;
+		display: inline-block;
+		float: left;
+		margin-top: 46px;
+		width: 7em;
+		line-height: 16px;
+		
+		&:after {
+			right: 20px;
+		}
+	}
+}
+
+
+		.landing__search-wrap {
+			float: left;
+			width: 25.95em;
+			margin-right: 38px;
+
+			label {
+				font-weight: $bold;
+				margin-bottom: 15px;
+				display: block;
+			}
+
+			input, select {
+				height: 60px;
+				font-size: inherit;
+			}
+		}

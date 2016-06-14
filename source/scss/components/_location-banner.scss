@@ -123,6 +123,7 @@
 		line-height: 1em;
 		height: 45px;
 		display: block;
+		text-indent: 0 !important;
 
 		@include media-query(note-and-up){
 			height: 60px;
@@ -131,8 +132,12 @@
 			@include font-size(22px);
 			margin-top: 30px;
 			padding: 18px 50px 18px 18px;
-		}
 
+			&:after {
+				right: 20px;
+			}
+		}
+	
 		span {
 			@include position(relative, null null null null);	
 			color: $white !important;

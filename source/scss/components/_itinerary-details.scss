@@ -7,26 +7,11 @@
 	@include container(1423px);
 }
 
+
 .itinerary-day {
 	margin-bottom: 38px;
 	border: 1px solid $tdc-grey;
 	@include clearfix();
-}
-
-
-.itinerary-image {
-	background: linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84)), url(../img/placeholder1.jpeg);
-	height: 400px;
-	background-size: 100%;
-
-	h2 {
-		color: $white;
-		display: block;
-		width: 100%;
-		text-align: center;
-		padding: 10% 0 !important;
-		background-color: transparent !important;
-	}
 }
 
 
@@ -65,5 +50,4 @@
 
 .itinerary-map {
 	height: 580px;
-
 }

@@ -12,112 +12,69 @@
 
 		@include media-query(note-and-up){
 			@include container(1423px);
+			padding: 0 38px;
 		}
 	
 		.filters {
 			float: left;
 			width: 80%;
 		}
-
-		.sort-select {
-			float: right;
-
-			select {
-				border-radius: 15px;
-			}
-		}
 	}
 
 
-		.itineraries__search {
-			border-bottom: 1px solid $tdc-grey;
-			@include clearfix();
-			// padding: 62px 21px;
-
-
-			@include media-query(note-and-up){
-				@include container();
-				// padding: 62px 19px;
-
-				select {
-					// width: 376px !important;
-					margin-right: 38px;	
-					float: left;
-				}
-
-				input {
-					// width: 334px !important;
-					float: left;
-					margin-right: 44px;
-				}
-
-				button {
-					width: 138px !important;
-					margin: 0;
-					text-indent: 0;
-					float: left;
-				}
-			}
-		}
-
-
-
-
-
-
-
-
-
-
-
-
 		.itineraries__list {
+			padding-bottom: 140px;
 			@extend .bare-list;
 			@include container(1423px);
 
 			> li {
-				margin-bottom: 38px;
+				margin-bottom: 66px;
+				@include font-size(21.42px);
+				line-height: 29.45px;
 				float: left;
-				@include font-size(19px);
+				width: 100%;
 
 				h2 {
 					color: $white;
 					display: block;
 					width: 100%;
-					padding: 0 38px;
+					padding: 25px 55px;
 					background-color: $tdc-navy;
+				}
+
+				header {
+					height: 508px;
+					background: linear-gradient(rgba(0, 28, 66, 0.6), rgba(0, 28, 66, 0.6)), url(../img/placeholder1.jpeg);
+					background-size: 100%;
+					
+					a {
+						display: block;
+						width: 100%;
+						@include font-size(66.93px);
+						height: 100%;
+						padding: 3.1em 38px 0 38px !important;	
+					}
+
+					h2 {
+						background-color: transparent;	
+						text-align: center;
+						font-size: inherit;
+					}
 				}
 			}
 		}
 
-		// header {
-		// 	// @include position(relative, null);
-		// 	height: 400px;
-		// 	background: linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84)), url(../img/placeholder1.jpeg);
-		// 	background-size: 100%;
-
-		// 	h2 {
-		// 		// @include position(absolute, 80px 0 0 0);
-		// 		padding: 10% 0;
-		// 		display: block;
-		// 		width: 100%;
-		// 		text-align: center;
-		// 		background-color: transparent !important;
-		// 	}
-		// }
-
 
 .itineraries__list__wrap {
 	border: 1px solid $tdc-grey;
-	width: 70%;
 	background-color: $white;
-	height: 300px;
 	float: left;
+	// width: 100%;
 
 	>	ul {
 		border-top: none;
 		border-bottom: 1px solid $tdc-grey;
-		height: 55px;
+		height: 97px;
 		padding: 0;
 
 		li {
@@ -126,25 +83,24 @@
 			height: 100%;
 			text-align: center;
 			vertical-align: center;
-			padding: 12px 38px;
+			@include font-size(32.13px);
+			padding: 32px 25px;
 			color: $tdc-dark-navy;
 		}
 	}
 }	
 
 
-
-
 				.itineraries__list__description {
-					padding: 38px;
-					width: 70%;
+					padding: 55px;
+					width: 650px;
 					float: left;
 				}
 
 				.itineraries__list__highlights {
-					padding: 38px;
+					padding: 55px;
 					float: left;
-					width: 30%;
+					width: 331px;
 
 					ul {
 						padding: 0;
@@ -153,80 +109,63 @@
 
 
 				.itineraries__list__map {
-					width: 30%;
+					width: 27.0199%;
 					padding: 0;
-					float: right;
-					height: 300px;
+					content: "";
+					float: left;
+					min-height: 383px;
 					background-color: $black;
 				}		
+	
 
 
+			.itineraries__list__info {
+				width: 100%;
 
+				li {
+					@include position(relative, null);
 
+					&:after {
+						@include position(absolute, 32px null 32px 25px);
+					}
+					
+					&:nth-child(1){
+						padding-left: 55px;
+					}
+					
+					&:nth-child(2){
+						padding-left: 70px;
+					}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+					&:nth-child(3){
+						border-right: none;
+					}
+				}
+			}
 
 
 
 
 				.itineraries__list__info__drive {
-					@include position(relative, null);
-
 					&:after {
 						font-family: 'Fontawesome';
 						content: "\f1b9";
-						@include position(absolute, 0 0 0 0);
 					}
 				}
 
 
 				.itineraries__list__info__walk {
-					@include position(relative, null);
 
 					&:after {
 						font-family: 'Fontawesome';
 						content: "\f21c";
-						@include position(absolute, 0 0 0 0);
 					}
 				}
 
 				.itineraries__list__info__bike {
-					@include position(relative, null);
 
 					&:after {
 						font-family: 'Fontawesome';
 						content: "\f206";
-						@include position(absolute, 0 0 0 0);
 					}
 				}

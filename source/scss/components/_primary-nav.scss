@@ -53,6 +53,15 @@
 					@include font-size(22.75px);
 				}
 			}
+
+			&.active {
+				span {
+					@include media-query(desk){
+						padding-bottom: 6px;
+						border-bottom: 3px solid $white;
+					}
+				}
+			}
 		}
 
 		&.open {

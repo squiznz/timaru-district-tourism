@@ -77,17 +77,41 @@
         <nav id="primary-nav" class="primary-nav">
           <span class="visuallyhidden">Primary navigation</span>
           <ul class="bare-list">
-            <li><a href="inside.html">Explore</a></li>
-            <li><a href="landing.html">Where to go</a></li>
-            <li><a href="">Accommodation</a></li>
-            <li><a href="whats-on.html">What's on</a></li>
-            <li><a href="topic.html">Eat &amp; Drink</a></li>
-            <li><a href="">Plan your trip</a></li>
+            <li>
+              <a href="inside.html">
+                <span>Explore</span>
+              </a>
+            </li>
+            <li>
+              <a href="landing.html">
+                <span>Where to go</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span>Accommodation</span>
+              </a>
+            </li>
+            <li>
+              <a href="whats-on.html">
+                <span>What's on</span>
+              </a>
+            </li>
+            <li>
+              <a href="topic.html">
+                <span>Eat &amp; Drink</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="">
+                <span>Plan your trip</span>
+              </a>
+            </li>
           </ul>
         </nav>
+        <!-- End Primary Navigation -->
 
       </div>
-      <!-- End Primary Navigation -->
   </header>
   <!-- End Global Header -->
   
@@ -102,152 +126,176 @@
 
 
     <div class="itineraries__wrap">
-      <form action="" class="itineraries__search">
-        <select name="" id="">
-          <option value="">Event type</option>
-        </select>
-        <select name="" id="">
-          <option value="">When</option>
-        </select>
+
+
+
+      <form action="" class="landing__search">
+        <div class="landing__search-wrap">
+          <label for="">I am visiting Timaru for:</label>
+          <select name="" id="">
+            <option value="">3-7 Days</option>
+            <option value="">3-7 Days</option>
+            <option value="">3-7 Days</option>
+          </select>
+        </div>
+        <div class="landing__search-wrap">
+          <label for="">I am interested in:</label>
+          <select name="" id="">
+            <option value="">Adventure</option>
+            <option value="">Adventure</option>
+            <option value="">Adventure</option>
+          </select>
+        </div>
         <button type="submit" class="cta-button">Search</button> 
       </form>
-      
-      <div class="filters">
-        <strong>Filter: </strong>
-        <ul>
-          <li>
-            <button>thing</button>
-          </li>
-          <li>
-            <button>thing</button>
-          </li>
-          <li>
-            <button>thing</button>
-          </li>
-        </ul>
-      </div>
 
 
-      <div class="sort-select">
-        <strong>Sort by: </strong>
-        <select>
-          <option value="">Stuff</option>
-        </select>
+      <div class="search-filters">
+        <div class="filters">
+          <strong>Filter: </strong>
+          <ul>
+            <li>
+              <button>thing</button>
+            </li>
+            <li>
+              <button>thing</button>
+            </li>
+            <li>
+              <button>thing</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sort-select">
+          <strong>Sort by: </strong>
+          <select>
+            <option value="">Stuff</option>
+          </select>
+        </div>
       </div>
+    
+
     </div>
 
+      
 
-    <ul class="itineraries__list">
-      <li>
-        <header class="itinerary-image">
+
+
+    <div class="itineraries__wrap">
+
+      <ul class="itineraries__list">
+        <li>
+          <header>
+            <a href="">
+              <h2>Tekapo Discovery</h2>
+            </a>
+          </header>
+          <div class="itineraries__list__wrap">
+            <ul class="itineraries__list__info">
+              <li><strong>10,000</strong> days</li>
+              <li class="itineraries__list__info__drive"><strong>200</strong> km</li>
+              <li>tags here</li>
+            </ul>
+            <div class="itineraries__list__description">
+              <h3 class="heading--green-small">Overview</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
+            </div>
+            <div class="itineraries__list__highlights">
+              <h4 class="heading--green-small">Highlights</h4>
+              <ul>
+                <li><a href="">things</a></li>
+                <li><a href="">things</a></li>
+                <li><a href="">things</a></li>
+              </ul>           
+            </div>
+          </div>
+          <div id="map-1" class="itineraries__list__map"></div>
+        </li>      
+
+        <li>
+          <header>
+            <a href="">
+              <h2>Tekapo Discovery</h2>
+            </a>
+          </header>
+          <div class="itineraries__list__wrap">
+            <ul class="itineraries__list__info">
+              <li><strong>10,000</strong> days</li>
+              <li class="itineraries__list__info__drive"><strong>200</strong> km</li>
+              <li>tags here</li>
+            </ul>
+            <div class="itineraries__list__description">
+              <h3 class="heading--green-small">Overview</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
+            </div>
+            <div class="itineraries__list__highlights">
+              <h4 class="heading--green-small">Highlights</h4>
+              <ul>
+                <li><a href="">things</a></li>
+                <li><a href="">things</a></li>
+                <li><a href="">things</a></li>
+              </ul>           
+            </div>
+          </div>
+          <div id="map-2" class="itineraries__list__map"></div>
+        </li>      
+
+
+        <li>
+          <header>
+            <a href="">
+              <h2>Tekapo Discovery</h2>
+            </a>
+          </header>
+          <div class="itineraries__list__wrap">
+            <ul class="itineraries__list__info">
+              <li><strong>10,000</strong> days</li>
+              <li class="itineraries__list__info__drive"><strong>200</strong> km</li>
+              <li>tags here</li>
+            </ul>
+            <div class="itineraries__list__description">
+              <h3 class="heading--green-small">Overview</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
+            </div>
+            <div class="itineraries__list__highlights">
+              <h4 class="heading--green-small">Highlights</h4>
+              <ul>
+                <li><a href="">things</a></li>
+                <li><a href="">things</a></li>
+                <li><a href="">things</a></li>
+              </ul>           
+            </div>
+          </div>
+          <div id="map-3" class="itineraries__list__map"></div>
+        </li>      
+
+
+        <li>
           <h2>Tekapo Discovery</h2>
-        </header>
-        <div class="itineraries__list__wrap">
-          <ul class="itineraries__list__info">
-            <li>10,000 days</li>
-            <li class="itineraries__list__info__walk">200kms</li>
-            <li>tags here</li>
-          </ul>
-          <div class="itineraries__list__description">
-            <h3 class="heading--green-small">Overview</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
+          <div class="itineraries__list__wrap">
+            <ul class="itineraries__list__info">
+              <li><strong>10,000</strong> days</li>
+              <li class="itineraries__list__info__drive"><strong>200</strong> km</li>
+              <li>tags here</li>
+            </ul>
+            <div class="itineraries__list__description">
+              <h3 class="heading--green-small">Overview</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
+            </div>
+            <div class="itineraries__list__highlights">
+              <h4 class="heading--green-small">Highlights</h4>
+              <ul>
+                <li><a href="">things</a></li>
+                <li><a href="">things</a></li>
+                <li><a href="">things</a></li>
+              </ul>           
+            </div>
           </div>
-          <div class="itineraries__list__highlights">
-            <h4 class="heading--green-small">Highlights</h4>
-            <ul>
-              <li><a href="">things</a></li>
-              <li><a href="">things</a></li>
-              <li><a href="">things</a></li>
-            </ul>           
-          </div>
-        </div>
-        <div class="itineraries__list__map"></div>
-      </li>      
+          <div id="map-4" class="itineraries__list__map"></div>
+        </li>      
+      </ul>
 
-      <li>
-        <header class="itinerary-image">
-          <h2>Tekapo Discovery</h2>
-        </header>
-        <div class="itineraries__list__wrap">
-          <ul class="itineraries__list__info">
-            <li>10,000 days</li>
-            <li class="itineraries__list__info__walk">200kms</li>
-            <li>tags here</li>
-          </ul>
-          <div class="itineraries__list__description">
-            <h3 class="heading--green-small">Overview</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
-          </div>
-          <div class="itineraries__list__highlights">
-            <h4 class="heading--green-small">Highlights</h4>
-            <ul>
-              <li><a href="">things</a></li>
-              <li><a href="">things</a></li>
-              <li><a href="">things</a></li>
-            </ul>           
-          </div>
-        </div>
-        <div class="itineraries__list__map"></div>
-      </li>      
-
-
-      <li>
-        <header class="itinerary-image">
-          <h2>Tekapo Discovery</h2>
-        </header>
-        <div class="itineraries__list__wrap">
-          <ul class="itineraries__list__info">
-            <li>10,000 days</li>
-            <li class="itineraries__list__info__bike">200kms</li>
-            <li>tags here</li>
-          </ul>
-          <div class="itineraries__list__description">
-            <h3 class="heading--green-small">Overview</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
-          </div>
-          <div class="itineraries__list__highlights">
-            <h4 class="heading--green-small">Highlights</h4>
-            <ul>
-              <li><a href="">things</a></li>
-              <li><a href="">things</a></li>
-              <li><a href="">things</a></li>
-            </ul>           
-          </div>
-        </div>
-        <div class="itineraries__list__map"></div>
-      </li>      
-
-
-      <li>
-        <h2>Tekapo Discovery</h2>
-        <div class="itineraries__list__wrap">
-          <ul class="itineraries__list__info">
-            <li>10,000 days</li>
-            <li class="itineraries__list__info__drive">200kms</li>
-            <li>tags here</li>
-          </ul>
-          <div class="itineraries__list__description">
-            <h3 class="heading--green-small">Overview</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
-          </div>
-          <div class="itineraries__list__highlights">
-            <h4 class="heading--green-small">Highlights</h4>
-            <ul>
-              <li><a href="">things</a></li>
-              <li><a href="">things</a></li>
-              <li><a href="">things</a></li>
-            </ul>           
-          </div>
-        </div>
-        <div class="itineraries__list__map"></div>
-      </li>      
-
-
-
-
-
-    </ul>
-    
+      </div>
 
 
 
@@ -349,7 +397,22 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoibGRvcmdhbiIsImEiOiJjaW9vMHNrd3gwMDJidjlrdnJ0YzZ5cjRsIn0.-kQIw3xb7fNgSVaOJ43O6A';
     
     var map = new mapboxgl.Map({
-        container: 'itineraries__list__map',
+        container: 'map-1',
+        style: 'mapbox://styles/mapbox/streets-v8'
+    });
+
+        var map = new mapboxgl.Map({
+        container: 'map-2',
+        style: 'mapbox://styles/mapbox/streets-v8'
+    });
+
+            var map = new mapboxgl.Map({
+        container: 'map-3',
+        style: 'mapbox://styles/mapbox/streets-v8'
+    });
+
+                var map = new mapboxgl.Map({
+        container: 'map-4',
         style: 'mapbox://styles/mapbox/streets-v8'
     });
   </script>

@@ -85,7 +85,7 @@
 			border-bottom: 2px solid $tdc-green;
 
 			@include media-query(note-and-up){
-				width: 116px;
+				width: 120px;
 			  -webkit-transition: width 0.5s;
 				transition: width 0.5s;
 				font-weight: $semibold;
@@ -93,9 +93,9 @@
 				background-color: transparent;
 				border-bottom: 3px solid $tdc-green;
 
-				.expanded & {
-					width: 300px;
-				}
+				// .expanded & {
+				// 	width: 300px;
+				// }
 			}
 			
 			&::-webkit-input-placeholder {
@@ -106,7 +106,7 @@
 				font-family: $font-primary;
 
 			   	@include media-query(note-and-up){
-					@include font-size(17px);
+					@include font-size(18px);
 			   	}
 			}
 
@@ -118,7 +118,7 @@
 				font-family: $font-primary;
 
 			   	@include media-query(note-and-up){
-					@include font-size(17px);
+					@include font-size(18px);
 			   	} 
 			}
 
@@ -130,7 +130,7 @@
 				font-family: $font-primary;
 
 			   	@include media-query(note-and-up){
-					@include font-size(17px);
+					@include font-size(18px);
 			   	} 
 			}
 
@@ -142,7 +142,7 @@
 				font-family: $font-primary;
 
 			   	@include media-query(note-and-up){
-						@include font-size(17px);
+						@include font-size(18px);
 			   	}  
 			}
 		}
@@ -166,14 +166,14 @@
 
 
 
-.site-search--expanded {
-	width: 250px;
+// .site-search--expanded {
+// 	width: 250px;
 
-	form, fieldset {
-		width: 100% !important; 
-	}
+// 	form, fieldset {
+// 		width: 100% !important; 
+// 	}
 
-	input {
-		width: 85% !important;
-	}
-}
+// 	input {
+// 		width: 85% !important;
+// 	}
+// }

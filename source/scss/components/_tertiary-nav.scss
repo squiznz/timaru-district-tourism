@@ -64,6 +64,10 @@
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: 20px;
+
+				@include media-query(note-and-up){
+					background-position: center 22px;
+				}
 			}
 
 			&:first-of-type {

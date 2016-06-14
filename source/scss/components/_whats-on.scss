@@ -17,7 +17,7 @@
 		@include media-query(note-and-up){
 			padding: 0 38px;
 			@include container(1700px);
-			@include font-size(22.5px);
+			@include font-size(32px);
 		}
 	}
 
@@ -40,20 +40,12 @@
 }
 
 
-
-
-
-
-
-
-
-
-.whats-on-slider__view-all {
-	@include media-query(note-and-up){
-		@include font-size(19px);
-		@include position(absolute, 115px 38px null null);
+	.whats-on-slider__view-all {
+		@include media-query(note-and-up){
+			@include font-size(19px);
+			@include position(absolute, 115px 38px null null);
+		}
 	}
-}
 
 
 .whats-on {

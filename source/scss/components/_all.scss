@@ -507,26 +507,12 @@ video {
 	}
 }
 
-.sort-select {
-	padding: 1em 0;
-	
-	strong {
-		font-weight: $bold;
-		color: $tdc-dark-navy;
-		display: inline-block;
-		float: left;
-		margin-right: 15px;
 
-		@include media-query(note-and-up){
-			@include font-size(21.42px);
-		}
-	}
-}
-
-.filters {
-	margin-bottom: 21px;
-	padding: 1em 0;
-	// @include container(1345px);
+.search-filters {
+	padding: 21px 0;
+	width: 100%;
+	float: left;
+	@include clearfix();
 
 	strong {
 		font-weight: $bold;
@@ -539,51 +525,74 @@ video {
 			@include font-size(21.42px);
 		}
 	}
-	
-	li {
-		color: $white;
-		background-color: $tdc-purple;
-		display: inline-block;
-		text-align: center;
-		text-indent: 0;
-		letter-spacing: 0.06em;
-		margin-right: 5px;
-		margin-top: 3px;
-		border-radius: 10.75px;
-		font-weight: $semibold;
 
-		@include media-query(note-and-up){
-			border-radius: 15px;
-			font-weight: $bold;
-		}
-		
-		&:before {
-			display: none;
-		}
-	
-		button {
-			background-color: transparent;
+	.sort-select {
+		float: right;
+		@include position(relative, null);
+		color: $tdc-dark-navy;
+
+		select {
 			text-transform: uppercase;
-			@include position(relative, null);
-			border: none;
-			float: left;
-			padding: 2px 25px 2px 10px;
-			line-height: 1.4em;
-			@include font-size(11px);
+			font-weight: $semibold;
+			color: $tdc-dark-navy;
+			border-radius: 25px;
+			padding: 0 21px 0 8px;
+			height: 26px;
+			margin-top: 0.3em;
+		}
+
+		&:after {
+			font-family: 'Fontawesome';
+			content: "\f0d7";
+			@include position(absolute, 6px 10px 0 null);
+			@include font-size(14px);
+		}
+	}
+
+	.filters {
+		li {
+			color: $white;
+			background-color: $tdc-purple;
+			display: inline-block;
+			text-align: center;
+			text-indent: 0;
+			letter-spacing: 0.06em;
+			margin-right: 5px;
+			margin-top: 3px;
+			border-radius: 15px;
+			font-weight: $semibold;
 
 			@include media-query(note-and-up){
-				@include font-size(14px);
-				padding: 8px 28px 8px 10px;
-				line-height: 1em;
+				border-radius: 15px;
+				font-weight: $bold;
+				height: 26px;
 			}
-
-			&:after {
-				content: "\f00d";
-				font-family: 'FontAwesome';
-				@include position(absolute, 2px 10px null null);
+			
+			&:before {
+				display: none;
+			}
+		
+			button {
+				background-color: transparent;
+				text-transform: uppercase;
+				@include position(relative, null);
+				border: none;
+				float: left;
+				padding: 2px 32px 2px 10px;
+				@include font-size(11px);
 
 				@include media-query(note-and-up){
-					@include position(absolute, 7px 10px null null);
+					@include font-size(14px);
+				}
+
+				&:after {
+					content: "\f00d";
+					font-family: 'FontAwesome';
+					@include position(absolute, 0px 10px null null);
+
+					@include media-query(note-and-up){
+						@include position(absolute, 2px 10px null null);
+					}
 				}
 			}
 		}

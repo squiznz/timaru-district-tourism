@@ -5,7 +5,8 @@
 .cta-banner {
 	background-color: $tdc-purple;
 	color: $white;
-	background-image: url('../img/swirls-purple.png');
+	// background-image: url('../img/swirls-purple.png');
+	background-image: url('../../__data/assets/image/0004/62995/swirls-purple.png');
 	text-align: center;
 	height: 16.1875em;
 	font-weight: $medium;
@@ -53,24 +54,24 @@
 }
 
 
-.cta-banner--green {
-	background-image: url('../img/swirls-green.png');
+		.cta-banner__wrap {
+			height: 100%;
+			@include container(20em);
+			margin: 0 auto;
+			padding: 50px 0;
 
-	a {
-		color: $white !important;
-	}
-}	
+			@include media-query(note-and-up){
+				@include container(58.125em);
+				padding: 120px 0 90px 0;
+				vertical-align: center;
+			}
+		}
 
 
-.cta-banner__wrap {
-	height: 100%;
-	@include container(20em);
-	margin: 0 auto;
-	padding: 50px 0;
+		.cta-banner--green {
+			background-image: url('../../__data/assets/image/0003/62994/swirls-green.png');
 
-	@include media-query(note-and-up){
-		@include container(58.125em);
-		padding: 120px 0 90px 0;
-		vertical-align: center;
-	}
-}
+			a {
+				color: $white !important;
+			}
+		}	

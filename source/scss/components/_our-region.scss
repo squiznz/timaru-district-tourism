@@ -14,7 +14,6 @@
 
 
 	.our-region__selector-wrap {
-		line-height: 27px;
 		padding: 0 21px 15px 21px;
 		@include clearfix();
 		@include font-size(23px);
@@ -32,13 +31,12 @@
 			color: $tdc-dark-navy;
 			font-weight: $medium;
 			@include font-size(23px);
-			line-height: 27px;
+			margin-right: 0.25em;
 			display: inline-block;
 
 			@include media-query(note-and-up){
 				@include font-size(32.12px);
 				display: block;
-				line-height: 41px;
 			}
 		}
 	}
