@@ -26,7 +26,7 @@ $ultrabold  :  900;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -webkit-font-smoothing: subpixel-antialiased;
-    // margin: 10px 0 0 0;
+    margin: 10px 0;
     display: block;
     padding: 0;
 }
@@ -95,94 +95,94 @@ a {
     font-family: $font-primary;
 }
 
-@font-face {
-    font-family: 'Pluto';
-    src: url('../fonts/plutoheavy.eot');
-    src: url('../fonts/plutoheavy.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/plutoheavy.woff2') format('woff2'),
-         url('../fonts/plutoheavy.woff') format('woff'),
-         url('../fonts/plutoheavy.ttf') format('truetype'),
-         url('../fonts/plutoheavy.svg#plutoheavy') format('svg');
-    font-weight: 900;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Pluto';
+//     src: url('../fonts/plutoheavy.eot');
+//     src: url('../fonts/plutoheavy.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/plutoheavy.woff2') format('woff2'),
+//          url('../fonts/plutoheavy.woff') format('woff'),
+//          url('../fonts/plutoheavy.ttf') format('truetype'),
+//          url('../fonts/plutoheavy.svg#plutoheavy') format('svg');
+//     font-weight: 900;
+//     font-style: normal;
+// }
 
 
-@font-face {
-  font-family: 'Pluto';
-  src: url('../fonts/plutobold.eot');
-  src: url('../fonts/plutobold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/plutobold.woff2') format('woff2'),
-      url('../fonts/plutobold.woff') format('woff'),
-      url('../fonts/plutobold.ttf') format('truetype'),
-      url('../fonts/plutobold.svg#plutobold') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Pluto';
+//   src: url('../fonts/plutobold.eot');
+//   src: url('../fonts/plutobold.eot?#iefix') format('embedded-opentype'),
+//       url('../fonts/plutobold.woff2') format('woff2'),
+//       url('../fonts/plutobold.woff') format('woff'),
+//       url('../fonts/plutobold.ttf') format('truetype'),
+//       url('../fonts/plutobold.svg#plutobold') format('svg');
+//   font-weight: 700;
+//   font-style: normal;
+// }
 
 
-@font-face {
-    font-family: 'Pluto';
-    src: url('../fonts/plutoblack.eot');
-    src: url('../fonts/plutoblack.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/plutoblack.woff2') format('woff2'),
-         url('../fonts/plutoblack.woff') format('woff'),
-         url('../fonts/plutoblack.ttf') format('truetype'),
-         url('../fonts/plutoblack.svg#plutoblack') format('svg');
-    font-weight: 600;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Pluto';
+//     src: url('../fonts/plutoblack.eot');
+//     src: url('../fonts/plutoblack.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/plutoblack.woff2') format('woff2'),
+//          url('../fonts/plutoblack.woff') format('woff'),
+//          url('../fonts/plutoblack.ttf') format('truetype'),
+//          url('../fonts/plutoblack.svg#plutoblack') format('svg');
+//     font-weight: 600;
+//     font-style: normal;
+// }
 
 
-@font-face {
-    font-family: 'Pluto';
-    src: url('../fonts/plutomedium.eot');
-    src: url('../fonts/plutomedium.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/plutomedium.woff2') format('woff2'),
-         url('../fonts/plutomedium.woff') format('woff'),
-         url('../fonts/plutomedium.ttf') format('truetype'),
-         url('../fonts/plutomedium.svg#plutomedium') format('svg');
-    font-weight: 500;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Pluto';
+//     src: url('../fonts/plutomedium.eot');
+//     src: url('../fonts/plutomedium.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/plutomedium.woff2') format('woff2'),
+//          url('../fonts/plutomedium.woff') format('woff'),
+//          url('../fonts/plutomedium.ttf') format('truetype'),
+//          url('../fonts/plutomedium.svg#plutomedium') format('svg');
+//     font-weight: 500;
+//     font-style: normal;
+// }
 
 
-@font-face {
-    font-family: 'Pluto';
-    src: url('../fonts/plutolight.eot');
-    src: url('../fonts/plutolight.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/plutolight.woff2') format('woff2'),
-         url('../fonts/plutolight.woff') format('woff'),
-         url('../fonts/plutolight.ttf') format('truetype'),
-         url('../fonts/plutolight.svg#plutolight') format('svg');
-    font-weight: 300;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Pluto';
+//     src: url('../fonts/plutolight.eot');
+//     src: url('../fonts/plutolight.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/plutolight.woff2') format('woff2'),
+//          url('../fonts/plutolight.woff') format('woff'),
+//          url('../fonts/plutolight.ttf') format('truetype'),
+//          url('../fonts/plutolight.svg#plutolight') format('svg');
+//     font-weight: 300;
+//     font-style: normal;
+// }
 
 
-@font-face {
-    font-family: 'Pluto';
-    src: url('../fonts/plutoregular.eot');
-    src: url('../fonts/plutoregular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/plutoregular.woff2') format('woff2'),
-         url('../fonts/plutoregular.woff') format('woff'),
-         url('../fonts/plutoregular.ttf') format('truetype'),
-         url('../fonts/plutoregular.svg#pluto_regularregular') format('svg');
-    font-weight: 400;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Pluto';
+//     src: url('../fonts/plutoregular.eot');
+//     src: url('../fonts/plutoregular.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/plutoregular.woff2') format('woff2'),
+//          url('../fonts/plutoregular.woff') format('woff'),
+//          url('../fonts/plutoregular.ttf') format('truetype'),
+//          url('../fonts/plutoregular.svg#pluto_regularregular') format('svg');
+//     font-weight: 400;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'Pluto';
-    src: url('../fonts/plutothin.eot');
-    src: url('../fonts/plutothin.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/plutothin.woff2') format('woff2'),
-         url('../fonts/plutothin.woff') format('woff'),
-         url('../fonts/plutothin.ttf') format('truetype'),
-         url('../fonts/plutothin.svg#plutothin') format('svg');
-    font-weight: 200;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Pluto';
+//     src: url('../fonts/plutothin.eot');
+//     src: url('../fonts/plutothin.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/plutothin.woff2') format('woff2'),
+//          url('../fonts/plutothin.woff') format('woff'),
+//          url('../fonts/plutothin.ttf') format('truetype'),
+//          url('../fonts/plutothin.svg#plutothin') format('svg');
+//     font-weight: 200;
+//     font-style: normal;
+// }
 
 
 
@@ -190,86 +190,86 @@ a {
 //Matrix font urls
 
 
-// @font-face {
-//   font-family: Pluto;
-//   src: url("/__data/assets/file/0020/63551/plutoblack.eot");
-//   src: url("/__data/assets/file/0020/63551/plutoblack.eot?#iefix") format("embedded-opentype"),
-//        url("/__data/assets/file/0006/63555/plutoblack.woff2") format("woff2"),
-//        url("/__data/assets/file/0005/63554/plutoblack.woff") format("woff"),
-//        url("/__data/assets/file/0004/63553/plutoblack.ttf") format("truetype"),
-//        url("/__data/assets/file/0003/63552/plutoblack.svg#pluto black") format("svg");
-//   font-weight: 600;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: Pluto;
+  src: url("/__data/assets/file/0020/63551/plutoblack.eot");
+  src: url("/__data/assets/file/0020/63551/plutoblack.eot?#iefix") format("embedded-opentype"),
+       url("/__data/assets/file/0006/63555/plutoblack.woff2") format("woff2"),
+       url("/__data/assets/file/0005/63554/plutoblack.woff") format("woff"),
+       url("/__data/assets/file/0004/63553/plutoblack.ttf") format("truetype"),
+       url("/__data/assets/file/0003/63552/plutoblack.svg#pluto black") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: Pluto;
-//   src: url("/__data/assets/file/0007/63556/plutobold.eot");
-//   src: url("/__data/assets/file/0007/63556/plutobold.eot?#iefix") format("embedded-opentype"),
-//        url("/__data/assets/file/0020/63560/plutobold.woff2") format("woff2"),
-//        url("/__data/assets/file/0010/63559/plutobold.woff") format("woff"),
-//        url("/__data/assets/file/0009/63558/plutobold.ttf") format("truetype"),
-//        url("/__data/assets/file/0008/63557/plutobold.svg#pluto bold") format("svg");
-//   font-weight: 700;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: Pluto;
+  src: url("/__data/assets/file/0007/63556/plutobold.eot");
+  src: url("/__data/assets/file/0007/63556/plutobold.eot?#iefix") format("embedded-opentype"),
+       url("/__data/assets/file/0020/63560/plutobold.woff2") format("woff2"),
+       url("/__data/assets/file/0010/63559/plutobold.woff") format("woff"),
+       url("/__data/assets/file/0009/63558/plutobold.ttf") format("truetype"),
+       url("/__data/assets/file/0008/63557/plutobold.svg#pluto bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: Pluto;
-//   src: url("/__data/assets/file/0003/63561/plutoheavy.eot");
-//   src: url("/__data/assets/file/0003/63561/plutoheavy.eot?#iefix") format("embedded-opentype"),
-//        url("/__data/assets/file/0007/63565/plutoheavy.woff2") format("woff2"),
-//        url("/__data/assets/file/0006/63564/plutoheavy.woff") format("woff"),
-//        url("/__data/assets/file/0005/63563/plutoheavy.ttf") format("truetype"),
-//        url("/__data/assets/file/0004/63562/plutoheavy.svg#pluto heavy") format("svg");
-//   font-weight: 900;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: Pluto;
+  src: url("/__data/assets/file/0003/63561/plutoheavy.eot");
+  src: url("/__data/assets/file/0003/63561/plutoheavy.eot?#iefix") format("embedded-opentype"),
+       url("/__data/assets/file/0007/63565/plutoheavy.woff2") format("woff2"),
+       url("/__data/assets/file/0006/63564/plutoheavy.woff") format("woff"),
+       url("/__data/assets/file/0005/63563/plutoheavy.ttf") format("truetype"),
+       url("/__data/assets/file/0004/63562/plutoheavy.svg#pluto heavy") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: Pluto;
-//   src: url("/__data/assets/file/0008/63566/plutolight.eot");
-//   src: url("/__data/assets/file/0008/63566/plutolight.eot?#iefix") format("embedded-opentype"),
-//        url("/__data/assets/file/0007/63574/plutolight.woff2") format("woff2"),
-//        url("/__data/assets/file/0006/63573/plutolight.woff") format("woff"),
-//        url("/__data/assets/file/0005/63572/plutolight.ttf") format("truetype"),
-//        url("/__data/assets/file/0009/63567/plutolight.svg#pluto light") format("svg");
-//   font-weight: 300;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: Pluto;
+  src: url("/__data/assets/file/0008/63566/plutolight.eot");
+  src: url("/__data/assets/file/0008/63566/plutolight.eot?#iefix") format("embedded-opentype"),
+       url("/__data/assets/file/0007/63574/plutolight.woff2") format("woff2"),
+       url("/__data/assets/file/0006/63573/plutolight.woff") format("woff"),
+       url("/__data/assets/file/0005/63572/plutolight.ttf") format("truetype"),
+       url("/__data/assets/file/0009/63567/plutolight.svg#pluto light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: Pluto;
-//   src: url("/__data/assets/file/0008/63575/plutomedium.eot");
-//   src: url("/__data/assets/file/0008/63575/plutomedium.eot?#iefix") format("embedded-opentype"),
-//        url("/__data/assets/file/0004/63580/plutomedium.woff2") format("woff2"),
-//        url("/__data/assets/file/0003/63579/plutomedium.woff") format("woff"),
-//        url("/__data/assets/file/0011/63578/plutomedium.ttf") format("truetype"),
-//        url("/__data/assets/file/0010/63577/plutomedium.svg#pluto medium") format("svg");
-//   font-weight: 500;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: Pluto;
+  src: url("/__data/assets/file/0008/63575/plutomedium.eot");
+  src: url("/__data/assets/file/0008/63575/plutomedium.eot?#iefix") format("embedded-opentype"),
+       url("/__data/assets/file/0004/63580/plutomedium.woff2") format("woff2"),
+       url("/__data/assets/file/0003/63579/plutomedium.woff") format("woff"),
+       url("/__data/assets/file/0011/63578/plutomedium.ttf") format("truetype"),
+       url("/__data/assets/file/0010/63577/plutomedium.svg#pluto medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: Pluto;
-//   src: url("/__data/assets/file/0018/63621/plutoregular.eot");
-//   src: url("/__data/assets/file/0018/63621/plutoregular.eot?#iefix") format("embedded-opentype"),
-//        url("/__data/assets/file/0005/63626/plutoregular.woff2") format("woff2"),
-//        url("/__data/assets/file/0004/63625/plutoregular.woff") format("woff"),
-//        url("/__data/assets/file/0003/63624/plutoregular.ttf") format("truetype"),
-//        url("/__data/assets/file/0020/63623/plutoregular.svg#pluto regular") format("svg");
-//     font-weight: 400;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: Pluto;
+  src: url("/__data/assets/file/0018/63621/plutoregular.eot");
+  src: url("/__data/assets/file/0018/63621/plutoregular.eot?#iefix") format("embedded-opentype"),
+       url("/__data/assets/file/0005/63626/plutoregular.woff2") format("woff2"),
+       url("/__data/assets/file/0004/63625/plutoregular.woff") format("woff"),
+       url("/__data/assets/file/0003/63624/plutoregular.ttf") format("truetype"),
+       url("/__data/assets/file/0020/63623/plutoregular.svg#pluto regular") format("svg");
+    font-weight: 400;
+  font-style: normal;
+}
 
-// @font-face {
-//   font-family: Pluto;
-//   src: url("/__data/assets/file/0006/63627/plutothin.eot");
-//   src: url("/__data/assets/file/0006/63627/plutothin.eot?#iefix") format("embedded-opentype"),
-//        url("/__data/assets/file/0019/63631/plutothin.woff2") format("woff2"),
-//        url("/__data/assets/file/0018/63630/plutothin.woff") format("woff"),
-//        url("/__data/assets/file/0008/63629/plutothin.ttf") format("truetype"),
-//        url("/__data/assets/file/0007/63628/plutothin.svg#pluto thin") format("svg");
-//   font-weight: 200;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: Pluto;
+  src: url("/__data/assets/file/0006/63627/plutothin.eot");
+  src: url("/__data/assets/file/0006/63627/plutothin.eot?#iefix") format("embedded-opentype"),
+       url("/__data/assets/file/0019/63631/plutothin.woff2") format("woff2"),
+       url("/__data/assets/file/0018/63630/plutothin.woff") format("woff"),
+       url("/__data/assets/file/0008/63629/plutothin.ttf") format("truetype"),
+       url("/__data/assets/file/0007/63628/plutothin.svg#pluto thin") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}

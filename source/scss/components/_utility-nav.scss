@@ -6,12 +6,17 @@
 	margin-top: 25px;
 	@include position(relative, null);
 	z-index: 99998;
+	padding: 0;
 
 	@include media-query(note-and-up){
-		height: 100px;
-		width: 215px;
 		margin-top: 35px;
+		// @include container();
 		float: left;
+		width: 240px;
+  }
+
+  > .container {
+  	padding: 0;
   }
 
 	li {

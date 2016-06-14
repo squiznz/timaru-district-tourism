@@ -17,16 +17,15 @@
 }
 
 .heading--green-small {
-  color: $tdc-green;
-  @include font-size(11px);
-  letter-spacing: 0.2em;
+  color: $tdc-green !important;
+  font-size: 11px !important;
+  letter-spacing: 0.16em;
   font-weight: $semibold;
   text-transform: uppercase;
   font-family: $font-primary;
   
   @include media-query(note-and-up){
-    @include font-size(14px);
-    // font-weight: $normal;
+    font-size: 14px !important;
   }
 }
 
