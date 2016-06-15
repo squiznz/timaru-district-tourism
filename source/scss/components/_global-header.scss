@@ -23,7 +23,6 @@
 
 
 .global-header__wrap {
-	padding: 0 21px;
 	height: 70px;
 	@include position(absolute, 42px 0 0 0);
 	z-index: 99999;
@@ -31,10 +30,6 @@
 	@include media-query(note-and-up){
 		height: 100px;
 		@include position(absolute, 55px 0 0 0);
-	}
-
-	@include media-query(desk){
-		padding: 0 38px;
 	}
 }
 
@@ -95,10 +90,6 @@
 				line-height: 28.11px;
 				background-color: transparent;
 				border-bottom: 3px solid $tdc-green;
-
-				// .expanded & {
-				// 	width: 300px;
-				// }
 			}
 			
 			&::-webkit-input-placeholder {
@@ -175,17 +166,3 @@
 			padding: 0 38px;
 		}
 	}
-
-
-
-// .site-search--expanded {
-// 	width: 250px;
-
-// 	form, fieldset {
-// 		width: 100% !important; 
-// 	}
-
-// 	input {
-// 		width: 85% !important;
-// 	}
-// }

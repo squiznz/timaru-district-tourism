@@ -2053,7 +2053,6 @@ table {
   margin: 50px 0;
   max-width: 100%;
   overflow: hidden;
-  display: none;
 }
 
 table thead {
@@ -2424,7 +2423,6 @@ video {
 }
 
 .global-header__wrap {
-  padding: 0 21px;
   height: 70px;
   position: absolute;
   top: 42px;
@@ -2442,12 +2440,6 @@ video {
     right: 0;
     bottom: 0;
     left: 0;
-  }
-}
-
-@media screen and (min-width: 1281px) {
-  .global-header__wrap {
-    padding: 0 38px;
   }
 }
 
@@ -2767,7 +2759,7 @@ video {
   color: #FFFFFF;
 }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1024px) {
   .footer-utilities__list {
     max-width: 1700px;
     margin-left: auto;
@@ -2824,21 +2816,22 @@ video {
   }
 }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1024px) {
   .footer-utilities__list li:nth-child(4) {
     position: absolute;
     top: 0;
-    right: 210px;
+    right: 188px;
     bottom: 0;
   }
 }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1024px) {
   .footer-utilities__list li:nth-child(5) {
     position: absolute;
     top: 0;
     right: 38px;
     bottom: 0;
+    padding-right: 0;
   }
 }
 
@@ -2876,7 +2869,7 @@ video {
   .primary-nav ul {
     border: none;
     position: static;
-    padding: 0 250px;
+    padding: 0 14.705882352941178%;
     background-color: transparent;
   }
 }
@@ -2900,13 +2893,13 @@ video {
   display: block;
   padding: 18px 1.3125em;
   font-weight: 600;
-  font-size: 19px;
-  font-size: 1.1875rem;
+  font-size: 17.23px;
+  font-size: 1.07688rem;
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1281px) {
   .primary-nav ul li a {
     line-height: 65px;
     padding: 16px 24px;
@@ -3028,14 +3021,15 @@ video {
   margin-top: 25px;
   position: relative;
   z-index: 99998;
-  padding: 0;
+  padding: 0 21px;
 }
 
 @media screen and (min-width: 1024px) {
   .utility-nav {
-    margin-top: 35px;
+    margin-top: 0;
+    height: 100%;
     float: left;
-    width: 240px;
+    padding: 0;
   }
 }
 
@@ -3055,18 +3049,20 @@ video {
 .utility-nav__item--logo {
   float: left;
   padding-top: 2px;
-  width: 7.563em;
+  width: 32.94117647058823%;
 }
 
 @media screen and (min-width: 1024px) {
   .utility-nav__item--logo {
-    width: 7.688em;
+    width: 50.770588235294116%;
+    padding-top: 8%;
   }
 }
 
 @media screen and (min-width: 1281px) {
   .utility-nav__item--logo {
-    width: 9.688em;
+    width: 61.770588235294116%;
+    padding-top: 13%;
   }
 }
 
@@ -3187,11 +3183,11 @@ video {
   right: 0;
   width: 100%;
   color: #00132a;
-  height: 42px;
+  height: 100%;
   text-align: right;
 }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1024px) {
   .tertiary-nav ul {
     padding: 0 38px;
     font-size: 16px;
@@ -3270,11 +3266,12 @@ video {
 
 @media screen and (min-width: 1024px) {
   .tertiary-nav ul li:first-of-type {
-    position: absolute;
+    position: static;
     top: 0;
     bottom: 0;
-    left: 38px;
+    left: 0;
     display: inline-block;
+    float: left;
     height: 55px;
   }
 }
@@ -3811,7 +3808,6 @@ video {
   .in-and-around h2 {
     font-size: 30.79px;
     font-size: 1.92437rem;
-    width: 17.538em;
     line-height: 60px;
     height: 60px;
     position: relative;
@@ -3880,7 +3876,7 @@ video {
 
 @media screen and (min-width: 1024px) {
   .in-and-around__list {
-    width: 33.750em;
+    width: 100%;
   }
   .in-and-around__list::after {
     clear: both;
@@ -3902,7 +3898,6 @@ video {
 @media screen and (min-width: 1024px) {
   .in-and-around__list li {
     background-color: #FFFFFF;
-    width: 30em;
     position: relative;
     height: auto;
     padding: 21px 100px 21px 21px;
@@ -4915,7 +4910,6 @@ video {
 
 .feature-banner__wrap {
   position: relative;
-  width: 100%;
   height: 100%;
   max-width: 15.625em;
   margin-left: auto;

@@ -6,13 +6,13 @@
 	margin-top: 25px;
 	@include position(relative, null);
 	z-index: 99998;
-	padding: 0;
+	padding: 0 21px;
 
 	@include media-query(note-and-up){
-		margin-top: 35px;
-		// @include container();
+		margin-top: 0;
+		height: 100%;
 		float: left;
-		width: 240px;
+		padding: 0;
   }
 
   > .container {
@@ -33,14 +33,16 @@
 		.utility-nav__item--logo {
 			float: left;
 			padding-top: 2px;
-			width: 7.563em;
+			width: 32.94117647058823%;
 
 			@include media-query(note-and-up){
-				width: 7.688em;
+				width: 50.770588235294116%;
+				padding-top: 8%;
 			}
 
 			@include media-query(desk){
-				width: 9.688em;
+				width: 61.770588235294116%;
+				padding-top: 13%;
 			}
 		}
 

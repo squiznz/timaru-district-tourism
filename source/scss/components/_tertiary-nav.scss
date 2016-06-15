@@ -18,10 +18,10 @@
 		@include position(absolute, null 0 null null);
 		width: 100%;
 		color: $tdc-dark-navy;
-		height: 42px;
+		height: 100%;
 		text-align: right;
 
-		@include media-query(desk){
+		@include media-query(note-and-up){
 			padding: 0 38px;
 			@include font-size(16px);	
 			@include container();
@@ -78,8 +78,9 @@
 				height: 44px;
 
 				@include media-query(note-and-up){
-					@include position(absolute, 0 null 0 38px);
+					@include position(static, 0 null 0 0);
 					display: inline-block;
+					float: left;
 					height: 55px;
 				}
 			}

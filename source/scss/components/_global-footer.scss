@@ -115,7 +115,7 @@
 		.footer-utilities__list {
 			@extend .bare-list;
 
-			@include media-query(desk){
+			@include media-query(note-and-up){
 			@include container(1700px);
 				padding: 0 38px;
 				@include position(relative, null);
@@ -154,17 +154,16 @@
 					}
 				}
 
-
 				&:nth-child(4) {
-					@include media-query(desk){
-						@include position(absolute, 0 210px 0 null);
+					@include media-query(note-and-up){
+						@include position(absolute, 0 188px 0 null);
 					}
 				}
 
 				&:nth-child(5) {
-
-					@include media-query(desk){
+					@include media-query(note-and-up){
 						@include position(absolute, 0 38px 0 null);
+						padding-right: 0;
 					}
 				}
 			}
