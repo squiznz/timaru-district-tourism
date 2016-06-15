@@ -4,6 +4,7 @@
 
 .in-and-around {
 	@include clearfix();
+	@include font-size(16px);
 
 	@include media-query(portable){
 		@include position(relative, null);
@@ -17,6 +18,7 @@
 		background-color: $tdc-navy;
 		padding: 0 21px;
 		color: $white;
+		margin: 0;
 		font-weight: $medium;
 
 		@include media-query(portable){
@@ -29,7 +31,7 @@
 
 		@include media-query(note-and-up){
 			@include font-size(30.79px);
-			width: 17.538em;
+			// width: 17.538em;
 			line-height: 60px;
 			height: 60px;
 			@include position(relative, null);
@@ -88,7 +90,7 @@
 		float: left;
 
 		@include media-query(note-and-up){
-			width: 33.750em;
+			width: 100%;
 			@include clearfix();
 		}
 
@@ -102,9 +104,8 @@
 
 			@include media-query(note-and-up){
 				background-color: $white;
-				width: 30em;
-							@include position(relative, null);
-
+				// width: 30em;
+				@include position(relative, null);
 				height: auto;
 				padding: 21px 100px 21px 21px;
 			}

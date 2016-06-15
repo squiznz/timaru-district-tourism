@@ -4,6 +4,7 @@
 
 .our-region {
 	padding: 50px 0 34px 0;
+	@include font-size(16px);
 	
 	@include media-query(note-and-up){
 		padding: 90px 0;
@@ -29,6 +30,7 @@
 			display: inline;
 			float: left;
 			color: $tdc-dark-navy;
+			margin: 0;
 			font-weight: $medium;
 			@include font-size(23px);
 			margin-right: 0.25em;

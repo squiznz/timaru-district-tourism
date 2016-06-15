@@ -4,6 +4,7 @@
 
 .three-best {
 	padding: 50px 0 1.3125em 0;
+	@include font-size(16px);
 
 	@include media-query(note-and-up){
 		@include container(84.063em);
@@ -26,6 +27,7 @@
 		h2 {
 			display: inline;
 			float: left;
+			margin: 0;
 			color: $tdc-dark-navy;
 			font-weight: $medium;
 			@include font-size(23px);

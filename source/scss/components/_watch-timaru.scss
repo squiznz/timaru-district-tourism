@@ -4,6 +4,7 @@
 
 .watch-timaru {
 	padding: 3.125em 0 2.125em 0;
+	@include font-size(16px);
 
 	@include media-query(note-and-up){
 		@include container(84.063em);

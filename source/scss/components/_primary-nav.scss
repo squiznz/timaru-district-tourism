@@ -26,8 +26,8 @@
 
 		@include media-query(note-and-up){
 			border: none;
-			@include position(static, nnull);
-			padding: 0 250px;
+			@include position(static, null);
+			padding: 0 14.705882352941178%;
 			background-color: transparent;
 		}
 
@@ -47,11 +47,11 @@
 				display: block;
 				padding: 18px 1.3125em;
 				font-weight: $semibold;
-				@include font-size(19px);
+				@include font-size(17.23px);
 				text-decoration: none;
 				font-family: $font-primary;
 
-				@include media-query(note-and-up){
+				@include media-query(desk){
 					line-height: 65px;
 					padding: 16px 24px;
 					@include font-size(22.75px);
