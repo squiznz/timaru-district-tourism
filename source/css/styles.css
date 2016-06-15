@@ -1660,11 +1660,24 @@ html main p {
   clear: both;
 }
 
+.inside main .container {
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inside main .container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 .detail-wrap {
-  max-width: 969px;
+  max-width: 68.09557%;
   margin-left: auto;
   margin-right: auto;
   float: left;
+  margin-bottom: 50px;
 }
 
 .detail-wrap:after {
@@ -1679,10 +1692,10 @@ html main p {
 
 @media screen and (min-width: 1024px) {
   .inside-wrap {
-    width: 66.8125em;
-    padding: 0 100px;
+    width: 65.84%;
+    padding: 0 100px !important;
     float: left;
-    margin: 0;
+    margin-right: 38px;
   }
   .inside-wrap::after {
     clear: both;
@@ -2373,6 +2386,11 @@ video {
 
 .tabs li .active {
   color: #00132a;
+}
+
+.feature-map {
+  width: 100%;
+  height: 560px;
 }
 
 /***
@@ -5070,7 +5088,7 @@ video {
 
 @media screen and (min-width: 1024px) {
   .in-this-section {
-    width: 14.6875em;
+    width: 14.55%;
     margin-right: 38px;
     padding: 0;
   }
@@ -5186,7 +5204,7 @@ video {
 
 @media screen and (min-width: 1024px) {
   .related-info {
-    width: 14.875em;
+    width: 14.6539%;
     float: right;
     margin: 0;
   }
@@ -5265,9 +5283,12 @@ video {
 
 .related-info__promoted-info .cta-button {
   color: #FFFFFF;
-  text-align: center;
-  text-indent: -20px;
+  text-align: left;
   margin-top: 21px;
+  padding: 20px 50px 20px 10px;
+  display: block;
+  letter-spacing: -1px;
+  height: auto;
 }
 
 @media screen and (min-width: 1024px) {

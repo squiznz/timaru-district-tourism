@@ -26,11 +26,18 @@ html {
 	}
 }
 
+.inside {
+	main {
+		.container {
+			@include container(1700px);
+		}
+	}
+}
+
 .detail-wrap {
-	@include container(969px);
+	@include container(68.09557273366129%);
 	float: left;
-	// @include clearfix();
-	// height: auto;
+	margin-bottom: 50px;
 }
 
 
@@ -38,11 +45,11 @@ html {
 	margin-bottom: 21px;
 
 	@include media-query(note-and-up){
-		width: 66.8125em;
-		padding: 0 100px ;
+		width: 65.84%;
+		padding: 0 100px !important;
 		float: left;
 		@include clearfix();
-		margin: 0;
+		margin-right: 38px;
 	}
 }
 
@@ -641,4 +648,10 @@ video {
 			color: $tdc-dark-navy;
 		}
 	}
+}
+
+
+.feature-map {
+	width: 100%;
+	height: 560px;
 }

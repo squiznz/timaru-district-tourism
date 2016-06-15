@@ -7,7 +7,7 @@
 	float: left;
 
 	@include media-query(note-and-up){
-		width: 14.875em;
+		width: 14.6539%;
 		float: right;
 		margin: 0;
 	}
@@ -71,9 +71,12 @@
 
 		.cta-button {
 			color: $white;
-			text-align: center;
-			text-indent: -20px;
+			text-align: left;
 			margin-top: 21px;
+			padding: 20px 50px 20px 10px;
+			display: block;
+			letter-spacing: -1px;
+			height: auto;
 
 			@include media-query(note-and-up){
 				margin-top: 40px;
