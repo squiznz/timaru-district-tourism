@@ -4,35 +4,22 @@
 
 html {
 	font-family: $font-primary;
+	
+	p {
+		@include media-query(note-and-up){
+			@include font-size(21.43px);
+		}
+	}
 }
-
-// .page {
-// 	font-family: $font-primary;
-// }
 
 .landing, .details {
 	main {
 		.container {
 			@include container(1423px);
 		}
+
 	}
 }
-
-// .inside {
-// 	.container {
-// 		@include container(1423px);
-// 	}
-// }
-
-
-// .page__content {
-// 	@include container();
-// 	padding: $padding;
-
-// 	@include media-query(note-and-up){
-// 		padding: 100px 38px 0 38px;
-// 	}
-// }
 
 
 .inside-wrap {
@@ -47,19 +34,11 @@ html {
 	}
 }
 
+.intro {
+	
+}
 
-// .page--inside__wrap {
-// 	@include container();
-// 	padding: 0 21px;
-
-// 	@include media-query(note-and-up){
-// 		@include container(1700px);
-// 		padding: 90px 38px;
-// 		@include clearfix();
-// 	}
-// }
-
-.subheading {
+.intro__subheading {
 	@include font-size(19px);
 	line-height: 26px;
 	letter-spacing: 0.02em;
