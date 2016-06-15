@@ -1640,6 +1640,10 @@ html {
   }
 }
 
+html main p {
+  margin-bottom: 10px;
+}
+
 .landing main .container, .details main .container {
   max-width: 1423px;
   margin-left: auto;
@@ -1647,6 +1651,19 @@ html {
 }
 
 .landing main .container:after, .details main .container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.detail-wrap {
+  max-width: 969px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+.detail-wrap:after {
   content: " ";
   display: block;
   clear: both;
@@ -1668,6 +1685,27 @@ html {
     content: "";
     display: table;
   }
+}
+
+.intro {
+  padding-bottom: 3.26em;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 50px;
+}
+
+.intro__wrap::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.intro__wrap p {
+  width: 73.78777231201687%;
+  float: left;
+}
+
+.intro__wrap a.cta-button {
+  float: right;
 }
 
 .intro__subheading {
@@ -1699,14 +1737,13 @@ video {
   letter-spacing: 0.01em;
   height: 45px;
   background-color: #4821c0;
-  text-indent: -1em;
   padding: 10px;
   position: relative;
 }
 
 @media screen and (min-width: 1024px) {
   .cta-button {
-    padding: 15px 30px;
+    padding: 15px 50px 15px 20px;
     height: 60px;
     text-align: left;
   }
@@ -1720,7 +1757,7 @@ video {
   background-image: url("../img/arrow-right-white.png");
   background-position: center;
   float: right;
-  height: 45px;
+  height: 100%;
   width: 20px;
   position: absolute;
   top: 0;
@@ -1731,11 +1768,10 @@ video {
 @media screen and (min-width: 1024px) {
   .cta-button:after {
     position: absolute;
-    top: 0;
-    right: 10px;
+    top: 2px;
+    right: 20px;
     bottom: 0;
     background-size: 21px;
-    height: 60px;
     background-position: 70% 23px;
   }
 }
@@ -2310,6 +2346,29 @@ video {
     top: 2px;
     right: 10px;
   }
+}
+
+.tabs {
+  padding: 0;
+  margin-bottom: 50px;
+  width: 100%;
+  float: left;
+}
+
+.tabs li {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  float: left;
+  margin-right: 3em;
+  color: #acacac;
+}
+
+.tabs li a {
+  color: inherit;
+}
+
+.tabs li .active {
+  color: #00132a;
 }
 
 /***
@@ -4179,6 +4238,7 @@ video {
   display: inline;
   float: left;
   color: #00132a;
+  margin: 0;
   font-weight: 500;
   font-size: 23px;
   font-size: 1.4375rem;
@@ -4356,6 +4416,7 @@ video {
 .three-best__selector-wrap h2 {
   display: inline;
   float: left;
+  margin: 0;
   color: #00132a;
   font-weight: 500;
   font-size: 23px;

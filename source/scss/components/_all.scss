@@ -9,8 +9,13 @@ html {
 		@include media-query(note-and-up){
 			@include font-size(21.43px);
 		}	
+
+		p {
+			margin-bottom: 10px;
+		}
 	}
 }
+
 
 
 .landing, .details {
@@ -18,8 +23,14 @@ html {
 		.container {
 			@include container(1423px);
 		}
-
 	}
+}
+
+.detail-wrap {
+	@include container(969px);
+	float: left;
+	// @include clearfix();
+	// height: auto;
 }
 
 
@@ -28,7 +39,7 @@ html {
 
 	@include media-query(note-and-up){
 		width: 66.8125em;
-		padding: 0 100px;
+		padding: 0 100px ;
 		float: left;
 		@include clearfix();
 		margin: 0;
@@ -36,7 +47,22 @@ html {
 }
 
 .intro {
+	padding-bottom: 3.26em;
+	border-bottom: 1px solid $tdc-grey;
+	margin-bottom: 50px;
+}
+
+.intro__wrap {
+	@include clearfix();
+
+	p {
+		width: 73.78777231201687%;
+		float: left;
+	}
 	
+	a.cta-button {
+		float: right;
+	}
 }
 
 .intro__subheading {
@@ -66,12 +92,12 @@ video {
 	letter-spacing: 0.01em;
 	height: 45px;
 	background-color: $tdc-purple;
-	text-indent: -1em;
+	// text-indent: -1em;
 	padding: 10px;
 	@include position(relative, null);
 
 	@include media-query(note-and-up){
-		padding: 15px 30px;
+		padding: 15px 50px 15px 20px;
 		height: 60px;
 		text-align: left;
 	}
@@ -84,14 +110,13 @@ video {
 		background-image: url('../img/arrow-right-white.png');
 		background-position: center;
 		float: right;
-		height: 45px;
+		height: 100%;
 		width: 20px;
 		@include position(absolute, 0 30px 0 null);
 
 		@include media-query(note-and-up){
-			@include position(absolute, 0 10px 0 null);
+			@include position(absolute, 2px 20px 0 null);
 			background-size: 21px;
-			height: 60px;
 			background-position: 70% 23px;
 		}
 	}
@@ -591,6 +616,29 @@ video {
 					}
 				}
 			}
+		}
+	}
+}
+
+.tabs {
+	padding: 0;
+	margin-bottom: 50px;
+	width: 100%;
+	float: left;
+
+	li {
+		list-style-type: decimal-leading-zero;
+    list-style-position: inside;
+		float: left;
+		margin-right: 3em;
+		color: $tdc-mid-grey;
+
+		a {
+			color: inherit;
+		}
+
+		.active {
+			color: $tdc-dark-navy;
 		}
 	}
 }
