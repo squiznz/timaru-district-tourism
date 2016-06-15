@@ -11,6 +11,10 @@
 		background-color: transparent;
 	}
 
+	&--transparent {
+		background-color: transparent;
+	}
+
 	@include media-query(note-and-up){
 		@include position(absolute, 0 0 null 0);
 		height: 155px;
