@@ -46,6 +46,10 @@
 				@include font-size(17.23px);
 				text-decoration: none;
 				font-family: $font-primary;
+				
+				@include media-query(note-and-up){
+					padding: 16px 1em;
+				}
 
 				@include media-query(desk){
 					line-height: 65px;
