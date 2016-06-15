@@ -88,19 +88,35 @@
 	ul {
 		float: left;
 		width: 592px;
-		padding: 55px 0 0 0;
+		padding: 60px 0 0 0;
 
 		li {
 			@include span(1 of 2);
-			
+			padding-right: 43px;
+
 			&:nth-child(even){
 				@include last();
 			}
+			
 
 			a {
 				padding: 0;
 				border: none !important;
+				font-weight: 500 !important;
 				line-height: 50px;
+				display: inline-block;
+				@include position(relative, null);
+
+				&:after {
+					content: "";
+					width: 40px;
+					height: 100%;
+					@include position(absolute, 0 -2em 0 null);
+					background-image: url('../img/arrow-right-white.png');
+					background-repeat: no-repeat;
+					background-size: 21px;
+					background-position: center;
+				}
 			}
 		}
 	}
@@ -130,5 +146,9 @@
 			border: none !important;
 			display: inline-block;
 			@include font-size(18.72px);
+
+			&:after {
+				top: 1px;
+			}
 		}
 	}

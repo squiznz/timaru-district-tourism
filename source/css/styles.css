@@ -2913,13 +2913,14 @@ video {
 .primary-nav__panel ul {
   float: left;
   width: 592px;
-  padding: 55px 0 0 0;
+  padding: 60px 0 0 0;
 }
 
 .primary-nav__panel ul li {
   width: 44.44444%;
   float: left;
   margin-right: 11.11111%;
+  padding-right: 43px;
 }
 
 .primary-nav__panel ul li:nth-child(even) {
@@ -2930,7 +2931,24 @@ video {
 .primary-nav__panel ul li a {
   padding: 0;
   border: none !important;
+  font-weight: 500 !important;
   line-height: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+.primary-nav__panel ul li a:after {
+  content: "";
+  width: 40px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -2em;
+  bottom: 0;
+  background-image: url("../img/arrow-right-white.png");
+  background-repeat: no-repeat;
+  background-size: 21px;
+  background-position: center;
 }
 
 .primary-nav__panel.open {
@@ -2960,6 +2978,10 @@ video {
   display: inline-block;
   font-size: 18.72px;
   font-size: 1.17rem;
+}
+
+.primary-nav__panel__info .more:after {
+  top: 1px;
 }
 
 /***
