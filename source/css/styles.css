@@ -2362,6 +2362,10 @@ video {
   background-color: transparent;
 }
 
+.global-header--transparent {
+  background-color: transparent;
+}
+
 @media screen and (min-width: 1024px) {
   .global-header {
     position: absolute;
@@ -4880,6 +4884,17 @@ video {
   max-width: 50em;
 }
 
+.feature-banner--inside {
+  background: url("/__data/assets/image/0005/65705/inside-banner.png");
+  height: 25em;
+  padding-top: 34px;
+}
+
+.feature-banner--inside h1 {
+  font-size: 48px;
+  font-size: 3rem;
+}
+
 .feature-banner--itinerary {
   background-image: url(../img/placeholder3.jpeg);
 }
@@ -4995,14 +5010,14 @@ video {
   left: 0;
 }
 
-.in-this-section ul > ul {
+.in-this-section ul li > ul {
   padding-left: 12px;
   border-bottom: 1px dotted #acacac;
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
 
-.in-this-section ul > ul li {
+.in-this-section ul li > ul li {
   font-size: 18.74px;
   font-size: 1.17125rem;
 }
