@@ -12,14 +12,14 @@
 // 4. Fonts on OSX will look more consistent with other systems that do not
 //    render text using sub-pixel anti-aliasing.
 html {
-    min-width: 320px;
-    min-height: 100%; // [2]
-    background-color: $base-background-color;
-    color: $base-text-color;
-    font-size: ($base-font-size / 16px) * 1em; // [1]
-    line-height: $base-line-height / $base-font-size; // [1]
-    -webkit-text-size-adjust: 100%; // [3]
-        -ms-text-size-adjust: 100%; // [3]
-    -moz-osx-font-smoothing: grayscale; // [4]
-     -webkit-font-smoothing: antialiased; // [4]
+  min-width: 320px;
+  min-height: 100%; // [2]
+  background-color: $base-background-color;
+  color: $base-text-color;
+  font-size: ($base-font-size / 16px) * 1em; // [1]
+  line-height: $base-line-height / $base-font-size; // [1]
+  -webkit-text-size-adjust: 100%; // [3]
+      -ms-text-size-adjust: 100%; // [3]
+  -moz-osx-font-smoothing: grayscale; // [4]
+   -webkit-font-smoothing: antialiased; // [4]  
 }

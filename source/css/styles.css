@@ -1633,6 +1633,13 @@ html {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+@media screen and (min-width: 1024px) {
+  html p {
+    font-size: 21.43px;
+    font-size: 1.33937rem;
+  }
+}
+
 .landing main .container, .details main .container {
   max-width: 1423px;
   margin-left: auto;
@@ -1663,7 +1670,7 @@ html {
   }
 }
 
-.subheading {
+.intro__subheading {
   font-size: 19px;
   font-size: 1.1875rem;
   line-height: 26px;
@@ -1673,7 +1680,7 @@ html {
 }
 
 @media screen and (min-width: 1024px) {
-  .subheading {
+  .intro__subheading {
     font-size: 25.43px;
     font-size: 1.58937rem;
     line-height: 30px;
