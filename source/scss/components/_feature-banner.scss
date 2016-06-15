@@ -12,6 +12,7 @@
 	padding-top: 112px;
 
 	@include media-query(note-and-up){
+		@include font-size(16px);
 		height: 44.875em;
 		padding-top: 155px;
 	}

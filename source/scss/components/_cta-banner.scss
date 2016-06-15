@@ -10,6 +10,7 @@
 	text-align: center;
 	height: 16.1875em;
 	font-weight: $medium;
+	@include font-size(16px);
 
 	@include media-query(note-and-up){
 		height: 25em;

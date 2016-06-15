@@ -19,7 +19,6 @@
 
 
 .global-header__wrap {
-	// @include container(1700px);
 	padding: 0 21px;
 	height: 70px;
 	@include position(absolute, 42px 0 0 0);
@@ -48,7 +47,7 @@
 			float: right;
 		  -webkit-transition: width 0.5s;
 			transition: width 0.5s;
-			@include position(static, null);
+			@include position(relative, null);
 			width: 200px;
 		}
 		

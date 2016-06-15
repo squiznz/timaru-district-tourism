@@ -5,12 +5,13 @@
 html {
 	font-family: $font-primary;
 	
-	p {
+	main {
 		@include media-query(note-and-up){
 			@include font-size(21.43px);
-		}
+		}	
 	}
 }
+
 
 .landing, .details {
 	main {
@@ -239,7 +240,7 @@ ul {
 	li {
     text-indent: -0.7em;
     list-style: none;
-		
+
 		&:before {
 	    content: "• ";
 	    margin-right: 0.5em;

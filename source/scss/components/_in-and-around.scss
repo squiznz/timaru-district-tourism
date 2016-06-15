@@ -4,6 +4,7 @@
 
 .in-and-around {
 	@include clearfix();
+	@include font-size(16px);
 
 	@include media-query(portable){
 		@include position(relative, null);
@@ -17,6 +18,7 @@
 		background-color: $tdc-navy;
 		padding: 0 21px;
 		color: $white;
+		margin: 0;
 		font-weight: $medium;
 
 		@include media-query(portable){

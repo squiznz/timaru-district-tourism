@@ -23,6 +23,7 @@
 
 		@include media-query(desk){
 			padding: 0 38px;
+			@include font-size(16px);	
 			@include container();
 			@include position(relative, null);
 		}
