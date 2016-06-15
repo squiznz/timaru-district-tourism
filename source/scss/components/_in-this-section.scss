@@ -80,16 +80,16 @@
 					@include position(absolute, 15px null 0 0);
 				}
 			}
-		}
 
-		> ul {
-			padding-left: 12px;
-			border-bottom: 1px dotted $tdc-mid-grey;
-			margin-bottom: 10px;
-			padding-bottom: 10px;
+			> ul {
+				padding-left: 12px;
+				border-bottom: 1px dotted $tdc-mid-grey;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
 
-			li {
-				@include font-size(18.74px);
+				li {
+					@include font-size(18.74px);
+				}
 			}
 		}
 	}

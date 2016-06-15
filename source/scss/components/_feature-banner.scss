@@ -192,7 +192,15 @@
   }
 }
 
+.feature-banner--inside {
+    background: url('/__data/assets/image/0005/65705/inside-banner.png');
+    height: 25em;
+    padding-top: 34px;
 
+    h1 {
+    	@include font-size(48px);
+    }
+}
 
 
 
