@@ -72,7 +72,7 @@ function globalActions() {
 function megaMenu() {
   var navItems = $('.primary-nav ul li');
 
-  $('.primary-nav ul li a').click(function(e) {
+  $('.primary-nav ul > li > a').click(function(e) {
     e.preventDefault();
     e.stopPropagation();
 
