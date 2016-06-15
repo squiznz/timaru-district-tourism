@@ -11,6 +11,10 @@
 		display: block;
 		@include position(absolute, 0px 0 null 0);
 	}
+	
+	.adbt & {
+		background-color: transparent;
+	}
 
 	ul {
 		@extend .bare-list;
@@ -70,7 +74,7 @@
 		}
 	}
 
-	.home & {
+	.home &, .adbt{
 		background-color: transparent;
 	}
 }
@@ -125,7 +129,7 @@
 		}
 	}
 
-	&.open {
+	.active & {
 		display: block;
 	}
 }
