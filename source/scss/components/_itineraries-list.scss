@@ -4,23 +4,12 @@
 
 .itineraries {
 	background-color: $tdc-bg-grey;
-}
 
-
-	.itineraries__wrap {
-		padding: 0 21px;
-
-		@include media-query(note-and-up){
-			@include container(1423px);
-			padding: 0 38px;
-		}
-	
-		.filters {
-			float: left;
-			width: 80%;
-		}
+	.filters {
+		float: left;
+		width: 80%;
 	}
-
+}
 
 		.itineraries__list {
 			padding-bottom: 140px;
@@ -67,13 +56,15 @@
 
 .itineraries__list__wrap {
 	border: 1px solid $tdc-grey;
+	border-top: none;
+	border-right: none;
 	background-color: $white;
 	float: left;
-	// width: 100%;
+	@include clearfix();
+	width: 100%;
 
 	>	ul {
 		border-top: none;
-		border-bottom: 1px solid $tdc-grey;
 		height: 97px;
 		padding: 0;
 
@@ -95,10 +86,37 @@
 					padding: 55px;
 					width: 650px;
 					float: left;
+					@include clearfix();
+					height: 100%;
+
+					p {
+						margin-bottom: 21px;
+					}
+
+					h3 {
+						@include font-size(37.42px);
+						font-weight: $medium;
+					}
+
+					h3, h5 {
+						color: $tdc-light-blue;
+					}
+
+					h5 {
+						font-weight: $semibold;
+					}
+
+					h4 {
+						color: $tdc-dark-navy;
+						font-family: $font-secondary;
+						font-weight: $medium;
+					}
 				}
 
 				.itineraries__list__highlights {
 					padding: 55px;
+					height: 100%;
+					@include clearfix();
 					float: left;
 					width: 331px;
 
@@ -116,8 +134,6 @@
 					min-height: 383px;
 					background-color: $black;
 				}		
-	
-
 
 			.itineraries__list__info {
 				width: 100%;
@@ -127,6 +143,7 @@
 
 					&:after {
 						@include position(absolute, 32px null 32px 25px);
+						font-family: 'Fontawesome';
 					}
 					
 					&:nth-child(1){
@@ -143,12 +160,8 @@
 				}
 			}
 
-
-
-
 				.itineraries__list__info__drive {
 					&:after {
-						font-family: 'Fontawesome';
 						content: "\f1b9";
 					}
 				}
@@ -157,7 +170,6 @@
 				.itineraries__list__info__walk {
 
 					&:after {
-						font-family: 'Fontawesome';
 						content: "\f21c";
 					}
 				}
@@ -165,7 +177,6 @@
 				.itineraries__list__info__bike {
 
 					&:after {
-						font-family: 'Fontawesome';
 						content: "\f206";
 					}
 				}

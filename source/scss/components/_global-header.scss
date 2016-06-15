@@ -23,7 +23,7 @@
 
 
 .global-header__wrap {
-	@include container();
+	// @include container(1700px);
 	padding: 0 21px;
 	height: 70px;
 	@include position(absolute, 42px 0 0 0);
@@ -52,8 +52,8 @@
 			float: right;
 		  -webkit-transition: width 0.5s;
 			transition: width 0.5s;
-			width: 200px;
 			@include position(static, null);
+			width: 200px;
 		}
 		
 		.site-search__form {
@@ -165,6 +165,15 @@
 				float: right;
 				margin-top: -6px;
 			}
+		}
+	}
+
+
+	.global-header__utility-nav-wrap {
+		@include container();
+
+		@include media-query(note-and-up){
+			padding: 0 38px;
 		}
 	}
 

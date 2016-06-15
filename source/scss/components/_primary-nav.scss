@@ -9,11 +9,11 @@
 	
 	@include media-query(note-and-up){
 		display: block;
+		@include position(absolute, 0px 0 null 0);
 	}
 
 	ul {
 		@extend .bare-list;
-		@include container();
 		z-index: 99997;
 		@include position(absolute, 0px 0 null 0);
 		padding-top: 70px;
@@ -22,8 +22,8 @@
 
 		@include media-query(note-and-up){
 			border: none;
-			@include position(absolute, 0 240px 0 250px);
-			padding: 0;
+			@include position(static, nnull);
+			padding: 0 250px;
 			background-color: transparent;
 		}
 
@@ -47,19 +47,16 @@
 				text-decoration: none;
 				font-family: $font-primary;
 
-				@include media-query(desk){
+				@include media-query(note-and-up){
 					line-height: 65px;
 					padding: 16px 24px;
 					@include font-size(22.75px);
 				}
 			}
 
-			&.active {
-				span {
-					@include media-query(desk){
-						padding-bottom: 6px;
-						border-bottom: 3px solid $white;
-					}
+			&.active a {
+				@include media-query(note-and-up){
+					border-bottom: 3px solid $white;
 				}
 			}
 		}
@@ -68,4 +65,90 @@
 			display: block;
 		}
 	}
+
+	.home & {
+		background-color: transparent;
+	}
 }
+
+
+
+.primary-nav__panel {
+	display: none;
+
+	@include media-query(note-and-up){
+		@include position(absolute, 100px 0 null 0);
+		width: 100%;
+		padding: 80px;
+		background-color: $tdc-navy !important;
+		border-bottom: 5px solid $white;
+		min-height: 410px;
+	}
+
+	ul {
+		float: left;
+		width: 592px;
+		padding: 60px 0 0 0;
+
+		li {
+			@include span(1 of 2);
+			padding-right: 43px;
+
+			&:nth-child(even){
+				@include last();
+			}
+			
+
+			a {
+				padding: 0;
+				border: none !important;
+				font-weight: 500 !important;
+				line-height: 50px;
+				display: inline-block;
+				@include position(relative, null);
+
+				&:after {
+					content: "";
+					width: 40px;
+					height: 100%;
+					@include position(absolute, 0 -2em 0 null);
+					background-image: url('../img/arrow-right-white.png');
+					background-repeat: no-repeat;
+					background-size: 21px;
+					background-position: center;
+				}
+			}
+		}
+	}
+
+	&.open {
+		display: block;
+	}
+}
+
+	
+	.primary-nav__panel__info {
+		width: 691px;
+		float: left;
+		padding: 0 100px 0 137px;
+		@include font-size(22.75px);
+
+		strong {
+			font-family: $font-secondary;
+			@include font-size(32.12px);
+			margin-bottom: 21px;
+			display: block;
+		}
+
+		.more {
+			padding: 0;
+			color: $tdc-light-blue;
+			border: none !important;
+			display: inline-block;
+			@include font-size(18.72px);
+
+			&:after {
+				top: 1px;
+			}
+		}
+	}

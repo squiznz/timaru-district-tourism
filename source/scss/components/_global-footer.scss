@@ -16,7 +16,7 @@
 
 	.global-footer__wrap {
 		padding: 2.25em 1.3125em;
-		@include container();
+		@include container(1700px);
 
 		@include media-query(note-and-up){
 			padding: 5.375em 1.3125em;
@@ -116,7 +116,7 @@
 			@extend .bare-list;
 
 			@include media-query(desk){
-				@include container();
+			@include container(1700px);
 				padding: 0 38px;
 				@include position(relative, null);
 			}
