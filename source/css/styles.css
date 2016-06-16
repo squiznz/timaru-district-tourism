@@ -1648,6 +1648,10 @@ html main p {
   margin-bottom: 10px;
 }
 
+img {
+  max-width: 100%;
+}
+
 .landing main .container, .details main .container {
   max-width: 1423px;
   margin-left: auto;
@@ -5861,34 +5865,6 @@ ul.listing--events .listing--events__feature-wrap span:last-of-type:before {
 /***
 *  Landing Template
 ***/
-.landing-list {
-  max-width: 106.25em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 21px;
-}
-
-.landing-list:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-@media screen and (min-width: 1281px) {
-  .landing-list {
-    max-width: 1345px;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 90px auto 87px auto;
-    padding: 0 38px;
-  }
-  .landing-list:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-}
-
 .landing-list li {
   width: 100%;
   float: left;
@@ -5907,6 +5883,7 @@ ul.listing--events .listing--events__feature-wrap span:last-of-type:before {
 
 .landing-list li img {
   height: 440px;
+  width: 100%;
 }
 
 .landing-list li div {
