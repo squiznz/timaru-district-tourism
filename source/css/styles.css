@@ -5906,12 +5906,12 @@ ul.listing--events .listing--events__feature-wrap span:last-of-type:before {
 }
 
 .landing-list li img {
-  height: 30em;
+  height: 440px;
 }
 
 .landing-list li div {
   border-top: none;
-  height: 380px;
+  height: 384px;
   position: relative;
   padding: 65px 44px;
 }
