@@ -42,7 +42,7 @@
 	// 	@include container(66.8125em);
 	// }
 
-	// .inside & {
-	// 	padding-left: 100px;
-	// }
+	.landing & {
+		@include container(1147px);
+	}
 }

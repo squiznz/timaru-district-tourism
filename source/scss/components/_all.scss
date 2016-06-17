@@ -16,13 +16,16 @@ html {
 
 		p {
 			margin-bottom: 10px;
-
-			&:empty {
-				display: none !important;
-			}
 		}
 	}
 }
+
+
+p:empty,
+a.cta-button:empty {
+	display: none !important;
+}
+
 
 img {
 	max-width: 100%;
@@ -65,12 +68,9 @@ img {
 
 .intro {
 	padding-bottom: 3.26em;
-	border-bottom: 1px solid $tdc-grey;
+	// border-bottom: 1px solid $tdc-grey;
 	margin-bottom: 50px;
-
-	> .container {
-		@include container(1147px);
-	}
+	@include container(1147px);
 }
 
 .intro__wrap {
@@ -438,7 +438,7 @@ video {
 		padding: 30px 21px;
 
 		@include media-query(note-and-up){
-			padding: 45px 50px;
+			padding: 45px 70px;
 		}
 	}
 
