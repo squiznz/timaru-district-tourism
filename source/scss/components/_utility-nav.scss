@@ -37,12 +37,12 @@
 
 			@include media-query(note-and-up){
 				width: 50.770588235294116%;
-				// padding-top: 8%;
+				margin-top: 8%;
 			}
 
 			@include media-query(desk){
 				width: 61.770588235294116%;
-				// padding-top: 13%;
+				margin-top: 13%;
 			}
 		}
 

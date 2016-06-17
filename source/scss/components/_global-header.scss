@@ -46,10 +46,14 @@
 			float: right;
 		  -webkit-transition: width 0.5s;
 			transition: width 0.5s;
-			@include position(relative, null);
+			@include position(relative, 8% null);
 			width: 200px;
 		}
 		
+		@include media-query(desk){
+			@include position(relative, 30% null);
+		}
+
 		.site-search__form {
 			width: 100%;
 

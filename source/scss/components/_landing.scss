@@ -4,14 +4,6 @@
 
 .landing-list {
 	@extend .bare-list;
-	// @include container();
-	// padding: 21px;
-	
-	// @include media-query(desk){
-	// 	// @include container(1345px);
-	// 	// margin: 90px auto 87px auto;
-	// 	// padding: 0 38px;
-	// }
 	
 	li {
 		@include span(1 of 1);
@@ -42,6 +34,8 @@
 		strong {
 			font-weight: $medium;
 			font-family: 'Pluto';
+			display: block;
+			width: 100%; 
 			color: $tdc-dark-navy;
 			@include font-size(32px);
 			line-height: 73px;

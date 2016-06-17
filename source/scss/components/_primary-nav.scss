@@ -62,7 +62,7 @@
 				}
 			}
 
-			&.active a {
+			&.active a, &.current a {
 				@include media-query(note-and-up){
 					border-bottom: 3px solid $white;
 				}

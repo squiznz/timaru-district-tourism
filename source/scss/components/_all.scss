@@ -7,11 +7,19 @@ html {
 	
 	main {
 		@include media-query(note-and-up){
+			@include font-size(18px);
+		}	
+
+		@include media-query(desk){
 			@include font-size(21.43px);
 		}	
 
 		p {
 			margin-bottom: 10px;
+
+			&:empty {
+				display: none !important;
+			}
 		}
 	}
 }
@@ -463,7 +471,8 @@ video {
 		}
 	}
 
-	button {
+	button, input[type="submit"]{
+		@extend .cta-button;
 		background-color: $tdc-purple;
 		color: $white;
 		border: none;
