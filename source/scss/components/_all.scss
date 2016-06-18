@@ -31,7 +31,7 @@ img {
 	max-width: 100%;
 }
 
-.landing, .details {
+.landing, .details, .topic {
 	main {
 		.container {
 			@include container(1423px);
@@ -430,6 +430,7 @@ video {
 
 .activity-search {
 	background-color: #f7f7f7;
+	margin-bottom: 55px;
 
 	fieldset {
 		@include container(1345px);
