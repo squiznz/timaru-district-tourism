@@ -5112,6 +5112,7 @@ video {
 .feature-banner--inside h1 {
   font-size: 48px;
   font-size: 3rem;
+  line-height: 1.5em;
 }
 
 /***
