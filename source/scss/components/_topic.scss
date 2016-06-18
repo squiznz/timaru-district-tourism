@@ -87,16 +87,19 @@
 		}
 
 		img {
+			width: 100%;
 			height: 190px;
-			width: 50% !important;
 
 			@include media-query(note-and-up){
 				height: 100% !important;
+				width: 50% !important;
 				float: left;
 			}
 		}
 
 		> div {
+			padding: 21px !important;
+
 			@include media-query(note-and-up){
 				@include span(6 of 12 no-gutters);
 				height: 100%;
