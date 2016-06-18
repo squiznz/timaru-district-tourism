@@ -2,234 +2,169 @@
 *  Topic Template
 ***/
 
-.page--topic__intro {
-	padding: 30px 21px;
-
-	@include media-query(note-and-up){
-		@include container(1147px);
-		padding: 0 38px 100px 38px;
-	}
-}
-
-
-.page--topic__wrap {
-	padding: 21px;
-
-	@include media-query(note-and-up){
-		padding: 0 0 100px 0;
-		@include container(1345px);
-	}
-}
-
 .topic-list {
-
-}
-
-
-	.topic-list__item {
+	li {
 		@include clearfix();
 		float: left;
-		height: 315px;
-		@include position(relative, null);
+		min-height: 315px;
 		line-height: 21px;
 		margin-bottom: 40px;
 
 		@include media-query(note-and-up){
-			@include span(3.893 of 12 (gutter-override: 41px));
-			height: 409px;
+			min-height: 415px;
 			margin-bottom: 80px;
 		}
 		
 		.more {
-			font-weight: $bold;
 			@include font-size(14px);
-			margin-top: 1em;
+			@include position(absolute, null null 0 0);
 
 			@include media-query(note-and-up){
 				@include font-size(18.74px);
 			}
 		}
 
-		&:nth-child(n+2){
+		@include media-query(note-and-up){
+			@include font-size(21.42px);
+			line-height: 29px;
+		}
+
+		strong {
+			margin-bottom: 5px;
+			display: block;
+		}
+
+		> div {
+			padding: 21px 0 42px 0;
+			@include position(relative, null);
 
 			@include media-query(note-and-up){
-				@include font-size(21.42px);
-				line-height: 29px;
+				padding: 38px 0 70px 0;
 			}
-
-			img {
-				height: 186px;
-				width: 100%;
-				
-				@include media-query(note-and-up){
-					height: 240px;
-				}
-			}
-
-
-			div {
-				padding: 21px 0;
-
-				@include media-query(note-and-up){
-					padding: 30px 0;
-				}
-			}
-			
-
-			strong {
-				color: $tdc-green;
-				margin-bottom: 5px;
-				display: block;
-				@include font-size(18px);
-
-				@include media-query(note-and-up){
-					@include font-size(24.09px);
-				}
-			}
-		}
-
-		&:nth-child(3n+1){
-			@include last();
 		}
 	}
+}
 
 
+.topic-list__item {
+	@include media-query(note-and-up){
+		@include span(3.893 of 12 (gutter-override: 41px));
+	}
 
-.topic-list__featured-item {
-	width: 100% !important;
-	color: $white;
-	height: 344px;
-	background-color: $tdc-navy;
-	
-	.more {
-		color: $tdc-light-blue;
+	&:nth-child(3n){
+		@include last();
 	}
 
 	img {
-		height: 190px;
+		height: 186px;
 		width: 100%;
-
+		
 		@include media-query(note-and-up){
-			@include span(6 of 12 no-gutters);
-			height: 100%;
-			float: left;
-		}
-	}
-
-	div {
-		padding: 21px;
-
-		@include media-query(note-and-up){
-			@include span(6.2 of 12 no-gutters);
-			height: 100%;
-			float: left;
-			padding: 80px 55px;
+			height: 240px;
 		}
 	}
 
 	strong {
-		font-weight: $medium;
-		font-family: 'Pluto';
-		color: $white;
-		@include font-size(24px);
-		margin-bottom: 10px;
-		display: block;
+		color: $tdc-green;
+		@include font-size(18px);
 
 		@include media-query(note-and-up){
-			@include font-size(32px);
-			line-height: 73px;
+			@include font-size(24.09px);
 		}
 	}
 }
 
 
-// .topic-filters {
-// 	margin-bottom: 21px;
-// 	@include container(1345px);
-
-// 	strong {
-// 		font-weight: $bold;
-// 		line-height: 30.79px;
-// 		color: $tdc-dark-navy;
-// 		display: inline-block;
-// 		float: left;
-// 		margin-right: 15px;
-
-// 		@include media-query(note-and-up){
-// 			@include font-size(21.42px);
-// 		}
-// 	}
-	
-// 	li {
-// 		color: $white;
-// 		background-color: $tdc-purple;
-// 		display: inline-block;
-// 		font-weight: $semibold;
-// 		margin: 0.7em 0.5em 0 0;
-// 		text-align: center;
-// 		@include font-size(11px);
-// 		border-radius: 10.75px;
-
-// 		button {
-// 			background-color: transparent;
-// 			text-transform: uppercase;
-// 			@include position(relative, null);
-// 			border: none;
-// 			padding: 2px 25px 2px 10px;
-// 			line-height: 1.4em;
-
-// 			&:after {
-// 				content: "\f00d";
-// 				font-family: 'FontAwesome';
-// 				@include position(absolute, 2px 10px null null);
-// 			}
-// 		}
-// 	}
-// }
-
-
-.topic-list__topic-list {
-	@include position(absolute, 15px null null 15px);
-	margin-bottom: 21px;
-
-	li {
-		display: inline-block;
-		background-color: rgba(0, 16, 36, 0.80);
-		border-radius: 50%;
+	.topic-list_item--featured {
+		@include span(12 of 12 no-gutters);
 		color: $white;
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		margin-right: 3px;
-		@include font-size(14px);
-		line-height: 30px;
-
-		@include media-query(note-and-up){
-			line-height: 40px;
-			height: 40px;
-			width: 40px;
-		}
-
-		a {
-			display: block;
-			width: 100%;
-			height: 100%;
-			color: inherit !important;
-		}
+		height: 344px;
+		background-color: $tdc-navy;
 		
-		.topic-list__featured-item & {
+		a.more {
+			color: $tdc-light-blue;
+			@include position(relative, null);	
+		}
+
+		img {
+			width: 100%;
+			height: 190px;
+
 			@include media-query(note-and-up){
-				background-color: $white;
-				color: $tdc-navy;
+				height: 100% !important;
+				width: 50% !important;
+				float: left;
+			}
+		}
+
+		> div {
+			padding: 21px !important;
+
+			@include media-query(note-and-up){
+				@include span(6 of 12 no-gutters);
+				height: 100%;
+				padding: 80px 55px !important;
+			}
+
+			strong {
+				font-weight: $medium;
+				font-family: 'Pluto';
+				color: $white;
+				@include font-size(24px);
+				margin-bottom: 10px;
+				display: block;
+
+				@include media-query(note-and-up){
+					@include font-size(32px);
+					line-height: 73px;
+				}
 			}
 		}
 	}
 
-	.topic-list__featured-item & {
-		@include position(absolute, 15px null null 15px);
+
+// .topic-list__topic-list {
+// 	@include position(absolute, 15px null null 15px);
+// 	margin-bottom: 21px;
+
+// 	li {
+// 		display: inline-block;
+// 		background-color: rgba(0, 16, 36, 0.80);
+// 		border-radius: 50%;
+// 		color: $white;
+// 		width: 30px;
+// 		height: 30px;
+// 		text-align: center;
+// 		margin-right: 3px;
+// 		@include font-size(14px);
+// 		line-height: 30px;
+
+// 		@include media-query(note-and-up){
+// 			line-height: 40px;
+// 			height: 40px;
+// 			width: 40px;
+// 		}
+
+// 		a {
+// 			display: block;
+// 			width: 100%;
+// 			height: 100%;
+// 			color: inherit !important;
+// 		}
 		
-		@include media-query(note-and-up){
-			@include position(static, null);
-		}
-	}	
-}
+// 		.topic-list__featured-item & {
+// 			@include media-query(note-and-up){
+// 				background-color: $white;
+// 				color: $tdc-navy;
+// 			}
+// 		}
+// 	}
+
+// 	.topic-list__featured-item & {
+// 		@include position(absolute, 15px null null 15px);
+		
+// 		@include media-query(note-and-up){
+// 			@include position(static, null);
+// 		}
+// 	}	
+// }

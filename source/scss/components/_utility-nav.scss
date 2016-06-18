@@ -3,17 +3,19 @@
 ***/
 
 .utility-nav {
-	margin-top: 25px;
 	@include position(relative, null);
 	z-index: 99998;
 	padding: 0 21px;
 
 	@include media-query(note-and-up){
-		margin-top: 0;
 		height: 100%;
 		float: left;
 		padding: 0;
   }
+	
+	ul {
+		height: 100%;
+	}
 
   > .container {
   	padding: 0;
@@ -22,7 +24,7 @@
 	li {
 		display: inline-block;
 		color: $white;
-
+		
 		a {
 			color: inherit;
 		}
@@ -31,18 +33,27 @@
 
 
 		.utility-nav__item--logo {
+			width: 155px;
 			float: left;
-			padding-top: 2px;
-			width: 32.94117647058823%;
-
-			@include media-query(note-and-up){
-				width: 50.770588235294116%;
-				margin-top: 8%;
-			}
+			height: 60px;
 
 			@include media-query(desk){
-				width: 61.770588235294116%;
-				margin-top: 13%;
+				height: 97px !important;
+			}
+
+			a {
+				display: block;
+				height: 100%;
+				width: 100%;
+				// background-image: url(../img/logo.png);
+				background-image: url(../../__data/assets/image/0011/62993/logo.png);
+				background-size: 80%;
+				background-position: left center;
+				background-repeat: no-repeat;
+
+				@include media-query(desk){
+					background-size: 100%;
+				}
 			}
 		}
 
@@ -50,17 +61,19 @@
 		.utility-nav__item--search-toggle {
 			float: right;
 			@include font-size(20px);
+			padding-top: 15px;
 			line-height: 1.2em;
 
 			@include media-query(note-and-up){
 				display: none !important;
+				padding: 0;
 			}
 		}
 
 
 		.utility-nav__item--primary-toggle {
 			float: right;
-			position: relative;
+			@include position(relative, 13px null null null)
 			margin: 0;
 			margin-left: 17px;
 			-webkit-transform: rotate(0deg);
