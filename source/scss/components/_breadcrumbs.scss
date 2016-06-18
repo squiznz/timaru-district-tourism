@@ -42,7 +42,7 @@
 	// 	@include container(66.8125em);
 	// }
 
-	.landing & {
+	.landing &, .topic & {
 		@include container(1147px);
 	}
 }
