@@ -80,8 +80,24 @@ function globalActions() {
   });
 
 
+  $('.three-best').find('select').change(function(){
+   threeBest();
+  });
+
 
 }; // globalActions()
+
+
+
+
+function threeBest(){
+  var selection = $('.three-best').find('select').val();
+                    
+  $('*[id*='+selection+']').each(function(index){
+    $(this).show();
+    $(this).siblings('ul').hide();
+  });
+}
 
 
 function megaMenu() {
@@ -100,12 +116,6 @@ function megaMenu() {
     })
   });
 } // globalActions()
-
-
-
-
-
-
 
 
 
@@ -228,6 +238,6 @@ $(document).ready(function () {
 
   detectScrolling();
   globalActions();
-  megaMenu();
-  
+  threeBest();
+  megaMenu();  
 });
