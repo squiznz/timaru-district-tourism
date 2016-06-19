@@ -5,15 +5,25 @@
 .cta-banner {
 	background-color: $tdc-purple;
 	color: $white;
-	// background-image: url('../img/swirls-purple.png');
 	background-image: url('../../__data/assets/image/0004/62995/swirls-purple.png');
 	text-align: center;
 	height: 16.1875em;
 	font-weight: $medium;
 	@include font-size(16px);
+	padding: 0 21px;
+	
+	@include media-query(note-and-up){
+		height: 14.65em;
+		padding: 0 45px;
+	}
 
 	@include media-query(note-and-up){
 		height: 25em;
+		padding: 0 38px;
+	}
+
+	strong {
+		font-weight: $ultrabold;
 	}
 
 	a {
@@ -46,6 +56,10 @@
 		@include font-size(32px);
 		font-family: $font-secondary;
 		line-height: 44px;
+		
+		@include media-query(palm-land-up){
+			@include font-size(40px);
+		}
 
 		@include media-query(note-and-up){
 			@include font-size(66px);
@@ -57,12 +71,15 @@
 
 		.cta-banner__wrap {
 			height: 100%;
-			@include container(20em);
+			@include container(71.09375%);
 			margin: 0 auto;
 			padding: 50px 0;
 
+			@include media-query(palm-land-up){
+				padding: 60px 0;
+			}
+			
 			@include media-query(note-and-up){
-				@include container(58.125em);
 				padding: 120px 0 90px 0;
 				vertical-align: center;
 			}
