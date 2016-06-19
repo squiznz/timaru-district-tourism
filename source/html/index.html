@@ -387,7 +387,7 @@
 <!-- End: What's On Slider -->
 <!-- Begin: Call to Action Banner -->
 <section class="cta-banner cta-banner--green">
-  <div class="cta-banner__wrap">
+  <div  class="cta-banner__wrap">
     <p><strong></strong> Lorem ipsum dolor sit amet</p>
     <a href="">World class in Timaru, find out more</a>
   </div>
@@ -467,8 +467,15 @@
         
   <script src="../js/min/core.min.js"></script>
   <script src="../js/min/main.min.js"></script>
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
+
    <script>
+  //   AOS.init({
+  //     offset: 200,
+  //     duration: 600,
+  //     easing: 'ease-in-sine',
+  //     delay: 100,
+  //   });
+
     mapboxgl.accessToken = 'pk.eyJ1IjoibGRvcmdhbiIsImEiOiJjaW9vMHNrd3gwMDJidjlrdnJ0YzZ5cjRsIn0.-kQIw3xb7fNgSVaOJ43O6A';
     
     var map = new mapboxgl.Map({
@@ -476,6 +483,7 @@
         style: 'mapbox://styles/mapbox/streets-v8'
     });
   </script>
+        
 
 </body>
 </html>
