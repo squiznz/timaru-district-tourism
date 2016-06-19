@@ -9,7 +9,7 @@
 	background-color: $white;
 	@include position(relative, null);
 
-	@include media-query(note-and-up){
+	@include media-query(desk){
 		height: 55px;
 		@include font-size(16px);	
 	}
@@ -21,7 +21,7 @@
 		height: 100%;
 		text-align: right;
 
-		@include media-query(note-and-up){
+		@include media-query(desk){
 			padding: 0 38px;
 			@include font-size(16px);	
 			@include container();
@@ -41,7 +41,7 @@
 				line-height: 3.3em;
 				text-decoration: none;
 
-				@include media-query(note-and-up){
+				@include media-query(desk){
 					padding: 0 21px;
 					height: 55px;
 					line-height: 3.4em;
@@ -51,7 +51,7 @@
 			&:nth-child(3) {
 				width: 122px;
 				
-				@include media-query(note-and-up){
+				@include media-query(desk){
 					width: auto;
 				}
 			}
@@ -66,22 +66,27 @@
 				background-position: center;
 				background-size: 20px;
 
-				@include media-query(note-and-up){
+				@include media-query(desk){
 					background-position: center 22px;
 				}
 			}
 
 			&:first-of-type {
 				@include position(absolute, 0 null 0 21px);
-				padding: 15px 20px 20px 0px;
 				display: none;
-				height: 44px;
 
-				@include media-query(note-and-up){
+				@include media-query(palm-land-up){
 					@include position(static, 0 null 0 0);
 					display: inline-block;
+					padding: 0 20px;
+					@include font-size(12px);
 					float: left;
-					height: 55px;
+					line-height: 3.5em;
+					height: 100%;
+				}
+
+				@include media-query(desk){
+					@include font-size(16px);
 				}
 			}
 		}

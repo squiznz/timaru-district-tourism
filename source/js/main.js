@@ -93,7 +93,7 @@ function globalActions() {
 function threeBest(){
   var selection = $('.three-best').find('select').val();
                     
-  $('*[id*='+selection+']').each(function(index){
+  $('ul[id='+selection+']').each(function(index){
     $(this).show();
     $(this).siblings('ul').hide();
   });

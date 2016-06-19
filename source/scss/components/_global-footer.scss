@@ -45,7 +45,6 @@
 		
 
 	.social-media-links {
-		// float: right;
 		margin-left: 1.5em !important;
 
 		@include media-query(desk){
@@ -140,8 +139,7 @@
 				@include position(relative, null);
 			}
 
-			@include media-query(desk){
-			// @include container(1700px);
+			@include media-query(note-and-up){
 				padding: 0 38px;
 			}
 

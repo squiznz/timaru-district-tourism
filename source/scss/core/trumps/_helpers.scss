@@ -15,7 +15,7 @@
       padding: 0 45px;
     }
     
-    @include media-query(desk) {
+    @include media-query(note-and-up) {
       padding: 0 38px;
     }
 }
