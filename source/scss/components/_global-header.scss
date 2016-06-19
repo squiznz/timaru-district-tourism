@@ -11,9 +11,11 @@
 		background-color: transparent;
 	}
 
+	@include media-query(palm-land-up){
+		@include position(absolute, 0 0 null 0);
+	}
 
 	@include media-query(note-and-up){
-		@include position(absolute, 0 0 null 0);
 		height: 155px;
 	}
 }
@@ -25,10 +27,10 @@
 
 
 	.global-header__wrap {
-		height: 57px;
+		height: 70px;
 		@include position(absolute, 42px 0 0 0);
 		z-index: 99999;
-		
+
 		@include media-query(note-and-up){
 			height: 57px;
 			@include position(absolute, 55px 0 0 0);

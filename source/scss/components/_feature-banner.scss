@@ -12,6 +12,10 @@
 	text-align: center;
 	padding-top: 112px;
 
+	@include media-query(palm-land-up){
+		height: 480px;
+	}
+
 	@include media-query(note-and-up){
 		@include font-size(16px);
 		height: 720px;
