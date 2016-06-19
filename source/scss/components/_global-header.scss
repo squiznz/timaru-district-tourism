@@ -11,13 +11,10 @@
 		background-color: transparent;
 	}
 
-<<<<<<< HEAD
-=======
 	@include media-query(palm-land-up){
 		@include position(absolute, 0 0 null 0);
 	}
 
->>>>>>> 5fa1693eab77fdbeae0d552f6f6f4c131574498f
 	@include media-query(note-and-up){
 		height: 155px;
 	}
