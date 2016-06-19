@@ -79,9 +79,14 @@
 					@include font-size(14px);
 					@include position(absolute, 15px null 0 0);
 				}
+
+				ul {
+					display: block;
+				}
 			}
 
 			> ul {
+				display: none;
 				padding-left: 12px;
 				border-bottom: 1px dotted $tdc-mid-grey;
 				margin-bottom: 10px;

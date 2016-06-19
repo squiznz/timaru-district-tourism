@@ -14,6 +14,12 @@
 		@include font-size(16px);	
 	}
 
+	//ADBT
+	.adbt & {
+		border-bottom: 1px solid #ECECEC;
+	} 
+	//End ADBT
+
 	ul {
 		@include position(absolute, null 0 null null);
 		width: 100%;
@@ -26,6 +32,12 @@
 			@include font-size(16px);	
 			@include container();
 			@include position(relative, null);
+
+			//ADBT
+			.adbt & {
+			    padding: 0 124px;
+			}
+			//End ADBT
 		}
 
 		li {
@@ -69,6 +81,13 @@
 				@include media-query(note-and-up){
 					background-position: center 22px;
 				}
+
+				//ADBT
+				.adbt & {
+				    width: auto;
+				    background-image: none;
+				}
+				//End ADBT
 			}
 
 			&:first-of-type {

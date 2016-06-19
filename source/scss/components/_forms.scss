@@ -50,6 +50,12 @@ form {
 		min-height: 40px;
 		line-height: auto;
 		letter-spacing: 0.02em;
+
+		//ADBT
+		.adbt.one_col &, .adbt.home_page & {
+			color: $tdc-dark-navy;
+		}
+		//End ADBT
 	}
 }
 

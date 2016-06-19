@@ -55,6 +55,15 @@
 					background-size: 100%;
 				}
 			}
+
+			//ADBT
+			@include media-query(note-and-up) {
+				.adbt & {
+	    			padding-top: 20px;
+	    			width: 138px;
+				}
+			}
+			//End ADBT
 		}
 
 

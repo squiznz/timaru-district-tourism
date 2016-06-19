@@ -53,6 +53,34 @@ ul.listing {
 		&:nth-child(even){
 			@include media-query(note-and-up){
 				@include last();
+				
+				&.listing--three-column & {
+					@include span(4 of 12 no-gutters);
+				} 
+			}
+		}
+
+		img {
+		    margin-bottom: 1em;
+		    max-height: 150px;
+		}
+	}
+
+	&.listing--three-column { 
+		li {
+			@include gallery(4 of 12 no-gutters);
+		    height: 635px;
+
+			&:nth-child(3){
+				@include media-query(note-and-up){
+					@include last();
+				}
+			}
+
+			&:nth-child(even){
+				@include media-query(note-and-up){
+					@include gallery(4 of 12 no-gutters);
+				}
 			}
 		}
 	}

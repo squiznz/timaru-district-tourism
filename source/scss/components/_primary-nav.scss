@@ -12,9 +12,24 @@
 		@include position(absolute, 0px 0 null 0);
 	}
 	
-	.adbt & {
+	//ADBT
+	.adbt.two_col &, .adbt.three_col &, .adbt.home_page & {
 		background-color: transparent;
 	}
+
+	.adbt.one_col &, .adbt.home_page & {
+		background-color: transparent;
+		> .container {
+ 			> ul {
+ 				padding: 0 0 0 290px;
+
+			 	> li {
+		 		    color: $tdc-navy;
+			 	}
+			}
+		}
+	}
+	// End ADBT
 
 	ul {
 		@extend .bare-list;
@@ -159,4 +174,12 @@
 				top: 1px;
 			}
 		}
+
+		//ADBT
+		.adbt & {
+			strong {
+				color: $white;
+			}
+		}
+		//End ADBT
 	}

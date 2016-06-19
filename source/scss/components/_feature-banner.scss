@@ -201,10 +201,22 @@
 }
 
 
-
+// ADBT
 .feature-banner--inside {
   background: url('/__data/assets/image/0005/65705/inside-banner.png');
   padding-top: 34px;
+  height: 360px;
+
+  h1 {
+  	@include font-size(48px);
+    line-height: 1.5em;
+  }
+}
+
+.feature-banner--landing {
+  background: url('/__data/assets/image/0005/65705/inside-banner.png');
+  padding-top: 34px;
+  height: 360px;
 
   h1 {
   	@include font-size(48px);

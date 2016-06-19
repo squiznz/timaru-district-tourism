@@ -15,6 +15,12 @@
 	@include media-query(note-and-up){
 		height: 25em;
 	}
+	
+	//ADBT
+	.adbt.home_page & {
+	    background-color: $tdc-dark-navy;
+	}
+	//END ADBT
 
 	a {
 		@include font-size(19px);
@@ -76,3 +82,11 @@
 				color: $white !important;
 			}
 		}	
+
+		.cta-banner--dark-blue {
+			background-color: $tdc-dark-navy;
+
+			a {
+				color: $tdc-green;
+			}
+		}
