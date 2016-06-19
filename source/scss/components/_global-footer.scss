@@ -10,21 +10,22 @@
 	a {
 		color: $white;
 		text-decoration: none;
+		display: block;
 	}
 }
 
 
 	.global-footer__wrap {
 		padding: 2.25em 1.3125em;
-		@include container(1700px);
-
-		@include media-query(note-and-up){
-			padding: 5.375em 1.3125em;
+		@include container();
+		
+		@include media-query(palm-land-up){
+			padding: 40px 45px;
 			@include position(relative, null);
 		}
 
 		@include media-query(desk){
-			padding: 5.375em 2.375em;
+			padding: 5.375em 38px;
 		}
 	}
 
@@ -35,7 +36,7 @@
 		width: 6.25em;
 		padding-top: 4px;
 
-		@include media-query(note-and-up){
+		@include media-query(desk){
 			width: 9.6875em;
 			padding: 0;
 			margin-right: 2.1875em;
@@ -44,9 +45,9 @@
 		
 
 	.social-media-links {
-		float: right;
+		margin-left: 1.5em !important;
 
-		@include media-query(note-and-up){
+		@include media-query(desk){
 			@include position(absolute, null 38px null null);
 		}
 
@@ -58,7 +59,7 @@
 			i {
 				@include font-size(18px);
 
-				@include media-query(note-and-up){
+				@include media-query(desk){
 					@include font-size(25px);
 				}
 			}
@@ -69,37 +70,54 @@
 	.footer-nav {
 		@extend .bare-list;
 		float: left;
+		@include clearfix();
+		width: 100%;
 		margin-top: 1.3125em;
 
-		@include media-query(note-and-up){
+		@include media-query(desk){
 			margin-top: 0;
+			width: auto;
 		}
 		
 		li {
 			line-height: 29px;
 			@include font-size(15px);
+			@include span(1 of 2 float no-gutters);
 
-			@include media-query(portable){
-				@include span(1 of 2 float inside);
-
-				&:nth-child(odd) {
-					padding-left: 0;
-				}
-
-				&:nth-child(even) {
-					padding-right: 0;
-				}
+			&:nth-child(odd) {
+				padding-left: 0;
 			}
 
-			@include media-query(note-and-up){
+			&:nth-child(even) {
+				padding-right: 0;
+			}
+
+			@include media-query(palm-land-up){
+				@include span(1 of 3 float no-gutters);
+
+				&:nth-child(2n) {
+					padding-left: 0;
+				}
+			}
+			
+			@include media-query(desk){
 				display: inline-block;
 				line-height: 1em;
-				padding: 0 25px;
-				@include font-size(16px);
+				width: auto;
+				@include font-size(19px);
 			}
 	
 			@include media-query(desk){
-				@include font-size(20.38px);
+				@include font-size(22.76px);
+			}
+
+			a {
+				@include media-query(desk){
+					display: inline-block;
+					line-height: 1em;
+					padding: 0 1em !important;
+				
+				}
 			}
 		}
 	}
@@ -114,54 +132,78 @@
 
 		.footer-utilities__list {
 			@extend .bare-list;
+			
+			@include media-query(palm-land-up){
+			@include container();
+				padding: 0 45px;
+				@include position(relative, null);
+			}
 
 			@include media-query(note-and-up){
-			@include container(1700px);
 				padding: 0 38px;
-				@include position(relative, null);
 			}
 
 			li {
 				display: inline-block;
 				border-right: 1px solid $tdc-navy;
 				@include font-size(12px);
-				padding: 10px 1.3125em;
 				width: 49.4%;
 				font-weight: $semibold;
-
-				@include media-query(note-and-up){
-					@include font-size(16.06px);
-					padding: 19px 28px;
-					font-weight: $bold;
+				
+				@include media-query(palm-land-up){
 					width: auto;
 				}
 
+				@include media-query(desk){
+					@include font-size(16.06px);
+				}
+
 				a {
-					font-size: inherit;
 					font-weight: inherit;
+					padding: 10px 1.3125em;
+
+					@include media-query(palm-land-up){
+						padding: 11px 20px;
+					}
+
+					@include media-query(desk){
+						padding: 19px 28px;
+					}
 				}
 				
 				&:first-child {
 					font-weight: $semibold !important;
+					width: 100%;
+					border-bottom: 1px solid $tdc-navy;
 
-					@include media-query(portable){
-						width: 100% !important;
-						border-bottom: 1px solid $tdc-navy;
+
+					@include media-query(palm-land-up){
+						width: auto;
+						padding-left: 0;
 					}
 
-					@include media-query(note-and-up){
+					@include media-query(desk){
 						padding-left: 0px !important;
+						border-bottom: none;
 					}
 				}
 
 				&:nth-child(4) {
-					@include media-query(note-and-up){
+					@include media-query(palm-land-up){
+						float: right;
+						padding: 11px 20px;
+						border: none;
+					}
+
+					@include media-query(desk){
+						float: none;
+						padding: 19px 28px;
 						@include position(absolute, 0 188px 0 null);
 					}
 				}
 
 				&:nth-child(5) {
-					@include media-query(note-and-up){
+					@include media-query(desk){
 						@include position(absolute, 0 38px 0 null);
 						padding-right: 0;
 					}

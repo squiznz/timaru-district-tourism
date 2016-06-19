@@ -302,7 +302,11 @@ ul.listing--images {
 	}
 }
 
-
+ul.listing--basic {
+	img {
+		display: none;
+	}
+}
 // ul.listing--related {
 // 	margin: 70px 0;
 

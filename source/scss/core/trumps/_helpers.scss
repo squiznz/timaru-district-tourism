@@ -10,9 +10,13 @@
 .container {
 	@include container;
 	padding: 0 21px;
-
+    
+    @include media-query(palm-land-up) {
+      padding: 0 45px;
+    }
+    
     @include media-query(note-and-up) {
-        padding: 0 38px;
+      padding: 0 38px;
     }
 }
 
@@ -24,7 +28,7 @@
   text-transform: uppercase;
   font-family: $font-primary;
   
-  @include media-query(note-and-up){
+  @include media-query(desk){
     font-size: 14px !important;
   }
 }
@@ -83,6 +87,12 @@
 
 .hidden-portable {
     @include media-query(portable) {
+        @include visuallyhidden();
+    }
+}
+
+.hidden-palm {
+    @include media-query(palm) {
         @include visuallyhidden();
     }
 }

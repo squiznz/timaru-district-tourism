@@ -11,7 +11,6 @@
 @import "components/primary-nav";
 @import "components/utility-nav";
 @import "components/tertiary-nav";
-@import "components/slick";
 @import "components/breadcrumbs";
 
 
@@ -44,6 +43,9 @@
 
 
 
+// Plugins
+@import "components/aos";
+@import "components/slick";
 
 
 // @import "components/content-components";
