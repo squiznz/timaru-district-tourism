@@ -31,7 +31,7 @@ img {
 	max-width: 100%;
 }
 
-.landing, .details, .topic {
+.landing, .details, .topic, .wide {
 	main {
 		.container {
 			@include container(1423px);
@@ -89,6 +89,11 @@ img {
 		float: left;
 		@include clearfix();
 		margin-right: 38px;
+	
+		
+		.wide & {
+			width: 100%;
+		}
 	}
 }
 
