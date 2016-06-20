@@ -303,8 +303,8 @@ a.more {
 		content: "\f0da";
 		font-family: "FontAwesome";
 		@include position(absolute, null -1em 3px null);
-		@include font-size(14px);
-		line-height: inherit;
+		@include font-size(11px);
+		line-height: 1.2em;
 	}
 }
 
@@ -439,19 +439,19 @@ video {
 .activity-search {
 	background-color: #f7f7f7;
 	margin-bottom: 55px;
+	
+	@include media-query(note-and-up){
+		margin-bottom: 80px;
+	}
 
 	fieldset {
 		@include container(1345px);
 		display: block;
 		border: none;
 		padding: 30px 21px;
-
-		@include media-query(palm-land-up){
-			padding: 21px 45px;
-		}
 		
 		@include media-query(note-and-up){
-			padding: 45px 70px;
+			padding: 35px 70px;
 		}
 	}
 
@@ -468,8 +468,9 @@ video {
 		}
 
 		@include media-query(note-and-up){
-			line-height: 60px;
+			line-height: 45px;
 			width: auto;
+			margin-bottom: 0;
 			margin-right: 30px;
 			// @include font-size(21.42px);
 		}
@@ -489,6 +490,7 @@ video {
 			width: 255px;	
 			margin-right: 30px;
 			height: 45px;
+			margin-bottom: 0;
 		}
 	}
 
