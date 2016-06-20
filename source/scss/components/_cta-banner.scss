@@ -13,14 +13,14 @@
 	padding: 0 21px;
 	
 	@include media-query(note-and-up){
-		height: 14.65em;
+		height: 300px;
 		padding: 0 45px;
 	}
 
-	@include media-query(note-and-up){
-		height: 25em;
-		padding: 0 38px;
-	}
+	// @include media-query(note-and-up){
+	// 	height: 25em;
+	// 	padding: 0 38px;
+	// }
 
 	strong {
 		font-weight: $ultrabold;
@@ -64,12 +64,8 @@
 		line-height: 44px;
 		
 		@include media-query(palm-land-up){
-			@include font-size(40px);
-		}
-
-		@include media-query(note-and-up){
-			@include font-size(66px);
-			line-height: 69px;
+			@include font-size(50px);
+			line-height: 52px;	
 		}
 	}
 }
@@ -86,8 +82,8 @@
 			}
 			
 			@include media-query(note-and-up){
-				padding: 120px 0 90px 0;
-				vertical-align: center;
+				padding: 90px 0 60px 0;
+				// vertical-align: center;
 			}
 		}
 

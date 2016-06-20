@@ -123,13 +123,13 @@
 
 		.location-banner--right & {
 			@include media-query(note-and-up){
-				@include position(absolute, 178px 38px null null);
+				@include position(absolute, 147px 38px null null);
 			}
 		}
 
 		.location-banner--left & {
 			@include media-query(note-and-up){
-				@include position(absolute, 178px null null 38px);
+				@include position(absolute, 147px null null 38px);
 			}
 		}
 
@@ -158,18 +158,15 @@
 		font-family: $font-primary;
 		@include font-size(17px);
 		text-transform: uppercase;
-		padding: 15px 0;
 		line-height: 1em;
-		height: 45px;
+		// height: 45px;
 		display: block;
 		text-indent: 0 !important;
 
 		@include media-query(note-and-up){
-			height: 60px;
 			display: inline-block;
 			width: auto;
-			margin-top: 30px;
-			padding: 18px 50px 18px 18px;
+			margin-top: 1em;
 
 			&:after {
 				right: 20px;

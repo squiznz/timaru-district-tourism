@@ -152,17 +152,13 @@ video {
 	display: inline-block;
 	color: $white;
 	text-transform: uppercase;
-	padding-right: 1em;
 	letter-spacing: 0.01em;
-	height: 45px;
+	height: 44px;
 	background-color: $tdc-purple;
-	// text-indent: -1em;
-	padding: 10px;
+	padding: 13px 3em 13px 13px;
 	@include position(relative, null);
 
 	@include media-query(note-and-up){
-		padding: 15px 50px 15px 20px;
-		height: 60px;
 		text-align: left;
 	}
 
@@ -176,12 +172,10 @@ video {
 		float: right;
 		height: 100%;
 		width: 20px;
-		@include position(absolute, 0 30px 0 null);
+		@include position(absolute, 0 0px 0 null);
 
 		@include media-query(note-and-up){
-			@include position(absolute, 2px 20px 0 null);
 			background-size: 21px;
-			background-position: 70% 23px;
 		}
 	}
 }
