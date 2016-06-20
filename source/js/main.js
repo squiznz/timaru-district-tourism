@@ -41,6 +41,10 @@ function detectScrolling() {
 
 function globalActions() {
 
+  if ($('.pagination a').length === 0)) {
+    $('.pagination').hide();
+  };
+
   $('.tags-list').each(function(index) {
     var $this = $(this),
         $list = $this.text().trim().split(",");

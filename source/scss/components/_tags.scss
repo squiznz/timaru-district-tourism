@@ -4,6 +4,7 @@
 
 ul.tags-list {
 	@extend .bare-list;
+	text-indent: -999999px;
 
 	> li {
 		display: inline-block;
@@ -20,7 +21,6 @@ ul.tags-list {
 		@include font-size(14px);
 		line-height: 30px;
 		@include position(relative, null);
-		text-indent: -999999px;
 
 		&:after {
 			@include position(absolute, 0 0 0 0);
