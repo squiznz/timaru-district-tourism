@@ -16,7 +16,7 @@
 	}
 
 	@include media-query(note-and-up){
-		height: 155px;
+		height: 120px;
 	}
 	
 	//ADBT
@@ -126,13 +126,13 @@
 				@include font-size(13px);
 				font-family: $font-primary;
 	
-			  @include media-query(note-and-up){
-					@include font-size(17px);
-		   	} 
+			  // @include media-query(note-and-up){
+					// @include font-size(17px);
+		   // 	} 
 
-			  @include media-query(desk){
-					@include font-size(18px);
-		   	}
+			  // @include media-query(desk){
+					// @include font-size(18px);
+		   // 	}
 
 			//ADBT
 			.adbt.one_col &, .adbt.home_page & {
@@ -149,13 +149,13 @@
 				@include font-size(13px); 
 				font-family: $font-primary;
 
-			  @include media-query(note-and-up){
-					@include font-size(17px);
-		   	} 
+			  // @include media-query(note-and-up){
+					// @include font-size(17px);
+		   // 	} 
 
-			  @include media-query(desk){
-					@include font-size(18px);
-		   	}
+			  // @include media-query(desk){
+					// @include font-size(18px);
+		   // 	}
 
 			//ADBT
 			.adbt.one_col &, .adbt.home_page & {
@@ -171,13 +171,13 @@
 				@include font-size(13px); 
 				font-family: $font-primary;
 
-			  @include media-query(note-and-up){
-					@include font-size(17px);
-		   	} 
+			  // @include media-query(note-and-up){
+					// @include font-size(17px);
+		   // 	} 
 
-			  @include media-query(desk){
-					@include font-size(18px);
-		   	}
+			  // @include media-query(desk){
+					// @include font-size(18px);
+		   // 	}
 
 			//ADBT
 			.adbt.one_col &, .adbt.home_page & {
@@ -193,13 +193,13 @@
 				@include font-size(13px);
 				font-family: $font-primary;
 			
-			  @include media-query(note-and-up){
-					@include font-size(17px);
-		   	} 
+			 //  @include media-query(note-and-up){
+				// 	@include font-size(17px);
+		  //  	} 
 			
-			  @include media-query(desk){
-				@include font-size(18px);
-	   		} 
+			 //  @include media-query(desk){
+				// @include font-size(18px);
+	   // 		} 
 
 			//ADBT
 			.adbt.one_col &, .adbt.home_page & {

@@ -7,11 +7,7 @@ html {
 	
 	main {
 		@include media-query(note-and-up){
-			@include font-size(18px);
-		}	
-
-		@include media-query(desk){
-			@include font-size(21.43px);
+			@include font-size(16px);
 		}	
 
 		p {

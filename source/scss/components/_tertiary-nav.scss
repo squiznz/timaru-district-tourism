@@ -2,7 +2,7 @@
 
 .tertiary-nav {
 	@extend .bare-list;
-	@include font-size(12.99px);
+	@include font-size(12px);
 	font-family: $font-primary;
 	font-weight: $semibold;
 	height: 42px;
@@ -11,7 +11,7 @@
 
 	@include media-query(desk){
 		height: 55px;
-		@include font-size(16px);	
+		// @include font-size(12px);	
 	}
 
 	//ADBT
@@ -29,7 +29,6 @@
 
 		@include media-query(desk){
 			padding: 0 38px;
-			@include font-size(16px);	
 			@include container();
 			@include position(relative, null);
 
@@ -98,14 +97,10 @@
 					@include position(static, 0 null 0 0);
 					display: inline-block;
 					padding: 0 20px 0 0;
-					@include font-size(12px);
+					// @include font-size(12px);
 					float: left;
 					line-height: 3.5em;
 					height: 100%;
-				}
-
-				@include media-query(desk){
-					@include font-size(16px);
 				}
 			}
 		}
