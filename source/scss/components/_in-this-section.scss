@@ -30,7 +30,6 @@
 			border-bottom: 0;
 			padding-bottom: 8px;
 			margin-bottom: 0;
-			@include font-size(24.09px);
 		}
 		
 		&:after {
@@ -54,11 +53,7 @@
 
 		li {
 			color: $tdc-light-blue;
-
-			@include media-query(note-and-up){
-				@include font-size(21.42px);
-			}
-
+			
 			a {
 				display: block;
 				padding: 8px 0;

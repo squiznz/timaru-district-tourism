@@ -27,10 +27,6 @@
   font-weight: $semibold;
   text-transform: uppercase;
   font-family: $font-primary;
-  
-  @include media-query(desk){
-    font-size: 14px !important;
-  }
 }
 
 // Display.

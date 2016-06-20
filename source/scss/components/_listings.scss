@@ -14,7 +14,7 @@ ul.listing {
 
 		@include media-query(note-and-up){
 			@include span(6.1 of 12 no-gutters);
-			@include font-size(21.4px);
+			// @include font-size(21.4px);
 			padding: 0 76px 55px 0;
 			margin-bottom: 55px;
 			line-height: 30px;
@@ -26,10 +26,6 @@ ul.listing {
 			line-height: 28px;
 			margin-bottom: 12px;
 			display: block;
-
-			@include media-query(note-and-up){
-				@include font-size(24.09px);
-			}
 		}
 		
 		a:last-of-type {
@@ -42,12 +38,12 @@ ul.listing {
 		}
 		
 		.more {
-			@include media-query(note-and-up){
-				@include font-size(18px);
-				&:after {
-					bottom: -2px;
-				}
-			}
+			// @include media-query(note-and-up){
+			// 	@include font-size(18px);
+			// 	&:after {
+			// 		bottom: -2px;
+			// 	}
+			// }
 		}
 
 		&:nth-child(even){
@@ -232,8 +228,8 @@ ul.listing--events {
 
 		a.more {
 			margin-top: 20px;
-			font-weight: $bold;
-			@include font-size(14px);
+			// font-weight: $bold;
+			// @include font-size(14px);
 		}
 	}
 	
@@ -283,13 +279,13 @@ ul.listing--with-images {
 
 
 		.more {
-			@include media-query(note-and-up){
-				@include font-size(18px);
+			// @include media-query(note-and-up){
+			// 	@include font-size(18px);
 				
-				&:after {
-					bottom: -2px;
-				}
-			}
+			// 	&:after {
+			// 		bottom: -2px;
+			// 	}
+			// }
 		}
 	}
 }

@@ -12,19 +12,19 @@
 
 		@include media-query(note-and-up){
 			@include span(4.133 of 12 no-gutters);
-			margin-bottom: 38px;
+			margin-bottom: 30px;
 		}
 		
 		img {
-			height: 440px;
+			height: 335px;
 			width: 100%;
 		}
 
 		div {
 			border-top: none;
-			height: 384px;
+			height: 280px;
 			@include position(relative, null);
-			padding: 65px 44px;
+			padding: 40px 30px;
 
 			@include media-query(note-and-up){
 				border: 1px solid $tdc-grey;
@@ -38,21 +38,15 @@
 			display: block;
 			width: 100%; 
 			color: $tdc-dark-navy;
-			@include font-size(32px);
-			line-height: 73px;
-		}
-
-		p {
-			@include font-size(21.42px);
-			line-height: 29px;
+			@include font-size(24px);
+			line-height: 55px;
 		}
 
 		a.more {
 			color: $tdc-light-blue;
-			@include position(absolute, null null 38px 38px);
+			@include position(absolute, null null 30px 30px);
 			display: inline-block !important;
 			margin-top: 21px;
-			@include font-size(18.74px);
 		}
 
 		&:nth-child(3n+1){
@@ -69,6 +63,6 @@
 
 .page--landing__wrap {
 	@include container(71.6875em);
-	padding: 0 38px;
+	padding: 0 30px;
 	margin-bottom: 90px;
 }
