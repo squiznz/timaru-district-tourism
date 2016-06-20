@@ -9,16 +9,13 @@
 	background-color: $white;
 	@include position(relative, null);
 
-	@include media-query(desk){
-		height: 55px;
-		// @include font-size(12px);	
+	@include media-query(note-and-up){
+		height: 38px;
 	}
 
-	//ADBT
 	.adbt & {
 		border-bottom: 1px solid #ECECEC;
 	} 
-	//End ADBT
 
 	ul {
 		@include position(absolute, null 0 null null);
@@ -28,15 +25,13 @@
 		text-align: right;
 
 		@include media-query(desk){
-			padding: 0 38px;
+			padding: 0 30px;
 			@include container();
 			@include position(relative, null);
 
-			//ADBT
 			.adbt & {
 			    padding: 0 124px;
 			}
-			//End ADBT
 		}
 
 		li {
@@ -47,16 +42,10 @@
 				color: $black;
 				padding: 0 16px;
 				display: block;
-				height: 42px;
+				height: 100%;
 				width: 100%;
-				line-height: 3.3em;
+				line-height: 3em;
 				text-decoration: none;
-
-				@include media-query(desk){
-					padding: 0 21px;
-					height: 55px;
-					line-height: 3.4em;
-				}
 			}			
 			
 			&:nth-child(3) {
