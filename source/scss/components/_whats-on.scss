@@ -12,12 +12,11 @@
 	
 	h2 {
 		color: $tdc-dark-navy;
-		@include font-size(22.5px);
+		@include font-size(24px);
 
 		@include media-query(note-and-up){
-			padding: 0 38px;
+			padding: 0 30px;
 			@include container(1700px);
-			@include font-size(32px);
 		}
 	}
 
@@ -29,11 +28,11 @@
 			}
 
 			@include media-query(note-and-up){
-				min-width: 376px;
+				min-width: 281px;
 			}
 
 			&.listing--events__feature {
-				max-width: 790px;
+				max-width: 591px;
 			}	
 		}
 	}
@@ -41,9 +40,10 @@
 
 
 	.whats-on-slider__view-all {
+		@include font-size(14px);
+
 		@include media-query(note-and-up){
-			@include font-size(19px);
-			@include position(absolute, 115px 38px null null);
+			@include position(absolute, 100px 38px null null);
 		}
 	}
 

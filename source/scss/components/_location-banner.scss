@@ -43,7 +43,7 @@
 			@include container();
 			@include position(relative, null null null null);
 			height: 100%;
-			padding: 0 38px;
+			padding: 0 30px;
 		}
 	}
 
@@ -123,13 +123,13 @@
 
 		.location-banner--right & {
 			@include media-query(note-and-up){
-				@include position(absolute, 147px 38px null null);
+				@include position(absolute, 147px 30px null null);
 			}
 		}
 
 		.location-banner--left & {
 			@include media-query(note-and-up){
-				@include position(absolute, 147px null null 38px);
+				@include position(absolute, 147px null null 30px);
 			}
 		}
 
@@ -159,10 +159,13 @@
 		@include font-size(17px);
 		text-transform: uppercase;
 		line-height: 1em;
-		// height: 45px;
 		display: block;
 		text-indent: 0 !important;
-
+	
+		&:after {
+			right: 20px;
+		}
+	
 		@include media-query(note-and-up){
 			display: inline-block;
 			width: auto;
@@ -170,15 +173,6 @@
 
 			&:after {
 				right: 20px;
-			}
-		}
-	
-		span {
-			@include position(relative, null null null null);	
-			color: $white !important;
-
-			&:after {
-				@include position(absolute, 2px -1em 0 null);
 			}
 		}
 	}

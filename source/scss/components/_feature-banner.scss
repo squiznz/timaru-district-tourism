@@ -100,7 +100,7 @@
 		margin-bottom: 6.25em;
 
 		.feature-banner__info {
-			@include position(absolute, null 38px 80px null);
+			@include position(absolute, null 30px 80px null);
 		}
 	}
 }
@@ -110,11 +110,11 @@
 	@include position(relative, null);
 	height: 100%;
 	@include container(15.625em);
-	padding-top: 3.25em;
+	padding-top: 160px;
 
 	@include media-query(note-and-up){
 		@include container(37em);
-		padding: 8.8125em 38px 0 38px;
+		padding: 8.8125em 30px 0 30px;
 		@include position(relative, null null null null);
 	}
 
