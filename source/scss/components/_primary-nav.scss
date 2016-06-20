@@ -56,6 +56,7 @@
 				display: inline-block;
 				padding: 0;
 				border: none;
+				height: 100%;
 			}
 
 			a {
@@ -69,6 +70,7 @@
 				
 				@include media-query(note-and-up){
 					padding: 30px 16px;
+					height: 100%;
 				}
 			}
 
@@ -98,7 +100,7 @@
  	}
 	
 	@include media-query(note-and-up){
-		@include position(absolute, 60px 0 null 0);
+		@include position(absolute, 80px 0 null 0);
 		width: 100%;
 		display: none;
 		padding: 80px;

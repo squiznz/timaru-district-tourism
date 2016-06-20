@@ -16,7 +16,7 @@
 	}
 
 	@include media-query(note-and-up){
-		height: 120px;
+		height: 118px;
 	}
 	
 	//ADBT
@@ -46,7 +46,7 @@
 		}
 
 		@include media-query(note-and-up){
-			height: 60px;
+			height: 80px;
 		}
 	}
 
@@ -65,19 +65,13 @@
 			transition: width 0.5s;
 			@include position(relative, 30% null);
 			width: 200px;
-
-			//ADBT
-			.adbt.one_col &, .adbt.home_page &  {
-				
-			}
-			//End ADBT
 		}
 
 		.site-search__form {
 			width: 100%;
 
 			@include media-query(note-and-up){
-				width: 160px;
+				width: 120px;
 				float: right;
 			}
 		}
@@ -90,7 +84,7 @@
 			float: left;
 
 			@include media-query(note-and-up){
-				width: 160px;
+				width: 120px;
 				background-color: transparent;
 				padding: 0;
 			}
@@ -183,7 +177,8 @@
 			@include media-query(note-and-up){
 				background-color: transparent !important;
 				width: 20px;
-				padding-right: 1em;
+				min-height: 35px !important;
+				padding: 0;
 				float: right;
 			}
 		}

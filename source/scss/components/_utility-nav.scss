@@ -38,8 +38,8 @@
 			float: left;
 			height: 60px;
 
-			@include media-query(desk){
-				height: 97px !important;
+			@include media-query(note-and-up){
+				height: 80px !important;
 			}
 
 			a {
