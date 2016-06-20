@@ -17,12 +17,12 @@
 	.our-region__selector-wrap {
 		padding: 0 21px 15px 21px;
 		@include clearfix();
-		@include font-size(23px);
+		@include font-size(24px);
 
 		@include media-query(note-and-up){
 			padding: 0;
 			margin-bottom: 28px;
-			@include font-size(32.12px);
+			// @include font-size(32.12px);
 			@include container(1700px);
 		}
 
@@ -32,12 +32,12 @@
 			color: $tdc-dark-navy;
 			margin: 0;
 			font-weight: $medium;
-			@include font-size(23px);
+			@include font-size(24px);
 			margin-right: 0.25em;
 			display: inline-block;
 
 			@include media-query(note-and-up){
-				@include font-size(32.12px);
+				// @include font-size(32.12px);
 				display: block;
 			}
 		}
@@ -49,18 +49,18 @@
 
 		li {
 			margin: 0 11px 0 11px;
-			height: 21.563em;
+			height: 341px;
 			background-color: #f7f7f7;
 
 			@include media-query(note-and-up){
-				width: 653px !important;
+				// width: 653px !important;
 				height: 20.5em;
-				margin: 0 38px 0 0;
+				margin: 0 30px 0 0;
 
 				img {
 					float: left;
 					@include span(1.1 of 2 (no-gutters));
-					height: 20.5em;
+					height: 185px;
 				}
 			}
 		}
@@ -68,16 +68,16 @@
 
 
 		.our-region__info-wrap {
-			padding: 25px 1.3125em 30px 1.3125em;
+			padding: 30px 21px;
 			line-height: 1.3125em;
 			@include font-size(16px);
 			color: $tdc-dark-grey;
+			height: 156px;
 
 	   	@include media-query(note-and-up){
 				height: 100%;
-				@include font-size(21.42px);
 				line-height: 29.45px;
-				padding: 65px 38px;
+				padding: 30px;
 				@include span(1.10 of 2 (no-gutters));
 				float: left;
 				@include position(relative, null);	
@@ -92,7 +92,7 @@
 				font-family: $font-primary;
 
 				@include media-query(note-and-up){
-					@include font-size(24.09px);
+					// @include font-size(24.09px);
 					line-height: 28.11px;
 				}
 			}
@@ -106,8 +106,8 @@
 				display: inline-block;
 
 		   	@include media-query(note-and-up){
-					@include font-size(18.74px);
-					@include position(absolute, null null 55px 38px);
+					// @include font-size(18.74px);
+					@include position(absolute, null null 55px 30px);
 				}
 
 				&:after {
@@ -122,10 +122,11 @@
 		.our-region__view-all {
 			display: block;
 			text-align: center;
+			@include font-size(14px);
 			width: 100%;
 
 			@include media-query(note-and-up){
-				@include font-size(18.74px);
+				// @include font-size(18.74px);
 				line-height: 29.45px;
 				float: right;
 				width: auto;
