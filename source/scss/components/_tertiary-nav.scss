@@ -26,7 +26,7 @@
 
 		@include media-query(note-and-up){
 			padding: 0 30px;
-			@include container();
+			@include container(1700px);
 			@include position(relative, null);
 
 			.adbt & {
@@ -36,6 +36,7 @@
 
 		li {
 			display: inline-block;
+			height: 100%;
 			border-right: 1px solid $tdc-grey;
 
 			a {
@@ -44,18 +45,14 @@
 				display: block;
 				height: 100%;
 				width: 100%;
-				line-height: 3em;
+				line-height: 3.5em;
 				text-decoration: none;
-			}			
-			
-			&:nth-child(3) {
-				width: 122px;
-				
-				@include media-query(desk){
-					width: auto;
-				}
-			}
 
+				@include media-query(note-and-up){
+					line-height: 3em;
+				}
+			}			
+		
 			&:last-of-type {
 				border-right: none;
 				float: right;

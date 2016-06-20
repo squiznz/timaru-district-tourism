@@ -106,7 +106,7 @@ function threeBest(){
 function megaMenu() {
   var navItems = $('.primary-nav ul li');
 
-  $('.primary-nav ul > li > a').click(function(e) {
+  $('.primary-nav__first-level > li > a').click(function(e) {
     e.preventDefault();
     e.stopPropagation();
 
