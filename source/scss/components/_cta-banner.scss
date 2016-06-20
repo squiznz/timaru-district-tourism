@@ -17,21 +17,10 @@
 		padding: 0 45px;
 	}
 
-	// @include media-query(note-and-up){
-	// 	height: 25em;
-	// 	padding: 0 38px;
-	// }
-
 	strong {
 		font-weight: $ultrabold;
 	}
 	
-	//ADBT
-	.adbt.home_page & {
-	    background-color: $tdc-dark-navy;
-	}
-	//END ADBT
-
 	a {
 		@include font-size(19px);
 		color: $tdc-green;
@@ -39,11 +28,6 @@
 		font-weight: $semibold;
 		@include position(relative, null);
 		display: inline-block;
-
-		@include media-query(note-and-up){
-			@include font-size(25px);
-			margin-top: 0.5em;
-		}
 
 		&:after {
 			@include position(absolute, 6px -1em 0 null);
@@ -68,12 +52,16 @@
 			line-height: 52px;	
 		}
 	}
+
+	.adbt.home_page & {
+    background-color: $tdc-dark-navy;
+	}
 }
 
 
 		.cta-banner__wrap {
 			height: 100%;
-			@include container(71.09375%);
+			@include container(56.41748942172073%);
 			margin: 0 auto;
 			padding: 50px 0;
 
@@ -83,7 +71,6 @@
 			
 			@include media-query(note-and-up){
 				padding: 90px 0 60px 0;
-				// vertical-align: center;
 			}
 		}
 

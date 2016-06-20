@@ -7,20 +7,19 @@
 	@include font-size(16px);
 
 	@include media-query(note-and-up){
-		@include container(84.063em);
-		padding: 90px 0;
+		@include container(1063px);
+		padding: 55px 30px 70px 30px;
 	}
 }
 
 	.three-best__selector-wrap {
 		padding: 0 21px 15px 21px;
 		@include clearfix();
-		@include font-size(23px);
 
 		@include media-query(note-and-up){
 			padding: 0;
 			margin-bottom: 28px;
-			@include font-size(32.12px);
+			@include font-size(24px);
 			@include container(1700px);
 		}
 
@@ -30,12 +29,11 @@
 			margin: 0;
 			color: $tdc-dark-navy;
 			font-weight: $medium;
-			@include font-size(23px);
+			font-size: inherit;
 			margin-right: 0.25em;
 			display: inline-block;
 
 			@include media-query(note-and-up){
-				@include font-size(32.12px);
 				display: block;
 			}
 		}
@@ -52,7 +50,7 @@
 			}
 
 			@include media-query(note-and-up){
-	 			@include span(2.966 of 9 (gutter-override: 38px));			
+	 			@include span(2.927 of 9 (gutter-override: 35px));			
 				height: 24.375em;
 
 				&:nth-child(3) {
@@ -65,7 +63,7 @@
 				width: 100%;
 				
 				@include media-query(note-and-up){
-					height: 13.438em;
+					height: 177px;
 				}
 			}
 		}
@@ -82,8 +80,7 @@
 			@include font-size(16px);
 		
 			@include media-query(note-and-up){
-				padding: 28px 0;
-				@include font-size(21.42px);
+				padding: 21px 0;
 				line-height: 29.45px;
 			}
 		
@@ -94,12 +91,6 @@
 				display: block;
 				margin-bottom: 10px;
 				font-family: $font-primary;
-
-				@include media-query(note-and-up){
-					@include font-size(24.09px);
-					line-height: 28.11px;
-					padding: 0;
-				}
 			}
 
 			a {

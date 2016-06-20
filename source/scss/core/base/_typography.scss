@@ -32,29 +32,17 @@ $ultrabold  :  900;
 }
 
 h1 {
-	@include font-size(35px);
-
-	@include media-query(note-and-up){
-		@include font-size(53.54px);
-		font-weight: $bold;
-	}
+	@include font-size(40px);
+    font-weight: $bold;
 }
 
 h2 {
 	@include font-size(28px);
 	color: $tdc-light-blue;
-
-	@include media-query(note-and-up){
-		@include font-size(37.48px);
-	}
 }
 
 h3 {
 	@include font-size(24px);
-
-	@include media-query(note-and-up){
-		@include font-size(32.12px);
-	}
 }
 
 h4 {
@@ -62,10 +50,6 @@ h4 {
 	font-weight: $semibold;
 	color: $tdc-light-blue;
 	font-family: $font-primary;
-
-	@include media-query(note-and-up){
-		@include font-size(29.45px);
-	}
 }
 
 h5 {
@@ -73,20 +57,12 @@ h5 {
 	@include font-size(18px);
 	font-family: $font-primary;
 	font-weight: $bold;
-
-	@include media-query(note-and-up){
-		@include font-size(24.09px);
-	}
 }
 
 h6 {
 	@include font-size(16px);
 	font-family: $font-primary;
 	font-weight: $bold;
-
-	@include media-query(note-and-up){
-		@include font-size(21.42px);
-	}
 }
 
 a {
