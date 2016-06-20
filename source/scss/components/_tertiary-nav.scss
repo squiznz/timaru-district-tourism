@@ -24,7 +24,7 @@
 		height: 100%;
 		text-align: right;
 
-		@include media-query(desk){
+		@include media-query(note-and-up){
 			padding: 0 30px;
 			@include container();
 			@include position(relative, null);
@@ -85,8 +85,7 @@
 				@include media-query(palm-land-up){
 					@include position(static, 0 null 0 0);
 					display: inline-block;
-					padding: 0 20px;
-					// @include font-size(12px);
+					// padding: 0 30px;
 					float: left;
 					line-height: 3.5em;
 					height: 100%;
