@@ -15,7 +15,7 @@
 	}
 
 	@include media-query(note-and-up){
-		height: 46.625em;
+		height: 550px;
 	}
 	
 	h1 {
@@ -74,13 +74,9 @@
 			width: 100%;
 			margin-bottom: 12px;
 			padding-left: 12px;
-
-			@include media-query(portable){
-				@include font-size(12px);
-			}
+			@include font-size(12px);
 
 			@include media-query(note-and-up){
-				@include font-size(16.06px);
 				line-height: 28.11px;
 				margin-bottom: 1.3125em;
 				padding-left: 20px;
@@ -119,10 +115,10 @@
 
 		@include media-query(note-and-up){
 			background-color: rgba(0,29,65,0.89);
-			width: 10.521em;
-			padding: 50px 46px;
-			@include font-size(48.19px);
-			line-height: 58.89px;
+			width: 423px;
+			padding: 32px 40px;
+			@include font-size(36px);
+			line-height: 44px;
 		}
 
 		.location-banner--right & {
@@ -172,7 +168,6 @@
 			height: 60px;
 			display: inline-block;
 			width: auto;
-			@include font-size(22px);
 			margin-top: 30px;
 			padding: 18px 50px 18px 18px;
 
