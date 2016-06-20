@@ -74,7 +74,10 @@ function globalActions() {
 
     if ($(this).hasClass('feature-banner--home')) {
       $(this).css('background','linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url("'+ bannerImage +'") repeat scroll 0 0');
-    } else {
+    } else if ($(this).hasClass('listing-itineraries__header')){
+      $(this).css('background','linear-gradient(rgba(0, 28, 66, 0.6), rgba(0, 28, 66, 0.6)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url("'+ bannerImage +'") repeat scroll 0 0');
+    }
+    else {
       $(this).css('background-image','url('+ bannerImage +')')
     }
   });

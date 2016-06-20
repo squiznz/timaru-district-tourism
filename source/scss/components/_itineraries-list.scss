@@ -11,7 +11,7 @@
 	}
 }
 
-		.itineraries__list {
+		.listing-itineraries {
 			padding-bottom: 140px;
 			@extend .bare-list;
 			@include container(1423px);
@@ -33,8 +33,7 @@
 
 				header {
 					height: 508px;
-					background: linear-gradient(rgba(0, 28, 66, 0.6), rgba(0, 28, 66, 0.6)), url(../img/placeholder1.jpeg);
-					background-size: 100%;
+					background-size: 100% !important;
 					
 					a {
 						display: block;
@@ -54,7 +53,7 @@
 		}
 
 
-.itineraries__list__wrap {
+.listing-itineraries__wrap {
 	border: 1px solid $tdc-grey;
 	border-top: none;
 	border-right: none;
@@ -82,7 +81,7 @@
 }	
 
 
-				.itineraries__list__description {
+				.listing-itineraries__description {
 					padding: 55px;
 					width: 650px;
 					float: left;
@@ -113,7 +112,7 @@
 					}
 				}
 
-				.itineraries__list__highlights {
+				.listing-itineraries__highlights {
 					padding: 55px;
 					height: 100%;
 					@include clearfix();
@@ -126,7 +125,7 @@
 				}
 
 
-				.itineraries__list__map {
+				.listing-itineraries__map {
 					width: 27.0199%;
 					padding: 0;
 					content: "";
@@ -135,7 +134,7 @@
 					background-color: $black;
 				}		
 
-			.itineraries__list__info {
+			.listing-itineraries__info {
 				width: 100%;
 
 				li {
@@ -160,21 +159,21 @@
 				}
 			}
 
-				.itineraries__list__info__drive {
+				.listing-itineraries__info__drive {
 					&:after {
 						content: "\f1b9";
 					}
 				}
 
 
-				.itineraries__list__info__walk {
+				.listing-itineraries__info__walk {
 
 					&:after {
 						content: "\f21c";
 					}
 				}
 
-				.itineraries__list__info__bike {
+				.listing-itineraries__info__bike {
 
 					&:after {
 						content: "\f206";
