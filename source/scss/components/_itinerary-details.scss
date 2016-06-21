@@ -1,70 +1,6 @@
-// /***
-// *   Itinerary Details
-// ***/
-
-// .itinerary-map {
-// 	height: 37.75em;
-// }
-
-// .itineraries__list--itinerary {
-// 	.itineraries__list__wrap {
-// 		width: 100%;
-// 	}
-
-// 	.itineraries__list__description {
-// 		width: 983px;
-// 		height: 100%;
-// 		padding: 55px 55px 97px 55px;
-// 	}
-
-// 	.itineraries__list__highlights {
-// 		border-left: 1px solid $tdc-grey;
-// 		border-right: 1px solid $tdc-grey;
-// 		@include clearfix();
-// 		min-height: 100%;
-// 		width: 360px;
-// 		padding: 30px;
-// 		height: 100%;
-// 		background-color: $tdc-bg-grey;
-// 		color: $tdc-dark-navy;
-
-// 		li {
-// 			margin-bottom: 30px;
-
-// 			.more {
-// 				font-weight: $bold;
-// 				margin-top: 8px;
-// 			}
-
-// 			strong {
-// 				margin: 8px 0;
-// 				display: block;
-// 				color: $tdc-green;
-// 			}
-// 		}
-// 	}
-// }
-
-
-// .itineraries__list__info__view-map {
-// 	float: right;
-// 	padding-right: 52px !important;
-
-// 	a {
-// 		@include font-size(18.74px);
-// 		color: $tdc-dark-navy;
-// 		font-weight: bold;
-// 	}
-	
-// 	&:after {
-// 		left: 80% !important;
-// 		@include font-size(21px);
-// 		line-height: 40px;
-// 		right: 42px;
-// 		content: "\f041";
-// 	}
-// }
-
+/***
+*   Itinerary Details
+***/
 
 .itinerary-details-list {
 	float: left;
@@ -72,7 +8,7 @@
 	li {
 		display: inline-block;
 		color: $tdc-dark-navy;
-		
+
 		a {
 			color: inherit;
 		}
