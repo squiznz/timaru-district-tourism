@@ -78,8 +78,13 @@ form {
 		border: none;
 		height: auto;
 		outline: none;
+<<<<<<< HEAD
 		margin: 2px 0 0 0;
    		background: transparent;
+=======
+		margin: 0;
+   	background: transparent;
+>>>>>>> 3ccbd69e933e3c0ac27449a20c35f2af001889f9
 		@include position(relative, null);
 		text-indent: 0.01px;
 		text-overflow: "";

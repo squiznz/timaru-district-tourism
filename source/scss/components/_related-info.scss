@@ -7,7 +7,7 @@
 	float: left;
 
 	@include media-query(note-and-up){
-		width: 14.6539%;
+		width: 177px;
 		float: right;
 		margin: 0;
 	}
@@ -21,9 +21,9 @@
 		padding-bottom: 15px;
 
 		@include media-query(note-and-up){
-			padding-bottom: 21px;
+			// padding-bottom: 20px;
 			display: block;
-			@include font-size(16.06px);	
+			// @include font-size(16.06px);	
 		}
 	}
 
@@ -34,8 +34,8 @@
 		margin: 21px 0 21px 0;
 
 		@include media-query(note-and-up){
-			@include font-size(20.08px);
-			margin: 21px 0 50px 0;
+			// @include font-size(20.08px);
+			margin: 10px 0 50px 0;
 		}
 		
 		a {
@@ -49,38 +49,23 @@
 	.related-info__promoted-info {
 		width: 100%;
 		padding: $padding;
-		margin: 21px 0;
+		margin: 25px 0;
 		float: left;
-
-		@include media-query(note-and-up){
-			padding: 48px 30px;
-			@include font-size(21.42px);
-			line-height: 29px;
-		}
+		line-height: 22px;
 		
 		strong {
 			font-weight: $bold;
 			margin-bottom: 8px;
 			display: block;
 			@include font-size(18px);
-
-			@include media-query(note-and-up){
-				@include font-size(24.09px);
-			}
 		}
 
 		.cta-button {
-			color: $white;
-			text-align: left;
-			margin-top: 21px;
-			padding: 20px 50px 20px 10px;
+			margin-top: 30px;
+			padding: 10px 30px 10px 10px;
 			display: block;
-			letter-spacing: -1px;
 			height: auto;
-
-			@include media-query(note-and-up){
-				margin-top: 40px;
-			}
+			@include font-size(17px);
 		}
 	}
 

@@ -1,0 +1,26 @@
+/***
+*  Details Template
+***/
+
+// .details {
+// 	@include container(1063px);
+// 	background-color: green;
+// }
+
+
+
+.details {
+	main {
+		.container {
+			@include container(1063px);
+		}
+	}
+}
+
+
+.details-wrap {
+	@include container(724px);
+	padding: 0;
+	float: left;
+}
+

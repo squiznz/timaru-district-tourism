@@ -3,29 +3,31 @@
 ***/
 
 .watch-timaru {
-	// @include font-size(16px);
-	// min-height: 559px;
+	background-color: $white;
 	padding: 50px 0 21px 0;
 
 	@include media-query(note-and-up){
-		@include container(1063px);
 		padding: 50px 30px;
 		@include position(relative, null);
 	}
 
 	header {
-		padding: 0 0 10px 0;
+		@include container(1063px);
 	}
 }
 
 
 		.watch-timaru__list {
+			@include media-query(note-and-up){
+				padding: 0 30px;
+				@include container(1063px);
+			}
+			
 			li {
 				padding-bottom: 1.875em;
 
 				@include media-query(note-and-up){
 					@include span(2.99 of 6 (gutter-override: 30px));
-					padding-bottom: 0;
 
 					&:nth-child(2){
 						@include last();

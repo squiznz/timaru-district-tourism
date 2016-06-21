@@ -9,9 +9,10 @@
 	float: left;
 	
 	@include media-query(note-and-up){
-		width: 14.55%;
-		margin-right: 38px;
+		width: 177px;
+		margin-right: 30px;
 		padding: 0;
+		margin-bottom: 80px;
 	}
 
 	h2 {
@@ -53,7 +54,7 @@
 
 		li {
 			color: $tdc-light-blue;
-			
+
 			a {
 				display: block;
 				padding: 8px 0;
@@ -71,8 +72,8 @@
 					font-family: "FontAwesome";
 					content: "\f0da";
 					line-height: inherit;
-					@include font-size(14px);
-					@include position(absolute, 15px null 0 0);
+					@include font-size(11px);
+					@include position(absolute, 12px null 0 0);
 				}
 
 				ul {

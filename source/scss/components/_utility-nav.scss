@@ -7,7 +7,11 @@
 	z-index: 99998;
 	padding: 6px 21px;
 	height: 100%;
-
+	
+	@include media-query(palm-land-up){
+		padding: 0 45px;
+	}
+	
 	@include media-query(note-and-up){
 		height: 100%;
 		float: left;
@@ -36,17 +40,12 @@
 		.utility-nav__item--logo {
 			width: 120px;
 			float: left;
-			height: 60px;
-
-			@include media-query(note-and-up){
-				height: 80px !important;
-			}
+			height: 100%;
 
 			a {
 				display: block;
 				height: 100%;
 				width: 100%;
-				// background-image: url(../img/logo.png);
 				background-image: url(../../__data/assets/image/0011/62993/logo.png);
 				background-size: 100%;
 				background-position: left center;
@@ -73,7 +72,11 @@
 			@include font-size(20px);
 			padding-top: 15px;
 			line-height: 1.2em;
-
+			
+			@include media-query(palm-land-up){
+				padding-top: 20px;
+			}
+			
 			@include media-query(note-and-up){
 				display: none !important;
 				padding: 0;
@@ -96,6 +99,14 @@
 			transition: .5s ease-in-out;
 			cursor: pointer;		
 			
+			@include media-query(palm-land-up){
+				top: 20px;
+			}				
+			
+			@include media-query(note-and-up){
+				top: 13px;
+			}
+
 			@include media-query(portable){
 				width: 26px;
 				height: 26px;

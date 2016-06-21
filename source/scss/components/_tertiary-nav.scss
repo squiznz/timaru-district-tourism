@@ -23,10 +23,14 @@
 		color: $tdc-dark-navy;
 		height: 100%;
 		text-align: right;
+		
+		@include media-query(palm-land-up){
+			padding: 0 45px;
+		}
 
 		@include media-query(note-and-up){
 			padding: 0 30px;
-			@include container(1700px);
+			@include container(1270px);
 			@include position(relative, null);
 
 			.adbt & {

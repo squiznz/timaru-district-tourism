@@ -44,6 +44,7 @@
 	background: linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)), url(../img/placeholder1.jpeg);
 	height: 400px;
 	margin-bottom: 0;
+	
 
 	@include media-query(note-and-up){
 		height: 675px;
@@ -111,6 +112,10 @@
 	height: 100%;
 	@include container(15.625em);
 	padding-top: 155px;
+
+	@include media-query(palm-land-up){
+		padding: 0px;
+	}
 
 	@include media-query(note-and-up){
 		@include container(37em);

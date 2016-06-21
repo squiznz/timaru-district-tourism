@@ -3,8 +3,10 @@
 ***/
 
 .three-best {
-	padding: 50px 30px;
+	padding: 50px 0;
+	background-color: $white;
 
+<<<<<<< HEAD
 	@include media-query(note-and-up){
 <<<<<<< HEAD
 		@include container(84.063em);
@@ -37,6 +39,14 @@
 		select {
 			@include font-size(24px);
 >>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
+=======
+	header {
+		padding: 0 21px;
+		@include container(1063px);
+
+		@include media-query(note-and-up){
+			padding: 0;
+>>>>>>> 3ccbd69e933e3c0ac27449a20c35f2af001889f9
 		}
 	}
 }
@@ -44,6 +54,7 @@
 
 	.three-best__list {		
 		@extend .bare-list;
+		@include container(1063px);
 
 		li {
 			@include media-query(portable){

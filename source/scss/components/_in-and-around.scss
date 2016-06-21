@@ -3,23 +3,22 @@
 ***/
 
 .in-and-around {
-	@include clearfix();
-	@include font-size(16px);
+	padding: 0;
 
 	@include media-query(portable){
 		@include position(relative, null);
 	}
 
 	@include media-query(note-and-up){
-		height: 750px;
+		height: 560px;
 	}
 
 	h2 {
 		background-color: $tdc-navy;
-		padding: 0 21px;
+		// padding: 0 21px;
 		color: $white;
-		margin: 0;
-		font-weight: $medium;
+		// margin: 0;
+		// font-weight: $medium;
 
 		@include media-query(portable){
 			width: 100%;
@@ -30,10 +29,10 @@
 		}
 
 		@include media-query(note-and-up){
-			@include font-size(30.79px);
+			// @include font-size(30.79px);
 			// width: 17.538em;
-			line-height: 60px;
-			height: 60px;
+			// line-height: 60px;
+			// height: 60px;
 			@include position(relative, null);
 
 			&:after {
@@ -81,7 +80,7 @@
 			@include clearfix();
 			width: 35%;
 			height: 100%;
-			padding: 65px;
+			// padding: 65px;
 		}
 	}
 
@@ -145,7 +144,7 @@
 				color: $tdc-green;
 
 				@include media-query(note-and-up){
-					right: 38px;
+					right: 30px;
 					top: 50px;
 				}
 			}
