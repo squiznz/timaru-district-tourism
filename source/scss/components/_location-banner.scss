@@ -123,29 +123,23 @@
 
 		.location-banner--right & {
 			@include media-query(note-and-up){
-<<<<<<< HEAD
-				@include position(absolute, 178px 38px null null);
 
 				.adbt.home_page & {
 					@include position(absolute, 150px 8% null null);
 				}
-=======
 				@include position(absolute, 147px 30px null null);
->>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
 			}
 		}
 
 		.location-banner--left & {
 			@include media-query(note-and-up){
-<<<<<<< HEAD
-				@include position(absolute, 178px null null 38px);
 
 				.adbt.home_page & {
 					@include position(absolute, 150px null null 8%);
 				}
-=======
+
 				@include position(absolute, 147px null null 30px);
->>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
+
 			}
 		}
 
