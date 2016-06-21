@@ -3,40 +3,15 @@
 ***/
 
 .three-best {
-	padding: 50px 30px;
+	padding: 50px 0;
+	background-color: $white;
 
-	@include media-query(note-and-up){
-<<<<<<< HEAD
-		@include container(84.063em);
-		padding: 90px 0;
-
-		//ADBT
-		.adbt & {
-			@include container(75.438em);
-			padding: 90px 0;
-		}
-		//End ADBT
-=======
-		@include container(1063px);
->>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
-	}
-
-<<<<<<< HEAD
-			@include media-query(note-and-up){
-				@include font-size(32.12px);
-				display: block;
-
-				.adbt & {
-					@include font-size(28.77px)
-				}
-			}
-=======
 	header {
-		padding: 0;
-		
-		select {
-			@include font-size(24px);
->>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
+		padding: 0 21px;
+		@include container(1063px);
+
+		@include media-query(note-and-up){
+			padding: 0;
 		}
 	}
 }
@@ -44,6 +19,7 @@
 
 	.three-best__list {		
 		@extend .bare-list;
+		@include container(1063px);
 
 		li {
 			@include media-query(portable){
@@ -66,18 +42,6 @@
 					height: 180px;
 				}
 			}
-
-			.adbt & {
-				@include media-query(note-and-up) {
-					@include span(3 of 9 inside (gutter-override: 35px));
-					margin-right: 0px;
-				}
-				
-				@include media-query(portable) {
-					max-width: 23em;
-				}
-
-			}
 		}
 
 		&:nth-child(n+2){
@@ -97,22 +61,6 @@
 				display: block;
 				margin-bottom: 10px;
 				font-family: $font-primary;
-<<<<<<< HEAD
-
-				@include media-query(note-and-up){
-					@include font-size(24.09px);
-					line-height: 28.11px;
-					padding: 0;
-				}
-				
-				//ADBT
-				.adbt & {
-					@include font-size(21.58px);
-					color: $tdc-light-blue;
-				}
-				//End ADBT
-=======
->>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
 			}
 
 			a {
@@ -122,10 +70,4 @@
 				margin-top: 10px;
 				font-weight: $bold;
 			}
-
-			//ADBT
-			.adbt & {
-				@include font-size(19.18px);
-			}
-			//End ADBT
 		}

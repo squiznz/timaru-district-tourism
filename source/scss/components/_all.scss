@@ -4,6 +4,7 @@
 
 html {
 	font-family: $font-primary;
+	background-color: #e7e7e7;
 	
 	main {
 		@include media-query(note-and-up){
@@ -16,6 +17,11 @@ html {
 	}
 }
 
+body {
+	@include media-query(desk-wide){
+		@include container(1700px);	
+	}
+}
 
 p:empty,
 a.cta-button:empty {
@@ -38,7 +44,7 @@ img {
 .inside {
 	main {
 		.container {
-			@include container(1700px);
+			@include container(1270px);
 		}
 	}
 }
@@ -80,12 +86,11 @@ img {
 	margin-bottom: 21px;
 
 	@include media-query(note-and-up){
-		width: 65.84%;
-		padding: 0 100px !important;
+		width: 796px;
+		padding: 0 70px !important;
 		float: left;
 		@include clearfix();
 		margin-right: 30px;
-	
 		
 		.wide & {
 			width: 100%;
@@ -401,15 +406,15 @@ table {
 		background-color: $tdc-navy;
 		color: $white;
 		font-weight: $bold;
-		@include font-size(21.42px);
+		// @include font-size(21.42px);
 	}
 
 	tr {
 		td {
 			border: 1px solid $tdc-grey;
-			padding: 28px;
-			@include font-size(20.08px);
-			line-height: 29px;
+			padding: 21px;
+			// @include font-size(20.08px);
+			line-height: 22px;
 		}
 	}
 }
@@ -716,7 +721,17 @@ video {
 
 
 section {	
-	header {
+	padding: 0 21px;
+
+	@include media-query(palm-land-up){
+		padding: 0 45px;
+	}
+
+	@include media-query(note-and-up){
+		padding: 0 30px;
+	}
+
+	>	header {
 		@include clearfix();
 		padding: 0 0 15px 0;
 
@@ -734,6 +749,7 @@ section {
 		}
 		
 		select {
+			@include font-size(24px);
 			padding: 3px 1em 2px 6px !important;
 		}
 
