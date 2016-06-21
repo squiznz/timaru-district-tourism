@@ -187,7 +187,7 @@ $slick-opacity-not-active: 1 !default;
     padding: 0;
     border: none;
     outline: none;
-    background-image: url('../img/arrow-black.png');
+    background-image: url('/__data/assets/image/0011/67808/arrow-dark-navy.png');
     background-size: 100%;
     // display: block;
     background-repeat: no-repeat;
@@ -226,7 +226,7 @@ $slick-opacity-not-active: 1 !default;
 }
 
 .slick-prev {
-    left: 0;
+    left: 30px;
     [dir="rtl"] & {
         left: auto;
         right: -25px;
@@ -247,7 +247,7 @@ $slick-opacity-not-active: 1 !default;
 }
 
 .slick-next {
-    right: 0;
+    right: 30px;
     bottom: 5px;
 
     [dir="rtl"] & {

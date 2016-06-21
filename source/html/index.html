@@ -26,7 +26,7 @@
   Running Squiz Matrix
   Developed by Squiz - http://www.squiz.net
   Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
-  Page generated: 21 June 2016 09:18:19
+  Page generated: 21 June 2016 12:20:34
 -->
 
 
@@ -295,7 +295,7 @@
 <!-- End: Location Banner -->
 <!-- Start: Our Region Slider -->
 <section class="our-region slick-center">
-  <div class="our-region__selector-wrap">
+  <header class="our-region__selector-wrap">
   <h2>Our Region: </h2>
     <div class="select-wrap">
       <select>
@@ -304,8 +304,8 @@
         <option value="">What to do</option>
       </select>
     </div>
-    <a href="" class="our-region__view-all hidden-portable">View all videos</a>
-   </div>
+    <a href="" class="view-all hidden-portable">View all</a>
+   </header>
    <ul class="our-region__list">
      <li>
   <img src="http://tt.timaru.govt.nz/__data/assets/image/0007/63268/placeholder1.jpeg" alt="">
@@ -417,7 +417,7 @@
    <div class="slider-tools">
      <div class="slider-dots"></div>
    </div>
-   <a href="" class="our-region__view-all visible-portable">View all videos</a>
+   <a href="" class="our-region__view-all visible-portable">View all</a>
 </section>
 <!-- End: Our Region Slider -->
 <!-- Begin: Call to Action Banner -->
@@ -431,7 +431,7 @@
 <!-- Begin: Three of the Best -->
   <section class="three-best">
 
-      <div class="three-best__selector-wrap">
+      <header>
         <h2>Three of the best: </h2>
        
 <div class="select-wrap">
@@ -439,7 +439,7 @@
         <option value="places-to-get-coffee">Places to get coffee</option>
     </select>
 </div>
-     </div>
+     </header>
 
              
              
@@ -484,7 +484,9 @@
 <!-- End: Location Banner -->
 <!-- Begin: Watch Timaru -->
 <section class="watch-timaru">
-  <h2>Watch Timaru</h2>
+  <header>
+     <h2>Watch Timaru</h2>
+  </header>
   <ul class="watch-timaru__list bare-list slick-watch-timaru">
             <li>
           <div class="watch-timaru__video-wrap">
@@ -495,7 +497,7 @@
           </div>
           <div class="watch-timaru__info-wrap">
             <strong>placeholder-video.mp4</strong>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut mauris neque.</p>
           </div>
         </li>
              <li>
@@ -518,14 +520,46 @@
 
 <div id="content_container_207">
 <div id="content_container_211">
-
+   <section class="page__in-and-around">
+      <div class="page__in-and-around__map">
+      </div>
+      <div class="page__in-and-around__wrap">
+        <h2>In and Around Timaru</h2>
+        <select class="page__in-and-around__selector">
+          <option value="">Select option</option>
+        </select>
+        <ul class="page__in-and-around__list bare-list">
+            <li class="page__in-and-around__list__item">
+              <strong>Local favourites</strong>
+              <span>(9)</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <i class="fa fa-heart"></i>
+            </li> 
+            <li class="page__in-and-around__list__item">
+              <strong>Local favourites</strong>
+              <span>(6)</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <i class="fa fa-heart"></i>
+            </li>
+            <li class="page__in-and-around__list__item">
+              <strong>Local favourites</strong>
+              <span>(12)</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <i class="fa fa-heart"></i>
+            </li>
+        </ul>
+      </div>
+    </section>
 </div>
 
 </div>
 <!-- Begin: What's On Slider -->
 <section class="whats-on-slider">
-   <h2>What's on</h2>
-   <ul class="listing--events">
+  <header>
+     <h2>What's on</h2>
+     <a href="http://tt.timaru.govt.nz/whats-on" class="view-all hidden-portable">View all events</a>
+  </header>
+  <ul class="listing--events">
               <li class="listing--events__feature">
           <div class="listing--events__feature-wrap">
             <span class="tc-tdc-green">Featured </span>
@@ -599,7 +633,7 @@
    <div class="slider-tools">
      <div class="slider-dots"></div>
    </div>
-   <a href="" class="whats-on-slider__view-all">View all events</a>
+   <a href="/?a=62703" class="view-all visible-portable">View all events</a>
 </section>
 <!-- End: What's On Slider -->
 <!-- Begin: Call to Action Banner -->
@@ -694,6 +728,7 @@
         style: 'mapbox://styles/mapbox/streets-v8'
     });
   </script>
+   
 
 
 </body>

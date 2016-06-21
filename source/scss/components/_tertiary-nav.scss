@@ -63,10 +63,6 @@
 				background-position: center;
 				background-size: 20px;
 
-				@include media-query(desk){
-					background-position: center 22px;
-				}
-
 				//ADBT
 				.adbt & {
 				    width: auto;

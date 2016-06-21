@@ -6,17 +6,15 @@
 	padding: 60px 21px;
 
 	@include media-query(note-and-up){
-		padding: 80px 0;
+		padding: 50px 0;
 		@include position(relative, null);
 	}
-	
-	h2 {
-		color: $tdc-dark-navy;
-		@include font-size(24px);
 
-		@include media-query(note-and-up){
-			padding: 0 30px;
-			@include container(1700px);
+	header {
+		@include container(1270px);
+		
+		a {
+			float: right;
 		}
 	}
 
@@ -36,58 +34,53 @@
 			}	
 		}
 	}
+
+	.slider-tools {
+		@include container(1270px);
+		padding: 0 30px;
+	}
 }
 
-
-	.whats-on-slider__view-all {
-		@include font-size(14px);
-
-		@include media-query(note-and-up){
-			@include position(absolute, 100px 38px null null);
-		}
-	}
+// .whats-on {
+// 	background-color: $tdc-bg-grey;
+// }
 
 
-.whats-on {
-	background-color: $tdc-bg-grey;
-}
+// 	.whats-on__wrap {
+// 		padding: 0 21px;
+
+// 		@include media-query(note-and-up){
+// 			@include container(1461px);
+// 		}
+// 	}
 
 
-	.whats-on__wrap {
-		padding: 0 21px;
-
-		@include media-query(note-and-up){
-			@include container(1461px);
-		}
-	}
+// 		.whats-on__search {
+// 			border-bottom: 1px solid $tdc-grey;
+// 			@include clearfix();
+// 			padding: 62px 21px;
 
 
-		.whats-on__search {
-			border-bottom: 1px solid $tdc-grey;
-			@include clearfix();
-			padding: 62px 21px;
+// 			@include media-query(note-and-up){
+// 				@include container(1423px);
+// 				padding: 62px 19px;
 
+// 				select {
+// 					width: 376px !important;
+// 					margin-right: 38px;	
+// 					float: left;
+// 				}
 
-			@include media-query(note-and-up){
-				@include container(1423px);
-				padding: 62px 19px;
+// 				input {
+// 					width: 334px !important;
+// 					float: left;
+// 					margin-right: 44px;
+// 				}
 
-				select {
-					width: 376px !important;
-					margin-right: 38px;	
-					float: left;
-				}
-
-				input {
-					width: 334px !important;
-					float: left;
-					margin-right: 44px;
-				}
-
-				button {
-					width: 138px !important;
-					margin: 0;
-					float: left;
-				}
-			}
-		}
+// 				button {
+// 					width: 138px !important;
+// 					margin: 0;
+// 					float: left;
+// 				}
+// 			}
+// 		}

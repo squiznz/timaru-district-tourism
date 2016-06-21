@@ -94,7 +94,7 @@
 }
 
 .visible-portable {
-    @include media-query(desk) {
+    @include media-query(note-and-up) {
         @include visuallyhidden();
     }
 }
