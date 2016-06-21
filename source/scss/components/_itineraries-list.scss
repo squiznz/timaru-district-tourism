@@ -11,14 +11,15 @@
 	}
 }
 
-		.listing-itineraries {
-			padding-bottom: 140px;
+		.listing-itineraries, .itinerary-details {
+			// padding-bottom: 140px;
 			@extend .bare-list;
-			@include container(1423px);
+			@include container(1063px);
+			padding: 0 30px;
 
 			> li {
 				margin-bottom: 66px;
-				@include font-size(21.42px);
+				// @include font-size(21.42px);
 				line-height: 29.45px;
 				float: left;
 				width: 100%;
@@ -32,13 +33,13 @@
 				}
 
 				header {
-					height: 508px;
+					height: 379px;
 					background-size: 100% !important;
 					
 					a {
 						display: block;
 						width: 100%;
-						@include font-size(66.93px);
+						@include font-size(50px);
 						height: 100%;
 						padding: 3.1em 30px 0 30px !important;	
 					}
@@ -53,18 +54,24 @@
 		}
 
 
-.listing-itineraries__wrap {
+.listing-itineraries__wrap, 	.itinerary-details__wrap {
 	border: 1px solid $tdc-grey;
 	border-top: none;
 	border-right: none;
 	background-color: $white;
 	float: left;
 	@include clearfix();
-	width: 100%;
+	width: 733px;
+	height: 268px;
 
+	h3, h4 {
+		margin: 0;
+	}
+				
 	>	ul {
 		border-top: none;
-		height: 97px;
+		border-bottom: 1px solid $tdc-grey;
+		height: 70px;
 		padding: 0;
 
 		li {
@@ -73,8 +80,6 @@
 			height: 100%;
 			text-align: center;
 			vertical-align: center;
-			@include font-size(32.13px);
-			padding: 32px 25px;
 			color: $tdc-dark-navy;
 		}
 	}
@@ -82,11 +87,11 @@
 
 
 				.listing-itineraries__description {
-					padding: 55px;
-					width: 650px;
+					padding: 35px 40px;
+					width: 488px;
 					float: left;
 					@include clearfix();
-					height: 100%;
+					line-height: 22px;
 
 					p {
 						margin-bottom: 21px;
@@ -113,11 +118,11 @@
 				}
 
 				.listing-itineraries__highlights {
-					padding: 55px;
-					height: 100%;
+					padding: 38px 30px;
+					// height: 268px;
 					@include clearfix();
 					float: left;
-					width: 331px;
+					width: 236px;
 
 					ul {
 						padding: 0;
@@ -126,27 +131,29 @@
 
 
 				.listing-itineraries__map {
-					width: 27.0199%;
+					width: 270px;
 					padding: 0;
 					content: "";
-					float: left;
-					min-height: 383px;
+					float: right;
+					height: 268px;
+					min-height: 268px;
 					background-color: $black;
 				}		
 
-			.listing-itineraries__info {
-				width: 100%;
 
+			.listing-itineraries__info, .itinerary-details__info {
 				li {
 					@include position(relative, null);
+					@include font-size(24px);
+					padding: 21px 24px;
 
 					&:after {
-						@include position(absolute, 32px null 32px 25px);
+						@include position(absolute, 21px null 32px 25px);
 						font-family: 'Fontawesome';
 					}
 					
 					&:nth-child(1){
-						padding-left: 55px;
+						padding-left: 40px;
 					}
 					
 					&:nth-child(2){
