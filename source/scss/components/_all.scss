@@ -702,7 +702,7 @@ video {
 
 
 
-section {
+section {	
 	header {
 		@include clearfix();
 		padding: 0 0 15px 0;
@@ -718,6 +718,10 @@ section {
 			margin: 0;
 			color: $tdc-dark-navy;
 			font-weight: $medium;
+		}
+		
+		select {
+			padding: 3px 1em 2px 6px !important;
 		}
 
 		a.view-all {

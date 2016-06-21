@@ -42,7 +42,7 @@
 
 .feature-banner--home {
 	background: linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)), url(../img/placeholder1.jpeg);
-	height: 24.875em;
+	height: 400px;
 	margin-bottom: 0;
 
 	@include media-query(note-and-up){
@@ -110,7 +110,7 @@
 	@include position(relative, null);
 	height: 100%;
 	@include container(15.625em);
-	padding-top: 160px;
+	padding-top: 155px;
 
 	@include media-query(note-and-up){
 		@include container(37em);
