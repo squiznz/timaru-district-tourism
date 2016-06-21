@@ -21,9 +21,9 @@
 		padding-bottom: 15px;
 
 		@include media-query(note-and-up){
-			padding-bottom: 21px;
+			// padding-bottom: 20px;
 			display: block;
-			@include font-size(16.06px);	
+			// @include font-size(16.06px);	
 		}
 	}
 
@@ -34,8 +34,8 @@
 		margin: 21px 0 21px 0;
 
 		@include media-query(note-and-up){
-			@include font-size(20.08px);
-			margin: 21px 0 50px 0;
+			// @include font-size(20.08px);
+			margin: 10px 0 50px 0;
 		}
 		
 		a {

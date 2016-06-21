@@ -703,7 +703,17 @@ video {
 
 
 section {	
-	header {
+	padding: 0 21px;
+
+	@include media-query(palm-land-up){
+		padding: 0 45px;
+	}
+
+	@include media-query(note-and-up){
+		padding: 0 30px;
+	}
+
+	>	header {
 		@include clearfix();
 		padding: 0 0 15px 0;
 
@@ -721,6 +731,7 @@ section {
 		}
 		
 		select {
+			@include font-size(24px);
 			padding: 3px 1em 2px 6px !important;
 		}
 
