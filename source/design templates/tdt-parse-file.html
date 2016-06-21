@@ -1,0 +1,351 @@
+<MySource_AREA id_name="exit_area" design_area="exit" print="no"></MySource_AREA>
+<MySource_AREA id_name="nested_EES_code" design_area="nest_content" print="no" />
+<MySource_AREA id_name="simple_edit_EES" design_area="show_if">
+    <MySource_SET name="condition" value="simple_edit_mode" />    
+    <MySource_THEN>    
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="utf-8" />                
+                <!-- EES install and implementation help: http://manuals.matrix.squizsuite.net/ees/chapters/installation -->                
+                <!-- The title tag is dynamically replaced by EES code, see your EES config.js file to customise -->
+                <!-- Related install step: http://manuals.matrix.squizsuite.net/ees/chapters/installation/#Constructing-the-Configuration-File -->
+                <title>Loading Easy Edit Suite...</title>                
+                <!-- Use a nested standard page (set to raw html) for custom CSS and JS file references. Avoids editing design file. -->
+                <MySource_PRINT id_name="nested_EES_code" />                
+            </head>
+            <body></body>
+        </html>        
+        <MySource_PRINT id_name="exit_area" />        
+    </MySource_THEN>
+</MySource_AREA>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Timaru District - <MySource_print id_name="__global__" var="asset_attribute_name" /></title>
+  <MySource_AREA id_name="metadata" design_area="metadata" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
+  <link rel="stylesheet" href="%globals_asset_href:62640%" />
+</head>
+<body class="<MySource_print id_name="__global__" var="asset_attribute_name^css_safe^lowercase^replace:_:-" /> <MySource_print id_name="__global__" var="asset_metadata_TDT.sectionClass" />">
+
+   <!-- Begin Global Header -->
+  <header class="global-header">
+    
+    <!-- Begin Tertiary Navigation -->
+      <nav class="tertiary-nav">
+        <span class="visuallyhidden">Tertiary navigation</span>
+        <ul>
+          <li>The official tourism website of the Timaru District</li>
+          <li class="text--bold"><a href="">Visit Timaru</a></li>
+          <li><a href="">Live, Work, Play</a></li>
+          <li><a href=""><span class="visuallyhidden">Visit Tripadvisor's site</span></a></li>
+        </ul>
+      </nav>
+      <!-- End Tertiary Navigation -->
+      
+      <div class="global-header__wrap">
+       
+       <div class="global-header__utility-nav-wrap">
+          <!-- Begin Utility Navigation -->
+          <nav class="utility-nav">
+              <span class="visuallyhidden">Utility navigation</span>
+              <ul class="bare-list">
+                <li class="utility-nav__item--logo">
+                 <a href="/"></a>
+                </li>
+                <li class="utility-nav__item--primary-toggle">
+                  <a href="#primary-nav">
+                    <hr><hr><hr>
+                  </a>
+                  <span class="visuallyhidden">Skip to primary navigation. </span>
+                </li>   
+                <li class="utility-nav__item--search-toggle">
+                  <a href="#search">
+                    <i class="fa fa-search"></i>
+                    <span class="hidden-portable">Search this site. </span>
+                  </a>
+                  <span class="visuallyhidden">Skip to search. </span>
+                </li>
+                <li class="visuallyhidden">
+                  <a href="#content">Skip to content. </a>
+                </li>
+              </ul>
+          </nav>
+          <!-- End Utility Navigation -->
+
+          <div class="site-search">
+            <form id="search" class="site-search__form" action="./?a=62974" method="post">
+              <fieldset>
+                <input type="search" name="queries_query_query" placeholder="Search this site">
+                <button type="submit">
+                  <span class="visuallyhidden">Search</span>
+                  <i class="fa fa-search"></i>
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Begin Primary Navigation -->
+        <nav id="primary-nav" class="primary-nav"> 
+         <div class="container"> 
+          <span class="visuallyhidden">Primary navigation</span>
+          <MySource_AREA id_name="primary_nav" design_area="menu_normal">    
+            <MySource_SET name="level" value="top"/>
+            <MySource_SET name="show_subs" value="always"/>
+            <MySource_SET name="settings.class.normal" value="" />
+            <MySource_SET name="settings.class.current" value=" class='current'" />
+            <MySource_SET name="settings.class.hierarchy" value=" class='hierarchy'" />   
+            <ul class="primary-nav__first-level">
+            <MySource_ASSET>
+              <li<MySource_PRINT var="settings.class"/>><MySource_PRINT var="asset_name_linked" />
+                <div class="primary-nav__panel">
+                  <div class="container">
+                   <div class="primary-nav__panel__info">
+                    <strong><MySource_PRINT var="asset_name" /></strong>
+                    <p><MySource_PRINT var="asset_metadata_description" /></p>
+                    <a class="more" href="<MySource_PRINT var="asset_url" />">Explore this section</a>
+                   </div>
+                  <MySource_SUB design_area="menu_normal">
+                  <MySource_SET name="settings.class.normal" value="" />
+                  <MySource_SET name="settings.class.current" value=" class='current'" />
+                  <MySource_SET name="settings.class.hierarchy" value=" class='hierarchy'" />   
+                     <ul>
+                      <MySource_ASSET>
+                         <li><MySource_PRINT var="asset_name_linked"/></li>
+                      </MySource_ASSET>
+                     </ul>
+                </MySource_SUB>
+                    </div>
+                </div>
+              </li>
+            </MySource_ASSET>
+            </ul>
+          </MySource_AREA>  
+          </div>
+         </nav>
+        </div>
+        <!-- End Primary Navigation -->
+        
+  </header>
+  <!-- End Global Header -->
+  
+  <MySource_AREA id_name="page_body" design_area="body" print="no" />
+  <MySource_AREA id_name="page_content_type" design_area="nest_content" print="no" />
+  
+  <MySource_AREA id_name="breadcrumbs" design_area="asset_lineage" print="no">
+    <MySource_SET name="show_hidden_links" value="false" />
+    <MySource_SET name="prefix_with_home_link" value="false" />
+    <MySource_SET name="suffix_with_current_link" value="false" />
+    <MySource_SET name="prefix_with_divider" value="false" />
+    <MySource_SET name="suffix_with_divider" value="false" />
+    <MySource_DIVIDER></MySource_DIVIDER>
+      <!--<div class="container">-->
+        <ul class="breadcrumbs bare-list">
+          <li class="breadcrumbs__home"><a href="<MySource_PRINT id_name="__global__" var="site_link" full_url="yes" />/home">Home</a></li>
+          <MySource_ASSET>
+             <li><a href="<MySource_PRINT var="asset_link" />"><MySource_PRINT var="asset_short_name" /></a></li>
+          </MySource_ASSET>
+          <li class="active">
+            <a href="<MySource_PRINT id_name="__global__" var="asset_href" />"><MySource_PRINT id_name="__global__" var="asset_attribute_short_name" /></a>
+          </li>
+        </ul>
+      <!--</div>-->
+    </MySource_AREA>
+  
+    <MySource_AREA id_name="in_this_section" design_area="menu_normal" print="no">    
+    <MySource_SET name="level" value="sub"/>
+    <MySource_SET name="show_subs" value="always"/>
+    <MySource_SET name="settings.class.normal" value="" />
+    <MySource_SET name="settings.class.current" value=" class='active'" />
+    <MySource_SET name="settings.class.hierarchy" value=" class='parent'" />   
+    <aside class="in-this-section">
+      <nav>
+      <h2>In this section</h2>
+         <ul class="bare-list">
+          <MySource_ASSET>
+              <li<MySource_PRINT var="settings.class"/>><MySource_PRINT var="asset_name_linked" />
+                  <MySource_SUB design_area="menu_normal">
+                  <MySource_SET name="settings.class.normal" value="" />
+                  <MySource_SET name="settings.class.current" value=" class='active'" />
+                  <MySource_SET name="settings.class.hierarchy" value=" class='parent'" />   
+                     <ul>
+                      <MySource_ASSET>
+                         <li><MySource_PRINT var="asset_name_linked"/></li>
+                      </MySource_ASSET>
+                     </ul>
+                </MySource_SUB>
+              </li>
+            </MySource_ASSET>
+        </ul>
+      </nav>
+    </aside>
+    </MySource_AREA>  
+
+   <MySource_AREA id_name="related_sidebar" design_area="nest_content" print="no" />
+
+
+    <MySource_AREA id_name="show_breadcrumbs" design_area="show_if" print="no">
+    <MySource_SET name="condition" value="keyword_regexp"/>
+      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.breadCrumbs"/>
+     <MySource_SET name="condition_keyword_match" value="show_yes" />
+      <MySource_THEN>
+        <MySource_PRINT id_name="breadcrumbs" />
+      </MySource_THEN>
+    </MySource_AREA>    
+    
+    <MySource_AREA id_name="show_in_this_section" design_area="show_if" print="no">
+    <MySource_SET name="condition" value="keyword_regexp"/>
+      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.secondaryNav"/>
+     <MySource_SET name="condition_keyword_match" value="show_yes" />
+      <MySource_THEN>
+        <MySource_PRINT id_name="in_this_section" />
+      </MySource_THEN>
+    </MySource_AREA>
+    
+    <MySource_AREA id_name="show_related_sidebar" design_area="show_if" print="no">
+    <MySource_SET name="condition" value="keyword_regexp"/>
+      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.relatedSidebar"/>
+     <MySource_SET name="condition_keyword_match" value="show_yes" />
+      <MySource_THEN>
+        <MySource_PRINT id_name="related_sidebar" />
+      </MySource_THEN>
+    </MySource_AREA>
+    
+    <MySource_AREA id_name="content_style" design_area="show_if" print="no">
+    <MySource_SET name="condition" value="keyword_regexp"/>
+      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
+     <MySource_SET name="condition_keyword_match" value="topic|landing" />
+      <MySource_THEN>
+         <MySource_PRINT id_name="breadcrumbs" />
+         <section class="intro">
+             <div class="intro__wrap">
+                 <h2>%asset_name%</h2>
+                 <p class="intro__subheading">%asset_metadata_description%</p>
+                 <a href="asset_metadata_landingCTAAsset" class="cta-button">%asset_metadata_landingCTAText%</a>
+                 <!-- pop categories -->
+                </div>
+             </div>
+          </section>
+          <MySource_PRINT id_name="page_content_type"  />
+      </MySource_THEN>
+      <MySource_ELSE>
+        <div class="container">
+            <MySource_PRINT id_name="show_in_this_section"  />
+            <div class="inside-wrap">
+                <MySource_PRINT id_name="page_body"  />
+                <MySource_PRINT id_name="page_content_type"  />
+            </div>
+            <MySource_PRINT id_name="show_related_sidebar"  />
+        </div>
+      </MySource_ELSE>
+    </MySource_AREA>
+
+
+   <!-- Begin Page Contents -->
+   <main id="content">
+     <MySource_AREA id_name="feature_banner" design_area="nest_content" />
+
+     <MySource_AREA id_name="is_home" design_area="show_if">
+     <MySource_SET name="condition" value="keyword_regexp"/>
+     <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
+     <MySource_SET name="condition_keyword_match" value="home" />
+     <MySource_THEN>
+         <MySource_PRINT id_name="page_body" />
+     </MySource_THEN>
+     <MySource_ELSE>
+         <MySource_PRINT id_name="content_style"  />
+     </MySource_ELSE>
+   </MySource_AREA>
+  </main>
+  <!-- End Page Contents -->
+
+  <!-- Begin Global Footer -->
+  <footer class="global-footer">
+    <div class="global-footer__wrap">
+      <a href="/" class="global-footer__logo float--left">
+        <img src="./?a=62993" alt="Timaru Tourism logo. ">
+      </a>
+
+      <!-- Begin Social Media Links -->
+      <ul class="social-media-links bare-list float--left ml++">
+        <li class="social-media-links__twitter">
+          <a href="" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        <li class="social-media-links__instagram">
+          <a href="" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </li>
+        <li class="social-media-links__youtube">
+          <a href="" target="_blank">
+            <i class="fa fa-youtube"></i>
+          </a>
+        </li>
+        <li class="social-media-links__facebook">
+          <a href="" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- End Social Media Links -->
+
+
+
+      <!-- Begin Footer Navigation -->
+      <nav class="footer-nav">
+       <MySource_AREA id_name="footer_menu" design_area="menu_normal">
+       <MySource_SET name="level" value="top"/>
+       <MySource_SET name="show_subs" value="always"/>        
+       <ul>
+         <MySource_ASSET>
+           <li><MySource_PRINT var="asset_name_linked"/></li>
+         </MySource_ASSET>
+       </ul>
+       </MySource_AREA>
+      </nav>
+      <!-- End Footer Navigation -->
+
+    </div>
+    
+    <!-- Begin Footer Utilities -->
+    <div class="footer-utilities">
+      <ul class="footer-utilities__list">
+        <li>The official Timaru Tourism website</li>
+        <li class="text--bold"><a href="">Visit Timaru</a></li>
+        <li class="no-border"><a href="">Live, Work, Play</a></li>
+        <li class="hidden-palm">&copy; 2016 Timaru</li>
+        <li class="border--none hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
+      </ul>
+    </div>
+    <!-- End Footer Utilities -->
+
+   </div>
+
+  </footer>
+  <!-- End Global Footer -->
+        
+
+  <script src="/__data/assets/js_file/0004/65704/core.min.js"></script>
+  <script src="/__data/assets/js_file/0003/65703/main.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
+   <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibGRvcmdhbiIsImEiOiJjaW9vMHNrd3gwMDJidjlrdnJ0YzZ5cjRsIn0.-kQIw3xb7fNgSVaOJ43O6A';
+    
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v8'
+    });
+  </script>       
+</body>
+</html>

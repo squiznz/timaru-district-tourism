@@ -34,12 +34,12 @@
 
 
 		.utility-nav__item--logo {
-			width: 155px;
+			width: 120px;
 			float: left;
 			height: 60px;
 
-			@include media-query(desk){
-				height: 97px !important;
+			@include media-query(note-and-up){
+				height: 80px !important;
 			}
 
 			a {
@@ -48,7 +48,7 @@
 				width: 100%;
 				// background-image: url(../img/logo.png);
 				background-image: url(../../__data/assets/image/0011/62993/logo.png);
-				background-size: 80%;
+				background-size: 100%;
 				background-position: left center;
 				background-repeat: no-repeat;
 

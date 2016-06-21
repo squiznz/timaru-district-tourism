@@ -56,6 +56,23 @@ function detectScrolling() {
 
 
 function globalActions() {
+
+  if ($('.pagination a').length === 0)) {
+    $('.pagination').hide();
+  };
+
+  $('.tags-list').each(function(index) {
+    var $this = $(this),
+        $list = $this.text().trim().split(",");
+     
+    $this.empty();
+
+    for (i=0; i < $list.length; i++) {
+       var item = '<li class="' + $list[i] + '"><span>' + $list[i] + '</span></li>';
+       $this.append(item);
+    }
+  });
+
   $('.utility-nav__item--primary-toggle a').click(function(e) {
     e.preventDefault();
     
@@ -90,7 +107,10 @@ function globalActions() {
 
     if ($(this).hasClass('feature-banner--home')) {
       $(this).css('background','linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url("'+ bannerImage +'") repeat scroll 0 0');
-    } else {
+    } else if ($(this).hasClass('listing-itineraries__header')){
+      $(this).css('background','linear-gradient(rgba(0, 28, 66, 0.6), rgba(0, 28, 66, 0.6)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url("'+ bannerImage +'") repeat scroll 0 0');
+    }
+    else {
       $(this).css('background-image','url('+ bannerImage +')')
     }
   });
@@ -119,7 +139,7 @@ function threeBest(){
 function megaMenu() {
   var navItems = $('.primary-nav ul li');
 
-  $('.primary-nav ul > li > a').click(function(e) {
+  $('.primary-nav__first-level > li > a').click(function(e) {
     e.preventDefault();
     e.stopPropagation();
 

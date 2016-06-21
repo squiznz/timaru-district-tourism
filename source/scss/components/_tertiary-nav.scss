@@ -2,23 +2,20 @@
 
 .tertiary-nav {
 	@extend .bare-list;
-	@include font-size(12.99px);
+	@include font-size(12px);
 	font-family: $font-primary;
 	font-weight: $semibold;
 	height: 42px;
 	background-color: $white;
 	@include position(relative, null);
 
-	@include media-query(desk){
-		height: 55px;
-		@include font-size(16px);	
+	@include media-query(note-and-up){
+		height: 38px;
 	}
 
-	//ADBT
 	.adbt & {
 		border-bottom: 1px solid #ECECEC;
 	} 
-	//End ADBT
 
 	ul {
 		@include position(absolute, null 0 null null);
@@ -27,47 +24,35 @@
 		height: 100%;
 		text-align: right;
 
-		@include media-query(desk){
-			padding: 0 38px;
-			@include font-size(16px);	
-			@include container();
+		@include media-query(note-and-up){
+			padding: 0 30px;
+			@include container(1700px);
 			@include position(relative, null);
 
-			//ADBT
 			.adbt & {
 			    padding: 0 124px;
 			}
-			//End ADBT
 		}
 
 		li {
 			display: inline-block;
+			height: 100%;
 			border-right: 1px solid $tdc-grey;
 
 			a {
 				color: $black;
 				padding: 0 16px;
 				display: block;
-				height: 42px;
+				height: 100%;
 				width: 100%;
-				line-height: 3.3em;
+				line-height: 3.5em;
 				text-decoration: none;
 
-				@include media-query(desk){
-					padding: 0 21px;
-					height: 55px;
-					line-height: 3.4em;
+				@include media-query(note-and-up){
+					line-height: 3em;
 				}
 			}			
-			
-			&:nth-child(3) {
-				width: 122px;
-				
-				@include media-query(desk){
-					width: auto;
-				}
-			}
-
+		
 			&:last-of-type {
 				border-right: none;
 				float: right;
@@ -77,10 +62,6 @@
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: 20px;
-
-				@include media-query(desk){
-					background-position: center 22px;
-				}
 
 				//ADBT
 				.adbt & {
@@ -97,15 +78,10 @@
 				@include media-query(palm-land-up){
 					@include position(static, 0 null 0 0);
 					display: inline-block;
-					padding: 0 20px;
-					@include font-size(12px);
+					padding-right: 11px;
 					float: left;
 					line-height: 3.5em;
 					height: 100%;
-				}
-
-				@include media-query(desk){
-					@include font-size(16px);
 				}
 			}
 		}

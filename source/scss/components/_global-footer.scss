@@ -24,8 +24,8 @@
 			@include position(relative, null);
 		}
 
-		@include media-query(desk){
-			padding: 5.375em 38px;
+		@include media-query(note-and-up){
+			padding: 60px 30px;
 		}
 	}
 
@@ -36,10 +36,10 @@
 		width: 6.25em;
 		padding-top: 4px;
 
-		@include media-query(desk){
-			width: 9.6875em;
+		@include media-query(note-and-up){
+			width: 114px;
 			padding: 0;
-			margin-right: 2.1875em;
+			margin-right: 35px;
 		}
 	}
 		
@@ -47,21 +47,21 @@
 	.social-media-links {
 		margin-left: 1.5em !important;
 
-		@include media-query(desk){
-			@include position(absolute, null 38px null null);
+		@include media-query(note-and-up){
+			@include position(absolute, null 30px null null);
 		}
 
 		li {
 			display: inline-block;
-			padding: 0 8px;
+			padding: 0 4px;
 			text-align: center;
+
+			@include media-query(note-and-up){
+				padding: 0 8px;
+			}
 
 			i {
 				@include font-size(18px);
-
-				@include media-query(desk){
-					@include font-size(25px);
-				}
 			}
 		}
 	}
@@ -74,7 +74,7 @@
 		width: 100%;
 		margin-top: 1.3125em;
 
-		@include media-query(desk){
+		@include media-query(note-and-up){
 			margin-top: 0;
 			width: auto;
 		}
@@ -94,29 +94,24 @@
 
 			@include media-query(palm-land-up){
 				@include span(1 of 3 float no-gutters);
-
+	
 				&:nth-child(2n) {
 					padding-left: 0;
 				}
 			}
 			
-			@include media-query(desk){
+			@include media-query(note-and-up){
 				display: inline-block;
 				line-height: 1em;
 				width: auto;
-				@include font-size(19px);
-			}
-	
-			@include media-query(desk){
-				@include font-size(22.76px);
+				@include font-size(17px);
 			}
 
 			a {
-				@include media-query(desk){
+				@include media-query(note-and-up){
 					display: inline-block;
 					line-height: 1em;
 					padding: 0 1em !important;
-				
 				}
 			}
 		}
@@ -140,7 +135,7 @@
 			}
 
 			@include media-query(note-and-up){
-				padding: 0 38px;
+				padding: 0 30px;
 			}
 
 			li {
@@ -154,35 +149,23 @@
 					width: auto;
 				}
 
-				@include media-query(desk){
-					@include font-size(16.06px);
-				}
-
 				a {
 					font-weight: inherit;
-					padding: 10px 1.3125em;
-
-					@include media-query(palm-land-up){
-						padding: 11px 20px;
-					}
-
-					@include media-query(desk){
-						padding: 19px 28px;
-					}
+					padding: 11px 21px;
 				}
 				
 				&:first-child {
 					font-weight: $semibold !important;
 					width: 100%;
 					border-bottom: 1px solid $tdc-navy;
-
+					padding-left: 21px;
 
 					@include media-query(palm-land-up){
 						width: auto;
 						padding-left: 0;
 					}
 
-					@include media-query(desk){
+					@include media-query(note-and-up){
 						padding-left: 0px !important;
 						border-bottom: none;
 					}
@@ -195,16 +178,16 @@
 						border: none;
 					}
 
-					@include media-query(desk){
+					@include media-query(note-and-up){
 						float: none;
-						padding: 19px 28px;
-						@include position(absolute, 0 188px 0 null);
+						@include position(absolute, 0 150px 0 null);
+						border-right: 1px solid $tdc-navy;
 					}
 				}
 
 				&:nth-child(5) {
-					@include media-query(desk){
-						@include position(absolute, 0 38px 0 null);
+					@include media-query(note-and-up){
+						@include position(absolute, 0 30px 0 null);
 						padding-right: 0;
 					}
 				}

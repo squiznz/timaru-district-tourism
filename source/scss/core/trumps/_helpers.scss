@@ -16,7 +16,7 @@
     }
     
     @include media-query(note-and-up) {
-      padding: 0 38px;
+      padding: 0 30px;
     }
 }
 
@@ -27,10 +27,6 @@
   font-weight: $semibold;
   text-transform: uppercase;
   font-family: $font-primary;
-  
-  @include media-query(desk){
-    font-size: 14px !important;
-  }
 }
 
 // Display.
@@ -98,7 +94,7 @@
 }
 
 .visible-portable {
-    @include media-query(desk) {
+    @include media-query(note-and-up) {
         @include visuallyhidden();
     }
 }

@@ -8,7 +8,6 @@
 	@include clearfix();
 	display: none;
 	height: 2em;
-	// float: left;
 	margin-bottom: 1em;
 
 	@include media-query(lap-and-up){
@@ -20,7 +19,7 @@
 		text-transform: uppercase;
 		color: $tdc-mid-grey;
 		font-weight: $semibold;
-		@include font-size(14.72px);
+		@include font-size(11px);
 		line-height: 29px;
 		letter-spacing: 2px;
 
@@ -37,10 +36,6 @@
 			color: $tdc-dark-navy !important;
 		}
 	}
-
-	// .page & {
-	// 	@include container(66.8125em);
-	// }
 
 	.landing &, .topic & {
 		@include container(100%);

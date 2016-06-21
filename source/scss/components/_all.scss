@@ -7,11 +7,7 @@ html {
 	
 	main {
 		@include media-query(note-and-up){
-			@include font-size(18px);
-		}	
-
-		@include media-query(desk){
-			@include font-size(21.43px);
+			@include font-size(16px);
 		}	
 
 		p {
@@ -31,10 +27,10 @@ img {
 	max-width: 100%;
 }
 
-.landing, .details, .topic {
+.landing, .details, .topic, .wide {
 	main {
 		.container {
-			@include container(1423px);
+			@include container(1063px);
 		}
 	}
 }
@@ -88,20 +84,24 @@ img {
 		padding: 0 100px !important;
 		float: left;
 		@include clearfix();
-		margin-right: 38px;
+		margin-right: 30px;
+	
+		
+		.wide & {
+			width: 100%;
+		}
 	}
 }
+
 
 .intro {
 	padding-bottom: 3.26em;
 	margin-bottom: 50px;
-	@include container(100%);
-	padding: 0 21px;
+	@include container();
+}
 
-	@include media-query(lap-and-up){
-		padding: 0 45px;
-	}
 
+<<<<<<< HEAD
 	@include media-query(note-and-up){
 		@include container(67.47058823529412%);
 		padding: 0;
@@ -112,32 +112,43 @@ img {
 		padding-left: 0px;
 	}
 }
+=======
+	.intro__wrap {
+		@include clearfix();
+		padding: 0 21px;
+		
+		@include media-query(lap-and-up){
+			padding: 0 45px;
+		}
+>>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
 
-.intro__wrap {
-	@include clearfix();
+		@include media-query(note-and-up){
+			@include container(857px);
+			padding: 0;
+		}
 
-	p {
-		width: 73.78777231201687%;
-		float: left;
+		h2 {
+			@extend h1;
+		}
+
+		p {
+			// width: 73.78777231201687%;
+			float: left;
+		}
+		
+		a.cta-button {
+			float: right;
+		}
 	}
-	
-	a.cta-button {
-		float: right;
-	}
-}
 
-.intro__subheading {
-	@include font-size(19px);
-	line-height: 26px;
-	letter-spacing: 0.02em;
-	color: $tdc-dark-navy;
-	margin-bottom: 21px;
 
-	@include media-query(note-and-up){
-		@include font-size(25.43px);
-		line-height: 30px;
+	.intro__subheading {
+		@include font-size(19px);
+		line-height: 26px;
+		letter-spacing: 0.02em;
+		color: $tdc-dark-navy;
+		margin-bottom: 21px;
 	}
-}
 
 
 video {
@@ -149,17 +160,13 @@ video {
 	display: inline-block;
 	color: $white;
 	text-transform: uppercase;
-	padding-right: 1em;
 	letter-spacing: 0.01em;
-	height: 45px;
+	height: 44px;
 	background-color: $tdc-purple;
-	// text-indent: -1em;
-	padding: 10px;
+	padding: 13px 3em 13px 13px;
 	@include position(relative, null);
 
 	@include media-query(note-and-up){
-		padding: 15px 50px 15px 20px;
-		height: 60px;
 		text-align: left;
 	}
 
@@ -173,12 +180,10 @@ video {
 		float: right;
 		height: 100%;
 		width: 20px;
-		@include position(absolute, 0 30px 0 null);
+		@include position(absolute, 0 0px 0 null);
 
 		@include media-query(note-and-up){
-			@include position(absolute, 2px 20px 0 null);
 			background-size: 21px;
-			background-position: 70% 23px;
 		}
 	}
 }
@@ -211,21 +216,14 @@ figure {
 				@include position(absolute, 1px 0 null 0);
 				@include font-size(11px);
 			}
-
-			@include media-query(note-and-up){
-				@include font-size(16.0px);
-				line-height: 28.09px;
-				margin-bottom: 8px;
-			}
 		}
 
 		@include media-query(note-and-up){
-			@include position(absolute, null 38px 38px null);
-			width: auto;
-			@include font-size(29.43px);
+			@include position(absolute, null 30px 30px null);
+			@include font-size(22px);
 			line-height: 36.11px;
-			padding: 25px;
-			width: 345px;
+			padding: 16px 18px;
+			max-width: 40%;
 			max-height: 100%;
 		}
 	}
@@ -241,7 +239,7 @@ figure {
 			@include position(static, null);
 			
 			@include media-query(note-and-up){
-				padding: 70px 38px;
+				padding: 70px 30px;
 			}
 
 			strong {
@@ -312,13 +310,14 @@ a.more {
 	color: $tdc-dark-navy;
 	font-weight: $bold;
 	letter-spacing: 0.02em;
+	@include font-size(14px);
 
 	&:after {
 		content: "\f0da";
 		font-family: "FontAwesome";
 		@include position(absolute, null -1em 3px null);
-		@include font-size(14px);
-		line-height: inherit;
+		@include font-size(11px);
+		line-height: 1.2em;
 	}
 }
 
@@ -357,17 +356,13 @@ ol {
 	}
 }
 
+
 .popular-categories {
 	margin: 50px 0;
 	@include clearfix();
 
 	h2 {
-		color: $tdc-green;
-		font-family: $font-primary;
-		text-transform: uppercase;
-		@include font-size(14.72px);	
-		font-weight: $semibold;
-		letter-spacing: 0.13em;
+		@extend .heading--green-small;
 	}
 
 	li {
@@ -376,9 +371,8 @@ ol {
 		@include span(1 of 2 (gutter-override: 21px));
 
 		@include media-query(palm-land-up){
-			@include span(2.93 of 9);
+			@include span(3.8 of 12);
 			display: inline-block;
-			@include font-size(21.42px);
 		}
 
 		a {
@@ -391,7 +385,7 @@ ol {
 				content: "\f0da";
 				@include position(absolute, 7px -1em null null);
 				line-height: inherit;
-				@include font-size(15px);
+				@include font-size(11px);
 			}
 		}
 	}
@@ -401,9 +395,7 @@ ol {
 table {
 	margin: 50px 0;
 	max-width: 100%;
-	overflow: hidden;
-	// display: none;
-
+	overflow-x: scroll;
 
 	thead {
 		background-color: $tdc-navy;
@@ -434,7 +426,7 @@ video {
 		margin-bottom: 21px;
 
 		@include media-query(note-and-up){
-			margin-bottom: 38px;
+			margin-bottom: 30px;
 		}	
 	}
 	
@@ -457,27 +449,22 @@ video {
 	}
 }
 
-
-
-
-
-
 .activity-search {
 	background-color: #f7f7f7;
 	margin-bottom: 55px;
+	
+	@include media-query(note-and-up){
+		margin-bottom: 80px;
+	}
 
 	fieldset {
 		@include container(1345px);
 		display: block;
 		border: none;
 		padding: 30px 21px;
-
-		@include media-query(palm-land-up){
-			padding: 21px 45px;
-		}
 		
 		@include media-query(note-and-up){
-			padding: 45px 70px;
+			padding: 35px 70px;
 		}
 	}
 
@@ -494,8 +481,11 @@ video {
 		}
 
 		@include media-query(note-and-up){
-			line-height: 60px;
-			@include font-size(21.42px);
+			line-height: 45px;
+			width: auto;
+			margin-bottom: 0;
+			margin-right: 30px;
+			// @include font-size(21.42px);
 		}
 	}
 
@@ -513,14 +503,7 @@ video {
 			width: 255px;	
 			margin-right: 30px;
 			height: 45px;
-		}
-
-		@include media-query(note-and-up){
-			width: 373px;	
-			margin-right: 38px;
-			@include font-size(19px);
-			height: 55px;
-			padding: 15px 18px;
+			margin-bottom: 0;
 		}
 	}
 
@@ -542,8 +525,6 @@ video {
 		@include media-query(note-and-up){
 			padding: 15px 42px 15px 21px;
 			width: 146px !important;
-			height: 55px;
-			@include font-size(22.76px);
 		}
 	}
 }
@@ -554,7 +535,6 @@ video {
 .pagination {
 	list-style: none;
 	text-align: center;
-  @include font-size(18.74px);
   line-height: 28.11px;
 
 	li {
@@ -717,8 +697,48 @@ video {
 	}
 }
 
+.view-all {
+	@include font-size(14px);
+
+	@include media-query(portable) {
+ 		width: 100%;
+ 		display: block;
+ 		text-align: center;
+ 	}
+}
+
 
 .feature-map {
 	width: 100%;
 	height: 560px;
+}
+
+
+
+section {	
+	header {
+		@include clearfix();
+		padding: 0 0 15px 0;
+
+		@include media-query(note-and-up) {
+			padding: 0 30px 15px 30px;	
+			line-height: 36px;
+		}
+
+		h2 {
+			@include font-size(24px);
+			float: left;
+			margin: 0;
+			color: $tdc-dark-navy;
+			font-weight: $medium;
+		}
+		
+		select {
+			padding: 3px 1em 2px 6px !important;
+		}
+
+		a.view-all {
+			float: right;
+		}
+	}
 }

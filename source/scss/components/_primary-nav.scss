@@ -41,8 +41,9 @@
 
 		@include media-query(note-and-up){
 			border: none;
+			height: 80px;
 			@include position(static, null);
-			padding: 0 14.705882352941178%;
+			padding: 0 160px;
 			background-color: transparent;
 		}
 
@@ -55,6 +56,7 @@
 				display: inline-block;
 				padding: 0;
 				border: none;
+				height: 100%;
 			}
 
 			a {
@@ -62,18 +64,13 @@
 				display: block;
 				padding: 18px 1.3125em;
 				font-weight: $semibold;
-				@include font-size(17.23px);
+				@include font-size(17px);
 				text-decoration: none;
 				font-family: $font-primary;
 				
 				@include media-query(note-and-up){
-					padding: 16px 1em;
-				}
-
-				@include media-query(desk){
-					line-height: 65px;
-					padding: 16px 24px;
-					@include font-size(22.75px);
+					padding: 30px 16px;
+					height: 100%;
 				}
 			}
 
@@ -97,21 +94,31 @@
 
 
 .primary-nav__panel {
-	display: none;
-
+	
+	@include media-query(portable){
+ 		display: none !important;	
+ 	}
+	
 	@include media-query(note-and-up){
-		@include position(absolute, 100px 0 null 0);
+		@include position(absolute, 80px 0 null 0);
 		width: 100%;
+		display: none;
 		padding: 80px;
 		background-color: $tdc-navy !important;
 		border-bottom: 5px solid $white;
 		min-height: 410px;
+		@include font-size(17px);
+	}
+
+	> .container {
+		@include container(1063px);
 	}
 
 	ul {
 		float: left;
-		width: 592px;
-		padding: 60px 0 0 0;
+		@include clearfix();
+		width: 443px;
+		padding: 45px 0 0 0;
 
 		li {
 			@include span(1 of 2);
@@ -121,12 +128,11 @@
 				@include last();
 			}
 			
-
 			a {
 				padding: 0;
 				border: none !important;
 				font-weight: 500 !important;
-				line-height: 50px;
+				line-height: 35px;
 				display: inline-block;
 				@include position(relative, null);
 
@@ -134,10 +140,10 @@
 					content: "";
 					width: 40px;
 					height: 100%;
-					@include position(absolute, 0 -2em 0 null);
+					@include position(absolute, 0 -2.3em 0 null);
 					background-image: url('../img/arrow-right-white.png');
 					background-repeat: no-repeat;
-					background-size: 21px;
+					background-size: 15px;
 					background-position: center;
 				}
 			}
@@ -151,14 +157,18 @@
 
 	
 	.primary-nav__panel__info {
-		width: 691px;
+		width: 400px;
 		float: left;
-		padding: 0 100px 0 137px;
-		@include font-size(22.75px);
+		padding: 0 60px 0 0;
+		font-size: inherit;
+
+		@include media-query(portable){
+			display: none !important;	
+		}
 
 		strong {
 			font-family: $font-secondary;
-			@include font-size(32.12px);
+			@include font-size(24px);
 			margin-bottom: 21px;
 			display: block;
 		}
@@ -168,18 +178,17 @@
 			color: $tdc-light-blue;
 			border: none !important;
 			display: inline-block;
-			@include font-size(18.72px);
+			margin-top: 21px;
+			@include font-size(14px);
 
 			&:after {
 				top: 1px;
 			}
 		}
 
-		//ADBT
 		.adbt & {
 			strong {
 				color: $white;
 			}
 		}
-		//End ADBT
 	}

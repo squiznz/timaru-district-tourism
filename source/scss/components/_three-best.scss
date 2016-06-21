@@ -3,10 +3,10 @@
 ***/
 
 .three-best {
-	padding: 50px 0 1.3125em 0;
-	@include font-size(16px);
+	padding: 50px 30px;
 
 	@include media-query(note-and-up){
+<<<<<<< HEAD
 		@include container(84.063em);
 		padding: 90px 0;
 
@@ -16,31 +16,12 @@
 			padding: 90px 0;
 		}
 		//End ADBT
+=======
+		@include container(1063px);
+>>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
 	}
-}
 
-	.three-best__selector-wrap {
-		padding: 0 21px 15px 21px;
-		@include clearfix();
-		@include font-size(23px);
-
-		@include media-query(note-and-up){
-			padding: 0;
-			margin-bottom: 28px;
-			@include font-size(32.12px);
-			@include container(1700px);
-		}
-
-		h2 {
-			display: inline;
-			float: left;
-			margin: 0;
-			color: $tdc-dark-navy;
-			font-weight: $medium;
-			@include font-size(23px);
-			margin-right: 0.25em;
-			display: inline-block;
-
+<<<<<<< HEAD
 			@include media-query(note-and-up){
 				@include font-size(32.12px);
 				display: block;
@@ -49,9 +30,16 @@
 					@include font-size(28.77px)
 				}
 			}
+=======
+	header {
+		padding: 0;
+		
+		select {
+			@include font-size(24px);
+>>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
 		}
 	}
-
+}
 
 
 	.three-best__list {		
@@ -63,8 +51,7 @@
 			}
 
 			@include media-query(note-and-up){
-	 			@include span(2.966 of 9 (gutter-override: 38px));			
-				height: 24.375em;
+	 			@include span(2.927 of 9 (gutter-override: 35px));			
 
 				&:nth-child(3) {
 					@include last();
@@ -72,11 +59,11 @@
 			}
 
 			img {
-				height: 11.75em;
+				height: 165px;
 				width: 100%;
 				
 				@include media-query(note-and-up){
-					height: 13.438em;
+					height: 180px;
 				}
 			}
 
@@ -100,15 +87,8 @@
 
 
 		.three-best__info-wrap {
-			padding: 1.3125em 0 1.3125em 0;
-			line-height: 1.3125em;
-			@include font-size(16px);
-		
-			@include media-query(note-and-up){
-				padding: 28px 0;
-				@include font-size(21.42px);
-				line-height: 29.45px;
-			}
+			padding: 21px 0;
+			line-height: 22px;
 		
 			strong {
 				color: $tdc-green;
@@ -117,6 +97,7 @@
 				display: block;
 				margin-bottom: 10px;
 				font-family: $font-primary;
+<<<<<<< HEAD
 
 				@include media-query(note-and-up){
 					@include font-size(24.09px);
@@ -130,6 +111,8 @@
 					color: $tdc-light-blue;
 				}
 				//End ADBT
+=======
+>>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
 			}
 
 			a {

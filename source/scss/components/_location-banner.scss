@@ -3,19 +3,18 @@
 ***/
 
 .location-banner {
-	// background-image: url(../img/placeholder1.jpeg);
-  background-size: cover;
+  background-size: cover !important;
 	@include font-size(16px);
 	color: $white;
 	@include clearfix();
 
 	@include media-query(portable){
 		@include position(relative, null null null null);
-		height: 27.188em;
+		height: 433px;
 	}
 
 	@include media-query(note-and-up){
-		height: 46.625em;
+		height: 550px;
 	}
 	
 	h1 {
@@ -43,16 +42,17 @@
 			@include container();
 			@include position(relative, null null null null);
 			height: 100%;
-			padding: 0 38px;
+			padding: 0 30px;
 		}
 	}
 
 
 	.location-banner__info {
-		padding: 28px 1.3125em;
+		padding: 21px;
 		@include font-size(22px);
 		font-family: $font-secondary;
 		@include clearfix();
+		// height: 
 
 		p {
 			@include media-query(portable){
@@ -74,13 +74,9 @@
 			width: 100%;
 			margin-bottom: 12px;
 			padding-left: 12px;
-
-			@include media-query(portable){
-				@include font-size(12px);
-			}
+			@include font-size(12px);
 
 			@include media-query(note-and-up){
-				@include font-size(16.06px);
 				line-height: 28.11px;
 				margin-bottom: 1.3125em;
 				padding-left: 20px;
@@ -119,29 +115,37 @@
 
 		@include media-query(note-and-up){
 			background-color: rgba(0,29,65,0.89);
-			width: 10.521em;
-			padding: 50px 46px;
-			@include font-size(48.19px);
-			line-height: 58.89px;
+			width: 423px;
+			padding: 32px 40px;
+			@include font-size(36px);
+			line-height: 44px;
 		}
 
 		.location-banner--right & {
 			@include media-query(note-and-up){
+<<<<<<< HEAD
 				@include position(absolute, 178px 38px null null);
 
 				.adbt.home_page & {
 					@include position(absolute, 150px 8% null null);
 				}
+=======
+				@include position(absolute, 147px 30px null null);
+>>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
 			}
 		}
 
 		.location-banner--left & {
 			@include media-query(note-and-up){
+<<<<<<< HEAD
 				@include position(absolute, 178px null null 38px);
 
 				.adbt.home_page & {
 					@include position(absolute, 150px null null 8%);
 				}
+=======
+				@include position(absolute, 147px null null 30px);
+>>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
 			}
 		}
 
@@ -171,31 +175,21 @@
 		font-family: $font-primary;
 		@include font-size(17px);
 		text-transform: uppercase;
-		padding: 15px 0;
 		line-height: 1em;
-		height: 45px;
 		display: block;
 		text-indent: 0 !important;
-
+	
+		&:after {
+			right: 20px;
+		}
+	
 		@include media-query(note-and-up){
-			height: 60px;
 			display: inline-block;
 			width: auto;
-			@include font-size(22px);
-			margin-top: 30px;
-			padding: 18px 50px 18px 18px;
+			margin-top: 1em;
 
 			&:after {
 				right: 20px;
-			}
-		}
-	
-		span {
-			@include position(relative, null null null null);	
-			color: $white !important;
-
-			&:after {
-				@include position(absolute, 2px -1em 0 null);
 			}
 		}
 	}

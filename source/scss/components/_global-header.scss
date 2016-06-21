@@ -16,7 +16,7 @@
 	}
 
 	@include media-query(note-and-up){
-		height: 155px;
+		height: 118px;
 	}
 	
 	//ADBT
@@ -42,11 +42,11 @@
 
 		@include media-query(note-and-up){
 			height: 57px;
-			@include position(absolute, 55px 0 0 0);
+			@include position(absolute, 38px 0 0 0);
 		}
 
-		@include media-query(desk){
-			height: 97px;
+		@include media-query(note-and-up){
+			height: 80px;
 		}
 	}
 
@@ -63,25 +63,15 @@
 			float: right;
 		  	-webkit-transition: width 0.5s;
 			transition: width 0.5s;
-			@include position(relative, 8% null);
-			width: 200px;
-
-			//ADBT
-			.adbt.one_col &, .adbt.home_page &  {
-				
-			}
-			//End ADBT
-		}
-		
-		@include media-query(desk){
 			@include position(relative, 30% null);
+			width: 200px;
 		}
 
 		.site-search__form {
 			width: 100%;
 
 			@include media-query(note-and-up){
-				width: 160px;
+				width: 120px;
 				float: right;
 			}
 		}
@@ -94,7 +84,7 @@
 			float: left;
 
 			@include media-query(note-and-up){
-				width: 160px;
+				width: 120px;
 				background-color: transparent;
 				padding: 0;
 			}
@@ -110,7 +100,7 @@
 			border-bottom: 2px solid $tdc-green;
 
 			@include media-query(note-and-up){
-				width: 120px;
+				width: 100px;
 			  -webkit-transition: width 0.5s;
 				transition: width 0.5s;
 				font-weight: $semibold;
@@ -125,14 +115,6 @@
 				font-weight: $semibold;
 				@include font-size(13px);
 				font-family: $font-primary;
-	
-			  @include media-query(note-and-up){
-					@include font-size(17px);
-		   	} 
-
-			  @include media-query(desk){
-					@include font-size(18px);
-		   	}
 
 			//ADBT
 			.adbt.one_col &, .adbt.home_page & {
@@ -149,14 +131,6 @@
 				@include font-size(13px); 
 				font-family: $font-primary;
 
-			  @include media-query(note-and-up){
-					@include font-size(17px);
-		   	} 
-
-			  @include media-query(desk){
-					@include font-size(18px);
-		   	}
-
 			//ADBT
 			.adbt.one_col &, .adbt.home_page & {
 				color: $tdc-dark-navy;
@@ -171,14 +145,6 @@
 				@include font-size(13px); 
 				font-family: $font-primary;
 
-			  @include media-query(note-and-up){
-					@include font-size(17px);
-		   	} 
-
-			  @include media-query(desk){
-					@include font-size(18px);
-		   	}
-
 			//ADBT
 			.adbt.one_col &, .adbt.home_page & {
 				color: $tdc-dark-navy;
@@ -192,14 +158,6 @@
 				font-weight: $semibold;
 				@include font-size(13px);
 				font-family: $font-primary;
-			
-			  @include media-query(note-and-up){
-					@include font-size(17px);
-		   	} 
-			
-			  @include media-query(desk){
-				@include font-size(18px);
-	   		} 
 
 			//ADBT
 			.adbt.one_col &, .adbt.home_page & {
@@ -213,15 +171,15 @@
 			background-color: $tdc-navy !important;
 			border: none;
 			color: $white;
-			@include font-size(18px);
+			@include font-size(16px);
 			width: auto !important;
 
 			@include media-query(note-and-up){
 				background-color: transparent !important;
-				@include font-size(20px);
-				width: 30px;
+				width: 20px;
+				min-height: 30px !important;
+				padding: 0;
 				float: right;
-				margin-top: -6px;
 			}
 		}
 	}
@@ -232,7 +190,7 @@
 		height: 100%;
 
 		@include media-query(note-and-up){
-			padding: 0 38px;
+			padding: 0 30px;
 
 			//ADBT
 			.adbt & {

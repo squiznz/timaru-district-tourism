@@ -191,7 +191,11 @@ $slick-opacity-not-active: 1 !default;
     padding: 0;
     border: none;
     outline: none;
+<<<<<<< HEAD
     background-image: url('./?a=67781');
+=======
+    background-image: url('/__data/assets/image/0011/67808/arrow-dark-navy.png');
+>>>>>>> 8065a8be1d947d292f72dea4cbd75d7c7e38c9c0
     background-size: 100%;
     // display: block;
     background-repeat: no-repeat;
@@ -234,7 +238,7 @@ $slick-opacity-not-active: 1 !default;
 }
 
 .slick-prev {
-    left: 0;
+    left: 30px;
     [dir="rtl"] & {
         left: auto;
         right: -25px;
@@ -255,7 +259,7 @@ $slick-opacity-not-active: 1 !default;
 }
 
 .slick-next {
-    right: 0;
+    right: 30px;
     bottom: 5px;
 
     [dir="rtl"] & {
