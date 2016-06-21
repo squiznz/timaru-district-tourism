@@ -9,6 +9,13 @@
 	@include media-query(note-and-up){
 		@include container(84.063em);
 		padding: 90px 0;
+
+		//ADBT
+		.adbt & {
+			@include container(75.438em);
+			padding: 90px 0;
+		}
+		//End ADBT
 	}
 }
 
@@ -37,6 +44,10 @@
 			@include media-query(note-and-up){
 				@include font-size(32.12px);
 				display: block;
+
+				.adbt & {
+					@include font-size(28.77px)
+				}
 			}
 		}
 	}
@@ -67,6 +78,18 @@
 				@include media-query(note-and-up){
 					height: 13.438em;
 				}
+			}
+
+			.adbt & {
+				@include media-query(note-and-up) {
+					@include span(3 of 9 inside (gutter-override: 35px));
+					margin-right: 0px;
+				}
+				
+				@include media-query(portable) {
+					max-width: 23em;
+				}
+
 			}
 		}
 
@@ -100,6 +123,13 @@
 					line-height: 28.11px;
 					padding: 0;
 				}
+				
+				//ADBT
+				.adbt & {
+					@include font-size(21.58px);
+					color: $tdc-light-blue;
+				}
+				//End ADBT
 			}
 
 			a {
@@ -109,4 +139,10 @@
 				margin-top: 10px;
 				font-weight: $bold;
 			}
+
+			//ADBT
+			.adbt & {
+				@include font-size(19.18px);
+			}
+			//End ADBT
 		}

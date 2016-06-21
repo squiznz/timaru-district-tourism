@@ -128,12 +128,20 @@
 		.location-banner--right & {
 			@include media-query(note-and-up){
 				@include position(absolute, 178px 38px null null);
+
+				.adbt.home_page & {
+					@include position(absolute, 150px 8% null null);
+				}
 			}
 		}
 
 		.location-banner--left & {
 			@include media-query(note-and-up){
 				@include position(absolute, 178px null null 38px);
+
+				.adbt.home_page & {
+					@include position(absolute, 150px null null 8%);
+				}
 			}
 		}
 
@@ -150,6 +158,7 @@
 	    		right: 240px;
 	    	}
 		}
+		//End ADBT
 	}
 
 

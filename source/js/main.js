@@ -2,6 +2,22 @@
 *   Insert Client Name - Main JS - Authors: Insert Author (Squiz)
 ***/
 
+function debounce(e, t, n) {
+    var i;
+    return function() {
+        var s = this
+          , a = arguments
+          , l = function() {
+            i = null ,
+            n || e.apply(s, a)
+        }
+          , r = n && !i;
+        clearTimeout(i),
+        i = setTimeout(l, t),
+        r && e.apply(s, a)
+    }
+}
+
 function detectScrolling() {
 
   /** Declare variables **/
@@ -117,7 +133,31 @@ function megaMenu() {
   });
 } // globalActions()
 
+//
+function threeBestSlider() {
+ var $mobileSlider = $('.slick-three-best');
+  if ($(window).width() < 1023) {
+    if($mobileSlider.hasClass('slick-initialized')) {
+      $mobileSlider.slick('unslick');
+    }
 
+    $mobileSlider.slick({
+      dots: true,
+      centerMode: true,
+      infinite: true,
+      speed: 300,
+      arrows: false,
+      slidesToShow: 1,
+      variableWidth: true
+    });
+
+  } 
+  else {
+    if($mobileSlider.hasClass('slick-initialized')) {
+      $mobileSlider.slick('unslick');
+    }
+  }
+}
 
 /* Clean me */
 $(document).ready(function () {
@@ -239,5 +279,10 @@ $(document).ready(function () {
   detectScrolling();
   globalActions();
   threeBest();
-  megaMenu();  
+  megaMenu(); 
+
+  threeBestSlider();
+  $(window).on("resize", debounce(function () {
+    threeBestSlider();
+  }, 50)); 
 });

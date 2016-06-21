@@ -79,17 +79,26 @@ form {
 		height: auto;
 		outline: none;
 		margin: 2px 0 0 0;
-   	background: transparent;
+   		background: transparent;
 		@include position(relative, null);
 		text-indent: 0.01px;
 		text-overflow: "";
-    appearance: none;
-    padding: 0 1em 0 0;
+	    appearance: none;
+	    padding: 0 1em 0 0;
 
-    &:focus {
-    	outline: none; 
-    	border: none;
-    }
+	    &:focus {
+	    	outline: none; 
+	    	border: none;
+	    }
+		//ADBT
+		.adbt & {
+			color: $tdc-light-blue;
+			
+			@include media-query(note-and-up){
+				@include font-size(28.77px);
+			}
+		}
+		//End ADBT
 	}
 
 	&:after {
@@ -104,6 +113,12 @@ form {
 		@include media-query(note-and-up){
 			@include position(absolute, 20% 0.5em 0 null);
 		}
+
+		//ADBT
+		.adbt & {
+			color: $tdc-light-blue;
+		}
+		//End ADBT
 	}
 
   &::-ms-expand {

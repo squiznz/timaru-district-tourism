@@ -41,6 +41,11 @@
 				display: block;
 			}
 		}
+		
+		//ADBT
+		.adbt & {
+		    margin: 0 250px .5em 250px;
+		}
 	}
 
 
@@ -53,16 +58,30 @@
 			background-color: #f7f7f7;
 
 			@include media-query(note-and-up){
-				width: 653px !important;
-				height: 20.5em;
-				margin: 0 38px 0 0;
+			    width: 587px !important;
+			    height: 18.1em;
+			    margin: 0 38px 0 0;
+			    float: left;
+
+				.adbt & {
+				    max-height: 18.5em;
+				}
 
 				img {
 					float: left;
 					@include span(1.1 of 2 (no-gutters));
 					height: 20.5em;
+
+					.adbt & {
+						max-height: 100%;
+					    height: 100%;
+					}
 				}
 			}
+		}
+
+		.adbt & {
+		    max-height: 20.5em;
 		}
 	}
 
@@ -105,7 +124,7 @@
 				@include position(relative, null);
 				display: inline-block;
 
-		   	@include media-query(note-and-up){
+		   		@include media-query(note-and-up){
 					@include font-size(18.74px);
 					@include position(absolute, null null 55px 38px);
 				}
