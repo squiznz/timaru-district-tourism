@@ -16,7 +16,10 @@ html {
 	}
 }
 
+// body {
 
+// 	@include container(1270px);
+// }
 p:empty,
 a.cta-button:empty {
 	display: none !important;
@@ -38,7 +41,7 @@ img {
 .inside {
 	main {
 		.container {
-			@include container(1700px);
+			@include container(1270px);
 		}
 	}
 }
@@ -80,12 +83,11 @@ img {
 	margin-bottom: 21px;
 
 	@include media-query(note-and-up){
-		width: 65.84%;
-		padding: 0 100px !important;
+		width: 796px;
+		padding: 0 70px !important;
 		float: left;
 		@include clearfix();
 		margin-right: 30px;
-	
 		
 		.wide & {
 			width: 100%;
@@ -388,15 +390,15 @@ table {
 		background-color: $tdc-navy;
 		color: $white;
 		font-weight: $bold;
-		@include font-size(21.42px);
+		// @include font-size(21.42px);
 	}
 
 	tr {
 		td {
 			border: 1px solid $tdc-grey;
-			padding: 28px;
-			@include font-size(20.08px);
-			line-height: 29px;
+			padding: 21px;
+			// @include font-size(20.08px);
+			line-height: 22px;
 		}
 	}
 }

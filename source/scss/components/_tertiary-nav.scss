@@ -30,7 +30,7 @@
 
 		@include media-query(note-and-up){
 			padding: 0 30px;
-			@include container(1700px);
+			@include container(1270px);
 			@include position(relative, null);
 
 			.adbt & {
