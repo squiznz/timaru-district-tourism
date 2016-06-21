@@ -4,6 +4,7 @@
 
 html {
 	font-family: $font-primary;
+	background-color: #e7e7e7;
 	
 	main {
 		@include media-query(note-and-up){
@@ -16,10 +17,12 @@ html {
 	}
 }
 
-// body {
+body {
+	@include media-query(desk-wide){
+		@include container(1700px);	
+	}
+}
 
-// 	@include container(1270px);
-// }
 p:empty,
 a.cta-button:empty {
 	display: none !important;

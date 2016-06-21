@@ -4,6 +4,7 @@
 
 .our-region {
 	padding: 50px 0 34px 0;
+	background-color: $white;
 	@include font-size(16px);
 	
 	@include media-query(note-and-up){

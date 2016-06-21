@@ -3,6 +3,7 @@
 ***/
 
 .whats-on-slider {
+	background-color: $white;
 	padding: 50px 21px;
 
 	@include media-query(palm-land-up){

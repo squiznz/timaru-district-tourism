@@ -4,16 +4,14 @@
 
 .three-best {
 	padding: 50px 0;
-
-	@include media-query(note-and-up){
-		@include container(1063px);
-	}
+	background-color: $white;
 
 	header {
 		padding: 0 21px;
+		@include container(1063px);
 
 		@include media-query(note-and-up){
-			padding: 0 30px;
+			padding: 0;
 		}
 	}
 }
@@ -21,6 +19,7 @@
 
 	.three-best__list {		
 		@extend .bare-list;
+		@include container(1063px);
 
 		li {
 			@include media-query(portable){

@@ -10,7 +10,7 @@
 	height: 2em;
 	margin-bottom: 1em;
 
-	@include media-query(lap-and-up){
+	@include media-query(note-and-up){
 		display: block;
 	}
 
@@ -37,17 +37,21 @@
 		}
 	}
 
-	.landing &, .topic & {
-		@include container(100%);
-		padding: 0 21px;
+	// .landing &, .topic & {
+	// 	@include container(100%);
+	// 	padding: 0 21px;
 
-		@include media-query(lap-and-up){
-			padding: 0 45px;
-		}
+	// 	@include media-query(lap-and-up){
+	// 		padding: 0 45px;
+	// 	}
 
-		@include media-query(note-and-up){
-			@include container(67.47058823529412%);
-			padding: 0;
-		}
-	}
+	// 	@include media-query(note-and-up){
+	// 		@include container(67.47058823529412%);
+	// 		padding: 0;
+	// 	}
+	// }
+
+	// .intro & {
+	// 	padding: 0;
+	// }
 }
