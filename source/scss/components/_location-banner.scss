@@ -4,7 +4,6 @@
 
 .location-banner {
   background-size: cover !important;
-	// @include font-size(16px);
 	color: $white;
 	@include clearfix();
 
@@ -52,7 +51,6 @@
 		@include font-size(22px);
 		font-family: $font-secondary;
 		@include clearfix();
-		// height: 
 
 		p {
 			@include media-query(portable){
@@ -83,14 +81,10 @@
 			}
 
 			&:before {
-				@include position(absolute, 2px null null 0);
+				@include position(absolute, 0 null null 0);
 				content: "\f041";
 				font-family: 'FontAwesome';
-				line-height: 1.2em;
-
-				@include media-query(note-and-up){
-					@include position(absolute, 5px null null 0);				
-				}
+				line-height: inherit;
 			}	
 
 			//ADBT
@@ -150,29 +144,29 @@
 
 
 	.location-banner__cta {
-		background-color: $tdc-purple;
-		color: $white;
-		text-decoration: none;
+		// background-color: $tdc-purple;
+		// color: $white;
+		// text-decoration: none;
 		margin-top: 20px;
-		text-align: center;
-		font-family: $font-primary;
+		// text-align: center;
+		// font-family: $font-primary;
 		@include font-size(17px);
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		line-height: 1em;
-		display: block;
-		text-indent: 0 !important;
+		// display: block;
+		// text-indent: 0 !important;
 	
 		&:after {
-			right: 20px;
+			right: 25px;
 		}
 	
-		@include media-query(note-and-up){
-			display: inline-block;
-			width: auto;
-			margin-top: 1em;
+		// @include media-query(note-and-up){
+		// 	display: inline-block;
+		// 	width: auto;
+		// 	margin-top: 1em;
 
-			&:after {
-				right: 20px;
-			}
-		}
+		// 	&:after {
+		// 		right: 20px;
+		// 	}
+		// }
 	}
