@@ -195,11 +195,5 @@
 
 		@include media-query(note-and-up){
 			padding: 0 30px;
-
-			//ADBT
-			.adbt & {
-			    padding: 0 124px;
-			}
-			//End ADBT
 		}
 	}
