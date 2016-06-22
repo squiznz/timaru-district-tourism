@@ -55,6 +55,23 @@
 	}
 }
 
+	.landing-list__cta-banner {
+
+		@include container(100%);
+
+		h2 {
+			@include span(4 of 12);
+		}
+
+		p {
+			@include span(4 of 12);
+		}
+
+		a {
+			@include span(last 4 of 12);
+		}
+	}
+
 .page--landing__description {
 	@include media-query(note-and-up){
 		@include font-size(21.42px);

@@ -56,7 +56,7 @@
 				display: inline-block;
 				padding: 0;
 				border: none;
-				height: 100%;
+				// height: 100%;
 			}
 
 			a {
@@ -132,7 +132,8 @@
 				padding: 0;
 				border: none !important;
 				font-weight: 500 !important;
-				line-height: 35px;
+				line-height: 22px;
+				margin: 8px 0;
 				display: inline-block;
 				@include position(relative, null);
 
@@ -190,5 +191,12 @@
 			strong {
 				color: $white;
 			}
+		}
+	}
+
+
+	.primary-nav__first-level {
+		> li {
+			height: 100%;
 		}
 	}

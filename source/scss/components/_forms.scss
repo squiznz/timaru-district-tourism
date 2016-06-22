@@ -102,7 +102,7 @@ form {
 		font-family: 'FontAwesome';
 
 		@include media-query(note-and-up){
-			@include position(absolute, 20% 0.5em 0 null);
+			@include position(absolute, 5% 0.5em 0 null);
 		}
 	}
 

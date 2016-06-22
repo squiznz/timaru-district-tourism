@@ -27,13 +27,6 @@
 	    	height: 31.625em;
 	    }
 	}
-
-	.adbt.home_page & {
-		@include media-query(note-and-up) {
-		    height: 41.425em;
-		}
-	}
-	// End ADBT
 }
 
 
@@ -57,11 +50,6 @@
 		p {
 			@include media-query(portable){
 				font-weight: $light;
-			}
-
-			//ADBT
-			.adbt & {
-			    line-height: 1.2em;
 			}
 		}
 
@@ -123,23 +111,13 @@
 
 		.location-banner--right & {
 			@include media-query(note-and-up){
-
-				.adbt.home_page & {
-					@include position(absolute, 150px 8% null null);
-				}
 				@include position(absolute, 147px 30px null null);
 			}
 		}
 
 		.location-banner--left & {
 			@include media-query(note-and-up){
-
-				.adbt.home_page & {
-					@include position(absolute, 150px null null 8%);
-				}
-
 				@include position(absolute, 147px null null 30px);
-
 			}
 		}
 
