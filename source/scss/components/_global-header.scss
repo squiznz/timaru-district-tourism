@@ -105,12 +105,20 @@
 
 			@include media-query(note-and-up){
 				width: 100px;
-			  -webkit-transition: width 0.5s;
-				transition: width 0.5s;
+		  	    -webkit-transition: 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+			    transition: 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
 				font-weight: $semibold;
 				line-height: 28.11px;
 				background-color: transparent;
 				border-bottom: 3px solid $tdc-green;
+				position: absolute;
+				right: 20px;
+
+				&:focus {
+					right: 20px;
+					width: 160px;
+					
+				}
 			}
 			
 			&::-webkit-input-placeholder {
@@ -195,11 +203,5 @@
 
 		@include media-query(note-and-up){
 			padding: 0 30px;
-
-			//ADBT
-			.adbt & {
-			    padding: 0 124px;
-			}
-			//End ADBT
 		}
 	}

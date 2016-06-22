@@ -30,6 +30,10 @@
         cursor: pointer;
         cursor: hand;
     }
+
+    .adbt.home_page & {
+        max-height: 18.1em;
+    }
 }
 .slick-slider .slick-track,
 .slick-slider .slick-list {
@@ -48,7 +52,7 @@
     display: block;
 
     .home & {
-			left: 300px;
+		left: 300px;
     }
 
     &:before,
@@ -194,9 +198,9 @@ $slick-opacity-not-active: 1 !default;
     background-position: center;
 
     &:hover, &:focus {
-        outline: none;
-        background: transparent;
-        color: transparent;
+        // outline: none;
+        // background: transparent;
+        // color: transparent;
         &:before {
             opacity: $slick-opacity-on-hover;
         }
@@ -223,6 +227,10 @@ $slick-opacity-not-active: 1 !default;
 	@include position(relative, null);
 	@include container();
 	height: 40px;
+
+    .adbt & {
+        @include container(57.25em);
+    }
 }
 
 .slick-prev {
@@ -273,6 +281,7 @@ $slick-opacity-not-active: 1 !default;
   @extend .bare-list;
     list-style: none;
     display: block;
+    position: relative;
     text-align: center;
     padding: 0;
 		margin: 21px auto 0 auto;

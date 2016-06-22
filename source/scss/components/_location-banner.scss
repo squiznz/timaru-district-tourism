@@ -26,13 +26,6 @@
 	    	height: 31.625em;
 	    }
 	}
-
-	.adbt.home_page & {
-		@include media-query(note-and-up) {
-		    height: 41.425em;
-		}
-	}
-	// End ADBT
 }
 
 
@@ -55,11 +48,6 @@
 		p {
 			@include media-query(portable){
 				font-weight: $light;
-			}
-
-			//ADBT
-			.adbt & {
-			    line-height: 1.2em;
 			}
 		}
 
@@ -140,6 +128,7 @@
 	    		right: 240px;
 	    	}
 		}
+		//End ADBT
 	}
 
 

@@ -33,9 +33,6 @@
 			@include container(1270px);
 			@include position(relative, null);
 
-			.adbt & {
-			    padding: 0 124px;
-			}
 		}
 
 		li {

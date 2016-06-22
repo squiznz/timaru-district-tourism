@@ -14,6 +14,10 @@ html {
 		p {
 			margin-bottom: 10px;
 		}
+
+		.adbt.one_col & {
+			padding-bottom: 4em;
+		}
 	}
 }
 
@@ -118,8 +122,12 @@ img {
 	.wide & {
 		@include container(1063px);
 	}
-}
 
+	.adbt & {
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+}
 
 	.intro__wrap {
 		@include clearfix();

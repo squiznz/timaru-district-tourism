@@ -61,6 +61,61 @@
 	}
 }
 
+	.landing-list__cta-strip {
+
+		@include container(100%);
+	    margin-bottom: 2em;
+        padding: 40px;
+	    background-color: $tdc-light-blue;
+
+		h2 {
+			width: 100%;
+			font-weight: $light;
+			font-family: $font-primary;
+		    color: $white;
+		    @include font-size(24px);
+		    margin-top: 7px;
+		    margin-bottom: 0;
+
+			@include media-query(palm-land-up) {
+				@include span(4 of 12);
+			}
+		}
+
+		p {
+			width: 100%;
+		    margin-top: 0;
+    		margin-bottom: 0;
+    		color: $white;
+
+			@include media-query(palm-land-up) {
+				@include span(4 of 12 at 7);
+	    	}
+		}
+
+		a {
+			width: 100%;
+			text-align: left;
+			margin-right: 0;
+		    color: $white;
+		    font-weight: $semibold;
+		    text-align: right;
+	        margin-top: 10px;
+			@include font-size(19px);
+
+		    &:after {
+			    content: "\f0da";
+			    font-family: FontAwesome;
+			    margin-left: 5px;
+			    font-size: 13px;
+			}
+
+			@include media-query(palm-land-up) {
+				@include span(last 2 of 12);
+			}
+		}
+	}
+
 .page--landing__description {
 	@include media-query(note-and-up){
 		@include font-size(21.42px);

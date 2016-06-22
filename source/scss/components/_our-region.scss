@@ -1,10 +1,9 @@
 /***
-*   Three of the Best
+*   Our Region Slider
 ***/
 
 .our-region {
 	padding: 50px 0 34px 0;
-	background-color: $white;
 	@include font-size(16px);
 	
 	@include media-query(note-and-up){
@@ -48,6 +47,11 @@
 				display: block;
 			}
 		}
+		
+		//ADBT
+		.adbt & {
+		    margin: 0 250px .5em 250px;
+		}
 	}
 
 
@@ -60,6 +64,11 @@
 			background-color: #f7f7f7;
 
 			@include media-query(note-and-up){
+
+				.adbt & {
+				    max-height: 18.5em;
+				}
+
 				height: 243px;
 				margin: 0 30px 0 0;
 				width: 488px !important;
@@ -67,7 +76,6 @@
 				img {
 					float: left;
 					@include span(1.1 of 2 (no-gutters));
-					height: 185px;
 
 					@include media-query(note-and-up){
 						width: 243px;
@@ -75,6 +83,10 @@
 					}
 				}
 			}
+		}
+
+		.adbt & {
+		    max-height: 20.5em;
 		}
 	}
 
