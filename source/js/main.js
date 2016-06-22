@@ -272,24 +272,12 @@ $(document).ready(function () {
     slidesToScroll: 1,
     fade: true,
     slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 768,
         settings: "unslick"
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
       }
     ]
   });
@@ -325,7 +313,6 @@ $(document).ready(function () {
   detectScrolling();
   globalActions();
   threeBest();
-  threeBestSlider();
   megaMenu(); 
 
   threeBestSlider();
