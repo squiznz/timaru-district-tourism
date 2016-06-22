@@ -198,7 +198,10 @@
 	color: $black;
 	font-weight: $bold;
 	background-color: $white;
-
+	background-image: url('../img/illustration.png');
+	background-size: 70% !important;
+	background-repeat: repeat-x;
+	background-position: bottom;
 
 	.feature-banner__wrap {
 		max-width: 50em;
