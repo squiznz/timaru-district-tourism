@@ -120,6 +120,32 @@ function threeBest(){
 }
 
 
+
+function threeBestSlider() {
+ var $mobileSlider = $('.slick-three-best');
+  if ($(window).width() < 1023) {
+    if($mobileSlider.hasClass('slick-initialized')) {
+      $mobileSlider.slick('unslick');
+    }
+
+    $mobileSlider.slick({
+      dots: true,
+      centerMode: true,
+      infinite: true,
+      speed: 300,
+      arrows: false,
+      slidesToShow: 1,
+      variableWidth: true
+    });
+
+  } 
+  else {
+    if($mobileSlider.hasClass('slick-initialized')) {
+      $mobileSlider.slick('unslick');
+    }
+  }
+}
+
 function megaMenu() {
   var navItems = $('.primary-nav ul li');
 
@@ -260,4 +286,6 @@ $(document).ready(function () {
   globalActions();
   threeBest();
   megaMenu();  
+
+  threeBestSlider();
 });

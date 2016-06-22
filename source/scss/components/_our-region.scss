@@ -41,7 +41,7 @@
 			margin: 0;
 			font-weight: $medium;
 			@include font-size(24px);
-			margin-right: 0.25em;
+			margin-right: 0.5em;
 			display: inline-block;
 
 			@include media-query(note-and-up){
@@ -81,7 +81,7 @@
 
 		.our-region__info-wrap {
 			padding: 30px 21px;
-			line-height: 1.3125em;
+			// line-height: 1.3125em;
 			@include font-size(16px);
 			color: $tdc-dark-grey;
 			height: 156px;
@@ -89,7 +89,7 @@
 	   	@include media-query(note-and-up){
 				height: 100%;
 				// height: 243px;
-				line-height: 29.45px;
+				line-height: 22px;
 				padding: 45px 30px;
 				@include span(1.10 of 2 (no-gutters));
 				float: left;
@@ -102,11 +102,8 @@
 				margin-bottom: 10px;
 				color: $tdc-green;
 				display: block;
+				line-height: 1.2em;
 				font-family: $font-primary;
-
-				@include media-query(note-and-up){
-					line-height: 28.11px;
-				}
 			}
 
 			a {
@@ -118,7 +115,7 @@
 				display: inline-block;
 
 		   	@include media-query(note-and-up){
-					@include position(absolute, null null 55px 30px);
+					@include position(absolute, null null 40px 30px);
 				}
 
 				&:after {
