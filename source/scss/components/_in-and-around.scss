@@ -3,11 +3,11 @@
 ***/
 
 .in-and-around {
-	padding: 0;
-
-	@include media-query(portable){
-		@include position(relative, null);
-	}
+	// padding: 0;
+	// @include container();
+	@include clearfix();
+	// margin: 0;
+	background-color: $tdc-purple;
 
 	@include media-query(note-and-up){
 		height: 560px;
@@ -15,34 +15,9 @@
 
 	h2 {
 		background-color: $tdc-navy;
-		// padding: 0 21px;
+		padding: 0 21px;
 		color: $white;
-		// margin: 0;
-		// font-weight: $medium;
-
-		@include media-query(portable){
-			width: 100%;
-			@include position(absolute, 0 0 0 null);
-			height: 50px;
-			line-height: 50px;
-			display: block;
-		}
-
-		@include media-query(note-and-up){
-			// @include font-size(30.79px);
-			// width: 17.538em;
-			// line-height: 60px;
-			// height: 60px;
-			@include position(relative, null);
-
-			&:after {
-				@include position(absolute, 0 1.3125em 0px null);
-				content: "\f041";
-				font-family: 'FontAwesome';
-				line-height: inherit;
-				@include font-size(24px);
-			}
-		}
+		margin: 0;
 	}
 
 	.select-wrap {
@@ -71,82 +46,45 @@
 			color: $tdc-dark-navy;
 		}
 	}
-}	
+}
+
 
 	.in-and-around__wrap {
-		@include media-query(note-and-up){
-			background-color: $tdc-purple;
-			float: left;
-			@include clearfix();
-			width: 35%;
-			height: 100%;
-			// padding: 65px;
-		}
-	}
-
-
-	.in-and-around__list {
-		float: left;
-
-		@include media-query(note-and-up){
-			width: 100%;
-			@include clearfix();
+		float: right;
+		padding: 55px;
+		// @include container(517px);
+		@include clearfix();
+		
+		ul {
+			// float: left;
+			width: 411px;
 		}
 
 		li {
 			border-bottom: 1px solid $tdc-grey;
-			@include font-size(18px);
 			cursor: pointer;
-			padding: 17px 70px 17px 1.3125em;
+			padding: 20px;
+			// height: auto;
 			@include position(relative, null);
-			line-height: 1.3125em;
-
-			@include media-query(note-and-up){
-				background-color: $white;
-				// width: 30em;
-				@include position(relative, null);
-				height: auto;
-				padding: 21px 100px 21px 21px;
-			}
-
-			span {
-				color: $tdc-dark-navy;
-				line-height: 28.11px;
-
-				@include media-query(note-and-up){
-					@include font-size(24.09px);
-				}
+			@include clearfix();
+			background-color: $white;
+			
+			p {
+				float: left;
+				width: 293px;
 			}
 
 			strong {
 				color: $tdc-green;
-
-				@include media-query(note-and-up){
-					@include font-size(24.09px);
-					line-height: 28.11px;
-				}
-			}
-
-			p {
-				margin-top: 5px;
-				@include font-size(15px);
-				line-height: 1.3125em;
-				color: #535353;
-
-				@include media-query(note-and-up){
-					@include font-size(20.08px);
-					line-height: 28.11px;
-				}
+				display: inline-block;
+				margin-bottom: 8px;
+				@include font-size(18px);
 			}
 
 			i {
-				@include position(absolute, 40px 1.3125em null null);
 				color: $tdc-green;
-
-				@include media-query(note-and-up){
-					right: 30px;
-					top: 50px;
-				}
+				margin: 0 20px;
+				float: right;
 			}
 
 			&:hover, &:focus {
@@ -157,7 +95,7 @@
 
 					&:after {
 						content: "";
-						@include position(absolute, 45% null null -10px);
+						@include position(absolute, 0 null null 0);
 					  width: 0; 
 					  height: 0; 
 					  border-top: 10px solid transparent;
@@ -165,20 +103,15 @@
 					  border-right: 10px solid #f7f7f7; 
 					}
 				}
-
-				@include media-query(portable){
-					> * { 
-						color: $white;
-					}
-				}
 			}
 		}
-	}
+}
+
 
 
 	.in-and-around__map {
 		background-color: $black;
-		height: 18.375em;
+		// height: 18.375em;
 		margin-top: 50px;
 		float: left;
 		@include clearfix();

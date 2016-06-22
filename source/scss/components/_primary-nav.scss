@@ -121,7 +121,7 @@
 
 		li {
 			@include span(1 of 2);
-			padding-right: 43px;
+			padding-right: 30px;
 
 			&:nth-child(even){
 				@include last();
@@ -179,11 +179,7 @@
 			border: none !important;
 			display: inline-block;
 			margin-top: 21px;
-			@include font-size(14px);
-
-			&:after {
-				top: 1px;
-			}
+			// @include font-size(14px);
 		}
 
 		.adbt & {

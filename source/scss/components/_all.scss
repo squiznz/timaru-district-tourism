@@ -303,13 +303,14 @@ a.more {
 	font-weight: $bold;
 	letter-spacing: 0.02em;
 	@include font-size(14px);
+	line-height: 21px;
 
 	&:after {
 		content: "\f0da";
 		font-family: "FontAwesome";
-		@include position(absolute, null -1em 3px null);
+		@include position(absolute, null -1em 0 null);
 		@include font-size(11px);
-		line-height: 1.2em;
+		line-height: 21px;
 	}
 }
 

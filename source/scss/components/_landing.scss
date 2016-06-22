@@ -4,7 +4,8 @@
 
 .landing-list {
 	@extend .bare-list;
-	
+	margin-bottom: 60px;
+
 	li {
 		@include span(1 of 1);
 		margin-bottom: 21px;
@@ -39,7 +40,8 @@
 			width: 100%; 
 			color: $tdc-dark-navy;
 			@include font-size(24px);
-			line-height: 55px;
+			line-height: 30px;
+			margin-bottom: 15px;
 		}
 
 		a.more {
@@ -52,6 +54,10 @@
 		&:nth-child(3n+1){
 			border-left: 1px solid $tdc-grey;
 		}
+	}
+
+	.tags-list {
+		display: none;
 	}
 }
 
