@@ -67,6 +67,10 @@
 				text-decoration: none;
 				font-family: $font-primary;
 				
+				@include media-query(palm-land-up){
+					padding: 18px 45px;
+				}
+
 				@include media-query(note-and-up){
 					padding: 30px 16px;
 					height: 100%;
