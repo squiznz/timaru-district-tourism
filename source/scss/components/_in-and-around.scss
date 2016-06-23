@@ -5,21 +5,30 @@
 .in-and-around {
 	@include clearfix();
 	padding: 0;
-	background-color: $tdc-purple;
+	@include position(relative, null);
 	
 	> .container {
 		padding: 0;
+		@include container(1700px);
 	}
 
 	@include media-query(note-and-up){
 		height: 560px;
+		background-color: $tdc-purple;
 	}
 
 	h2 {
 		background-color: $tdc-navy;
 		padding: 0 21px;
 		color: $white;
+		line-height: 2em;
 		margin: 0;
+		@include position(absolute, 0 0 null 0);
+		z-index: 99999;
+
+		@include media-query(note-and-up){
+			@include position(static, null);
+		}
 	}
 
 	.select-wrap {
@@ -31,6 +40,7 @@
 		
 		select {
 			width: 100%;
+			z-index: 99999;
 			padding: 0 21px;
 			border-bottom: 1px solid $tdc-grey;
 			color: $tdc-dark-navy;
@@ -52,26 +62,38 @@
 
 
 	.in-and-around__wrap {
-		float: right;
-		padding: 55px 0 55px 55px;
-		// @include container(517px);
 		@include clearfix();
-		
+
+		@include media-query(note-and-up){
+			// @include position(absolute, 55px 55px 55px null);
+			width: 30.352941176470587%;
+			margin: 55px 55px 55px 0;
+			float: right;
+		}
+
 		ul {
-			width: 411px;
+			width: 100%;
+			float: left;
+			border-bottom: 1px solid $tdc-grey;
+			@include clearfix();
+
+			@include media-query(note-and-up){
+				border-bottom: none;
+				// float: right;
+				// margin: 55px;
+			}
 		}
 
 		li {
 			border-bottom: 1px solid $tdc-grey;
 			cursor: pointer;
-			padding: 20px;
-			@include position(relative, null);
 			@include clearfix();
+			padding: 15px 80px 15px 15px;
+			@include position(relative, null);
 			background-color: $white;
-			
-			p {
-				float: left;
-				width: 293px;
+				
+			@include media-query(note-and-up){
+				padding: 21px 80px 21px 21px;
 			}
 
 			strong {
@@ -83,13 +105,18 @@
 
 			i {
 				color: $tdc-green;
-				margin: 0 20px;
-				float: right;
+				@include position(absolute, 40% 21px null null);
 			}
 
 			&:hover, &:focus {
 				background-color: $tdc-green;
 
+				@include media-query(portable){
+					> * {
+						color: $white;
+					}		
+				}
+			
 				@include media-query(note-and-up){
 					background-color: #f7f7f7;
 
@@ -102,10 +129,6 @@
 					  border-bottom: 10px solid transparent; 
 					  border-right: 10px solid #f7f7f7; 
 					}
-
-					> * {
-						color: $white;
-					}	
 				}
 			}
 		}
@@ -115,15 +138,15 @@
 
 	.in-and-around__map {
 		background-color: $black;
-		// height: 18.375em;
-		margin-top: 50px;
 		float: left;
+		height: 295px;
+		margin-top: 56px;
 		@include clearfix();
 		width: 100%;
 
 		@include media-query(note-and-up){
-			height: 100%;
-			width: 65%;
+			height: 560px;
+			width: 63.2%;
 			margin: 0;
 		}
 	}
