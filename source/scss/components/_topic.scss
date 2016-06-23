@@ -42,6 +42,8 @@
 
 
 .topic-list__item {
+	@include span(1 of 1);
+
 	@include media-query(palm-land-up){
 		@include span(5.83 of 12 (gutter-override: 30px));
 

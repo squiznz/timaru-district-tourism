@@ -47,21 +47,22 @@
 
 	ul {
 		display: none;
-	
+		color: $tdc-light-blue;
+
 		@include media-query(note-and-up){
 			display: block;
 		}
 
 		li {
-			color: $tdc-light-blue;
-
+			color: inherit;
+			
 			a {
 				display: block;
 				padding: 8px 0;
 				color: inherit;
 			}
 			
-			&.active {
+			&.active, &.parent {
 				padding-left: 12px;
 				color: $tdc-dark-navy;
 				@include position(relative, null);
@@ -76,8 +77,9 @@
 					@include position(absolute, 12px null 0 0);
 				}
 
-				ul {
+				> ul {
 					display: block;
+					color: $tdc-dark-navy;
 				}
 			}
 
@@ -87,10 +89,6 @@
 				border-bottom: 1px dotted $tdc-mid-grey;
 				margin-bottom: 10px;
 				padding-bottom: 10px;
-
-				li {
-					@include font-size(18.74px);
-				}
 			}
 		}
 	}

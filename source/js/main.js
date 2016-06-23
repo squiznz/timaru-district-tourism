@@ -103,16 +103,16 @@ function globalActions() {
 
 
   $('.banner').each(function(index) {
-    var bannerImage = $(this).data('img');
+      var bannerImage = $(this).data('img');
 
-    if ($(this).hasClass('feature-banner--home')) {
-      $(this).css('background','linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url("'+ bannerImage +'") repeat scroll 0 0');
-    } else if ($(this).hasClass('listing-itineraries__header') || $(this).hasClass('itinerary-details__header')){
-      $(this).css('background','linear-gradient(rgba(0, 28, 66, 0.6), rgba(0, 28, 66, 0.6)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url("'+ bannerImage +'") repeat scroll 0 0');
-    }
-    else {
-      $(this).css('background-image','url('+ bannerImage +')')
-    }
+      if ($(this).hasClass('feature-banner--home')) {
+        $(this).css('background','linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url("'+ bannerImage +'") repeat scroll 0 0');
+      } else if ($(this).hasClass('listing-itineraries__header') || $(this).hasClass('itinerary-details__header')){
+        $(this).css('background','linear-gradient(rgba(0, 28, 66, 0.6), rgba(0, 28, 66, 0.6)) repeat scroll 0 0%, rgba(0, 0, 0, 0) url("'+ bannerImage +'") repeat scroll 0 0');
+      }
+      else {
+        $(this).css('background-image','url('+ bannerImage +')')
+      }
   });
 
 
@@ -135,6 +135,32 @@ function threeBest(){
   });
 }
 
+
+
+function threeBestSlider() {
+ var $mobileSlider = $('.slick-three-best');
+  if ($(window).width() < 1023) {
+    if($mobileSlider.hasClass('slick-initialized')) {
+      $mobileSlider.slick('unslick');
+    }
+
+    $mobileSlider.slick({
+      dots: true,
+      centerMode: true,
+      infinite: true,
+      speed: 300,
+      arrows: false,
+      slidesToShow: 1,
+      variableWidth: true
+    });
+
+  } 
+  else {
+    if($mobileSlider.hasClass('slick-initialized')) {
+      $mobileSlider.slick('unslick');
+    }
+  }
+}
 
 function megaMenu() {
   var navItems = $('.primary-nav ul li');
@@ -246,24 +272,12 @@ $(document).ready(function () {
     slidesToScroll: 1,
     fade: true,
     slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 768,
         settings: "unslick"
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
       }
     ]
   });

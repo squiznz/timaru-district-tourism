@@ -24,8 +24,6 @@
 			}
 			
 			li {
-				padding-bottom: 1.875em;
-
 				@include media-query(note-and-up){
 					@include span(2.99 of 6 (gutter-override: 30px));
 
@@ -37,7 +35,9 @@
 				video {
 					width: 100%;
 					display: block;
-					height: 210px !important;
+					height: 100% !important;
+					@include position(absolute, 0 0 0 0);
+					z-index: 9998;
 					background-color: $black;
 	
 					@include media-query(note-and-up){
@@ -66,7 +66,7 @@
 
 			.watch-timaru__video-wrap {		
 				@include position(relative, null);
-				height: 13.5625em;
+				height: 211px;
 				width: 100%;
 
 				@include media-query(note-and-up){
@@ -77,11 +77,14 @@
 
 			.watch-timaru__video-filter {
 				@include position(absolute, 0 0 0 0);			
+				z-index: 99999;
 				background-color: rgba(23,23,23,0.60);
 			}
 
 			
 			.watch-timaru__view-all {
+				@extend .view-all;
+
 				@include media-query(note-and-up){
 					display: inline-block;
 					width: auto;

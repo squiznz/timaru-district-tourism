@@ -3,45 +3,31 @@
 ***/
 
 .in-and-around {
+	@include clearfix();
 	padding: 0;
-
-	@include media-query(portable){
-		@include position(relative, null);
+	@include position(relative, null);
+	
+	> .container {
+		padding: 0;
+		@include container(1700px);
 	}
 
 	@include media-query(note-and-up){
 		height: 560px;
+		background-color: $tdc-purple;
 	}
 
 	h2 {
 		background-color: $tdc-navy;
-		// padding: 0 21px;
+		padding: 0 21px;
 		color: $white;
-		// margin: 0;
-		// font-weight: $medium;
-
-		@include media-query(portable){
-			width: 100%;
-			@include position(absolute, 0 0 0 null);
-			height: 50px;
-			line-height: 50px;
-			display: block;
-		}
+		line-height: 2em;
+		margin: 0;
+		@include position(absolute, 0 0 null 0);
+		z-index: 99999;
 
 		@include media-query(note-and-up){
-			// @include font-size(30.79px);
-			// width: 17.538em;
-			// line-height: 60px;
-			// height: 60px;
-			@include position(relative, null);
-
-			&:after {
-				@include position(absolute, 0 1.3125em 0px null);
-				content: "\f041";
-				font-family: 'FontAwesome';
-				line-height: inherit;
-				@include font-size(24px);
-			}
+			@include position(static, null);
 		}
 	}
 
@@ -54,6 +40,7 @@
 		
 		select {
 			width: 100%;
+			z-index: 99999;
 			padding: 0 21px;
 			border-bottom: 1px solid $tdc-grey;
 			color: $tdc-dark-navy;
@@ -71,93 +58,71 @@
 			color: $tdc-dark-navy;
 		}
 	}
-}	
+}
+
 
 	.in-and-around__wrap {
+		@include clearfix();
+
 		@include media-query(note-and-up){
-			background-color: $tdc-purple;
-			float: left;
-			@include clearfix();
-			width: 35%;
-			height: 100%;
-			// padding: 65px;
+			// @include position(absolute, 55px 55px 55px null);
+			width: 30.352941176470587%;
+			margin: 55px 55px 55px 0;
+			float: right;
 		}
-	}
 
-
-	.in-and-around__list {
-		float: left;
-
-		@include media-query(note-and-up){
+		ul {
 			width: 100%;
+			float: left;
+			border-bottom: 1px solid $tdc-grey;
 			@include clearfix();
+
+			@include media-query(note-and-up){
+				border-bottom: none;
+				// float: right;
+				// margin: 55px;
+			}
 		}
 
 		li {
 			border-bottom: 1px solid $tdc-grey;
-			@include font-size(18px);
 			cursor: pointer;
-			padding: 17px 70px 17px 1.3125em;
+			@include clearfix();
+			padding: 15px 80px 15px 15px;
 			@include position(relative, null);
-			line-height: 1.3125em;
-
+			background-color: $white;
+				
 			@include media-query(note-and-up){
-				background-color: $white;
-				// width: 30em;
-				@include position(relative, null);
-				height: auto;
-				padding: 21px 100px 21px 21px;
-			}
-
-			span {
-				color: $tdc-dark-navy;
-				line-height: 28.11px;
-
-				@include media-query(note-and-up){
-					@include font-size(24.09px);
-				}
+				padding: 21px 80px 21px 21px;
 			}
 
 			strong {
 				color: $tdc-green;
-
-				@include media-query(note-and-up){
-					@include font-size(24.09px);
-					line-height: 28.11px;
-				}
-			}
-
-			p {
-				margin-top: 5px;
-				@include font-size(15px);
-				line-height: 1.3125em;
-				color: #535353;
-
-				@include media-query(note-and-up){
-					@include font-size(20.08px);
-					line-height: 28.11px;
-				}
+				display: inline-block;
+				margin-bottom: 8px;
+				@include font-size(18px);
 			}
 
 			i {
-				@include position(absolute, 40px 1.3125em null null);
 				color: $tdc-green;
-
-				@include media-query(note-and-up){
-					right: 30px;
-					top: 50px;
-				}
+				@include position(absolute, 40% 21px null null);
 			}
 
 			&:hover, &:focus {
 				background-color: $tdc-green;
 
+				@include media-query(portable){
+					> * {
+						color: $white;
+					}		
+				}
+			
 				@include media-query(note-and-up){
 					background-color: #f7f7f7;
 
 					&:after {
 						content: "";
-						@include position(absolute, 45% null null -10px);
+						@include position(absolute, 0 null null 0);
 					  width: 0; 
 					  height: 0; 
 					  border-top: 10px solid transparent;
@@ -165,28 +130,23 @@
 					  border-right: 10px solid #f7f7f7; 
 					}
 				}
-
-				@include media-query(portable){
-					> * { 
-						color: $white;
-					}
-				}
 			}
 		}
-	}
+}
+
 
 
 	.in-and-around__map {
 		background-color: $black;
-		height: 18.375em;
-		margin-top: 50px;
 		float: left;
+		height: 295px;
+		margin-top: 56px;
 		@include clearfix();
 		width: 100%;
 
 		@include media-query(note-and-up){
-			height: 100%;
-			width: 65%;
+			height: 560px;
+			width: 63.2%;
 			margin: 0;
 		}
 	}

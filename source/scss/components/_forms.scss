@@ -93,17 +93,13 @@ form {
 	}
 
 	&:after {
-		@include position(absolute, 5% 0.5em 0 null);
+		@include position(absolute, 0 0.5em 0 null);
 		content: "\f0d7";
 		color: $tdc-green;
 		cursor: pointer;
 		font-size: 70%;
 		pointer-events: none;
 		font-family: 'FontAwesome';
-
-		@include media-query(note-and-up){
-			@include position(absolute, 5% 0.5em 0 null);
-		}
 	}
 
   &::-ms-expand {
