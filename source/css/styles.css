@@ -1999,7 +1999,7 @@ a.more:after {
   bottom: 3px;
   font-size: 11px;
   font-size: 0.6875rem;
-  line-height: 1.2em;
+  line-height: 1.8em;
 }
 
 ul li {
@@ -3010,7 +3010,7 @@ section > header a.view-all {
 }
 
 .adbt.one_col .primary-nav > .container > ul, .adbt.home_page .primary-nav > .container > ul {
-  padding: 0 0 0 290px;
+  padding: 0 193px;
 }
 
 .adbt.one_col .primary-nav > .container > ul > li, .adbt.home_page .primary-nav > .container > ul > li {
@@ -3253,6 +3253,11 @@ section > header a.view-all {
 
 .utility-nav li a {
   color: inherit;
+}
+
+.adbt .utility-nav {
+  padding-right: 18px;
+  border-right: 1px solid #eeeeee;
 }
 
 .utility-nav__item--logo {
@@ -4084,16 +4089,6 @@ section > header a.view-all {
 
 .location-banner__info strong {
   font-weight: 900;
-}
-
-@media screen and (min-width: 1024px) {
-  .adbt.one_col .location-banner__info {
-    font-size: 37.16px;
-    font-size: 2.3225rem;
-    padding: 24px 30px;
-    top: 202px;
-    right: 240px;
-  }
 }
 
 .location-banner__cta {

@@ -321,7 +321,7 @@ a.more {
 		font-family: "FontAwesome";
 		@include position(absolute, null -1em 3px null);
 		@include font-size(11px);
-		line-height: 1.2em;
+	    line-height: 1.8em;
 	}
 }
 

@@ -125,16 +125,6 @@
 			font-weight: $ultrabold;
 		}
 
-		//ADBT
-		.adbt.one_col & {
-			@include media-query(note-and-up){
-				@include font-size(37.16px);
-			    padding: 24px 30px;
-	    		top: 202px;
-	    		right: 240px;
-	    	}
-		}
-		//End ADBT
 	}
 
 
