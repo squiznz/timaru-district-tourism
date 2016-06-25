@@ -44,6 +44,19 @@
 		@include font-size(22px);
 		font-family: $font-secondary;
 		@include clearfix();
+		
+		@include media-query(portable){
+			background-color: $tdc-navy;
+			@include position(absolute, null 0 0 0);
+		}
+
+		@include media-query(note-and-up){
+			background-color: rgba(0,29,65,0.89);
+			width: 423px;
+			padding: 32px 40px;
+			@include font-size(36px);
+			line-height: 44px;
+		}
 
 		p {
 			@include media-query(portable){
@@ -89,20 +102,6 @@
 			// End ADBT
 		}
 
-
-		@include media-query(portable){
-			background-color: $tdc-navy;
-			@include position(absolute, null 0 0 0);
-		}
-
-		@include media-query(note-and-up){
-			background-color: rgba(0,29,65,0.89);
-			width: 423px;
-			padding: 32px 40px;
-			@include font-size(36px);
-			line-height: 44px;
-		}
-
 		.location-banner--right & {
 			@include media-query(note-and-up){
 				@include position(absolute, 147px 30px null null);
@@ -141,5 +140,29 @@
 	
 		&:after {
 			right: 25px;
+			background-image: none;
+		}
+		
+		span {
+			@include position(relative, null);
+
+			&:after {
+				content: "";
+				background-repeat: no-repeat;
+				background-size: 100%;
+				@include position(absolute, 0 -1.25em 0 null);
+				background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
+				background-position: center;
+				float: right;
+				height: 100%;
+				width: 15px;
+				margin-left: 0.5em;
+			}
+		}
+
+		@include media-query(note-and-up){
+			display: inline-block;
+			text-align: left;
+			
 		}
 	}
