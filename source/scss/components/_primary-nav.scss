@@ -8,7 +8,7 @@
 	display: none;
 	
 	@include media-query(note-and-up){
-		display: block;
+		display: block !important;
 		@include position(absolute, 0px 0 null 0);
 	}
 	
