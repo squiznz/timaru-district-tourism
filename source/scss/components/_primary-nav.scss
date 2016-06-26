@@ -97,7 +97,8 @@
 
 
 .primary-nav__panel {
-	
+	padding: 40px;
+
 	@include media-query(portable){
  		display: none !important;	
  	}

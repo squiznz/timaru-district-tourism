@@ -184,7 +184,7 @@ function searchForm() {
 
 function megaMenu() {
 
-  if ($(window).width() > 767) {
+  if ($(window).width() > 1023) {
     var navItems = $('.primary-nav ul li');
 
     $('.primary-nav__first-level > li > a').click(function(e) {
