@@ -28,7 +28,7 @@
 		@include container(1063px);
 
 		li {
-			max-width: 310px;
+			// max-width: 310px;
 
 			@include media-query(portable){
 				margin: 0 11px;

@@ -15,10 +15,8 @@
 	.slider-tools {
 		@include container(1005px);
 	}
-}
 
-
-	.our-region__selector-wrap {
+		header {
 		padding: 0 21px 15px 21px;
 		@include clearfix();
 		@include font-size(24px);
@@ -53,6 +51,7 @@
 		    margin: 0 250px .5em 250px;
 		}
 	}
+}
 
 
 	.our-region__list {
@@ -90,6 +89,10 @@
 		.adbt & {
 		    max-height: 20.5em;
 		}
+
+		&:nth-child(n+2){
+			display: none;
+		}
 	}
 
 
@@ -118,8 +121,7 @@
 				font-family: $font-primary;
 			}
 
-			a {
-				@extend .more;
+			a.more {
 				display: inline-block;
 				@include position(absolute, null null 30px 21px);
 

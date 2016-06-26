@@ -98,6 +98,10 @@ function globalActions() {
    threeBest();
   });
 
+  $('.our-region').find('select').change(function(){
+   ourRegion();
+  });
+
   $('.in-this-section h2').click(function(e) {
     e.preventDefault();
     
@@ -112,6 +116,15 @@ function globalActions() {
 
 function threeBest(){
   var selection = $('.three-best').find('select').val();
+                    
+  $('ul[id='+selection+']').each(function(index){
+    $(this).show();
+    $(this).siblings('ul').hide();
+  });
+}
+
+function ourRegion(){
+  var selection = $('.our-region').find('select').val();
                     
   $('ul[id='+selection+']').each(function(index){
     $(this).show();
@@ -343,6 +356,7 @@ $(document).ready(function () {
   threeBest();
   megaMenu();  
   searchForm();
+  ourRegion();
  
   $(window).on("resize", debounce(function () {
     threeBestSlider();
