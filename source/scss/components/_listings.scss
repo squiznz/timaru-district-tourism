@@ -14,7 +14,6 @@ ul.listing {
 
 		@include media-query(note-and-up){
 			@include span(6.1 of 12 no-gutters);
-			// @include font-size(21.4px);
 			padding: 0 76px 55px 0;
 			margin-bottom: 55px;
 			line-height: 30px;
@@ -35,15 +34,6 @@ ul.listing {
 			&:after {
 				@include font-size(11px);
 			}
-		}
-		
-		.more {
-			// @include media-query(note-and-up){
-			// 	@include font-size(18px);
-			// 	&:after {
-			// 		bottom: -2px;
-			// 	}
-			// }
 		}
 
 		&:nth-child(even){
@@ -114,8 +104,8 @@ ul.listing--events {
 			max-width: 30%;
   		height: 328px;
 		}
-
-		&:nth-child(2n+1){
+	
+		&:not(.listing--events__feature):nth-child(even){
 			@include media-query(portable){
 				margin-right: 0;
 			}
@@ -228,8 +218,6 @@ ul.listing--events {
 
 		a.more {
 			margin-top: 20px;
-			// font-weight: $bold;
-			// @include font-size(14px);
 		}
 	}
 	
@@ -275,17 +263,6 @@ ul.listing--with-images {
 
 		strong {
 			color: $tdc-green;
-		}
-
-
-		.more {
-			// @include media-query(note-and-up){
-			// 	@include font-size(18px);
-				
-			// 	&:after {
-			// 		bottom: -2px;
-			// 	}
-			// }
 		}
 	}
 }
