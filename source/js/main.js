@@ -79,28 +79,6 @@ function globalActions() {
     $('.primary-nav').toggle().toggleClass('open');
     $('.utility-nav__item--primary-toggle').toggleClass('close');
   });
-  
-  $('.utility-nav__item--search-toggle a').click(function(e) {
-    e.preventDefault();
-    
-    $('.site-search').toggle().toggleClass('open');
-  });
-
-  $('.in-this-section h2').click(function(e) {
-    e.preventDefault();
-    
-    $(this).next('ul').toggle();  
-  });
-
-
-  $('.site-search input[type=search]').focus(function(e){
-    $(this).parent('fieldset').parent('form').parent('.site-search').addClass('site-search--expanded');
-  });
-
-  $('.site-search input[type=search]').focusout(function(e){
-    $(this).parent('fieldset').parent('form').parent('.site-search').blur().removeClass('site-search--expanded');
-  });
-
 
   $('.banner').each(function(index) {
       var bannerImage = $(this).data('img');
@@ -120,6 +98,16 @@ function globalActions() {
    threeBest();
   });
 
+  $('.our-region').find('select').change(function(){
+   ourRegion();
+  });
+
+  $('.in-this-section h2').click(function(e) {
+    e.preventDefault();
+    
+    $(this).next('ul').toggle();  
+  });
+
 
 }; // globalActions()
 
@@ -128,6 +116,15 @@ function globalActions() {
 
 function threeBest(){
   var selection = $('.three-best').find('select').val();
+                    
+  $('ul[id='+selection+']').each(function(index){
+    $(this).show();
+    $(this).siblings('ul').hide();
+  });
+}
+
+function ourRegion(){
+  var selection = $('.our-region').find('select').val();
                     
   $('ul[id='+selection+']').each(function(index){
     $(this).show();
@@ -162,21 +159,53 @@ function threeBestSlider() {
   }
 }
 
-function megaMenu() {
-  var navItems = $('.primary-nav ul li');
 
-  $('.primary-nav__first-level > li > a').click(function(e) {
+function searchForm() {
+  $('.utility-nav__item--search-toggle a').click(function(e) {
     e.preventDefault();
     e.stopPropagation();
-
-    $(this).parent('li').toggleClass('active').siblings().removeClass('active'); 
+    
+    $('.site-search').addClass('open');
+    
+      $('body').click(function(){
+        $('.site-search').removeClass('open');
+      }); 
   });
 
-  $('body').click(function(){
-    navItems.each(function(){
-      $(this).removeClass('active');
-    })
+
+  $('.site-search input[type=search]').focus(function(e){
+    $(this).parent('fieldset').parent('form').parent('.site-search').addClass('site-search--expanded');
   });
+
+  $('.site-search input[type=search]').focusout(function(e){
+    $(this).parent('fieldset').parent('form').parent('.site-search').blur().removeClass('site-search--expanded');
+  });
+}
+
+function megaMenu() {
+
+  if ($(window).width() > 1023) {
+    var navItems = $('.primary-nav ul li');
+
+    $('.primary-nav__first-level > li > a').click(function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      $(this).parent('li').toggleClass('active').siblings().removeClass('active'); 
+    });
+
+    $('body').click(function(){
+      navItems.each(function(){
+        $(this).removeClass('active');
+      })
+    });
+  } else {
+    $('.primary-nav__first-level > li > a').unbind('click');
+
+    $('.primary-nav__first-level > li > a').click(function(e) {
+      return true;
+    });
+  }
 } // globalActions()
 
 //
@@ -220,6 +249,18 @@ $(document).ready(function () {
     appendArrows: $('.slick-center .slider-tools'),
     appendDots: $('.slick-center .slider-dots'),
     responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          centerPadding: '24.3%'
+        }
+      }, 
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: '32%'
+        }
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -313,10 +354,16 @@ $(document).ready(function () {
   detectScrolling();
   globalActions();
   threeBest();
-  megaMenu(); 
-
-  threeBestSlider();
+  megaMenu();  
+  searchForm();
+  ourRegion();
+ 
   $(window).on("resize", debounce(function () {
     threeBestSlider();
+
+    console.log($(window).width())
+
+    megaMenu(); 
+
   }, 50)); 
 });

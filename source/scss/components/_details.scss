@@ -2,13 +2,6 @@
 *  Details Template
 ***/
 
-// .details {
-// 	@include container(1063px);
-// 	background-color: green;
-// }
-
-
-
 .details {
 	main {
 		.container {
@@ -19,8 +12,15 @@
 
 
 .details-wrap {
-	@include container(857px);
-	padding: 0 30px;
+	@include container(800px);
 	float: left;
+	
+	h2,h3,h4,h5,h6 {
+		margin-top: 30px;
+	}
 }
 
+
+.details__integration {
+	padding: 0;
+}

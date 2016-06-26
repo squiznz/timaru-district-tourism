@@ -81,15 +81,23 @@ img {
 }
 //End ADBT
 
-.detail-wrap {
-	@include container(68.09557273366129%);
-	float: left;
-	margin-bottom: 50px;
-}
+// .detail-wrap {
+// 	@include container(68.09557273366129%);
+// 	float: left;
+// 	margin-bottom: 50px;
+
+// 	h1,h2,h3,h4,h5,h6 {
+// 		margin-top: 30px;
+// 	}
+// }
 
 
 .inside-wrap {
 	margin-bottom: 21px;
+
+	h2,h3,h4,h5,h6 {
+		margin-top: 30px;
+	}
 
 	@include media-query(note-and-up){
 		width: 796px;
@@ -708,10 +716,22 @@ video {
  	}
 }
 
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ font-family: $font-primary !important;
+ overflow: none;
+}
+
 
 .feature-map {
-	width: 100%;
 	height: 560px;
+	width: 100vw;
+	margin-top: 60px;
+  // margin-left: calc(-50vw + 50%);
 }
 
 

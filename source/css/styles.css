@@ -1700,22 +1700,12 @@ img {
   width: 100%;
 }
 
-.detail-wrap {
-  max-width: 68.09557%;
-  margin-left: auto;
-  margin-right: auto;
-  float: left;
-  margin-bottom: 50px;
-}
-
-.detail-wrap:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 .inside-wrap {
   margin-bottom: 21px;
+}
+
+.inside-wrap h2, .inside-wrap h3, .inside-wrap h4, .inside-wrap h5, .inside-wrap h6 {
+  margin-top: 30px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1973,7 +1963,7 @@ figure.featured-activity figcaption ul li i {
   }
 }
 
-a.more, .our-region__info-wrap a {
+a.more {
   display: inline-block;
   position: relative;
   color: #00132a;
@@ -1984,7 +1974,7 @@ a.more, .our-region__info-wrap a {
   line-height: 21px;
 }
 
-a.more:after, .our-region__info-wrap a:after {
+a.more:after {
   content: "\f0da";
   font-family: "FontAwesome";
   position: absolute;
@@ -2426,9 +2416,25 @@ video {
   }
 }
 
+pre {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  font-family: "Source Sans Pro", sans-serif !important;
+  overflow: none;
+}
+
 .feature-map {
-  width: 100%;
   height: 560px;
+  width: 100vw;
+  margin-top: 60px;
 }
 
 section {
@@ -2713,6 +2719,10 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   }
 }
 
+.site-search.open {
+  display: block;
+}
+
 .global-header__utility-nav-wrap {
   max-width: 79.375em;
   margin-left: auto;
@@ -2986,7 +2996,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 
 @media screen and (min-width: 1024px) {
   .primary-nav {
-    display: block;
+    display: block !important;
     position: absolute;
     top: 0px;
     right: 0;
@@ -3056,6 +3066,12 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+@media screen and (min-width: 768px) {
+  .primary-nav ul li a {
+    padding: 18px 45px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .primary-nav ul li a {
     padding: 30px 16px;
@@ -3075,6 +3091,10 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 
 .home .primary-nav, .primary-nav .adbt {
   background-color: transparent;
+}
+
+.primary-nav__panel {
+  padding: 40px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -3185,7 +3205,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   display: block;
 }
 
-.primary-nav__panel__info .more, .primary-nav__panel__info .our-region__info-wrap a, .our-region__info-wrap .primary-nav__panel__info a {
+.primary-nav__panel__info .more {
   padding: 0;
   color: #0093d0;
   border: none !important;
@@ -3949,6 +3969,27 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 }
 
 @media screen and (max-width: 1023px) {
+  .location-banner__info {
+    background-color: #001d41;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .location-banner__info {
+    background-color: rgba(0, 29, 65, 0.89);
+    width: 423px;
+    padding: 32px 40px;
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 44px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
   .location-banner__info p {
     font-weight: 300;
   }
@@ -3994,27 +4035,6 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   }
 }
 
-@media screen and (max-width: 1023px) {
-  .location-banner__info {
-    background-color: #001d41;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .location-banner__info {
-    background-color: rgba(0, 29, 65, 0.89);
-    width: 423px;
-    padding: 32px 40px;
-    font-size: 36px;
-    font-size: 2.25rem;
-    line-height: 44px;
-  }
-}
-
 @media screen and (min-width: 1024px) {
   .location-banner--right .location-banner__info {
     position: absolute;
@@ -4046,6 +4066,34 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 
 .location-banner__cta:after {
   right: 25px;
+  background-image: none;
+}
+
+.location-banner__cta span {
+  position: relative;
+}
+
+.location-banner__cta span:after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  right: -1.25em;
+  bottom: 0;
+  background-image: url("/__data/assets/image/0005/68702/arrow-right-white.png");
+  background-position: center;
+  float: right;
+  height: 100%;
+  width: 15px;
+  margin-left: 0.5em;
+}
+
+@media screen and (min-width: 1024px) {
+  .location-banner__cta {
+    display: inline-block;
+    text-align: left;
+  }
 }
 
 /***
@@ -4080,37 +4128,37 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   clear: both;
 }
 
-.our-region__selector-wrap {
+.our-region header {
   padding: 0 21px 15px 21px;
   font-size: 24px;
   font-size: 1.5rem;
 }
 
-.our-region__selector-wrap::after {
+.our-region header::after {
   clear: both;
   content: "";
   display: table;
 }
 
 @media screen and (min-width: 1024px) {
-  .our-region__selector-wrap {
+  .our-region header {
     max-width: 1005px;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
     margin-bottom: 15px;
   }
-  .our-region__selector-wrap:after {
+  .our-region header:after {
     content: " ";
     display: block;
     clear: both;
   }
-  .our-region__selector-wrap * {
+  .our-region header * {
     height: 100% !important;
   }
 }
 
-.our-region__selector-wrap h2 {
+.our-region header h2 {
   display: inline;
   float: left;
   color: #00132a;
@@ -4123,18 +4171,19 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 }
 
 @media screen and (min-width: 1024px) {
-  .our-region__selector-wrap h2 {
+  .our-region header h2 {
     display: block;
   }
 }
 
-.adbt .our-region__selector-wrap {
+.adbt .our-region header {
   margin: 0 250px .5em 250px;
 }
 
 .our-region__list li {
   margin: 0 11px 0 11px;
   height: 341px;
+  width: 310px;
   background-color: #f7f7f7;
   position: relative;
 }
@@ -4164,6 +4213,10 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 
 .adbt .our-region__list {
   max-height: 20.5em;
+}
+
+.our-region__list:nth-child(n+2) {
+  display: none;
 }
 
 .our-region__info-wrap {
@@ -4197,7 +4250,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.our-region__info-wrap a {
+.our-region__info-wrap a.more {
   display: inline-block;
   position: absolute;
   bottom: 30px;
@@ -4205,14 +4258,14 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 }
 
 @media screen and (min-width: 1024px) {
-  .our-region__info-wrap a {
+  .our-region__info-wrap a.more {
     position: absolute;
     bottom: 40px;
     left: 30px;
   }
 }
 
-.our-region__info-wrap a:after {
+.our-region__info-wrap a.more:after {
   content: "\f0da";
   font-family: 'FontAwesome';
   font-size: 11px;
@@ -4288,6 +4341,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 @media screen and (max-width: 1023px) {
   .three-best__list li {
     margin: 0 11px;
+    width: 310px;
   }
 }
 
@@ -4536,13 +4590,13 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 *   Feature Banner
 ***/
 .feature-banner {
-  background-size: cover !important;
   color: #FFFFFF;
   width: 100%;
   height: 240px;
   background: none;
   text-align: center;
   margin-bottom: 25px;
+  background-size: cover !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -4989,6 +5043,15 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   }
 }
 
+.related-info ul li:last-of-type a {
+  text-transform: capitalize;
+}
+
+.related-info ul li:last-of-type i {
+  font-size: 10px;
+  font-size: 0.625rem;
+}
+
 .related-info ul a {
   padding: 6px 0;
   display: block;
@@ -5395,14 +5458,14 @@ ul.listing--events li.listing--events__feature .listing--events__info-wrap {
   }
 }
 
-ul.listing--events li.listing--events__feature .listing--events__info-wrap a.more, ul.listing--events li.listing--events__feature .listing--events__info-wrap .our-region__info-wrap a, .our-region__info-wrap ul.listing--events li.listing--events__feature .listing--events__info-wrap a {
+ul.listing--events li.listing--events__feature .listing--events__info-wrap a.more {
   position: relative;
   float: left;
   display: inline-block;
 }
 
 @media screen and (min-width: 1024px) {
-  ul.listing--events li.listing--events__feature .listing--events__info-wrap a.more, ul.listing--events li.listing--events__feature .listing--events__info-wrap .our-region__info-wrap a, .our-region__info-wrap ul.listing--events li.listing--events__feature .listing--events__info-wrap a {
+  ul.listing--events li.listing--events__feature .listing--events__info-wrap a.more {
     position: absolute;
     bottom: 35px;
     left: 35px;
@@ -5476,7 +5539,7 @@ ul.listing--events .listing--events__info-wrap span {
   }
 }
 
-ul.listing--events .listing--events__info-wrap a.more, ul.listing--events .listing--events__info-wrap .our-region__info-wrap a, .our-region__info-wrap ul.listing--events .listing--events__info-wrap a {
+ul.listing--events .listing--events__info-wrap a.more {
   margin-top: 20px;
 }
 
@@ -5601,10 +5664,9 @@ ul.tags-list > li > span {
 }
 
 .details-wrap {
-  max-width: 857px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 30px;
   float: left;
 }
 
@@ -5612,6 +5674,14 @@ ul.tags-list > li > span {
   content: " ";
   display: block;
   clear: both;
+}
+
+.details-wrap h2, .details-wrap h3, .details-wrap h4, .details-wrap h5, .details-wrap h6 {
+  margin-top: 30px;
+}
+
+.details__integration {
+  padding: 0;
 }
 
 /***
@@ -5669,7 +5739,7 @@ ul.tags-list > li > span {
   margin-bottom: 15px;
 }
 
-.landing-list li a.more, .landing-list li .our-region__info-wrap a, .our-region__info-wrap .landing-list li a {
+.landing-list li a.more {
   color: #0093d0;
   position: absolute;
   bottom: 30px;
@@ -5810,7 +5880,7 @@ ul.tags-list > li > span {
   }
 }
 
-.topic-list li a.more, .topic-list li .our-region__info-wrap a, .our-region__info-wrap .topic-list li a {
+.topic-list li a.more {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -5935,7 +6005,7 @@ ul.tags-list > li > span {
   }
 }
 
-.topic-list_item--featured > div a.more, .topic-list_item--featured > div .our-region__info-wrap a, .our-region__info-wrap .topic-list_item--featured > div a {
+.topic-list_item--featured > div a.more {
   color: #0093d0;
   margin-top: 21px;
   position: relative;
