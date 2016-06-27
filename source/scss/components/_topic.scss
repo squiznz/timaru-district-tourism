@@ -30,7 +30,8 @@
 			@include position(relative, null);
 
 			@include media-query(note-and-up){
-				padding: 30px 0 70px 0;
+				padding: 30px 0;
+				min-height: 160px;
 			}
 		}
 
@@ -83,7 +84,26 @@
 		background-color: $tdc-navy;
 
 		@include media-query(palm-land-up){
+			height: 494px;
+		}
+		
+		@include media-query(note-and-up){
 			height: 300px;
+		}
+
+		ul.tags-list {
+			@include media-query(note-and-up){
+				width: 49.1525%;
+				@include position(absolute, 40px 0 0 54%);
+
+			 	li {
+			 		background-color: $white;
+					
+					&:after {
+						color: $tdc-navy;
+					}
+			 	}
+			}
 		}
 
 		img {
@@ -96,6 +116,7 @@
 		
 			@include media-query(note-and-up){
 				width: 50% !important;
+				height: 100%;
 				float: left;
 			}
 		}
@@ -111,7 +132,7 @@
 			@include media-query(note-and-up){
 				@include span(6 of 12 no-gutters);
 				height: 100%;
-				padding: 50px 42px !important;
+				padding: 115px 42px !important;
 			}
 
 			a.more {

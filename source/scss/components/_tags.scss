@@ -5,9 +5,11 @@
 ul.tags-list {
 	@extend .bare-list;
 	text-indent: -999999px;
+	width: 100%;
 
 	> li {
 		display: inline-block;
+		float: left;
 		background-color: rgba(0, 16, 36, 0.80);
 		border-radius: 50%;
 		color: $white;

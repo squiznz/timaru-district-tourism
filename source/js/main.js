@@ -111,9 +111,57 @@ function globalActions() {
   });
 
 
+
+
+
+
+  if ($('.our-region').length !== 0) {    
+    $.get(( "./assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + root[0]), function (response) {
+      $('.our-region__wrap').html(response);
+      ourRegionSlider();
+  });
+  } 
+
 }; // globalActions()
 
-
+function ourRegionSlider(){
+  $('.our-region__list').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    centerMode: true,
+    centerPadding: '8.6%',
+    draggable: false,
+    appendArrows: $('.slick-center .slider-tools'),
+    appendDots: $('.slick-center .slider-dots'),
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          centerPadding: '24.3%'
+        }
+      }, 
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: '32%'
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+    ]
+  });
+}
 
 
 function threeBest(){
@@ -126,11 +174,13 @@ function threeBest(){
 }
 
 function ourRegion(){
-  var selection = $('.our-region').find('select').val();
+  var root = $('.our-region').find('select').val();
                     
-  $('ul[id='+selection+']').each(function(index){
-    $(this).show();
-    $(this).siblings('ul').hide();
+  $.get(( "./assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + root), function (response) {
+    $('.our-region__wrap').html(response);
+    
+      ourRegionSlider();
+
   });
 }
 
@@ -238,7 +288,7 @@ function threeBestSlider() {
 
 /* Clean me */
 $(document).ready(function () {
-  $('.slick-center ul').slick({
+  $('.our-region__list').slick({
     dots: true,
     infinite: true,
     autoplay: false,
@@ -358,7 +408,7 @@ $(document).ready(function () {
   threeBest();
   megaMenu();  
   searchForm();
-  ourRegion();
+  // ourRegion();
  
   $(window).on("resize", debounce(function () {
     threeBestSlider();
