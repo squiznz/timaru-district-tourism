@@ -159,6 +159,8 @@
 					width: 100%;
 					border-bottom: 1px solid $tdc-navy;
 					padding-left: 21px;
+					height: 40px;
+					line-height: 40px;
 
 					@include media-query(palm-land-up){
 						width: auto;
@@ -168,6 +170,7 @@
 					@include media-query(note-and-up){
 						padding-left: 0px !important;
 						border-bottom: none;
+						padding-right: 21px;
 					}
 				}
 
@@ -180,7 +183,7 @@
 
 					@include media-query(note-and-up){
 						float: none;
-						@include position(absolute, 0 150px 0 null);
+						@include position(absolute, 0 135px 0 null);
 						border-right: 1px solid $tdc-navy;
 					}
 				}
@@ -188,7 +191,11 @@
 				&:nth-child(5) {
 					@include media-query(note-and-up){
 						@include position(absolute, 0 30px 0 null);
-						padding-right: 0;
+						// padding-right: 0;
+
+						a {
+							padding-right: 0;
+						}
 					}
 				}
 			}

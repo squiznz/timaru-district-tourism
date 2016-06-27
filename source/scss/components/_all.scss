@@ -368,6 +368,7 @@ ol {
 
 .popular-categories {
 	margin: 50px 0;
+	float: left;
 	@include clearfix();
 
 	h2 {

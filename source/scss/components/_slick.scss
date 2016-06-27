@@ -51,10 +51,6 @@
     top: 0;
     display: block;
 
-    .whats-on-slider & {
-		left: 300px;
-    }
-
     &:before,
     &:after {
         content: "";
@@ -68,10 +64,6 @@
     .slick-loading & {
         visibility: hidden;
     }
-
-    // whats-on & {
-    //     width: 100% !important;
-    // }
 }
 
 .slick-slide {

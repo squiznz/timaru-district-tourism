@@ -62,15 +62,17 @@ function globalActions() {
   };
 
   $('.tags-list').each(function(index) {
-    var $this = $(this),
-        $list = $this.text().trim().split(",");
-     
-    $this.empty();
+    if ($('.tags-list').text !== "") {
+      var $this = $(this),
+          $list = $this.text().trim().split(",");
+      
+      $this.empty();
 
-    for (i=0; i < $list.length; i++) {
-       var item = '<li class="' + $list[i] + '"><span>' + $list[i] + '</span></li>';
-       $this.append(item);
-    }
+      for (i=0; i < $list.length; i++) {
+         var item = '<li class="' + $list[i] + '"><span>' + $list[i] + '</span></li>';
+         $this.append(item);
+      }
+    };
   });
 
   $('.utility-nav__item--primary-toggle a').click(function(e) {
