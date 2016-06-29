@@ -10,10 +10,14 @@
 		@include span(1 of 1);
 		margin-bottom: 21px;
 		@include position(relative, null);
-
-		@include media-query(note-and-up){
-			@include span(4.133 of 12 no-gutters);
+		
+		@include media-query(palm-land-up){
+			@include span(6 of 12 (gutter-override: 0px));
 			margin-bottom: 30px;
+		}
+			
+		@include media-query(note-and-up){
+			@include span(4.133 of 12 (gutter-override: 0px));
 		}
 		
 		img {
@@ -31,7 +35,7 @@
 			@include position(relative, null);
 			padding: 40px 30px;
 
-			@include media-query(note-and-up){
+			@include media-query(palm-land-up){
 				border: 1px solid $tdc-grey;
 				border-left: none;
 			}
@@ -55,8 +59,10 @@
 			margin-top: 21px;
 		}
 
-		&:nth-child(3n+1){
-			border-left: 1px solid $tdc-grey;
+		&:nth-child(3n+1){			
+			@include media-query(palm-land-up){
+				border-left: 1px solid $tdc-grey;
+			}
 		}
 	}
 

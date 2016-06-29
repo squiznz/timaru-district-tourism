@@ -97,6 +97,7 @@ form {
 		content: "\f0d7";
 		color: $tdc-green;
 		cursor: pointer;
+		line-height: 42px;
 		font-size: 70%;
 		pointer-events: none;
 		font-family: 'FontAwesome';
@@ -110,44 +111,3 @@ form {
     display: none;
 	}
 }
-
-
-
-.landing__search {
-	padding: 58px 0;
-	float: left;
-	width: 100%;
-	border-bottom: 1px solid $tdc-grey;
-
-	button {
-		text-indent: 0;
-		padding: 21px;
-		display: inline-block;
-		float: left;
-		margin-top: 46px;
-		width: 7em;
-		line-height: 16px;
-		
-		&:after {
-			right: 20px;
-		}
-	}
-}
-
-
-		.landing__search-wrap {
-			float: left;
-			width: 25.95em;
-			margin-right: 38px;
-
-			label {
-				font-weight: $bold;
-				margin-bottom: 15px;
-				display: block;
-			}
-
-			input, select {
-				height: 60px;
-				font-size: inherit;
-			}
-		}

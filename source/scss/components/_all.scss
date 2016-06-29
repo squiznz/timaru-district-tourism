@@ -81,19 +81,8 @@ img {
 }
 //End ADBT
 
-// .detail-wrap {
-// 	@include container(68.09557273366129%);
-// 	float: left;
-// 	margin-bottom: 50px;
-
-// 	h1,h2,h3,h4,h5,h6 {
-// 		margin-top: 30px;
-// 	}
-// }
-
-
 .inside-wrap {
-	margin-bottom: 21px;
+	margin-bottom: 100px;
 
 	h2,h3,h4,h5,h6 {
 		margin-top: 30px;
@@ -188,6 +177,7 @@ video {
 		background-repeat: no-repeat;
 		background-size: 100%;
 		background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
+		// background-image: url('../img/arrow-right-white.png');
 		background-position: center;
 		float: right;
 		height: 100%;
@@ -326,7 +316,7 @@ a.more {
 		font-family: "FontAwesome";
 		@include position(absolute, null -1em 0 null);
 		@include font-size(11px);
-		line-height: 21px;
+		line-height: 19px;
 	}
 }
 
@@ -368,6 +358,7 @@ ol {
 
 .popular-categories {
 	margin: 50px 0;
+	float: left;
 	@include clearfix();
 
 	h2 {
@@ -516,29 +507,21 @@ video {
 		}
 	}
 
-	button, input[type="submit"]{
-		@extend .cta-button;
-		border: none;
-		width: 100%;
-		line-height: 1em;
-		height: 45px;
-		-webkit-appearance: none;
+	input[type="submit"]{
+		@extend .cta-button;	
 		@include font-size(17px);
+		background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
+		background-repeat: no-repeat;
+		background-size: 17px;
+		background-position: 90% center;
 
 		@include media-query(palm-land-up){
 			width: 107px;
 			margin: 0;
 			float: left;
 		}
-
-		@include media-query(note-and-up){
-			padding: 15px 42px 15px 21px;
-			width: 146px !important;
-		}
 	}
 }
-
-
 
 
 .pagination {
@@ -728,10 +711,10 @@ pre {
 
 
 .feature-map {
-	height: 560px;
+	height: 450px;
 	width: 100vw;
+	max-width: 1700px;
 	margin-top: 60px;
-  // margin-left: calc(-50vw + 50%);
 }
 
 
@@ -763,7 +746,6 @@ section {
 			color: $tdc-dark-navy;
 			font-weight: $medium;
 		}
-	
 
 		a.view-all {
 			float: right;

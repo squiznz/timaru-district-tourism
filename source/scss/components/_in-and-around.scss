@@ -12,7 +12,7 @@
 		@include container(1700px);
 	}
 
-	@include media-query(note-and-up){
+	@include media-query(palm-land-up){
 		height: 560px;
 		background-color: $tdc-purple;
 	}
@@ -23,18 +23,23 @@
 		color: $white;
 		line-height: 2em;
 		margin: 0;
+		@include font-size(22px);
 		@include position(absolute, 0 0 null 0);
 		z-index: 99999;
-
-		@include media-query(note-and-up){
+		
+		@include media-query(palm-land-up){
+			@include font-size(24px);
 			@include position(static, null);
 		}
+		
+		// @include media-query(note-and-up){
+		// }
 	}
 
 	.select-wrap {
 		width: 100%;
 		
-		@include media-query(note-and-up){
+		@include media-query(palm-land-up){
 			display: none;
 		}
 		
@@ -64,8 +69,7 @@
 	.in-and-around__wrap {
 		@include clearfix();
 
-		@include media-query(note-and-up){
-			// @include position(absolute, 55px 55px 55px null);
+		@include media-query(palm-land-up){
 			width: 30.352941176470587%;
 			margin: 55px 55px 55px 0;
 			float: right;
@@ -77,10 +81,8 @@
 			border-bottom: 1px solid $tdc-grey;
 			@include clearfix();
 
-			@include media-query(note-and-up){
+			@include media-query(palm-land-up){
 				border-bottom: none;
-				// float: right;
-				// margin: 55px;
 			}
 		}
 
@@ -92,7 +94,7 @@
 			@include position(relative, null);
 			background-color: $white;
 				
-			@include media-query(note-and-up){
+			@include media-query(palm-land-up){
 				padding: 21px 80px 21px 21px;
 			}
 
@@ -117,7 +119,7 @@
 					}		
 				}
 			
-				@include media-query(note-and-up){
+				@include media-query(palm-land-up){
 					background-color: #f7f7f7;
 
 					&:after {
@@ -140,11 +142,11 @@
 		background-color: $black;
 		float: left;
 		height: 295px;
-		margin-top: 56px;
+		margin-top: 44px;
 		@include clearfix();
 		width: 100%;
 
-		@include media-query(note-and-up){
+		@include media-query(palm-land-up){
 			height: 560px;
 			width: 63.2%;
 			margin: 0;
