@@ -101,6 +101,10 @@ form {
 		font-size: 70%;
 		pointer-events: none;
 		font-family: 'FontAwesome';
+
+		.tc-tdc-light-blue & {
+			color: $tdc-light-blue !important;
+		}
 	}
 
   &::-ms-expand {

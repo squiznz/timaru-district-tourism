@@ -13,16 +13,15 @@
 	}
 	
 	//ADBT
-	.adbt.two_col &, .adbt.three_col &, .adbt.home_page & {
+	.adbt & {
 		background-color: transparent;
 	}
 
-	.adbt.one_col &, .adbt.home_page & {
+	.adbt & {
 		background-color: transparent;
 		> .container {
  			> ul {
- 				padding: 0 0 0 290px;
-
+    			padding: 0 193px;
 			 	> li {
 		 		    color: $tdc-navy;
 			 	}

@@ -47,10 +47,6 @@
 					display: block;
 				}
 			}
-		
-		.adbt & {
-		    margin: 0 250px .5em 250px;
-		}
 	}
 }
 
@@ -86,10 +82,6 @@
 				}
 			}
 		}
-
-		.adbt & {
-		    max-height: 20.5em;
-		}
 	}
 
 
@@ -116,6 +108,10 @@
 				display: block;
 				line-height: 1.2em;
 				font-family: $font-primary;
+
+				.adbt & {
+					color: $tdc-light-blue;
+				}
 			}
 
 			a.more {

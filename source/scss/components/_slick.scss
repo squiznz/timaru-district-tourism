@@ -31,9 +31,9 @@
         cursor: hand;
     }
 
-    .adbt.home_page & {
-        max-height: 18.1em;
-    }
+    // .adbt.home_page & {
+    //     max-height: 18.1em;
+    // }
 }
 .slick-slider .slick-track,
 .slick-slider .slick-list {
@@ -220,9 +220,9 @@ $slick-opacity-not-active: 1 !default;
 	@include container();
 	height: 40px;
 
-    .adbt & {
-        @include container(57.25em);
-    }
+    // .adbt & {
+    //     @include container(57.25em);
+    // }
 }
 
 .slick-prev {
