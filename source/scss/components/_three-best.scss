@@ -80,3 +80,11 @@
 				font-weight: $bold;
 			}
 		}
+
+		.three-best-select--blue {
+			color: $tdc-light-blue !important;
+
+			&:after {
+				color: $tdc-light-blue !important;
+			}
+		}

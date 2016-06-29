@@ -26,6 +26,10 @@
 
 		@include media-query(note-and-up){
 			padding: 60px 30px;
+
+			.adbt & {
+			    padding: 60px 30px 40px;
+			}
 		}
 	}
 
@@ -40,6 +44,10 @@
 			width: 114px;
 			padding: 0;
 			margin-right: 35px;
+
+			.adbt & {
+			    margin-top: -17px;
+			}
 		}
 	}
 		
@@ -62,6 +70,12 @@
 
 			i {
 				@include font-size(18px);
+			}
+		}
+
+		.adbt & {
+			@include media-query(portable){
+		    	margin-top: 1em;
 			}
 		}
 	}

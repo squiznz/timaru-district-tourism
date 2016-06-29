@@ -271,10 +271,16 @@ ul.listing--with-images {
 		img {
 			margin-bottom: 30px;
 			width: 100%;
+		    object-fit: contain;
+    		object-position: left;
 		}
 
 		strong {
 			color: $tdc-green;
+
+			.adbt & {
+				color: $tdc-light-blue;
+			}
 		}
 
 

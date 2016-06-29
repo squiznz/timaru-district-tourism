@@ -13,11 +13,11 @@
 	}
 	
 	//ADBT
-	.adbt.two_col &, .adbt.three_col &, .adbt.home_page & {
+	.adbt & {
 		background-color: transparent;
 	}
 
-	.adbt.one_col &, .adbt.home_page & {
+	.adbt & {
 		background-color: transparent;
 		> .container {
  			> ul {

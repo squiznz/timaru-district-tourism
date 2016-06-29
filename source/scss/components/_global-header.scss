@@ -24,7 +24,7 @@
 	}
 	
 	//ADBT
-	.adbt.one_col &, .adbt.home_page &{
+	.adbt & {
 		@include media-query(note-and-up){
 			@include position(relative, 0 0 null 0);
 		}
@@ -128,7 +128,7 @@
 				font-family: $font-primary;
 
 			//ADBT
-			.adbt.one_col &, .adbt.home_page & {
+			.adbt & {
 				color: $tdc-dark-navy;
 			}
 			//End ADBT
@@ -143,7 +143,7 @@
 				font-family: $font-primary;
 
 			//ADBT
-			.adbt.one_col &, .adbt.home_page & {
+			.adbt & {
 				color: $tdc-dark-navy;
 			}
 			//End ADBT 
@@ -157,7 +157,7 @@
 				font-family: $font-primary;
 
 			//ADBT
-			.adbt.one_col &, .adbt.home_page & {
+			.adbt & {
 				color: $tdc-dark-navy;
 			}
 			//End ADBT 
@@ -171,7 +171,7 @@
 				font-family: $font-primary;
 
 			//ADBT
-			.adbt.one_col &, .adbt.home_page & {
+			.adbt & {
 				color: $tdc-dark-navy;
 			}
 			//End ADBT 

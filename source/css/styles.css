@@ -2528,7 +2528,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 }
 
 @media screen and (min-width: 1024px) {
-  .adbt.one_col .global-header, .adbt.home_page .global-header {
+  .adbt .global-header {
     position: relative;
     top: 0;
     right: 0;
@@ -2655,7 +2655,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.adbt.one_col .site-search input[type="search"]::-webkit-input-placeholder, .adbt.home_page .site-search input[type="search"]::-webkit-input-placeholder {
+.adbt .site-search input[type="search"]::-webkit-input-placeholder {
   color: #00132a;
 }
 
@@ -2669,7 +2669,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.adbt.one_col .site-search input[type="search"]:-moz-placeholder, .adbt.home_page .site-search input[type="search"]:-moz-placeholder {
+.adbt .site-search input[type="search"]:-moz-placeholder {
   color: #00132a;
 }
 
@@ -2683,7 +2683,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.adbt.one_col .site-search input[type="search"]::-moz-placeholder, .adbt.home_page .site-search input[type="search"]::-moz-placeholder {
+.adbt .site-search input[type="search"]::-moz-placeholder {
   color: #00132a;
 }
 
@@ -2696,7 +2696,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.adbt.one_col .site-search input[type="search"]:-ms-input-placeholder, .adbt.home_page .site-search input[type="search"]:-ms-input-placeholder {
+.adbt .site-search input[type="search"]:-ms-input-placeholder {
   color: #00132a;
 }
 
@@ -2781,6 +2781,9 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   .global-footer__wrap {
     padding: 60px 30px;
   }
+  .adbt .global-footer__wrap {
+    padding: 60px 30px 40px;
+  }
 }
 
 .global-footer__logo {
@@ -2795,6 +2798,9 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
     width: 114px;
     padding: 0;
     margin-right: 35px;
+  }
+  .adbt .global-footer__logo {
+    margin-top: -17px;
   }
 }
 
@@ -2824,6 +2830,12 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 .social-media-links li i {
   font-size: 18px;
   font-size: 1.125rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .adbt .social-media-links {
+    margin-top: 1em;
+  }
 }
 
 .footer-nav {
@@ -3004,19 +3016,19 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   }
 }
 
-.adbt.two_col .primary-nav, .adbt.three_col .primary-nav, .adbt.home_page .primary-nav {
+.adbt .primary-nav {
   background-color: transparent;
 }
 
-.adbt.one_col .primary-nav, .adbt.home_page .primary-nav {
+.adbt .primary-nav {
   background-color: transparent;
 }
 
-.adbt.one_col .primary-nav > .container > ul, .adbt.home_page .primary-nav > .container > ul {
+.adbt .primary-nav > .container > ul {
   padding: 0 193px;
 }
 
-.adbt.one_col .primary-nav > .container > ul > li, .adbt.home_page .primary-nav > .container > ul > li {
+.adbt .primary-nav > .container > ul > li {
   color: #001d41;
 }
 
@@ -3291,7 +3303,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 
 @media screen and (min-width: 1024px) {
   .adbt .utility-nav__item--logo {
-    padding-top: 10px;
+    padding-top: 17px;
     width: 138px;
   }
 }
@@ -3935,7 +3947,7 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
 
 @media screen and (min-width: 1024px) {
   .adbt.one_col .location-banner {
-    height: 31.625em;
+    height: 28.625em;
   }
 }
 
@@ -4176,10 +4188,6 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   }
 }
 
-.adbt .our-region header {
-  margin: 0 250px .5em 250px;
-}
-
 .our-region__list li {
   margin: 0 11px 0 11px;
   height: 341px;
@@ -4211,12 +4219,12 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   }
 }
 
-.adbt .our-region__list {
-  max-height: 20.5em;
-}
-
 .our-region__list:nth-child(n+2) {
   display: none;
+}
+
+.adbt .our-region__list:nth-child(n+2) {
+  display: block;
 }
 
 .our-region__info-wrap {
@@ -4248,6 +4256,10 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   display: block;
   line-height: 1.2em;
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.adbt .our-region__info-wrap strong {
+  color: #0093d0;
 }
 
 .our-region__info-wrap a.more {
@@ -4394,6 +4406,14 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   display: block;
   margin-top: 10px;
   font-weight: 700;
+}
+
+.three-best-select--blue {
+  color: #0093d0 !important;
+}
+
+.three-best-select--blue:after {
+  color: #0093d0 !important;
 }
 
 /***
@@ -5212,6 +5232,10 @@ form input[type="submit"], form button[type="submit"] {
   font-family: 'FontAwesome';
 }
 
+.tc-tdc-light-blue .select-wrap:after {
+  color: #0093d0 !important;
+}
+
 .select-wrap::-ms-expand {
   display: none;
 }
@@ -5586,10 +5610,16 @@ ul.listing--with-images li {
 ul.listing--with-images li img {
   margin-bottom: 30px;
   width: 100%;
+  object-fit: contain;
+  object-position: left;
 }
 
 ul.listing--with-images li strong {
   color: #00d29b;
+}
+
+.adbt ul.listing--with-images li strong {
+  color: #0093d0;
 }
 
 ul.listing--basic img {
@@ -5713,6 +5743,10 @@ ul.tags-list > li > span {
   width: 100%;
 }
 
+.adbt .landing-list li img {
+  height: 400px;
+}
+
 .landing-list li div {
   border-top: none;
   height: 280px;
@@ -5754,6 +5788,10 @@ ul.tags-list > li > span {
 
 .landing-list .tags-list {
   display: none;
+}
+
+.adbt .landing-list {
+  margin-bottom: 0;
 }
 
 .landing-list__cta-strip {
@@ -6298,10 +6336,6 @@ ul.tags-list > li > span {
   cursor: hand;
 }
 
-.adbt.home_page .slick-list {
-  max-height: 18.1em;
-}
-
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
@@ -6455,18 +6489,6 @@ ul.tags-list > li > span {
 }
 
 .slider-tools:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.adbt .slider-tools {
-  max-width: 57.25em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.adbt .slider-tools:after {
   content: " ";
   display: block;
   clear: both;
