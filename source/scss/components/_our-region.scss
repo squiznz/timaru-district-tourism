@@ -19,7 +19,7 @@
 		header {
 			padding: 0 21px 15px 21px;
 			@include clearfix();
-			@include font-size(23px);
+			@include font-size(24px);
 			height: 47px;
 
 			@include media-query(note-and-up){
