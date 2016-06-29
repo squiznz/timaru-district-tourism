@@ -3,6 +3,8 @@
 ***/
 
 .topic-list {
+	margin-bottom: 80px;
+	
 	li {
 		@include clearfix();
 		float: left;

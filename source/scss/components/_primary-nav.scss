@@ -125,7 +125,7 @@
 
 		li {
 			@include span(1 of 2);
-			padding-right: 30px;
+			padding-right: 23px;
 
 			&:nth-child(even){
 				@include last();

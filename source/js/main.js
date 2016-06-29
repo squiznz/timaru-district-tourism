@@ -381,7 +381,11 @@ $(document).ready(function () {
   megaMenu();  
   searchForm();
   // ourRegion();
- 
+  
+  AOS.init({
+    duration: 1200
+  });
+
   $(window).on("resize", debounce(function () {
     threeBestSlider();
 
