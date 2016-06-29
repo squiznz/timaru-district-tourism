@@ -17,36 +17,37 @@
 	}
 
 		header {
-		padding: 0 21px 15px 21px;
-		@include clearfix();
-		@include font-size(24px);
-
-		@include media-query(note-and-up){
-			@include container(1005px);
-			padding: 0;
-			margin-bottom: 15px;
-
-			* {
-				height: 100% !important;
-			}
-		}
-
-		h2 {
-			display: inline;
-			float: left;
-			color: $tdc-dark-navy;
-			margin: 0;
-			font-weight: $medium;
-			@include font-size(24px);
-			margin-right: 0.5em;
-			display: inline-block;
+			padding: 0 21px 15px 21px;
+			@include clearfix();
+			@include font-size(23px);
+			height: 47px;
 
 			@include media-query(note-and-up){
-				display: block;
+				@include container(1005px);
+				padding: 0;
+				margin-bottom: 15px;
 			}
-		}
+			
+			* {
+				height: 100% !important;
+				line-height: 47px;
+			}
+
+			h2 {
+				display: inline-block !important;
+				float: left;
+				color: $tdc-dark-navy;
+				margin: 0;
+				font-weight: $medium;
+				@include font-size(24px);
+				margin-right: 0.5em;
+				display: inline-block;
+
+				@include media-query(note-and-up){
+					display: block;
+				}
+			}
 		
-		//ADBT
 		.adbt & {
 		    margin: 0 250px .5em 250px;
 		}
@@ -89,10 +90,6 @@
 		.adbt & {
 		    max-height: 20.5em;
 		}
-
-		// &:nth-child(n+2){
-		// 	display: none;
-		// }
 	}
 
 

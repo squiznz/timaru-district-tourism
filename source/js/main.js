@@ -176,7 +176,7 @@ function ourRegionSlider(){
 function threeBest(){
   var root = $('.three-best').find('select').val();
                   
-  $.get(( "../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + threeBestRoot[0]), function (response) {
+  $.get(( "../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + root), function (response) {
     $('.three-best__wrap').html(response);
     threeBestSlider();
   });
@@ -366,7 +366,7 @@ $(document).ready(function () {
         settings: "unslick"
       },
       {
-      breakpoint: 1024,
+      breakpoint: 768,
         settings: {
           centerMode: true,
           initialSlide: 1,

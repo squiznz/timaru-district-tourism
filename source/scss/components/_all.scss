@@ -81,19 +81,8 @@ img {
 }
 //End ADBT
 
-// .detail-wrap {
-// 	@include container(68.09557273366129%);
-// 	float: left;
-// 	margin-bottom: 50px;
-
-// 	h1,h2,h3,h4,h5,h6 {
-// 		margin-top: 30px;
-// 	}
-// }
-
-
 .inside-wrap {
-	margin-bottom: 21px;
+	margin-bottom: 100px;
 
 	h2,h3,h4,h5,h6 {
 		margin-top: 30px;
@@ -722,10 +711,10 @@ pre {
 
 
 .feature-map {
-	height: 560px;
+	height: 450px;
 	width: 100vw;
+	max-width: 1700px;
 	margin-top: 60px;
-  // margin-left: calc(-50vw + 50%);
 }
 
 
@@ -757,7 +746,6 @@ section {
 			color: $tdc-dark-navy;
 			font-weight: $medium;
 		}
-	
 
 		a.view-all {
 			float: right;

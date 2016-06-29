@@ -5,10 +5,14 @@
 .watch-timaru {
 	background-color: $white;
 	padding: 50px 21px 21px 21px;
-
+	
+	@include media-query(palm-land-up){
+		padding: 50px 45px;
+		@include position(relative, null);
+	}
+	
 	@include media-query(note-and-up){
 		padding: 50px 30px;
-		@include position(relative, null);
 	}
 
 	header {
@@ -24,8 +28,8 @@
 			}
 			
 			li {
-				@include media-query(note-and-up){
-					@include span(2.99 of 6 (gutter-override: 30px));
+				@include media-query(palm-land-up){
+					@include span(2.97 of 6 (gutter-override: 30px));
 
 					&:nth-child(2){
 						@include last();
@@ -84,6 +88,13 @@
 			
 			.watch-timaru__view-all {
 				@extend .view-all;
+
+				@include media-query(palm-land-up){
+					display: inline-block;
+					width: auto;
+					text-align: right;
+					@include position(absolute, 55px null null 635px);
+				}
 
 				@include media-query(note-and-up){
 					display: inline-block;
