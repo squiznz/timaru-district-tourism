@@ -33,7 +33,8 @@ $ultrabold  :  900;
 
 h1 {
 	@include font-size(40px);
-    font-weight: $bold;
+  font-weight: $bold;
+  line-height: 1.25em;
 }
 
 h2 {
