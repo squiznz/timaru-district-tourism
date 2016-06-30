@@ -26,6 +26,13 @@
     	    height: 28.625em;
 	    }
 	}
+
+	.adbt.home_page & {
+		&:first-child {
+		    background-position: 0 !important;
+    		background-size: initial !important;
+		}
+	}
 }
 
 

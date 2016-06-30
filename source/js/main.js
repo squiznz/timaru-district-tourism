@@ -95,7 +95,6 @@ function globalActions() {
       }
   });
 
-
   $('.three-best').find('select').change(function(){
    threeBest();
   });
@@ -111,11 +110,7 @@ function globalActions() {
   });
 
 
-
-
-
-
-  if ($('.our-region').length !== 0) {    
+  if ($('.our-region').length !== 0 && !$('.adbt').length) {    
     $.get(( "../assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + ourRegionRoot[0]), function (response) {
       $('.our-region__wrap').html(response);
       ourRegionSlider();
@@ -123,17 +118,69 @@ function globalActions() {
   }   
 
   if ($('.three-best').length !== 0) {    
-    $.get(( "../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + threeBestRoot[0]), function (response) {
+    $.get(( "../../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + threeBestRoot[0]), function (response) {
       $('.three-best__wrap').html(response);
       threeBestSlider();
     });
   }
-
-
 }; 
 // globalActions()
 
+
+function threeBest(){
+  var root = $('.three-best').find('select').val();               
+    $.get(( "../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + root), function (response) {
+      $('.three-best__wrap').html(response);
+      threeBestSlider();
+    });
+}
+
+function ourRegion(){
+  var root = $('.our-region').find('select').val();
+
+  if(!$('.adbt').length) {
+    $.get(( "./assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + root), function (response) {
+      $('.our-region__wrap').html(response);
+        ourRegionSlider();
+    });
+  }
+  else {
+    ourRegionSlider();
+  }
+}
+
+
+
+function threeBestSlider() {
+
+  $('.slick-three-best').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    centerMode: true,
+    centerPadding: '8.7%',
+    draggable: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: "unslick"
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  })
+}
+
 function ourRegionSlider(){
+
   $('.our-region__list').slick({
     dots: true,
     infinite: true,
@@ -142,8 +189,9 @@ function ourRegionSlider(){
     slidesToScroll: 1,
     mobileFirst: true,
     centerMode: true,
+    variableWidth: true,
     centerPadding: '8.6%',
-    draggable: false,
+    draggable: true,
     appendArrows: $('.slick-center .slider-tools'),
     appendDots: $('.slick-center .slider-dots'),
     responsive: [
@@ -172,77 +220,30 @@ function ourRegionSlider(){
   });
 }
 
+ // var $mobileSlider = $('.slick-three-best');
+ //  if ($(window).width() < 1025) {
+ //    if($mobileSlider.hasClass('slick-initialized')) {
+ //      $mobileSlider.slick('unslick');
+ //    }
 
-function threeBest(){
-  var root = $('.three-best').find('select').val();
-                  
-  $.get(( "../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + root), function (response) {
-    $('.three-best__wrap').html(response);
-    threeBestSlider();
-  });
-}
+ //    $mobileSlider.slick({
+ //      dots: true,
+ //      centerMode: true,
+ //      infinite: true,
+ //      draggable: true,
+ //      speed: 300,
+ //      arrows: false,
+ //      slidesToShow: 1,
+ //      variableWidth: true
+ //    });
 
-function ourRegion(){
-  var root = $('.our-region').find('select').val();
-                    
-  $.get(( "./assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + root), function (response) {
-    $('.our-region__wrap').html(response);
-      ourRegionSlider();
-  });
-}
+ //  } 
+ //  else {
+ //    if($mobileSlider.hasClass('slick-initialized')) {
+ //      $mobileSlider.slick('unslick');
+ //    }
+ //  }
 
-
-
-function threeBestSlider() {
-
-  $('.slick-three-best').slick({
-    dots: true,
-    infinite: true,
-    autoplay: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    centerMode: true,
-    centerPadding: '8.7%',
-    draggable: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: "unslick"
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-
- var $mobileSlider = $('.slick-three-best');
-  if ($(window).width() < 1023) {
-    if($mobileSlider.hasClass('slick-initialized')) {
-      $mobileSlider.slick('unslick');
-    }
-
-    $mobileSlider.slick({
-      dots: true,
-      centerMode: true,
-      infinite: true,
-      speed: 300,
-      arrows: false,
-      slidesToShow: 1,
-      variableWidth: true
-    });
-
-  } 
-  else {
-    if($mobileSlider.hasClass('slick-initialized')) {
-      $mobileSlider.slick('unslick');
-    }
-  }
-}
 
 
 function searchForm() {
@@ -284,6 +285,7 @@ function megaMenu() {
         $(this).removeClass('active');
       })
     });
+
   } else {
     $('.primary-nav__first-level > li > a').unbind('click');
 
@@ -304,6 +306,7 @@ function threeBestSlider() {
     $mobileSlider.slick({
       dots: true,
       centerMode: true,
+      draggable: true,
       infinite: true,
       speed: 300,
       arrows: false,
@@ -322,13 +325,13 @@ function threeBestSlider() {
 /* Clean me */
 $(document).ready(function () {
 
-  $('.slick').slick({
-    dots: true,
-    infinite: true,
-    mobileFirst: true,
-    slidesToScroll: 1,
-    slidesToShow: 1
-  });
+  // $('.slick').slick({
+  //   dots: true,
+  //   infinite: true,
+  //   mobileFirst: true,
+  //   slidesToScroll: 1,
+  //   slidesToShow: 1
+  // });
 
 
   $('.slick-watch-timaru').slick({
@@ -337,6 +340,7 @@ $(document).ready(function () {
     mobileFirst: true,
     slidesToScroll: 1,
     fade: true,
+    draggable: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: false,
@@ -354,7 +358,7 @@ $(document).ready(function () {
     infinite: true,
     autoplay: false,
     mobileFirst: true,
-    draggable: false,
+    draggable: true,
     variableWidth: true,
     centerMode: false,
     initialSlide: 1,
@@ -370,6 +374,8 @@ $(document).ready(function () {
         settings: {
           centerMode: true,
           initialSlide: 1,
+          rows: 3,
+          slidesPerRow: 2
         }
       }
     ]
@@ -380,14 +386,10 @@ $(document).ready(function () {
   threeBest();
   megaMenu();  
   searchForm();
-  // ourRegion();
+  ourRegion();
  
   $(window).on("resize", debounce(function () {
     threeBestSlider();
-
-    console.log($(window).width())
-
-    megaMenu(); 
-
+    megaMenu();
   }, 50)); 
 });

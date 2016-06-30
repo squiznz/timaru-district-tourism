@@ -3941,6 +3941,11 @@ section > header a.view-all, section > header a.watch-timaru__view-all {
   }
 }
 
+.adbt.home_page .location-banner:first-child {
+  background-position: 0 !important;
+  background-size: initial !important;
+}
+
 @media screen and (min-width: 1024px) {
   .location-banner__wrap {
     max-width: 1270px;
