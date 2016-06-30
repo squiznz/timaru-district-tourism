@@ -110,6 +110,14 @@ function globalActions() {
   });
 
 
+  if ($('.three-best').length !== 0) {    
+    $.get(( "../../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + threeBestRoot[0]), function (response) {
+      $('.three-best__wrap').html(response);
+      threeBestSlider();
+    });
+  }
+
+
   if ($('.our-region').length !== 0 && !$('.adbt').length) {    
     $.get(( "../assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + ourRegionRoot[0]), function (response) {
       $('.our-region__wrap').html(response);
@@ -117,12 +125,7 @@ function globalActions() {
     });
   }   
 
-  if ($('.three-best').length !== 0) {    
-    $.get(( "../../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + threeBestRoot[0]), function (response) {
-      $('.three-best__wrap').html(response);
-      threeBestSlider();
-    });
-  }
+
 }; 
 // globalActions()
 
@@ -386,8 +389,12 @@ $(document).ready(function () {
   threeBest();
   megaMenu();  
   searchForm();
-  ourRegion();
- 
+  // ourRegion();
+  
+  AOS.init({
+    duration: 1200
+  });
+
   $(window).on("resize", debounce(function () {
     threeBestSlider();
     megaMenu();

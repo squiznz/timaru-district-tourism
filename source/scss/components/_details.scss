@@ -12,9 +12,10 @@
 
 
 .details-wrap {
-	@include container(800px);
+	@include container(724px);
 	float: left;
-	
+	margin-bottom: 80px;
+
 	h2,h3,h4,h5,h6 {
 		margin-top: 30px;
 	}

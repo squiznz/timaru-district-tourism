@@ -4,29 +4,35 @@
 
 .watch-timaru {
 	background-color: $white;
-	padding: 50px 21px 21px 21px;
-	
-	@include media-query(palm-land-up){
-		padding: 50px 45px;
-		@include position(relative, null);
-	}
-	
-	@include media-query(note-and-up){
-		padding: 50px 30px;
-	}
+	padding: 0;
 
-	header {
+	> .container {
 		@include container(1063px);
+		padding: 50px 0;
+		@include position(relative, null);
+
+		@include media-query(palm-land-up){
+			padding: 50px 45px;
+		}
+		
+		@include media-query(note-and-up){
+			padding: 50px 30px;
+		}
+
+		header {
+			padding: 0 21px;
+
+			@include media-query(palm-land-up){
+				padding: 0 0 15px 0;
+			}
+		}
 	}
 }
 
 
 		.watch-timaru__list {
-			@include media-query(note-and-up){
-				padding: 0 30px;
-				@include container(1063px);
-			}
-			
+			width: 100%;
+
 			li {
 				@include media-query(palm-land-up){
 					@include span(2.97 of 6 (gutter-override: 30px));
@@ -45,7 +51,7 @@
 					background-color: $black;
 	
 					@include media-query(note-and-up){
-						height: 275px !important;
+						height: 270px !important;
 					}
 				}
 			}
@@ -53,7 +59,7 @@
 
 
 			.watch-timaru__info-wrap {		
-				padding: 21px 0;
+				padding: 21px;
 				
 				@include media-query(note-and-up){
 					padding: 30px 30px 0 0;
@@ -74,7 +80,7 @@
 				width: 100%;
 
 				@include media-query(note-and-up){
-					height: 275px;
+					height: 270px;
 				}
 			}
 
@@ -90,16 +96,8 @@
 				@extend .view-all;
 
 				@include media-query(palm-land-up){
-					display: inline-block;
-					width: auto;
+					// display: inline-block;
 					text-align: right;
-					@include position(absolute, 55px null null 635px);
-				}
-
-				@include media-query(note-and-up){
-					display: inline-block;
-					width: auto;
-					text-align: right;
-					@include position(absolute, 55px null null 1270px);
+					@include position(absolute, 60px 30px null null);
 				}
 			}

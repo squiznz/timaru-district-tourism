@@ -66,9 +66,7 @@
 		}
 
 		p {
-			@include media-query(portable){
-				font-weight: $light;
-			}
+			font-weight: $light;	
 		}
 
 		> span {

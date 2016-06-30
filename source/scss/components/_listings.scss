@@ -207,13 +207,14 @@ ul.listing--events {
 			margin-top: 10px;
 
 			@include media-query(note-and-up){
-				line-height: 40px;
+				// line-height: 40px;
 				margin-top: 0;
 			}
 		}
 
 		@include media-query(note-and-up){
 			@include position(absolute, null null 35px 35px);
+			width: 85%;
 		}
 
 		a.more {
