@@ -116,6 +116,10 @@
 
 		strong {
 			font-weight: $ultrabold;
+
+			&:after {
+				content: ":";
+			}
 		}
 	}
 
@@ -139,7 +143,7 @@
 				content: "";
 				background-repeat: no-repeat;
 				@include position(absolute, 0 -1.25em 0 null);
-				// background-image: url(../img/01TDCsprites.svg);
+				// background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				background-position: -200px -95px;
 				background-size: 400px;
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
