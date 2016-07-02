@@ -52,7 +52,7 @@ form {
 		letter-spacing: 0.02em;
 
 		//ADBT
-		.adbt.one_col &, .adbt.home_page & {
+		.adbt & {
 			color: $tdc-dark-navy;
 		}
 		//End ADBT
@@ -79,17 +79,17 @@ form {
 		height: auto;
 		outline: none;
 		margin: 0;
-   	background: transparent;
+   		background: transparent;
 		@include position(relative, null);
 		text-indent: 0.01px;
 		text-overflow: "";
-    appearance: none;
-    padding: 0 1em 0 0;
+    	appearance: none;
+    	padding: 0 1em 0 0;
 
-    &:focus {
-    	outline: none; 
-    	border: none;
-    }
+	    &:focus {
+	    	outline: none; 
+	    	border: none;
+	    }
 	}
 
 	&:after {
@@ -101,13 +101,15 @@ form {
 		font-size: 70%;
 		pointer-events: none;
 		font-family: 'FontAwesome';
+	}
 
-		.tc-tdc-light-blue & {
+	&.tc-tdc-light-blue {
+		&:after {
 			color: $tdc-light-blue !important;
 		}
 	}
 
   &::-ms-expand {
     display: none;
-	}
+  }
 }

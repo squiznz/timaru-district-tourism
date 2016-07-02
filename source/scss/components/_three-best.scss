@@ -91,7 +91,7 @@
 		.three-best-select--blue {
 			color: $tdc-light-blue !important;
 
-			&:after {
+			&::after {
 				color: $tdc-light-blue !important;
 			}
 		}
