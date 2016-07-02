@@ -53,18 +53,16 @@
 				width: 100%;
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				background-size: 400px;
-				background-position: 0 30px;
+				background-position: 0 32px;
 				background-repeat: no-repeat;
 			}
 
-			//ADBT
 			@include media-query(note-and-up) {
 				.adbt & {
 	    			padding-top: 17px;
 	    			width: 138px;
 				}
 			}
-			//End ADBT
 		}
 
 
