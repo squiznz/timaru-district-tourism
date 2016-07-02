@@ -23,51 +23,81 @@ ul.tags-list {
 		@include font-size(14px);
 		line-height: 30px;
 		@include position(relative, null);
-
+	  -webkit-transition: width 0.5s;
+		transition: width 0.5s;
+	
 		&:after {
 			@include position(absolute, 0 0 0 0);
 			line-height: inherit;
-			color: $white;
-			content: "?";
+			content: "";
 			width: 100%;
+			// background-image: url(../img/01TDCsprites.svg);
+			background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+			background-size: 400px;
 			height: 100%;
-			font-family: "FontAwesome";
 			text-indent: 0px;
 			text-align: center;
 		}
+	
+		&:hover, &:focus {
+			width: auto !important;
+			border-radius: 15px;
+			padding: 0 10px 0 35px;
+		  -webkit-transition: 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+	    transition: 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+			line-height: 28px;
+
+			&:after {
+				width: 30px;
+			}
+
+			> span {
+				visibility: visible;
+  	    -webkit-transition:opacity 0.25s  ease-in-out;
+		    transition:opacity 0.25s  ease-in-out;
+				opacity: 1;
+				@include font-size(12px);
+				text-transform: uppercase;
+			}
+		}
 
 		> span {
-			display: none;
+			visibility: hidden;
+			opacity: 0;
 		}
 		
-		&.family-friendly {
-			
+		&.family-friendly:after {
+			background-position: -0px -0px;
 		}
 
-		&.accessible {
-
+		&.accessible:after {
+			background-position: -0px -0px;
 		}
 
-		&.local-picks {
-			
+		&.local-favs:after {
+			background-position: -43px -240px;
 		}
 	
-		&.pet-friendly {
-			
+		&.pet-friendly:after {
+			background-position: -0px -0px;
 		}
 
-		&.maori-culture {
-			
+		&.maori-culture:after {
+			background-position: -0px -0px;
 		}
 
-		&.heritage {
-			
+		&.heritage:after {
+			background-position: -0px -0px;
 		}
 
-		&.free {
-	
+		&.free:after {
+			background-position: -0px -0px;
 		}
-
+		
+		&.popular-routes:after {
+			background-position: 6px -243px;
+		}
+		
 		.topic-list__featured-item & {
 			@include media-query(note-and-up){
 				background-color: $white;

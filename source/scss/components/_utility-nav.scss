@@ -51,14 +51,10 @@
 				display: block;
 				height: 100%;
 				width: 100%;
-				background-image: url(../../__data/assets/image/0011/62993/logo.png);
-				background-size: 100%;
-				background-position: left center;
+				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+				background-size: 400px;
+				background-position: 0 30px;
 				background-repeat: no-repeat;
-
-				@include media-query(desk){
-					background-size: 100%;
-				}
 			}
 
 			//ADBT
@@ -77,9 +73,20 @@
 			@include font-size(20px);
 			padding-top: 15px;
 			line-height: 1.2em;
-			
+			background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+			background-repeat: no-repeat;
+			background-position: -180px 15px;
+			background-size: 500px;
+				
+			a {
+				display: block;
+				width: 30px;
+				height: 30px;
+			}
+
 			@include media-query(palm-land-up){
 				padding-top: 20px;
+				background-position: -180px 20px;
 			}
 			
 			@include media-query(note-and-up){

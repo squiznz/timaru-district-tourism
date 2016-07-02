@@ -10,6 +10,7 @@
 	text-align: center;
 	margin-bottom: 25px;
 	background-size: cover !important;
+	background-position: center;
 
 	@include media-query(palm-land-up){
 		height: 480px;
@@ -198,17 +199,30 @@
 	color: $black;
 	font-weight: $bold;
 	background-color: $white;
-	// background-image: url('/__data/assets/image/0003/68745/illustration.png') !important;
-	background-image: url('../img/TDC-Illustration-Outlined-Purple.svg') !important;
-	background-size: 60% !important;
-	background-repeat: repeat-x;
-	background-position: bottom;
+	background-image: url('/__data/assets/file/0018/71613/TDC-Illustration-Outlined.svg') !important;
+	background-size: 85% !important;
+	background-repeat: no-repeat;
+	background-position: center bottom;
 
 	.feature-banner__wrap {
 		max-width: 50em;
   }
 }
 
+
+.feature-banner--purple {
+	color: $white;
+	font-weight: $bold;
+	background-color: $tdc-purple;
+	background-image: url('/__data/assets/file/0017/71612/TDC-Illustration-Outlined-Purple.svg') !important;
+	background-size: 70% !important;
+	background-repeat: repeat-x;
+	background-position: center 95%;
+
+	.feature-banner__wrap {
+		max-width: 50em;
+  }
+}
 
 // ADBT
 .feature-banner--inside {

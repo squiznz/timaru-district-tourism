@@ -1,4 +1,6 @@
-//Tertiary Nav
+/***
+*   Tertiary Nav
+***/
 
 .tertiary-nav {
 	@extend .bare-list;
@@ -58,17 +60,19 @@
 				float: right;
 				height: 100%;
 				width: 50px;
-				background-image: url(/__data/assets/image/0005/62996/tripadvisor-logo.png);
+				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				background-repeat: no-repeat;
-				background-position: center;
-				background-size: 20px;
+				background-position: 15px -133px;
+				background-size: 400px;
+				
+				@include media-query(note-and-up){
+					background-position: 15px -140px;
+				}
 
-				//ADBT
 				.adbt & {
 				    width: auto;
 				    background-image: none;
 				}
-				//End ADBT
 			}
 
 			&:first-of-type {

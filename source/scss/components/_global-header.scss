@@ -23,14 +23,11 @@
 		height: 118px;
 	}
 	
-	//ADBT
 	.adbt & {
 		@include media-query(note-and-up){
 			@include position(relative, 0 0 null 0);
 		}
 	}
-	// End ADBT
-
 }
 
 
@@ -64,8 +61,9 @@
 		@include media-query(note-and-up){
 			color: $white;
 			display: block;
+			margin-right: 30px;
 			float: right;
-		  	-webkit-transition: width 0.5s;
+		  -webkit-transition: width 0.5s;
 			transition: width 0.5s;
 			@include position(relative, 30% null);
 			width: 200px;
@@ -82,11 +80,15 @@
 
 		fieldset {
 			width: 100%;
-			padding: 2px 21px;
+			padding: 10px 21px 5px 21px;
 			border: none;
 			background-color: $tdc-navy;
 			float: left;
-
+		
+			@include media-query(palm-land-up){
+				padding: 10px 40px 5px 40px;
+			}
+		
 			@include media-query(note-and-up){
 				width: 120px;
 				background-color: transparent;
@@ -103,6 +105,11 @@
 			height: auto;
 			border-bottom: 2px solid $tdc-green;
 
+			@include media-query(palm-land-up){
+				width: 95%;
+			}
+
+				//ADBT
 			@include media-query(note-and-up){
 				width: 100px;
 		  	    -webkit-transition: 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -183,14 +190,24 @@
 			border: none;
 			color: $white;
 			@include font-size(16px);
-			width: auto !important;
+			border-right: none;
+			float: right;
+			height: 30px !important;
+			min-height: 30px;
+			width: 30px;
+			background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+			background-repeat: no-repeat;
+			background-position: -180px 5px;
+			background-size: 500px;
 
+				//ADBT
 			@include media-query(note-and-up){
 				background-color: transparent !important;
-				width: 20px !important;
 				min-height: 30px !important;
 				padding: 0;
 				float: right;
+				background-size: 400px;
+				background-position: -135px 10px;
 			}
 		}
 
