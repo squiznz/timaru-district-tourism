@@ -89,7 +89,7 @@
 
 				&:before {
 					text-indent: 0;
-					@include font-size(20px);
+					// @include font-size(20px);
 					text-align: center;
 					right: 0;
 					top: 5px;
@@ -135,10 +135,12 @@
 
 
 .feature-banner__info {
-	padding: 28px 1.3125em;
-	@include font-size(22px);
+	padding: 21px;
+	@include font-size(31px);
 	font-family: $font-secondary;
 	@include position(absolute, null 0 null null);
+	font-weight: $light;
+	line-height: 39px;
 
 	> span {
 		color: $tdc-light-blue;
@@ -149,30 +151,28 @@
 		float: left;
 		display: block;
 		width: 100%;
+		font-weight: $normal;
 		margin-bottom: 12px;
 		padding-left: 12px;
-
-		@include media-query(portable){
-			@include font-size(12px);
-		}
+		@include font-size(12px);
 
 		@include media-query(note-and-up){
-			@include font-size(16.06px);
-			line-height: 28.11px;
-			margin-bottom: 1.3125em;
-			padding-left: 20px;
+			// @include font-size(16.06px);
+			// line-height: 28.11px;
+			// margin-bottom: 1.3125em;
+			// padding-left: 20px;
 		}
 
-		&:before {
-			@include position(absolute, 1px null null 0);
-			content: "\f041";
-			font-family: 'FontAwesome';
-			line-height: 1.2em;
+		// &:before {
+		// 	@include position(absolute, 1px null null 0);
+		// 	content: "\f041";
+		// 	font-family: 'FontAwesome';
+		// 	line-height: 1.2em;
 
-			@include media-query(note-and-up){
-				@include position(absolute, 5px null null 0);				
-			}
-		}	
+		// 	@include media-query(note-and-up){
+		// 		@include position(absolute, 5px null null 0);				
+		// 	}
+		// }	
 	}
 
 	@include media-query(portable){
@@ -183,13 +183,18 @@
 	@include media-query(note-and-up){
 		background-color: rgba(0,29,65,0.89);
 		width: 10.521em;
-		padding: 50px 46px;
-		@include font-size(48.19px);
-		line-height: 58.89px;
+		// padding: 50px 46px;
+		// @include font-size(48.19px);
+		// line-height: 58.89px;
 	}
 
 	strong {
+		display: inline-block;
 		font-weight: $ultrabold;
+
+		&:after {
+			content: ":";
+		}
 	}
 }
 

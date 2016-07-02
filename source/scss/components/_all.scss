@@ -313,11 +313,11 @@ a.more {
 	
 	&:after {
 		content: "";
-		// background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+		background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 		width: 10px;
 		height: 100%;
 		display: block;
-		background-image: url(../img/01TDCsprites.svg);
+		// background-image: url(../img/01TDCsprites.svg);
 		background-repeat: no-repeat;
 		background-position: -47px -52px;
 		background-size: 400px;
