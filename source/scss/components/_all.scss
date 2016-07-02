@@ -310,13 +310,18 @@ a.more {
 	letter-spacing: 0.02em;
 	@include font-size(14px);
 	line-height: 21px;
-
+	
 	&:after {
-		content: "\f0da";
-		font-family: "FontAwesome";
+		content: "";
+		// background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+		width: 10px;
+		height: 100%;
+		display: block;
+		background-image: url(../img/01TDCsprites.svg);
+		background-repeat: no-repeat;
+		background-position: -47px -52px;
+		background-size: 400px;
 		@include position(absolute, null -1em 0 null);
-		@include font-size(11px);
-		line-height: 19px;
 	}
 }
 
@@ -448,81 +453,6 @@ video {
 		}	
 	}
 }
-
-.activity-search {
-	background-color: #f7f7f7;
-	margin-bottom: 55px;
-	
-	@include media-query(note-and-up){
-		margin-bottom: 80px;
-	}
-
-	fieldset {
-		@include container(1345px);
-		display: block;
-		border: none;
-		padding: 30px 21px;
-		
-		@include media-query(note-and-up){
-			padding: 35px 70px;
-		}
-	}
-
-	label {
-		color: $tdc-dark-navy;
-		font-weight: $bold;
-		width: 276px;
-		float: left;
-		line-height: 21px;
-		margin-bottom: 10px;
-		
-		@include media-query(palm-land-up){
-			width: 100%;
-		}
-
-		@include media-query(note-and-up){
-			line-height: 45px;
-			width: auto;
-			margin-bottom: 0;
-			margin-right: 30px;
-			// @include font-size(21.42px);
-		}
-	}
-
-	input, select {
-		display: block;
-		line-height: 1em;
-		float: left;
-		border: 1px solid $tdc-grey;
-		width: 100%;
-		padding: 5px 15px;
-		margin-bottom: 15px;
-		height: 40px;
-		
-		@include media-query(palm-land-up){
-			width: 255px;	
-			margin-right: 30px;
-			height: 45px;
-			margin-bottom: 0;
-		}
-	}
-
-	input[type="submit"]{
-		@extend .cta-button;	
-		@include font-size(17px);
-		background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
-		background-repeat: no-repeat;
-		background-size: 17px;
-		background-position: 90% center;
-
-		@include media-query(palm-land-up){
-			width: 107px;
-			margin: 0;
-			float: left;
-		}
-	}
-}
-
 
 .pagination {
 	list-style: none;

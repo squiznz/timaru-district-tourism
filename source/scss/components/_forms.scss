@@ -1,4 +1,6 @@
-// Forms
+/***
+*   Forms
+***/
 
 input, select {
 	padding: 5px 15px;
@@ -41,6 +43,10 @@ form {
 			color: $tdc-dark-grey;
 			opacity: 1;
 		}
+
+		&:focus {
+			border: 1px solid darken($tdc-grey, 5%);
+		}
 	}
 
 	input[type="submit"], button[type="submit"] {
@@ -55,7 +61,6 @@ form {
 		.adbt & {
 			color: $tdc-dark-navy;
 		}
-		//End ADBT
 	}
 }
 
@@ -69,47 +74,186 @@ form {
 	@include clearfix();
 	float: left;
 	cursor: pointer;
-	
+
 	select {
-		color: $tdc-green;
-		font-family: $font-secondary;
 		float: left;
-		font-size: inherit;
-		border: none;
-		height: auto;
 		outline: none;
 		margin: 0;
-   		background: transparent;
 		@include position(relative, null);
 		text-indent: 0.01px;
 		text-overflow: "";
     	appearance: none;
-    	padding: 0 1em 0 0;
+		border: 1px solid $tdc-grey;
+    	padding: 0 1em 0 15px;
 
 	    &:focus {
 	    	outline: none; 
-	    	border: none;
 	    }
 	}
+	
+	.our-region &, .three-best & {
+		select {
+			color: $tdc-green;
+			font-family: $font-secondary;
+			font-size: inherit;
+			border: none;
+			height: auto;
+	   		background: transparent;
+			@include position(relative, null);
+	    	padding: 0 1em 0 0;
+
+		    &:focus {
+		    	outline: none; 
+		    	border: none;
+		    }
+		}
+	}
+
 
 	&:after {
 		@include position(absolute, 0 0.5em 0 null);
-		content: "\f0d7";
-		color: $tdc-green;
+		content: "";
 		cursor: pointer;
 		line-height: 42px;
+		display: block;
 		font-size: 70%;
 		pointer-events: none;
-		font-family: 'FontAwesome';
 	}
 
 	&.tc-tdc-light-blue {
 		&:after {
-			color: $tdc-light-blue !important;
+			// background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+			background-image: url(../img/01TDCsprites.svg);
+			background-repeat: no-repeat;
+			background-position: -245px -50px;
+			background-size: 500px;		
+			width: 15px;
+		}
+	}
+
+	.activity-search & {	
+		margin-right: 0;
+
+		&:after {
+			border-left: 1px solid $tdc-grey;
+			width: 45px;
+			background-position: -293px -42px;
+		}
+	}
+
+	.our-region &, .three-best & {
+		&:after {
+			background-position: -245px -50px;
+		
+			@include media-query(note-and-up){
+				background-position: -245px -45px;
+			}
+
+			.tc-tdc-light-blue & {
+				background-position: -310px -50px;
+
+				@include media-query(note-and-up){
+					background-position: -310px -45px;
+				}
+			}
 		}
 	}
 
   &::-ms-expand {
     display: none;
   }
+}
+
+.activity-search {
+	background-color: #f7f7f7;
+	margin-bottom: 55px;
+	
+	@include media-query(note-and-up){
+		margin-bottom: 80px;
+	}
+
+	fieldset {
+		@include container(1345px);
+		display: block;
+		border: none;
+		padding: 30px 21px;
+		
+		@include media-query(note-and-up){
+			padding: 35px 70px;
+		}
+	}
+
+	label {
+		color: $tdc-dark-navy;
+		font-weight: $bold;
+		width: 276px;
+		float: left;
+		line-height: 21px;
+		margin-bottom: 10px;
+		
+		@include media-query(palm-land-up){
+			width: 100%;
+		}
+
+		@include media-query(note-and-up){
+			line-height: 45px;
+			width: auto;
+			margin-bottom: 0;
+			margin-right: 30px;
+		}
+	}
+
+	input, select {
+		display: block;
+		line-height: 1em;
+		float: left;
+		border: 1px solid $tdc-grey;
+		width: 100%;
+		padding: 5px 15px;
+		margin-bottom: 15px;
+		height: 40px;
+		margin-right: 30px;
+		
+		@include media-query(palm-land-up){
+			width: 280px;	
+			height: 45px;
+			margin-bottom: 0;
+		}
+	}
+
+	select {
+		margin: 0 0 15px 0;
+
+		@include media-query(palm-land-up){
+			width: 280px;	
+			height: 45px;
+			margin-bottom: 0;
+		}
+	}
+
+	.select-wrap {
+		width: 100%;
+		height: 45px;
+		float: left;
+		@include clearfix();
+		
+		@include media-query(palm-land-up){
+			width: auto;
+		}
+	}
+
+	input[type="submit"]{
+		@extend .cta-button;	
+		@include font-size(17px);
+		background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
+		background-repeat: no-repeat;
+		background-size: 17px;
+		background-position: 90% center;
+
+		@include media-query(palm-land-up){
+			width: 107px;
+			margin: 0 0 0 30px;
+			float: left;
+		}
+	}
 }

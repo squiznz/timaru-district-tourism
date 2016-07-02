@@ -69,8 +69,9 @@ function globalActions() {
       $this.empty();
 
       for (i=0; i < $list.length; i++) {
-         var item = '<li class="' + $list[i] + '"><span>' + $list[i] + '</span></li>';
-         $this.append(item);
+        var itemClass = $list[i].replace(/ /g,"-").toLowerCase();
+        var item = '<li class="' + itemClass + '"><span>' + $list[i] + '</span></li>';
+        $this.append(item);
       }
     };
   });

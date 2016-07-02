@@ -32,12 +32,13 @@
 		div {
 			border-top: none;
 			height: 280px;
+			padding: 40px 0px;
 			@include position(relative, null);
-			padding: 40px 30px;
 
 			@include media-query(palm-land-up){
 				border: 1px solid $tdc-grey;
 				border-left: none;
+				padding: 40px 30px;
 			}
 		}
 

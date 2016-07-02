@@ -61,15 +61,14 @@
 
 		li {
 			display: inline-block;
-			padding: 0 4px;
-			text-align: center;
+			width: 23px;
+			height: 23px;
+			background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+			background-repeat: no-repeat;
+			background-size: 400px;
 
-			@include media-query(note-and-up){
-				padding: 0 8px;
-			}
-
-			i {
-				@include font-size(18px);
+			a {
+				display: block;
 			}
 		}
 
@@ -205,7 +204,6 @@
 				&:nth-child(5) {
 					@include media-query(note-and-up){
 						@include position(absolute, 0 30px 0 null);
-						// padding-right: 0;
 
 						a {
 							padding-right: 0;
@@ -214,3 +212,25 @@
 				}
 			}
 		}
+
+
+
+
+
+
+
+   .social-media-links__twitter {
+			background-position: -96px -150px;
+   }
+   
+   .social-media-links__instagram {
+			background-position: -146px -150px;
+   }
+
+   .social-media-links__youtube {
+			background-position: -198px -150px;
+   }
+  
+   .social-media-links__facebook {
+			background-position: -43px -150px;
+   }
