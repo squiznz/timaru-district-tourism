@@ -9,7 +9,7 @@
 	height: 100%;
 	
 	@include media-query(palm-land-up){
-		padding: 0 45px;
+		padding: 0 40px;
 	}
 	
 	@include media-query(note-and-up){
@@ -53,10 +53,18 @@
 				width: 100%;
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				background-size: 400px;
-				background-position: 0 32px;
+				background-position: 0 18px;
 				background-repeat: no-repeat;
-			}
+	
+				@include media-query(palm-land-up) {
+					background-position: 0 27px;
+				}
 
+				@include media-query(note-and-up) {
+					background-position: 0 32px;
+				}
+			}
+			
 			@include media-query(note-and-up) {
 				.adbt & {
 	    			padding-top: 17px;

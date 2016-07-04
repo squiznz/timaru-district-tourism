@@ -10,7 +10,7 @@
 	text-align: center;
 	margin-bottom: 25px;
 	background-size: cover !important;
-	background-position: center;
+	background-position: top;
 
 	@include media-query(palm-land-up){
 		height: 480px;

@@ -109,8 +109,8 @@ img {
 	@include container(857px);
 	padding: 0 21px;
 
-	@include media-query(lap-and-up){
-		padding: 0 45px;
+	@include media-query(palm-land-up){
+		padding: 0 40px;
 	}
 
 	@include media-query(note-and-up){
