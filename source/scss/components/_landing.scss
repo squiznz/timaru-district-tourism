@@ -55,9 +55,16 @@
 
 		a.more {
 			color: $tdc-light-blue;
-			@include position(absolute, null null 30px 30px);
 			display: inline-block !important;
 			margin-top: 21px;
+	
+			@include media-query(palm-land-up){
+				@include position(absolute, null null 30px 30px);
+			}
+
+			&:after {
+				background-position: -149px -52px;
+			}
 		}
 
 		&:nth-child(3n+1){			
@@ -79,9 +86,9 @@
 	.landing-list__cta-strip {
 
 		@include container(100%);
-	    margin-bottom: 2em;
-        padding: 40px;
-	    background-color: $tdc-light-blue;
+    margin-bottom: 2em;
+    padding: 40px;
+    background-color: $tdc-light-blue;
 
 		h2 {
 			width: 100%;

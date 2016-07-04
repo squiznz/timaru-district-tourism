@@ -12,7 +12,6 @@
 		@include position(absolute, 0px 0 null 0);
 	}
 	
-	//ADBT
 	.adbt & {
 		background-color: transparent;
 	}
@@ -28,7 +27,6 @@
 			}
 		}
 	}
-	// End ADBT
 
 	ul {
 		@extend .bare-list;
@@ -186,7 +184,10 @@
 			border: none !important;
 			display: inline-block;
 			margin-top: 21px;
-			// @include font-size(14px);
+
+			&:after {
+				background-position:-149px -52px;
+			}
 		}
 
 		.adbt & {
