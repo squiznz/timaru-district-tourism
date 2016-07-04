@@ -10,7 +10,7 @@
 	text-align: center;
 	margin-bottom: 25px;
 	background-size: cover !important;
-	background-position: center;
+	background-position: top;
 
 	@include media-query(palm-land-up){
 		height: 480px;
@@ -89,7 +89,7 @@
 
 				&:before {
 					text-indent: 0;
-					@include font-size(20px);
+					// @include font-size(20px);
 					text-align: center;
 					right: 0;
 					top: 5px;
@@ -133,63 +133,63 @@
 	}
 }
 
-
 .feature-banner__info {
-	padding: 28px 1.3125em;
-	@include font-size(22px);
-	font-family: $font-secondary;
-	@include position(absolute, null 0 null null);
-
-	> span {
-		color: $tdc-light-blue;
-		text-transform: uppercase;
-		font-family: $font-primary;
-		@include position(relative, null null null null);
+		padding: 21px;
+		@include font-size(22px);
+		font-family: $font-secondary;
 		@include clearfix();
-		float: left;
-		display: block;
-		width: 100%;
-		margin-bottom: 12px;
-		padding-left: 12px;
-
+		
 		@include media-query(portable){
-			@include font-size(12px);
+			background-color: $tdc-navy;
+			@include position(absolute, null 0 0 0);
 		}
 
 		@include media-query(note-and-up){
-			@include font-size(16.06px);
-			line-height: 28.11px;
-			margin-bottom: 1.3125em;
-			padding-left: 20px;
+			background-color: rgba(0,29,65,0.89);
+			width: 423px;
+			@include font-size(31px);
+			line-height: 39px;
 		}
 
-		&:before {
-			@include position(absolute, 1px null null 0);
-			content: "\f041";
-			font-family: 'FontAwesome';
-			line-height: 1.2em;
+		p {
+			font-weight: $light;	
+		}
+
+		strong {
+			font-weight: $ultrabold;
+
+			&:after {
+				content: ":";
+			}
+		}
+
+		> span {
+			color: $tdc-light-blue;
+			text-transform: uppercase;
+			font-family: $font-primary;
+			@include position(relative, null null null null);
+			display: block;
+			width: 100%;
+			margin-bottom: 12px;
+			padding-left: 12px;
+			@include font-size(12px);
 
 			@include media-query(note-and-up){
-				@include position(absolute, 5px null null 0);				
+				line-height: 28.11px;
+				margin-bottom: 1.3125em;
+				padding-left: 20px;
 			}
-		}	
-	}
 
-	@include media-query(portable){
-		background-color: $tdc-navy;
-		@include position(absolute, null 0 0 0);
-	}
-
-	@include media-query(note-and-up){
-		background-color: rgba(0,29,65,0.89);
-		width: 10.521em;
-		padding: 50px 46px;
-		@include font-size(48.19px);
-		line-height: 58.89px;
-	}
-
-	strong {
-		font-weight: $ultrabold;
+			&:before {
+				@include position(absolute, 0 null null 0);
+				content: "";
+				width: 15px;
+				height: 100%;
+				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+				background-repeat: no-repeat;
+				background-position: -295px 7px;
+				background-size: 400px;
+			}	
 	}
 }
 

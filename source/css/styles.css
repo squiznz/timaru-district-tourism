@@ -1650,6 +1650,7 @@ a.cta-button:empty {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .landing main .container, .details main .container, .topic main .container {
@@ -1753,9 +1754,9 @@ img {
   clear: both;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .intro {
-    padding: 0 45px;
+    padding: 0 40px;
   }
 }
 
@@ -1989,10 +1990,10 @@ a.more {
 
 a.more:after {
   content: "";
+  background-image: url(/__data/assets/file/0009/72099/sprites.svg);
   width: 10px;
   height: 100%;
   display: block;
-  background-image: url(../img/01TDCsprites.svg);
   background-repeat: no-repeat;
   background-position: -47px -52px;
   background-size: 400px;
@@ -3198,6 +3199,10 @@ section header a.view-all, section header a.watch-timaru__view-all {
   margin-top: 21px;
 }
 
+.primary-nav__panel__info .more:after {
+  background-position: -149px -52px;
+}
+
 .adbt .primary-nav__panel__info strong {
   color: #FFFFFF;
 }
@@ -3218,7 +3223,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
 
 @media screen and (min-width: 768px) {
   .utility-nav {
-    padding: 0 45px;
+    padding: 0 40px;
   }
 }
 
@@ -3263,35 +3268,41 @@ section header a.view-all, section header a.watch-timaru__view-all {
   width: 100%;
   background-image: url(/__data/assets/file/0009/72099/sprites.svg);
   background-size: 400px;
-  background-position: 0 30px;
+  background-position: 0 18px;
   background-repeat: no-repeat;
 }
 
-.adbt .utility-nav__item--logo {
+@media screen and (min-width: 768px) {
+  .utility-nav__item--logo a {
+    background-position: 0 27px;
+  }
+}
+
+.adbt .utility-nav__item--logo a {
   width: 138px;
   height: 83%;
 }
 
-.adbt .utility-nav__item--logo a {
+.adbt .utility-nav__item--logo a a {
   background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
 }
 
 @media screen and (min-width: 1024px) {
-  .adbt .utility-nav__item--logo a {
+  .adbt .utility-nav__item--logo a a {
     background-size: 410px;
     background-position: 0px 15px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .adbt .utility-nav__item--logo a {
+  .adbt .utility-nav__item--logo a a {
     background-size: 367px;
     background-position: 0px 14px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .adbt .utility-nav__item--logo a {
+  .adbt .utility-nav__item--logo a a {
     background-position: 0px 5px;
   }
 }
@@ -3516,7 +3527,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
   width: 50px;
   background-image: url(/__data/assets/file/0009/72099/sprites.svg);
   background-repeat: no-repeat;
-  background-position: 15px -133px;
+  background-position: 15px -131px;
   background-size: 400px;
 }
 
@@ -3624,7 +3635,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
 
 @media screen and (min-width: 1024px) {
   .cta-banner {
-    min-height: 300px;
+    height: 300px;
     padding: 0 45px;
   }
 }
@@ -4053,8 +4064,14 @@ section header a.view-all, section header a.watch-timaru__view-all {
   height: 100%;
   background-image: url(/__data/assets/file/0009/72099/sprites.svg);
   background-repeat: no-repeat;
-  background-position: -295px 7px;
+  background-position: -298px -2px;
   background-size: 400px;
+}
+
+@media screen and (min-width: 1024px) {
+  .location-banner__info > span:before {
+    background-position: -295px 7px;
+  }
 }
 
 .adbt .location-banner__info > span {
@@ -4096,6 +4113,10 @@ section header a.view-all, section header a.watch-timaru__view-all {
 
 .location-banner__info strong {
   font-weight: 900;
+}
+
+.location-banner__info strong:after {
+  content: ":";
 }
 
 .location-banner__cta {
@@ -4697,7 +4718,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
   text-align: center;
   margin-bottom: 25px;
   background-size: cover !important;
-  background-position: center;
+  background-position: top;
 }
 
 @media screen and (min-width: 768px) {
@@ -4792,8 +4813,6 @@ section header a.view-all, section header a.watch-timaru__view-all {
   }
   .feature-banner--location .feature-banner__info p:before, .feature-banner--location .feature-banner__info span:before {
     text-indent: 0;
-    font-size: 20px;
-    font-size: 1.25rem;
     text-align: center;
     right: 0;
     top: 5px;
@@ -4858,64 +4877,16 @@ section header a.view-all, section header a.watch-timaru__view-all {
 }
 
 .feature-banner__info {
-  padding: 28px 1.3125em;
+  padding: 21px;
   font-size: 22px;
   font-size: 1.375rem;
   font-family: "Pluto", sans-serif;
-  position: absolute;
-  right: 0;
 }
 
-.feature-banner__info > span {
-  color: #0093d0;
-  text-transform: uppercase;
-  font-family: "Source Sans Pro", sans-serif;
-  position: relative;
-  float: left;
-  display: block;
-  width: 100%;
-  margin-bottom: 12px;
-  padding-left: 12px;
-}
-
-.feature-banner__info > span::after {
+.feature-banner__info::after {
   clear: both;
   content: "";
   display: table;
-}
-
-@media screen and (max-width: 1023px) {
-  .feature-banner__info > span {
-    font-size: 12px;
-    font-size: 0.75rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .feature-banner__info > span {
-    font-size: 16.06px;
-    font-size: 1.00375rem;
-    line-height: 28.11px;
-    margin-bottom: 1.3125em;
-    padding-left: 20px;
-  }
-}
-
-.feature-banner__info > span:before {
-  position: absolute;
-  top: 1px;
-  left: 0;
-  content: "\f041";
-  font-family: 'FontAwesome';
-  line-height: 1.2em;
-}
-
-@media screen and (min-width: 1024px) {
-  .feature-banner__info > span:before {
-    position: absolute;
-    top: 5px;
-    left: 0;
-  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -4931,16 +4902,57 @@ section header a.view-all, section header a.watch-timaru__view-all {
 @media screen and (min-width: 1024px) {
   .feature-banner__info {
     background-color: rgba(0, 29, 65, 0.89);
-    width: 10.521em;
-    padding: 50px 46px;
-    font-size: 48.19px;
-    font-size: 3.01187rem;
-    line-height: 58.89px;
+    width: 423px;
+    font-size: 31px;
+    font-size: 1.9375rem;
+    line-height: 39px;
   }
+}
+
+.feature-banner__info p {
+  font-weight: 300;
 }
 
 .feature-banner__info strong {
   font-weight: 900;
+}
+
+.feature-banner__info strong:after {
+  content: ":";
+}
+
+.feature-banner__info > span {
+  color: #0093d0;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .feature-banner__info > span {
+    line-height: 28.11px;
+    margin-bottom: 1.3125em;
+    padding-left: 20px;
+  }
+}
+
+.feature-banner__info > span:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 15px;
+  height: 100%;
+  background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+  background-repeat: no-repeat;
+  background-position: -295px 7px;
+  background-size: 400px;
 }
 
 .feature-banner--white {
@@ -5427,6 +5439,20 @@ form input[type="submit"], form button[type="submit"] {
   clear: both;
 }
 
+@media screen and (min-width: 768px) {
+  .activity-search fieldset {
+    padding: 35px 40px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .activity-search fieldset:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .activity-search fieldset {
     padding: 35px 70px;
@@ -5471,17 +5497,26 @@ form input[type="submit"], form button[type="submit"] {
 
 @media screen and (min-width: 768px) {
   .activity-search input, .activity-search select {
-    width: 280px;
+    width: 37.88136%;
+    float: left;
+    margin-right: 30px;
     height: 45px;
     margin-bottom: 0;
   }
 }
 
-.activity-search select {
-  margin: 0 0 15px 0;
+@media screen and (min-width: 1024px) {
+  .activity-search input, .activity-search select {
+    width: 280px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+.activity-search select {
+  margin: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
   .activity-search select {
     width: 280px;
     height: 45px;
@@ -5491,6 +5526,7 @@ form input[type="submit"], form button[type="submit"] {
 
 .activity-search .select-wrap {
   width: 100%;
+  margin-bottom: 15px;
   height: 45px;
   float: left;
 }
@@ -5503,6 +5539,14 @@ form input[type="submit"], form button[type="submit"] {
 
 @media screen and (min-width: 768px) {
   .activity-search .select-wrap {
+    width: 37.88136%;
+    float: left;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .activity-search .select-wrap {
     width: auto;
   }
 }
@@ -5513,6 +5557,7 @@ form input[type="submit"], form button[type="submit"] {
   background-image: url("/__data/assets/image/0005/68702/arrow-right-white.png");
   background-repeat: no-repeat;
   background-size: 17px;
+  text-align: center;
   background-position: 90% center;
 }
 
@@ -5521,6 +5566,7 @@ form input[type="submit"], form button[type="submit"] {
     width: 107px;
     margin: 0 0 0 30px;
     float: left;
+    text-align: left;
   }
 }
 
@@ -5940,6 +5986,10 @@ ul.tags-list > li:hover > span, ul.tags-list > li:focus > span {
   text-transform: uppercase;
 }
 
+ul.tags-list > li:empty {
+  display: none;
+}
+
 ul.tags-list > li > span {
   visibility: hidden;
   opacity: 0;
@@ -5953,7 +6003,7 @@ ul.tags-list > li.accessible:after {
   background-position: -0px -0px;
 }
 
-ul.tags-list > li.local-favs:after {
+ul.tags-list > li.local-favourites:after {
   background-position: -43px -240px;
 }
 
@@ -5982,6 +6032,19 @@ ul.tags-list > li.popular-routes:after {
     background-color: #FFFFFF;
     color: #001d41;
   }
+}
+
+ul.listing-itineraries ul.tags-list li, ul.itinerary-details ul.tags-list li {
+  width: 30px !important;
+  background-color: #00132a;
+}
+
+ul.listing-itineraries ul.tags-list li:hover, ul.itinerary-details ul.tags-list li:hover, ul.listing-itineraries ul.tags-list li:focus, ul.itinerary-details ul.tags-list li:focus {
+  width: auto !important;
+}
+
+ul.listing-itineraries ul.tags-list li:hover > span, ul.itinerary-details ul.tags-list li:hover > span, ul.listing-itineraries ul.tags-list li:focus > span, ul.itinerary-details ul.tags-list li:focus > span {
+  color: #FFFFFF;
 }
 
 /***
@@ -6092,11 +6155,20 @@ ul.tags-list > li.popular-routes:after {
 
 .landing-list li a.more {
   color: #0093d0;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
   display: inline-block !important;
   margin-top: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  .landing-list li a.more {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+}
+
+.landing-list li a.more:after {
+  background-position: -149px -52px;
 }
 
 @media screen and (min-width: 768px) {
@@ -6459,21 +6531,23 @@ ul.tags-list > li.popular-routes:after {
 
 .listing-itineraries > li header, .itinerary-details > li header, .itinerary-details > li header {
   height: 379px;
+  display: table;
+  width: 100%;
   background-size: 100% !important;
 }
 
 .listing-itineraries > li header a, .itinerary-details > li header a, .itinerary-details > li header a {
-  display: block;
   width: 100%;
   font-size: 50px;
   font-size: 3.125rem;
   height: 100%;
-  padding: 3.1em 30px 0 30px !important;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
 }
 
 .listing-itineraries > li header h2, .itinerary-details > li header h2, .itinerary-details > li header h2 {
   background-color: transparent;
-  text-align: center;
   font-size: inherit;
 }
 
@@ -6509,7 +6583,7 @@ ul.tags-list > li.popular-routes:after {
   border-right: 1px solid #ececec;
   height: 100%;
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
   color: #00132a;
 }
 
@@ -6576,43 +6650,49 @@ ul.tags-list > li.popular-routes:after {
   background-color: #000000;
 }
 
-.listing-itineraries__info li, .itinerary-details__info li {
+.listing-itineraries__info > li, .itinerary-details__info > li {
   position: relative;
   font-size: 24px;
   font-size: 1.5rem;
   padding: 21px 24px;
 }
 
-.listing-itineraries__info li:after, .itinerary-details__info li:after {
+.listing-itineraries__info > li:nth-child(1), .itinerary-details__info > li:nth-child(1) {
+  padding-left: 40px;
+}
+
+.listing-itineraries__info > li:nth-child(2), .itinerary-details__info > li:nth-child(2) {
+  padding-left: 70px;
+}
+
+.listing-itineraries__info > li:nth-child(2):after, .itinerary-details__info > li:nth-child(2):after {
   position: absolute;
   top: 21px;
   bottom: 32px;
   left: 25px;
-  font-family: 'Fontawesome';
+  background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+  background-size: 400px;
+  content: "";
+  width: 30px;
+  height: 30px;
 }
 
-.listing-itineraries__info li:nth-child(1), .itinerary-details__info li:nth-child(1) {
-  padding-left: 40px;
-}
-
-.listing-itineraries__info li:nth-child(2), .itinerary-details__info li:nth-child(2) {
-  padding-left: 70px;
-}
-
-.listing-itineraries__info li:nth-child(3), .itinerary-details__info li:nth-child(3) {
+.listing-itineraries__info > li:nth-child(3), .itinerary-details__info > li:nth-child(3) {
   border-right: none;
+  width: 400px;
+  padding: 0.25em 24px;
 }
 
 .listing-itineraries__info__drive:after {
-  content: "\f1b9";
+  background-position: 4px -194px;
 }
 
 .listing-itineraries__info__walk:after {
-  content: "\f21c";
+  background-position: -91px -194px;
 }
 
 .listing-itineraries__info__bike:after {
-  content: "\f206";
+  background-position: -50px -194px;
 }
 
 /***

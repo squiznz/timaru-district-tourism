@@ -191,6 +191,11 @@ form {
 		border: none;
 		padding: 30px 21px;
 		
+		@include media-query(palm-land-up){
+			padding: 35px 40px;
+			@include container(100%);
+		}		
+		
 		@include media-query(note-and-up){
 			padding: 35px 70px;
 		}
@@ -228,16 +233,21 @@ form {
 		margin-right: 30px;
 		
 		@include media-query(palm-land-up){
-			width: 280px;	
+			@include span(4.67 of 12 (gutter-override: 30px));	
 			height: 45px;
 			margin-bottom: 0;
+		}
+
+		@include media-query(note-and-up){
+			width: 280px;	
 		}
 	}
 
 	select {
-		margin: 0 0 15px 0;
+		margin: 0;
+		width: 100%;
 
-		@include media-query(palm-land-up){
+		@include media-query(note-and-up){
 			width: 280px;	
 			height: 45px;
 			margin-bottom: 0;
@@ -246,11 +256,16 @@ form {
 
 	.select-wrap {
 		width: 100%;
+		margin-bottom: 15px;
 		height: 45px;
 		float: left;
 		@include clearfix();
-		
+
 		@include media-query(palm-land-up){
+			@include span(4.67 of 12 (gutter-override: 0px));	
+		}
+
+		@include media-query(note-and-up){
 			width: auto;
 		}
 	}
@@ -261,12 +276,17 @@ form {
 		background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
 		background-repeat: no-repeat;
 		background-size: 17px;
+		text-align: center;
 		background-position: 90% center;
-
+		
 		@include media-query(palm-land-up){
 			width: 107px;
 			margin: 0 0 0 30px;
 			float: left;
+			text-align: left;
+		}
+		
+		@include media-query(note-and-up){
 		}
 	}
 }

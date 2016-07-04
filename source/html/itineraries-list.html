@@ -6,8 +6,9 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Timaru District - Itineraries</title>
+  <!-- General Metadata -->
   
-<!-- TDT General //-->
+<!-- TDT Page Info //-->
 
 <!-- General Details //-->
 <meta name="title" content="" />
@@ -16,18 +17,28 @@
 <meta name="author" content="" />
 
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="" />
+<meta property="og:type" content="" />
+<meta property="og:url" content="https://tt.timaru.govt.nz/plan/itineraries" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="" />
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
   <link rel="shortcut icon" href="../images/favicon.ico" />
   <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
   <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
   <link rel="stylesheet" href="../css/styles.css" />
+  <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
 
 <!--
   Running Squiz Matrix
   Developed by Squiz - http://www.squiz.net
   Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
-  Page generated: 21 June 2016 20:42:52
+  Page generated: 04 July 2016 16:22:03
 -->
 
 
@@ -44,7 +55,7 @@
           <li>The official tourism website of the Timaru District</li>
           <li class="text--bold"><a href="">Visit Timaru</a></li>
           <li><a href="">Live, Work, Play</a></li>
-          <li><a href=""><span class="visuallyhidden">Visit Tripadvisor's site</span></a></li>
+          <li><a href="//www.tripadvisor.co.nz" target="_blank"><span class="visuallyhidden">Visit Tripadvisor's site</span></a></li>
         </ul>
       </nav>
       <!-- End Tertiary Navigation -->
@@ -67,7 +78,6 @@
                 </li>   
                 <li class="utility-nav__item--search-toggle">
                   <a href="#search">
-                    <i class="fa fa-search"></i>
                     <span class="hidden-portable">Search this site. </span>
                   </a>
                   <span class="visuallyhidden">Skip to search. </span>
@@ -80,12 +90,11 @@
           <!-- End Utility Navigation -->
 
           <div class="site-search">
-            <form id="search" class="site-search__form" action="http://tt.timaru.govt.nz/search" method="post">
+            <form id="search" class="site-search__form" action="https://tt.timaru.govt.nz/search" method="get">
               <fieldset>
                 <input type="search" name="queries_query_query" placeholder="Search this site">
                 <button type="submit">
                   <span class="visuallyhidden">Search</span>
-                  <i class="fa fa-search"></i>
                 </button>
               </fieldset>
             </form>
@@ -98,135 +107,150 @@
           <span class="visuallyhidden">Primary navigation</span>
                            
             <ul class="primary-nav__first-level">
-                          <li><a href="http://tt.timaru.govt.nz/explore">Explore</a>
+                          <li><a href="https://tt.timaru.govt.nz/explore">Explore</a>
                 <div class="primary-nav__panel">
                   <div class="container">
                    <div class="primary-nav__panel__info">
                     <strong>Explore</strong>
-                    <p>Aliquam a imperdiet ligula. Donec at condimentum sem. Donec orci nisi, pretium vestibulum posuere a, fringilla vel enim. Suspendisse ac ante massa.</p>
-                    <a class="more" href="http://tt.timaru.govt.nz/explore">Explore this section</a>
+                    <p></p>
+                    <a class="more" href="https://tt.timaru.govt.nz/explore">Explore this section</a>
                    </div>
                                    
                      <ul>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/about-timaru">About Timaru</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/art-and-culture">Art &amp; Culture</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/beaches-and-coastline">Beaches &amp; coastline</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/cheapfree-activities">Cheap/free activities</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/family-activities">Family activities</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/indoors-activities">Indoors activities</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/outdoor-and-adventure">Outdoor &amp; adventure</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/shopping-and-markets">Shopping &amp; markets</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/tours-in-the-region">Tours in the region</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/explore/wineries">Wineries</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/explore/timaru-and-surrounds">Timaru and surrounds</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/explore/art,culture-and-heritage">Art, culture &amp; heritage</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/explore/walk,-swim,-bike">Walk, swim, bike</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/explore/hunt,fish,ski">Hunt, fish, ski</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/explore/epic-scenery-tours">Epic scenery tours</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/explore/wildlife">Wildlife</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/explore/parks-and-gardens">Parks &amp; gardens</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/explore/shop">Shop</a></li>
                                            </ul>
                 
             
                     </div>
                 </div>
               </li>
-                          <li><a href="http://tt.timaru.govt.nz/where-to-go">Where to go</a>
+                          <li><a href="https://tt.timaru.govt.nz/activities">Activities</a>
                 <div class="primary-nav__panel">
                   <div class="container">
                    <div class="primary-nav__panel__info">
-                    <strong>Where to go</strong>
-                    <p></p>
-                    <a class="more" href="http://tt.timaru.govt.nz/where-to-go">Explore this section</a>
+                    <strong>Activities</strong>
+                    <p>There’s a lot of great stuff to do in Timaru. Find out more.</p>
+                    <a class="more" href="https://tt.timaru.govt.nz/activities">Explore this section</a>
                    </div>
                                    
                      <ul>
-                                               <li><a href="http://tt.timaru.govt.nz/where-to-go/beaches">Beaches</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/where-to-go/cycling">Cycling</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/where-to-go/forests">Forests</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/where-to-go/lakes">Lakes</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/where-to-go/mountains">Mountains</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/where-to-go/parks">Parks</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/where-to-go/walks">Walks</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/activities/food-and-wine">Food &amp; Wine</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/activities/family-fun">Family Fun</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/activities/art-And-culture">Art &amp; Culture</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/activities/backpackers">Backpackers</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/activities/heritage">Heritage</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/activities/caravaners">Caravaners</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/activities/outdoor-and-adventure">Outdoor &amp; Adventure</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/activities/ask-a-local">Ask a Local</a></li>
                                            </ul>
                 
             
                     </div>
                 </div>
               </li>
-                          <li><a href="http://tt.timaru.govt.nz/accommodation">Accommodation</a>
+                          <li><a href="https://tt.timaru.govt.nz/stay">Stay</a>
                 <div class="primary-nav__panel">
                   <div class="container">
                    <div class="primary-nav__panel__info">
-                    <strong>Accommodation</strong>
+                    <strong>Stay</strong>
                     <p></p>
-                    <a class="more" href="http://tt.timaru.govt.nz/accommodation">Explore this section</a>
+                    <a class="more" href="https://tt.timaru.govt.nz/stay">Explore this section</a>
                    </div>
                                    
                      <ul>
-                                               <li><a href="http://tt.timaru.govt.nz/accommodation/b-and-bs">B&amp;Bs</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/accommodation/backpackershostels">Backpackers/hostels</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/accommodation/caravan-and-camping">Caravan &amp; camping</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/accommodation/hotels">Hotels</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/accommodation/motels">Motels</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/stay/caravaning-and-camping">Caravaning &amp; Camping</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/stay/hotels-and-motels">Hotels &amp; Motels</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/stay/backpackers">Backpackers</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/stay/luxury-And-boutique">Luxury &amp; Boutique</a></li>
                                            </ul>
                 
             
                     </div>
                 </div>
               </li>
-                          <li><a href="http://tt.timaru.govt.nz/whats-on">What's on</a>
+                          <li><a href="https://tt.timaru.govt.nz/events">Events</a>
                 <div class="primary-nav__panel">
                   <div class="container">
                    <div class="primary-nav__panel__info">
-                    <strong>What's on</strong>
-                    <p></p>
-                    <a class="more" href="http://tt.timaru.govt.nz/whats-on">Explore this section</a>
+                    <strong>Events</strong>
+                    <p>Timaru hosts a range of events throughout the year. Find out more.</p>
+                    <a class="more" href="https://tt.timaru.govt.nz/events">Explore this section</a>
                    </div>
                                    
                      <ul>
-                                               <li><a href="http://tt.timaru.govt.nz/whats-on/eventfinder">Events</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/events/whats-on-now">What's on now?</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/events/special-events">Special events</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/events/regular-events">Regular events</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/events/conferences-And-weddings">Conferences &amp; weddings</a></li>
                                            </ul>
                 
             
                     </div>
                 </div>
               </li>
-                          <li><a href="http://tt.timaru.govt.nz/eat-and-drink">Eat &amp; Drink</a>
+                          <li><a href="https://tt.timaru.govt.nz/eat-and-drink">Eat &amp; Drink</a>
                 <div class="primary-nav__panel">
                   <div class="container">
                    <div class="primary-nav__panel__info">
                     <strong>Eat &amp; Drink</strong>
-                    <p></p>
-                    <a class="more" href="http://tt.timaru.govt.nz/eat-and-drink">Explore this section</a>
+                    <p>Great places to eat and drink in Timaru. Find out where to go.</p>
+                    <a class="more" href="https://tt.timaru.govt.nz/eat-and-drink">Explore this section</a>
                    </div>
                                    
                      <ul>
-                                               <li><a href="http://tt.timaru.govt.nz/eat-and-drink/bars">Bars</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/eat-and-drink/best-breakfast-spots">Best breakfast spots</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/eat-and-drink/cafes">Cafes</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/eat-and-drink/cheap-eats">Cheap eats</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/eat-and-drink/coffee">Coffee</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/eat-and-drink/local-specialties">Local specialties</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/eat-and-drink/restaurants">Restaurants</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/eat-and-drink/cafes">Cafes</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/eat-and-drink/restaurants-and-bars">Restaurants &amp; bars</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/eat-and-drink/markets">Markets</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/eat-and-drink/fresh-And-local">Fresh &amp; local</a></li>
                                            </ul>
                 
             
                     </div>
                 </div>
               </li>
-                          <li class='hierarchy'><a href="http://tt.timaru.govt.nz/plan-your-trip">Plan Your Trip</a>
+                          <li class='hierarchy'><a href="https://tt.timaru.govt.nz/plan">Plan</a>
                 <div class="primary-nav__panel">
                   <div class="container">
                    <div class="primary-nav__panel__info">
-                    <strong>Plan Your Trip</strong>
+                    <strong>Plan</strong>
                     <p></p>
-                    <a class="more" href="http://tt.timaru.govt.nz/plan-your-trip">Explore this section</a>
+                    <a class="more" href="https://tt.timaru.govt.nz/plan">Explore this section</a>
                    </div>
                                    
                      <ul>
-                                               <li><a href="http://tt.timaru.govt.nz/plan-your-trip/bus-timetable">Bus timetable</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/plan-your-trip/campervan">Campervan</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/plan-your-trip/car-hires">Car hires</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/plan-your-trip/climate-info">Climate info</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/plan-your-trip/info-centres">Info centres</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/plan-your-trip/road-safety">Road safety</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/plan-your-trip/timaru-airport">Timaru Airport</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/plan-your-trip/tourism-operators">Tourism operators</a></li>
-                                               <li><a href="http://tt.timaru.govt.nz/plan-your-trip/itineraries">(( Itineraries ))</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/plan/short-break">Short break</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/plan/see-the-region">See the region</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/plan/food-And-wine">Food &amp; wine</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/plan/winter-retreat">Winter retreat</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/plan/summer-fun">Summer fun</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/plan/itineraries">Itineraries</a></li>
+                                           </ul>
+                
+            
+                    </div>
+                </div>
+              </li>
+                          <li><a href="https://tt.timaru.govt.nz/trip-tools">Trip tools</a>
+                <div class="primary-nav__panel">
+                  <div class="container">
+                   <div class="primary-nav__panel__info">
+                    <strong>Trip tools</strong>
+                    <p></p>
+                    <a class="more" href="https://tt.timaru.govt.nz/trip-tools">Explore this section</a>
+                   </div>
+                                   
+                     <ul>
+                                               <li><a href="https://tt.timaru.govt.nz/trip-tools/what-to-pack">What to pack</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/trip-tools/the-weather">The weather</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/trip-tools/maps">Maps</a></li>
+                                               <li><a href="https://tt.timaru.govt.nz/trip-tools/transport">Transport</a></li>
                                            </ul>
                 
             
@@ -261,34 +285,52 @@
 
    <!-- Begin Page Contents -->
    <main id="content">
-     <section class="banner feature-banner feature-banner--white" data-img="">
-   <div class="feature-banner__wrap">
+     <section class="banner feature-banner feature-banner--white"
+
+    
+         
+         
+    >
+    
+  <div class="feature-banner__wrap">
       
       
     
         
 
     
-        <h2><strong>Itineraries</strong></h2>
+        <h2 aos="fade-zoom-out"><strong>Itineraries</strong></h2>
     
   
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
                               <div class="container">
                         <div class="inside-wrap">
                                 
-          <form id="search_page_67165" method="get" action="http://tt.timaru.govt.nz/plan-your-trip/itineraries">
+          <form id="search_page_67165" method="get" action="https://tt.timaru.govt.nz/plan/itineraries/">
 
             
 <div class="activity-search" id="content_container_67344">
 <fieldset class="container">
+    <div class="float--left">
           <label for="">I am visiting Timaru for:</label>
           <select name="" id="">
             <option value="">3-7 Days</option>
             <option value="">3-7 Days</option>
             <option value="">3-7 Days</option>
           </select>
-
+    </div>
+    <div class="float--left">
           <label for="">I am interested in:</label>
           <select name="" id="">
             <option value="">Adventure</option>
@@ -304,18 +346,20 @@
 
 
 <ul class="listing-itineraries">    
-    <li >
-  <header class="banner listing-itineraries__header" data-img="">
-    <a href="http://tt.timaru.govt.nz/plan-your-trip/itineraries/dummy-itinerary2">
+    <li>
+  <header class="banner listing-itineraries__header" data-img="https://tt.timaru.govt.nz/__data/assets/image/0020/71129/temp3.jpg">
+    <a href="https://tt.timaru.govt.nz/plan/itineraries/48-hours/dummy-itinerary2">
       <h2>Dummy Itinerary</h2>
     </a>
   </header>
   <div class="listing-itineraries__wrap">
     <ul class="listing-itineraries__info">
-      <li><strong></strong></li>
-      <li class="listing-itineraries__info__drive"><strong></strong></li>
+      <li><strong>48 hours</strong></li>
+      <li class="listing-itineraries__info__walk"><strong>700km</strong></li>
       <li>
-          tags
+         
+           
+         
       </li>
     </ul>
     <div class="listing-itineraries__description">
@@ -331,67 +375,83 @@
       </ul>           
     </div>
   </div>
-  <div id="map-1" class="listing-itineraries__map"></div>
-</li>
-<li >
-  <header class="banner listing-itineraries__header" data-img="">
-    <a href="http://tt.timaru.govt.nz/plan-your-trip/itineraries/dummy-itinerary3">
-      <h2>Dummy Itinerary</h2>
-    </a>
-  </header>
-  <div class="listing-itineraries__wrap">
-    <ul class="listing-itineraries__info">
-      <li><strong></strong></li>
-      <li class="listing-itineraries__info__drive"><strong></strong></li>
-      <li>
-          tags
-      </li>
-    </ul>
-    <div class="listing-itineraries__description">
-      <h3 class="heading--green-small">Overview</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
-    </div>
-    <div class="listing-itineraries__highlights">
-      <h4 class="heading--green-small">Highlights</h4>
-      <ul>
-        <li><a href="">things</a></li>
-        <li><a href="">things</a></li>
-        <li><a href="">things</a></li>
-      </ul>           
-    </div>
-  </div>
-  <div id="map-2" class="listing-itineraries__map"></div>
-</li>
-<li >
-  <header class="banner listing-itineraries__header" data-img="http://tt.timaru.govt.nz/__data/assets/image/0008/66365/placeholder3.jpeg">
-    <a href="http://tt.timaru.govt.nz/plan-your-trip/itineraries/dummy-itinerary">
-      <h2>Dummy Itinerary</h2>
-    </a>
-  </header>
-  <div class="listing-itineraries__wrap">
-    <ul class="listing-itineraries__info">
-      <li><strong>2 days</strong></li>
-      <li class="listing-itineraries__info__drive"><strong>300km</strong></li>
-      <li>
-          tags
-      </li>
-    </ul>
-    <div class="listing-itineraries__description">
-      <h3 class="heading--green-small">Overview</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
-    </div>
-    <div class="listing-itineraries__highlights">
-      <h4 class="heading--green-small">Highlights</h4>
-      <ul>
-        <li><a href="">things</a></li>
-        <li><a href="">things</a></li>
-        <li><a href="">things</a></li>
-      </ul>           
-    </div>
-  </div>
-  <div id="map-3" class="listing-itineraries__map"></div>
+  <div id="map-1" class="listing-itineraries__map" data-lat="-43.8837" data-long="170.5327"></div>
 </li>
 
+<script>
+    
+    
+</script><li>
+  <header class="banner listing-itineraries__header" data-img="https://tt.timaru.govt.nz/__data/assets/image/0020/71129/temp3.jpg">
+    <a href="https://tt.timaru.govt.nz/plan/itineraries/48-hours/dummy-itinerary">
+      <h2>Dummy Itinerary</h2>
+    </a>
+  </header>
+  <div class="listing-itineraries__wrap">
+    <ul class="listing-itineraries__info">
+      <li><strong>48 hours</strong></li>
+      <li class="listing-itineraries__info__bike"><strong>700km</strong></li>
+      <li>
+         
+           
+         
+      </li>
+    </ul>
+    <div class="listing-itineraries__description">
+      <h3 class="heading--green-small">Overview</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
+    </div>
+    <div class="listing-itineraries__highlights">
+      <h4 class="heading--green-small">Highlights</h4>
+      <ul>
+        <li><a href="">things</a></li>
+        <li><a href="">things</a></li>
+        <li><a href="">things</a></li>
+      </ul>           
+    </div>
+  </div>
+  <div id="map-2" class="listing-itineraries__map" data-lat="-43.8837" data-long="170.5327"></div>
+</li>
+
+<script>
+    
+    
+</script><li>
+  <header class="banner listing-itineraries__header" data-img="https://tt.timaru.govt.nz/__data/assets/image/0008/66365/placeholder3.jpeg">
+    <a href="https://tt.timaru.govt.nz/plan/itineraries/2-3-days/dummy-itinerary">
+      <h2>Dummy Itinerary</h2>
+    </a>
+  </header>
+  <div class="listing-itineraries__wrap">
+    <ul class="listing-itineraries__info">
+      <li><strong>48 hours</strong></li>
+      <li class="listing-itineraries__info__drive"><strong>700km</strong></li>
+      <li>
+         <ul class="tags-list">
+           Local favourites,Māori culture,Heritage
+         </ul>
+      </li>
+    </ul>
+    <div class="listing-itineraries__description">
+      <h3 class="heading--green-small">Overview</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa tenetur deserunt, illo amet quod error explicabo suscipit mollitia doloremque. Iusto tempore soluta aliquam porro, voluptatem aspernatur sint minus consequuntur saepe!</p>
+    </div>
+    <div class="listing-itineraries__highlights">
+      <h4 class="heading--green-small">Highlights</h4>
+      <ul>
+        <li><a href="">things</a></li>
+        <li><a href="">things</a></li>
+        <li><a href="">things</a></li>
+      </ul>           
+    </div>
+  </div>
+  <div id="map-3" class="listing-itineraries__map" data-lat="" data-long=""></div>
+</li>
+
+<script>
+    
+    
+</script>
 </ul>     <div>
       <input type="hidden" name="current_result_page" value="1" />
       <input type="hidden" name="results_per_page" value="0" />
@@ -410,30 +470,22 @@
   <footer class="global-footer">
     <div class="global-footer__wrap">
       <a href="/" class="global-footer__logo float--left">
-        <img src="http://tt.timaru.govt.nz/__data/assets/image/0011/62993/logo.png" alt="Timaru Tourism logo. ">
+        <img src="https://tt.timaru.govt.nz/__data/assets/image/0011/62993/logo.png" alt="Timaru Tourism logo. ">
       </a>
 
       <!-- Begin Social Media Links -->
       <ul class="social-media-links bare-list float--left ml++">
         <li class="social-media-links__twitter">
-          <a href="" target="_blank">
-            <i class="fa fa-twitter"></i>
-          </a>
+           <a href="" target="_blank"></a>
         </li>
         <li class="social-media-links__instagram">
-          <a href="" target="_blank">
-            <i class="fa fa-instagram"></i>
-          </a>
+          <a href="" target="_blank"></a>
         </li>
         <li class="social-media-links__youtube">
-          <a href="" target="_blank">
-            <i class="fa fa-youtube"></i>
-          </a>
+          <a href="" target="_blank"></a>
         </li>
         <li class="social-media-links__facebook">
-          <a href="" target="_blank">
-            <i class="fa fa-facebook"></i>
-          </a>
+          <a href="" target="_blank"></a>
         </li>
       </ul>
       <!-- End Social Media Links -->
@@ -444,12 +496,13 @@
       <nav class="footer-nav">
                             
        <ul>
-                    <li><a href="http://tt.timaru.govt.nz/explore">Explore</a></li>
-                    <li><a href="http://tt.timaru.govt.nz/where-to-go">Where to go</a></li>
-                    <li><a href="http://tt.timaru.govt.nz/accommodation">Accommodation</a></li>
-                    <li><a href="http://tt.timaru.govt.nz/whats-on">What's on</a></li>
-                    <li><a href="http://tt.timaru.govt.nz/eat-and-drink">Eat &amp; Drink</a></li>
-                    <li><a href="http://tt.timaru.govt.nz/plan-your-trip">Plan Your Trip</a></li>
+                    <li><a href="https://tt.timaru.govt.nz/explore">Explore</a></li>
+                    <li><a href="https://tt.timaru.govt.nz/activities">Activities</a></li>
+                    <li><a href="https://tt.timaru.govt.nz/stay">Stay</a></li>
+                    <li><a href="https://tt.timaru.govt.nz/events">Events</a></li>
+                    <li><a href="https://tt.timaru.govt.nz/eat-and-drink">Eat &amp; Drink</a></li>
+                    <li><a href="https://tt.timaru.govt.nz/plan">Plan</a></li>
+                    <li><a href="https://tt.timaru.govt.nz/trip-tools">Trip tools</a></li>
                 </ul>
        
             
@@ -463,7 +516,7 @@
       <ul class="footer-utilities__list">
         <li>The official Timaru Tourism website</li>
         <li class="text--bold"><a href="">Visit Timaru</a></li>
-        <li class="no-border"><a href="">Live, Work, Play</a></li>
+        <li class="border--none"><a href="">Live, Work, Play</a></li>
         <li class="hidden-portable">&copy; 2016 Timaru</li>
         <li class="border--none hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
       </ul>

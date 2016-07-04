@@ -93,8 +93,12 @@
 				height: 100%;
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				background-repeat: no-repeat;
-				background-position: -295px 7px;
+				background-position: -298px -2px;
 				background-size: 400px;
+	
+				@include media-query(note-and-up){
+					background-position: -295px 7px;
+				}
 			}	
 
 			.adbt & {
@@ -129,6 +133,10 @@
 
 		strong {
 			font-weight: $ultrabold;
+
+			&:after {
+				content: ":";
+			}
 		}
 	}
 
@@ -152,7 +160,7 @@
 				content: "";
 				background-repeat: no-repeat;
 				@include position(absolute, 0 -1.25em 0 null);
-				// background-image: url(../img/01TDCsprites.svg);
+				// background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				background-position: -200px -95px;
 				background-size: 400px;
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
