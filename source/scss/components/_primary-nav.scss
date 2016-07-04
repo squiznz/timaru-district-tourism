@@ -11,17 +11,15 @@
 		display: block !important;
 		@include position(absolute, 0px 0 null 0);
 	}
-	
-	//ADBT
-	.adbt & {
-		background-color: transparent;
-	}
 
 	.adbt & {
 		background-color: transparent;
 		> .container {
  			> ul {
-    			padding: 0 193px;
+			    background-color: $white;
+ 				@include media-query(note-and-up) {
+    				padding: 0 193px;
+ 				}
 			 	> li {
 		 		    color: $tdc-navy;
 			 	}

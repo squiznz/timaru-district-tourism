@@ -29,6 +29,12 @@
 			margin-right: 0.5em;
 		}
 	}
+
+	.adbt & {
+		@include media-query(portable) {
+	    	padding: 50px 0 0;
+		}
+	}
 }
 
 
@@ -91,7 +97,7 @@
 		.three-best-select--blue {
 			color: $tdc-light-blue !important;
 
-			&::after {
+			&:after {
 				color: $tdc-light-blue !important;
 			}
 		}

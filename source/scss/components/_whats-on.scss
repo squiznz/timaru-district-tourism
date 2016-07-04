@@ -38,6 +38,12 @@
 				max-width: 591px;
 			}
 		}
+
+		&:nth-child(2) {
+			@include media-query(palm-land-up) {
+				display: none;
+			}
+		}
 	}
 
 	.slider-tools {

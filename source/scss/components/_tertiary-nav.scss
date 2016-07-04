@@ -17,6 +17,7 @@
 
 	.adbt & {
 		border-bottom: 1px solid #ECECEC;
+	    z-index: 999;
 	} 
 
 	ul {
@@ -72,6 +73,10 @@
 				.adbt & {
 				    width: auto;
 				    background-image: none;
+
+				    @include media-query(portable) {
+				    	display: none;
+				    }
 				}
 			}
 

@@ -60,15 +60,23 @@ img {
 	main {
 		.intro-container {
 			@include container(1210px);
-			padding: 90px 125px;
+		    padding: 90px 125px;
+
+			@include media-query(palm-landscape) {
+				padding: 4.2em;
+			}
+
+			@include media-query(palm) {
+				padding: 2.2em;
+			}
 
 			.intro__subheading {
-				@include font-size(22.78px);
+				@include font-size(22px);
 				width: 100%;
 			}
 
 			.intro__description{
-				@include font-size(19.18px);
+				@include font-size(19px);
 				width: 100%;
 			}
 		}
@@ -95,7 +103,7 @@ img {
 		@include clearfix();
 		margin-right: 30px;
 		
-		.wide & {
+		.wide &, .one_col & {
 			width: 100%;
 		}
 	}

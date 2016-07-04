@@ -98,14 +98,20 @@
 			}	
 
 			.adbt & {
+				color: $white;
+
 				@include media-query(note-and-up){
-					color: $white;
-			    margin-bottom: 0.3125em;
-				     
-		    	&:before {
-					color: $tdc-light-blue;
-		     }
-	    	}
+				    margin-bottom: 0.3125em;
+	    		}
+
+	    		&:before {
+	    		    background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
+				    background-position: -292px 10px !important;
+
+					@include media-query(portable) {
+						background-position: -294px 5px !important;
+					}
+		     	}
 			}
 		}
 

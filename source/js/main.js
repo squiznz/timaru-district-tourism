@@ -2,6 +2,11 @@
 *   Insert Client Name - Main JS - Authors: Insert Author (Squiz)
 ***/
 
+var $whatsOnSlider = $('.whats-on-slider ul.listing--events:nth-child(3)'),
+    $clonedSlider = $whatsOnSlider.clone(true, true),
+    featuredSlides = $('.listing--events__feature').clone(true, true),
+    featuredSlider = $('.featured-list');
+
 function debounce(e, t, n) {
     var i;
     return function() {
@@ -56,6 +61,7 @@ function detectScrolling() {
 
 
 function globalActions() {
+  featuredSlider.append(featuredSlides);
 
   if ($('.pagination a').length == 0) {
     $('.pagination').hide();
@@ -74,13 +80,6 @@ function globalActions() {
         $this.append(item);
       }
     };
-  });
-
-  $('.utility-nav__item--primary-toggle a').click(function(e) {
-    e.preventDefault();
-    
-    $('.primary-nav').toggle().toggleClass('open');
-    $('.utility-nav__item--primary-toggle').toggleClass('close');
   });
 
   $('.banner').each(function(index) {
@@ -156,7 +155,20 @@ function ourRegion(){
   }
 }
 
+function mobileMenu() {
+  $('.utility-nav__item--primary-toggle a').click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    $('.primary-nav').toggle().toggleClass('open');
+    $('.utility-nav__item--primary-toggle').toggleClass('close');
+  });
 
+  $('body').click(function(){
+      $('.primary-nav').hide().removeClass('open');
+      $('.utility-nav__item--primary-toggle').removeClass('close');
+  });
+}
 
 function threeBestSlider() {
 
@@ -259,12 +271,17 @@ function searchForm() {
     e.stopPropagation();
     
     $('.site-search').addClass('open');
-    
-      $('body').click(function(){
-        $('.site-search').removeClass('open');
-      }); 
   });
 
+  $('.site-search').click(function(e){
+    e.stopPropagation();
+  });
+
+  $(document).click(function(e){
+    if (!$(e.target).is('.site-search')) {
+      $('.site-search').removeClass('open');
+    }
+  }); 
 
   $('.site-search input[type=search]').focus(function(e){
     $(this).parent('fieldset').parent('form').parent('.site-search').addClass('site-search--expanded');
@@ -329,6 +346,57 @@ function threeBestSlider() {
   }
 }
 
+function whatsOnSlider() {
+  var $newSlider = $clonedSlider.clone(true, true);
+
+  if(!featuredSlider.hasClass('slick-initialized') && featuredSlider.children().length > 1) {
+    featuredSlider.slick({
+      centerMode: true,
+      initialSlide: 1,
+      draggable: true,
+      arrows: false,
+      dots: false
+    })
+  }    
+
+  if ($(window).width() > 768) {
+
+    if($whatsOnSlider.hasClass('slick-initialized')) {
+      $whatsOnSlider.slick('unslick');
+    }
+
+    $whatsOnSlider.empty();
+    $whatsOnSlider.append($newSlider.find('li'));
+
+    $whatsOnSlider.slick({
+      dots: true,
+      infinite: true,
+      autoplay: false,
+      mobileFirst: false,
+      draggable: true,
+      variableWidth: true,
+      centerMode: true,
+      appendArrows: $('.whats-on-slider .slider-tools'),
+      appendDots: $('.whats-on-slider .slider-dots')
+    });
+    
+  }
+  else {
+
+    if($whatsOnSlider.hasClass('slick-initialized')) {
+      $whatsOnSlider.slick('unslick');
+    }
+
+    $whatsOnSlider.empty();
+    $whatsOnSlider.append($newSlider.find("li:not(.listing--events__feature)"));
+
+    $whatsOnSlider.slick({
+      rows: 2,
+      slidesPerRow: 2
+    });
+  } 
+}
+
 /* Clean me */
 $(document).ready(function () {
 
@@ -359,34 +427,6 @@ $(document).ready(function () {
     ]
   });
 
-  
-  $('.whats-on-slider ul').slick({
-    dots: true,
-    infinite: true,
-    autoplay: false,
-    mobileFirst: true,
-    draggable: true,
-    variableWidth: true,
-    centerMode: false,
-    rows: 3,
-    slidesPerRow: 2,
-    appendArrows: $('.whats-on-slider .slider-tools'),
-    appendDots: $('.whats-on-slider .slider-dots'),
-    responsive: [
-      // {
-      // breakpoint: 0,
-      //   settings: "unslick"
-      // },
-      {
-      breakpoint: 768,
-        settings: {
-          centerMode: true,
-          initialSlide: 1,
-        }
-      }
-    ]
-  });
-
   // var featuredSlides = $('.whats-on-slider ul').slick('slickFilter', ".listing--events__feature");
   // $featuredSlides.each(function(){
     $('.listing--events__feature').parent('.slick-slide').after("<div class='visuallyhidden slick-slide'></div>");
@@ -397,6 +437,8 @@ $(document).ready(function () {
   threeBest();
   megaMenu();  
   searchForm();
+  whatsOnSlider(); 
+  mobileMenu();
   // ourRegion();
   
   // AOS.init({
@@ -405,6 +447,7 @@ $(document).ready(function () {
 
   $(window).on("resize", debounce(function () {
     threeBestSlider();
+    whatsOnSlider(); 
     megaMenu();
   }, 50)); 
 });

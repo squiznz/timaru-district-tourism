@@ -24,9 +24,7 @@
 	}
 	
 	.adbt & {
-		@include media-query(note-and-up){
-			@include position(relative, 0 0 null 0);
-		}
+		@include position(relative, 0 0 null 0);
 	}
 }
 
@@ -109,7 +107,6 @@
 				width: 95%;
 			}
 
-				//ADBT
 			@include media-query(note-and-up){
 				width: 100px;
 		  	    -webkit-transition: 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -200,7 +197,6 @@
 			background-position: -180px 5px;
 			background-size: 500px;
 
-				//ADBT
 			@include media-query(note-and-up){
 				background-color: transparent !important;
 				min-height: 30px !important;
@@ -209,10 +205,18 @@
 				background-size: 400px;
 				background-position: -135px 10px;
 			}
+
+			.adbt & {
+			    background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg);
+			}
 		}
 
 		&.open {
 			display: block;
+		}
+
+		.adbt & {
+			color: $tdc-dark-navy;
 		}
 	}
 

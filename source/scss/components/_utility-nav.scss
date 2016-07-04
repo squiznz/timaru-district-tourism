@@ -36,7 +36,6 @@
 	}
 
 	.adbt & {
-	    padding-right: 18px;
     	border-right: 1px solid #eeeeee;
 	}
 }
@@ -58,11 +57,26 @@
 			}
 
 			//ADBT
-			@include media-query(note-and-up) {
-				.adbt & {
-	    			padding-top: 17px;
-	    			width: 138px;
-				}
+			.adbt & {
+    			width: 138px;
+    			height: 83%;
+
+    			a {
+    				background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
+    				@include media-query(note-and-up) {
+					    background-size: 410px;
+					    background-position: 0px 15px;
+    				}
+
+    				@include media-query(portable) {
+				        background-size: 367px;
+					    background-position: 0px 14px;
+    				}
+
+    				@include media-query(palm-landscape) {
+					    background-position: 0px 5px;
+    				}
+    			}
 			}
 			//End ADBT
 		}
@@ -87,11 +101,19 @@
 			@include media-query(palm-land-up){
 				padding-top: 20px;
 				background-position: -180px 20px;
+
+				.adbt & {
+				    background-position: -180px 23px;
+				}
 			}
 			
 			@include media-query(note-and-up){
 				display: none !important;
 				padding: 0;
+			}
+
+			.adbt & {
+			    background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
 			}
 		}
 
@@ -149,6 +171,10 @@
 				-moz-transform: rotate(0deg);
 				-o-transform: rotate(0deg);
 				transform: rotate(0deg);
+
+				.adbt & {
+					background: $tdc-navy;
+				}
 			}
 
 			&.close {

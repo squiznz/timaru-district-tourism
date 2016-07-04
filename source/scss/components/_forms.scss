@@ -49,6 +49,10 @@ form {
 		}
 	}
 
+	textarea {
+	    max-width: 100%;
+	}
+
 	input[type="submit"], button[type="submit"] {
 		background-color: $tdc-purple;
 		color: $white;
@@ -128,6 +132,15 @@ form {
 			background-position: -245px -50px;
 			background-size: 500px;		
 			width: 15px;
+
+			.adbt & {
+				background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
+			    background-position: -306px -39px !important;
+							
+				@include media-query(portable) {
+			    	background-position: -306px -45px !important;
+				}
+			}
 		}
 	}
 

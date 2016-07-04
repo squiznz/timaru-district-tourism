@@ -1689,15 +1689,27 @@ img {
   clear: both;
 }
 
+@media screen and (max-width: 767px) {
+  .adbt.one_col main .intro-container {
+    padding: 4.2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .adbt.one_col main .intro-container {
+    padding: 2.2em;
+  }
+}
+
 .adbt.one_col main .intro-container .intro__subheading {
-  font-size: 22.78px;
-  font-size: 1.42375rem;
+  font-size: 22px;
+  font-size: 1.375rem;
   width: 100%;
 }
 
 .adbt.one_col main .intro-container .intro__description {
-  font-size: 19.18px;
-  font-size: 1.19875rem;
+  font-size: 19px;
+  font-size: 1.1875rem;
   width: 100%;
 }
 
@@ -1721,7 +1733,7 @@ img {
     content: "";
     display: table;
   }
-  .wide .inside-wrap {
+  .wide .inside-wrap, .one_col .inside-wrap {
     width: 100%;
   }
 }
@@ -2432,13 +2444,11 @@ section header a.view-all, section header a.watch-timaru__view-all {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .adbt .global-header {
-    position: relative;
-    top: 0;
-    right: 0;
-    left: 0;
-  }
+.adbt .global-header {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .global-header--transparent {
@@ -2646,8 +2656,16 @@ section header a.view-all, section header a.watch-timaru__view-all {
   }
 }
 
+.adbt .site-search button {
+  background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg);
+}
+
 .site-search.open {
   display: block;
+}
+
+.adbt .site-search {
+  color: #00132a;
 }
 
 .global-header__utility-nav-wrap {
@@ -2682,6 +2700,10 @@ section header a.view-all, section header a.watch-timaru__view-all {
   color: #FFFFFF;
   text-decoration: none;
   display: block;
+}
+
+.adbt .global-footer {
+  border-top: 1px solid #FFFFFF;
 }
 
 .global-footer__wrap {
@@ -2964,12 +2986,14 @@ section header a.view-all, section header a.watch-timaru__view-all {
   background-color: transparent;
 }
 
-.adbt .primary-nav {
-  background-color: transparent;
+.adbt .primary-nav > .container > ul {
+  background-color: #FFFFFF;
 }
 
-.adbt .primary-nav > .container > ul {
-  padding: 0 193px;
+@media screen and (min-width: 1024px) {
+  .adbt .primary-nav > .container > ul {
+    padding: 0 193px;
+  }
 }
 
 .adbt .primary-nav > .container > ul > li {
@@ -3224,7 +3248,6 @@ section header a.view-all, section header a.watch-timaru__view-all {
 }
 
 .adbt .utility-nav {
-  padding-right: 18px;
   border-right: 1px solid #eeeeee;
 }
 
@@ -3244,10 +3267,32 @@ section header a.view-all, section header a.watch-timaru__view-all {
   background-repeat: no-repeat;
 }
 
+.adbt .utility-nav__item--logo {
+  width: 138px;
+  height: 83%;
+}
+
+.adbt .utility-nav__item--logo a {
+  background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
+}
+
 @media screen and (min-width: 1024px) {
-  .adbt .utility-nav__item--logo {
-    padding-top: 17px;
-    width: 138px;
+  .adbt .utility-nav__item--logo a {
+    background-size: 410px;
+    background-position: 0px 15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .adbt .utility-nav__item--logo a {
+    background-size: 367px;
+    background-position: 0px 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .adbt .utility-nav__item--logo a {
+    background-position: 0px 5px;
   }
 }
 
@@ -3274,6 +3319,9 @@ section header a.view-all, section header a.watch-timaru__view-all {
     padding-top: 20px;
     background-position: -180px 20px;
   }
+  .adbt .utility-nav__item--search-toggle {
+    background-position: -180px 23px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -3281,6 +3329,10 @@ section header a.view-all, section header a.watch-timaru__view-all {
     display: none !important;
     padding: 0;
   }
+}
+
+.adbt .utility-nav__item--search-toggle {
+  background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
 }
 
 .utility-nav__item--primary-toggle {
@@ -3348,6 +3400,10 @@ section header a.view-all, section header a.watch-timaru__view-all {
   transform: rotate(0deg);
 }
 
+.adbt .utility-nav__item--primary-toggle hr {
+  background: #001d41;
+}
+
 .utility-nav__item--primary-toggle.close hr {
   position: absolute;
   height: 3px;
@@ -3398,6 +3454,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
 
 .adbt .tertiary-nav {
   border-bottom: 1px solid #ECECEC;
+  z-index: 999;
 }
 
 .tertiary-nav ul {
@@ -3472,6 +3529,12 @@ section header a.view-all, section header a.watch-timaru__view-all {
 .adbt .tertiary-nav ul li:last-of-type {
   width: auto;
   background-image: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .adbt .tertiary-nav ul li:last-of-type {
+    display: none;
+  }
 }
 
 .tertiary-nav ul li:first-of-type {
@@ -3610,6 +3673,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
 
 .adbt.home_page .cta-banner {
   background-color: #00132a;
+  background-image: none;
 }
 
 .cta-banner__wrap {
@@ -3993,13 +4057,24 @@ section header a.view-all, section header a.watch-timaru__view-all {
   background-size: 400px;
 }
 
+.adbt .location-banner__info > span {
+  color: #FFFFFF;
+}
+
 @media screen and (min-width: 1024px) {
   .adbt .location-banner__info > span {
-    color: #FFFFFF;
     margin-bottom: 0.3125em;
   }
+}
+
+.adbt .location-banner__info > span:before {
+  background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
+  background-position: -292px 10px !important;
+}
+
+@media screen and (max-width: 1023px) {
   .adbt .location-banner__info > span:before {
-    color: #0093d0;
+    background-position: -294px 5px !important;
   }
 }
 
@@ -4300,6 +4375,12 @@ section header a.view-all, section header a.watch-timaru__view-all {
   margin-right: 0.5em;
 }
 
+@media screen and (max-width: 1023px) {
+  .adbt .three-best {
+    padding: 50px 0 0;
+  }
+}
+
 .three-best__list {
   max-width: 1063px;
   margin-left: auto;
@@ -4374,7 +4455,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
   color: #0093d0 !important;
 }
 
-.three-best-select--blue::after {
+.three-best-select--blue:after {
   color: #0093d0 !important;
 }
 
@@ -4584,6 +4665,12 @@ section header a.view-all, section header a.watch-timaru__view-all {
 
 .whats-on-slider .listing--events li.listing--events__feature {
   max-width: 591px;
+}
+
+@media screen and (min-width: 768px) {
+  .whats-on-slider .listing--events:nth-child(2) {
+    display: none;
+  }
 }
 
 .whats-on-slider .slider-tools {
@@ -5182,6 +5269,10 @@ form input:focus, form select:focus {
   border: 1px solid #dfdfdf;
 }
 
+form textarea {
+  max-width: 100%;
+}
+
 form input[type="submit"], form button[type="submit"] {
   background-color: #4821c0;
   color: #FFFFFF;
@@ -5263,6 +5354,17 @@ form input[type="submit"], form button[type="submit"] {
   background-position: -245px -50px;
   background-size: 500px;
   width: 15px;
+}
+
+.adbt .select-wrap.tc-tdc-light-blue:after {
+  background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
+  background-position: -306px -39px !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .adbt .select-wrap.tc-tdc-light-blue:after {
+    background-position: -306px -45px !important;
+  }
 }
 
 .activity-search .select-wrap {
