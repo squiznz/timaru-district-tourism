@@ -125,9 +125,9 @@
 				}
 
 				&:after {
-					content: "\f0da";
-					font-family: 'FontAwesome';
-					@include font-size(11px);
+					// content: "\f0da";
+					// font-family: 'FontAwesome';
+					// @include font-size(11px);
 					@include position(absolute, 1px -1em 0 null);
 				}
 			}

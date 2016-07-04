@@ -111,7 +111,7 @@ function globalActions() {
 
 
   if ($('.three-best').length !== 0) {    
-    $.get(( "/dev/assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + threeBestRoot[0]), function (response) {
+    $.get(( "/../../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + threeBestRoot[0]), function (response) {
       $('.three-best__wrap').html(response);
       threeBestSlider();
     });
@@ -119,7 +119,7 @@ function globalActions() {
 
 
   if ($('.our-region').length !== 0 && !$('.adbt').length) {    
-    $.get(( "/dev/assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + ourRegionRoot[0]), function (response) {
+    $.get(( "/../../assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + ourRegionRoot[0]), function (response) {
       $('.our-region__wrap').html(response);
       ourRegionSlider();
     });
@@ -135,7 +135,7 @@ function globalActions() {
 
 function threeBest(){
   var root = $('.three-best').find('select').val();               
-    $.get(( "/dev/assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + root), function (response) {
+    $.get(( "../../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + root), function (response) {
       $('.three-best__wrap').html(response);
       threeBestSlider();
     });
@@ -145,7 +145,7 @@ function ourRegion(){
   var root = $('.our-region').find('select').val();
 
   if(!$('.adbt').length) {
-    $.get(( "/dev/assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + root), function (response) {
+    $.get(( "../../assets/nested-content-assets/content-templates/our-region/our-region-search?id=" + root), function (response) {
       $('.our-region__wrap').html(response);
         ourRegionSlider();
     });
@@ -441,9 +441,9 @@ $(document).ready(function () {
   mobileMenu();
   // ourRegion();
   
-  // AOS.init({
-  //   duration: 1200
-  // });
+  AOS.init({
+    duration: 1200
+  });
 
   $(window).on("resize", debounce(function () {
     threeBestSlider();

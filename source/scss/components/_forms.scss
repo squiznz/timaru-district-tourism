@@ -118,28 +118,20 @@ form {
 		@include position(absolute, 0 0.5em 0 null);
 		content: "";
 		cursor: pointer;
-		line-height: 42px;
 		display: block;
-		font-size: 70%;
+		background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+		width: 15px;
+		background-size: 500px;		
+		background-repeat: no-repeat;
+		background-position: -245px -50px;
 		pointer-events: none;
-	}
 
-	&.tc-tdc-light-blue {
-		&:after {
-			// background-image: url(/__data/assets/file/0009/72099/sprites.svg);
-			background-image: url(../img/01TDCsprites.svg);
-			background-repeat: no-repeat;
-			background-position: -245px -50px;
-			background-size: 500px;		
-			width: 15px;
-
-			.adbt & {
+		.adbt & {
 				background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
-			    background-position: -306px -39px !important;
-							
-				@include media-query(portable) {
-			    	background-position: -306px -45px !important;
-				}
+		    background-position: -306px -42px !important;
+						
+			@include media-query(portable) {
+		    	background-position: -306px -50px !important;
 			}
 		}
 	}

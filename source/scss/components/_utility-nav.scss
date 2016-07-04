@@ -59,6 +59,10 @@
 					background-position: 0 27px;
 				}
 
+				@include media-query(note-and-up) {
+					background-position: 0 32px;
+				}
+
 				//ADBT
 				.adbt & {
 	    			width: 138px;
@@ -83,6 +87,7 @@
 				}
 			}
 		}
+		
 
 		.utility-nav__item--search-toggle {
 			float: right;

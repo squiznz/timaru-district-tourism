@@ -185,13 +185,17 @@ video {
 		content: "";
 		background-repeat: no-repeat;
 		background-size: 100%;
-		background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
-		// background-image: url('../img/arrow-right-white.png');
-		background-position: center;
+		// background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
+		background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+			background-position: -47px -43px;
 		float: right;
 		height: 100%;
 		width: 15px;
 		margin-left: 0.5em;
+
+		// @-moz-document url-prefix() { 
+		// 	background-position: -47px -43px;
+		// }	
 	}
 }
 
@@ -326,11 +330,14 @@ a.more {
 		width: 10px;
 		height: 100%;
 		display: block;
-		// background-image: url(../img/01TDCsprites.svg);
 		background-repeat: no-repeat;
-		background-position: -47px -52px;
+		background-position: -47px -54px;
 		background-size: 400px;
 		@include position(absolute, null -1em 0 null);
+
+		@-moz-document url-prefix() { 
+			background-position: -47px -43px;
+		}	
 	}
 }
 

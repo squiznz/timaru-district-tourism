@@ -99,6 +99,10 @@
 				@include media-query(note-and-up){
 					background-position: -295px 7px;
 				}
+
+				@-moz-document url-prefix() { 
+					background-position: -293px 10px;
+				}	
 			}	
 
 			.adbt & {
@@ -136,6 +140,7 @@
 
 			&:after {
 				content: ":";
+				display: inline;
 			}
 		}
 	}
@@ -160,7 +165,6 @@
 				content: "";
 				background-repeat: no-repeat;
 				@include position(absolute, 0 -1.25em 0 null);
-				// background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				background-position: -200px -95px;
 				background-size: 400px;
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
@@ -168,6 +172,10 @@
 				height: 100%;
 				width: 15px;
 				margin-left: 0.5em;
+
+				@-moz-document url-prefix() { 
+					background-position: -200px -93px;;
+				}	
 			}
 		}
 
