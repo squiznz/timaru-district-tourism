@@ -12,14 +12,12 @@
 }
 
 		.listing-itineraries, .itinerary-details {
-			// padding-bottom: 140px;
 			@extend .bare-list;
 			@include container(1063px);
 			padding: 0 30px;
 
 			> li {
 				margin-bottom: 66px;
-				// @include font-size(21.42px);
 				line-height: 29.45px;
 				float: left;
 				width: 100%;
@@ -34,20 +32,25 @@
 
 				header {
 					height: 379px;
+					display: table;
+					width: 100%;
 					background-size: 100% !important;
 					
 					a {
-						display: block;
+						// display: block;
 						width: 100%;
 						@include font-size(50px);
 						height: 100%;
-						padding: 3.1em 30px 0 30px !important;	
+						// padding: 3.1em 30px 0 30px !important;
+						vertical-align: middle;
+		  			display: table-cell;
+					  text-align: center;	
 					}
 
 					h2 {
 						background-color: transparent;	
-						text-align: center;
 						font-size: inherit;
+
 					}
 				}
 			}
@@ -79,7 +82,7 @@
 			border-right: 1px solid $tdc-grey;
 			height: 100%;
 			text-align: center;
-			vertical-align: center;
+			vertical-align: middle;
 			color: $tdc-dark-navy;
 		}
 	}
@@ -142,15 +145,10 @@
 
 
 			.listing-itineraries__info, .itinerary-details__info {
-				li {
+				> li {
 					@include position(relative, null);
 					@include font-size(24px);
 					padding: 21px 24px;
-
-					&:after {
-						@include position(absolute, 21px null 32px 25px);
-						font-family: 'Fontawesome';
-					}
 					
 					&:nth-child(1){
 						padding-left: 40px;
@@ -158,17 +156,28 @@
 					
 					&:nth-child(2){
 						padding-left: 70px;
+
+						&:after {
+							@include position(absolute, 21px null 32px 25px);
+							background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+							background-size: 400px;
+							content: "";
+							width: 30px;
+							height: 30px;
+						}
 					}
 
 					&:nth-child(3){
 						border-right: none;
+						width: 400px;
+						padding: 0.25em 24px;
 					}
 				}
 			}
 
 				.listing-itineraries__info__drive {
 					&:after {
-						content: "\f1b9";
+						background-position: 4px -194px;
 					}
 				}
 
@@ -176,13 +185,13 @@
 				.listing-itineraries__info__walk {
 
 					&:after {
-						content: "\f21c";
+						background-position: -91px -194px;
 					}
 				}
 
 				.listing-itineraries__info__bike {
 
 					&:after {
-						content: "\f206";
+						background-position: -50px -194px;
 					}
 				}
