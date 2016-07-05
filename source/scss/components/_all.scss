@@ -81,11 +81,6 @@ img {
 				width: 100%;
 			}
 		}
-
-		// .landing-container {
-		// 	@include container(1210px);
-		// 	padding: 0;
-		// }
 	}
 }
 //End ADBT
@@ -187,7 +182,7 @@ video {
 		background-size: 100%;
 		// background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
 		background-image: url(/__data/assets/file/0009/72099/sprites.svg);
-			background-position: -47px -43px;
+		background-position: -47px -43px;
 		float: right;
 		height: 100%;
 		width: 15px;
@@ -624,13 +619,17 @@ video {
 		float: left;
 		margin-right: 3em;
 		color: $tdc-mid-grey;
+		padding: 0 0 8px 0;
 
 		a {
+			@include font-size(17px);
 			color: inherit;
 		}
 
-		.active {
+		&.active {
 			color: $tdc-dark-navy;
+			font-weight: $bold;
+			border-bottom: 3px solid $tdc-dark-navy;
 		}
 	}
 }

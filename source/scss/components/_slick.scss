@@ -183,10 +183,9 @@ $slick-opacity-not-active: 1 !default;
     padding: 0;
     border: none;
     outline: none;
-    background-image: url('/__data/assets/image/0011/67808/arrow-dark-navy.png');
-    background-size: 100%;
+    background-image: url(/__data/assets/file/0009/72099/sprites.svg);
+    background-size: 400px;
     background-repeat: no-repeat;
-    background-position: center !important;
 
     &:hover, &:focus {
         // outline: none;
@@ -231,7 +230,7 @@ $slick-opacity-not-active: 1 !default;
         right: -25px;
     }
     transform: rotate(180deg);
-    background-position: center -1px;
+    background-position: 78px -98px !important;
 
     top: 5px;
 
@@ -248,6 +247,8 @@ $slick-opacity-not-active: 1 !default;
 .slick-next {
     right: 30px;
     bottom: 5px;
+    background-position: 28px -98px !important;
+
 
     [dir="rtl"] & {
         left: -25px;

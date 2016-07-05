@@ -2,12 +2,19 @@
 *   Itinerary Details
 ***/
 
+.intro--itinerary {
+	.intro__wrap {
+		border-bottom: 1px solid $tdc-grey;		
+	}
+}
+
 .itinerary-details-list {
 	float: left;
 	
 	li {
 		display: inline-block;
 		color: $tdc-dark-navy;
+		border-left: 1px solid $tdc-grey;
 
 		a {
 			color: inherit;
