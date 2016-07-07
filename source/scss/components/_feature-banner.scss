@@ -122,6 +122,10 @@
 		@include container(37em);
 		padding: 107px 30px;
 		@include position(relative, null null null null);
+
+		.adbt & {
+			 @include container(62em);
+		}
 	}
 
 	.feature-banner--home &:after {

@@ -58,30 +58,30 @@
 				@include media-query(palm-land-up) {
 					background-position: 0 27px;
 				}
-
-				//ADBT
-				.adbt & {
-	    			width: 138px;
-	    			height: 83%;
-
-	    			a {
-	    				background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
-	    				@include media-query(note-and-up) {
-						    background-size: 410px;
-						    background-position: 0px 15px;
-	    				}
-
-	    				@include media-query(portable) {
-					        background-size: 367px;
-						    background-position: 0px 14px;
-	    				}
-
-	    				@include media-query(palm-landscape) {
-						    background-position: 0px 5px;
-	    				}
-					}
-				}
 			}
+
+			//ADBT
+			.adbt & {
+    			width: 138px;
+    			height: 83%;
+
+    			a {
+    				background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
+    				@include media-query(note-and-up) {
+					    background-size: 410px;
+					    background-position: 0px 15px;
+    				}
+
+    				@include media-query(portable) {
+				        background-size: 367px;
+					    background-position: 0px 14px;
+    				}
+
+    				@include media-query(palm-landscape) {
+					    background-position: 0px 5px;
+    				}
+				}
+			}		
 		}
 
 		.utility-nav__item--search-toggle {

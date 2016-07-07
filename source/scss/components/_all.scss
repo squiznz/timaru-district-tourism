@@ -103,6 +103,7 @@ img {
 		float: left;
 		@include clearfix();
 		margin-right: 30px;
+		margin-left: 30px;
 		
 		.wide &, .one_col & {
 			width: 100%;

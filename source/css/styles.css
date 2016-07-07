@@ -1728,6 +1728,7 @@ img {
     padding: 0 70px !important;
     float: left;
     margin-right: 30px;
+    margin-left: 30px;
   }
   .inside-wrap::after {
     clear: both;
@@ -3278,31 +3279,31 @@ section header a.view-all, section header a.watch-timaru__view-all {
   }
 }
 
-.adbt .utility-nav__item--logo a {
+.adbt .utility-nav__item--logo {
   width: 138px;
   height: 83%;
 }
 
-.adbt .utility-nav__item--logo a a {
+.adbt .utility-nav__item--logo a {
   background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
 }
 
 @media screen and (min-width: 1024px) {
-  .adbt .utility-nav__item--logo a a {
+  .adbt .utility-nav__item--logo a {
     background-size: 410px;
     background-position: 0px 15px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  .adbt .utility-nav__item--logo a a {
+  .adbt .utility-nav__item--logo a {
     background-size: 367px;
     background-position: 0px 14px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .adbt .utility-nav__item--logo a a {
+  .adbt .utility-nav__item--logo a {
     background-position: 0px 5px;
   }
 }
@@ -3690,19 +3691,19 @@ section header a.view-all, section header a.watch-timaru__view-all {
 .cta-banner__wrap {
   height: 100%;
   margin: 0 auto;
-  padding: 0 21px;
+  padding: 15px 21px 0px;
   vertical-align: middle;
   display: table-cell;
   text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
-  .cta-banner__wrap * {
-    max-width: 60%;
+  .cta-banner__wrap p {
+    max-width: 55%;
     margin-left: auto;
     margin-right: auto;
   }
-  .cta-banner__wrap *:after {
+  .cta-banner__wrap p:after {
     content: " ";
     display: block;
     clear: both;
@@ -4023,7 +4024,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
   .location-banner__info {
     background-color: rgba(0, 29, 65, 0.89);
     width: 423px;
-    padding: 32px 40px;
+    padding: 40px;
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 44px;
@@ -4171,7 +4172,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
 
 @media screen and (min-width: 1024px) {
   .our-region {
-    padding: 60px 0 40px 0;
+    padding: 50px 0 44px 0;
     margin-bottom: 0;
     position: relative;
     top: 0;
@@ -4184,6 +4185,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
   max-width: 1005px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -15px;
 }
 
 .our-region .slider-tools:after {
@@ -4210,7 +4212,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     height: 47px;
     line-height: 47px;
   }
@@ -4355,7 +4357,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
 *   Three of the Best
 ***/
 .three-best {
-  padding: 50px 0;
+  padding: 50px 0 60px;
   background-color: #FFFFFF;
 }
 
@@ -4449,7 +4451,7 @@ section header a.view-all, section header a.watch-timaru__view-all {
 }
 
 .three-best__info-wrap {
-  padding: 21px 0;
+  padding: 9px 0 21px;
   line-height: 22px;
 }
 
@@ -4860,6 +4862,16 @@ section header a.view-all, section header a.watch-timaru__view-all {
     position: relative;
   }
   .feature-banner__wrap:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  .adbt .feature-banner__wrap {
+    max-width: 62em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .adbt .feature-banner__wrap:after {
     content: " ";
     display: block;
     clear: both;
@@ -5701,6 +5713,7 @@ ul.listing--events * {
 
 ul.listing--events li {
   padding: 21px;
+  vertical-align: top;
   -webkit-flex: 1 0 0;
   flex: 1 0 0;
   flex-basis: 46.7%;
@@ -5721,7 +5734,11 @@ ul.listing--events li {
   }
 }
 
-@media screen and (max-width: 1023px) {
+.adbt ul.listing--events li {
+  border: 3px solid #0093d0;
+}
+
+@media screen and (max-width: 767px) {
   ul.listing--events li:not(.listing--events__feature):nth-child(even) {
     margin-right: 0;
   }
@@ -5748,6 +5765,12 @@ ul.listing--events li.listing--events__feature {
   ul.listing--events li.listing--events__feature {
     flex-basis: 63%;
     max-width: 63%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  ul.listing--events li.listing--events__feature {
+    width: 100% !important;
   }
 }
 
@@ -6929,7 +6952,7 @@ ul.listing-itineraries ul.tags-list li:hover > span, ul.itinerary-details ul.tag
 }
 
 .slick-prev {
-  left: 30px;
+  left: 0px;
   transform: rotate(180deg);
   background-position: center -1px;
   top: 5px;
@@ -6951,7 +6974,7 @@ ul.listing-itineraries ul.tags-list li:hover > span, ul.itinerary-details ul.tag
 }
 
 .slick-next {
-  right: 30px;
+  right: 0px;
   bottom: 5px;
 }
 
