@@ -63,7 +63,7 @@
 		@include media-query(note-and-up){
 			background-color: rgba(0,29,65,0.89);
 			width: 423px;
-			padding: 32px 40px;
+			padding: 40px;
 			@include font-size(36px);
 			line-height: 44px;
 		}

@@ -224,7 +224,7 @@ $slick-opacity-not-active: 1 !default;
 }
 
 .slick-prev {
-    left: 30px;
+    left: 0px;
     [dir="rtl"] & {
         left: auto;
         right: -25px;
@@ -245,7 +245,7 @@ $slick-opacity-not-active: 1 !default;
 }
 
 .slick-next {
-    right: 30px;
+    right: 0px;
     bottom: 5px;
     background-position: 28px -98px !important;
 

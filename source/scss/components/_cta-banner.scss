@@ -11,7 +11,7 @@
 	font-weight: $medium;
 	@include font-size(16px);
 	padding: 0 21px;
-  display: table;
+  	display: table;
 	width: 100%;
 
 	@include media-query(note-and-up){
@@ -63,14 +63,14 @@
 		.cta-banner__wrap {
 			height: 100%;
 			margin: 0 auto;
-			padding: 0 21px;
+			padding: 15px 21px 0px;
 			vertical-align: middle;
-		  display: table-cell;
-		  text-align: center;
+			display: table-cell;
+			text-align: center;
 
-			* {
+			p {
 				@include media-query(note-and-up){
-					@include container(60%);
+					@include container(55%);
 				}
 			}
 		}

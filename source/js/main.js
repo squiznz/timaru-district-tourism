@@ -61,7 +61,6 @@ function detectScrolling() {
 
 
 function globalActions() {
-  featuredSlider.append(featuredSlides);
 
   if ($('.pagination a').length == 0) {
     $('.pagination').hide();
@@ -349,14 +348,19 @@ function threeBestSlider() {
 function whatsOnSlider() {
   var $newSlider = $clonedSlider.clone(true, true);
 
-  if(!featuredSlider.hasClass('slick-initialized') && featuredSlider.children().length > 1) {
+  if(!featuredSlider.hasClass('slick-initialized')) {
+    featuredSlider.append(featuredSlides);
+    
     featuredSlider.slick({
       centerMode: true,
       initialSlide: 1,
+      slidesToShow: 1,
       draggable: true,
+      centerPadding: '0px',
       arrows: false,
       dots: false
-    })
+    });
+
   }    
 
   if ($(window).width() > 768) {
@@ -392,9 +396,13 @@ function whatsOnSlider() {
 
     $whatsOnSlider.slick({
       rows: 2,
-      slidesPerRow: 2
+      slidesPerRow: 2,
+      dots: true
     });
   } 
+
+  $($whatsOnSlider).find('li').matchHeight({byRow:false});
+  $(featuredSlider).find('li').matchHeight({byRow:false});
 }
 
 /* Clean me */
