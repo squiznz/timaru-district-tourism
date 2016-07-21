@@ -70,45 +70,85 @@ ul.tags-list {
 		}
 		
 		&.family-friendly:after {
-			background-position: -0px -0px;
+			background-position: -242px -242px;
 		}
 
 		&.accessible:after {
-			background-position: -0px -0px;
+			background-position: -291px -243px;
 		}
 
 		&.local-favourites:after {
-			background-position: -43px -240px;
+			background-position: -42px -240px;
 		}
 	
 		&.pet-friendly:after {
-			background-position: -0px -0px;
+			background-position: -92px -243px;
 		}
 
-		&.maori-culture:after {
-			background-position: -0px -0px;
+		&.māori-culture:after {
+			background-position: -340px -244px;
 		}
 
 		&.heritage:after {
-			background-position: -0px -0px;
+			background-position: -190px -242px;
 		}
 
 		&.free:after {
-			background-position: -0px -0px;
+			background-position: -142px -241px;
 		}
 		
 		&.popular-routes:after {
 			background-position: 6px -243px;
 		}
+	}
+
+
+	.topic-list__item--featured & {
 		
-		.topic-list__featured-item & {
-			@include media-query(note-and-up){
-				background-color: $white;
-				color: $tdc-navy;
+		@include media-query(note-and-up){
+			padding: 0 !important;
+		}
+		
+		> li {
+			background-color: $white !important;
+			color: $tdc-navy !important;
+
+			&.family-friendly:after {
+				background-position: -242px -342px;
+			}
+
+			&.accessible:after {
+				background-position: -291px -343px;
+			}
+
+			&.local-favourites:after {
+				background-position: -42px -340px;
+			}
+		
+			&.pet-friendly:after {
+				background-position: -92px -343px;
+			}
+
+			&.māori-culture:after {
+				background-position: -340px -344px;
+			}
+
+			&.heritage:after {
+				background-position: -190px -342px;
+			}
+
+			&.free:after {
+				background-position: -142px -341px;
+			}
+			
+			&.popular-routes:after {
+				background-position: 6px -343px;
 			}
 		}
 	}
+
 }
+
 
 ul.listing-itineraries {
 	ul.tags-list li {
@@ -117,11 +157,8 @@ ul.listing-itineraries {
 
 		&:hover, &:focus {
 			width: auto !important;
-			// border-radius: 50%;
-			// padding: 0;
 
 			> span {
-				// display: none !important;
 				color: $white;
 			}
 		}

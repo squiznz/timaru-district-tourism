@@ -189,9 +189,13 @@ video {
 		width: 15px;
 		margin-left: 0.5em;
 
-		// @-moz-document url-prefix() { 
-		// 	background-position: -47px -43px;
-		// }	
+		@-moz-document url-prefix() { 
+			background-position: -47px -43px;
+		}	
+	}
+
+	&.cta-button--tripadvisor {
+		background-color: #589442;
 	}
 }
 
@@ -327,13 +331,23 @@ a.more {
 		height: 100%;
 		display: block;
 		background-repeat: no-repeat;
-		background-position: -47px -54px;
+		background-position: -47px -52px;
 		background-size: 400px;
 		@include position(absolute, null -1em 0 null);
 
 		@-moz-document url-prefix() { 
-			background-position: -47px -43px;
+			background-position: -47px -41px;
 		}	
+	}
+
+	&.tc-tdc-light-blue {
+		&:after {
+			background-position: -145px -53px;
+
+			@-moz-document url-prefix() { 
+				background-position: -145px -41px;
+			}	
+		}
 	}
 }
 

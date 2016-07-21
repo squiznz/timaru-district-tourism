@@ -316,9 +316,13 @@ function megaMenu() {
       return true;
     });
   }
+
+  $('ul.topic-list').has('li.topic-list__item--featured').addClass('topic-list--featured');
 } // globalActions()
 
-//
+
+
+
 function threeBestSlider() {
  var $mobileSlider = $('.slick-three-best');
   if ($(window).width() < 1023) {
