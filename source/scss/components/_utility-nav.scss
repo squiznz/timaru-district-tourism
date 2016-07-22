@@ -98,7 +98,11 @@
 			background-repeat: no-repeat;
 			background-position: -180px 15px;
 			background-size: 500px;
-				
+			
+			@-moz-document url-prefix() { 
+				background-position: -180px 18px;
+			}
+
 			a {
 				display: block;
 				width: 30px;

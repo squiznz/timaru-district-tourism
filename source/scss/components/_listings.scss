@@ -289,3 +289,10 @@ ul.listing--basic {
 		display: none;
 	}
 }
+
+
+ul.tripadvisor-listing {
+	li {
+		border-bottom: 1px solid $tdc-grey;
+	}
+}

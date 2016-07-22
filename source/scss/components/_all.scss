@@ -180,17 +180,16 @@ video {
 	&:after {
 		content: "";
 		background-repeat: no-repeat;
-		background-size: 100%;
-		// background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
+		background-size: 400px;
 		background-image: url(/__data/assets/file/0009/72099/sprites.svg);
-		background-position: -47px -43px;
+		background-position: -196px -103px;
 		float: right;
 		height: 100%;
-		width: 15px;
+		width: 20px;
 		margin-left: 0.5em;
 
 		@-moz-document url-prefix() { 
-			background-position: -47px -43px;
+			background-position: -196px -96px;
 		}	
 	}
 

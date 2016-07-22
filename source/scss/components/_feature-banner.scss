@@ -202,10 +202,11 @@
 .feature-banner--white, .feature-banner--purple  {
 	font-weight: $bold;
 	background-position: center 95%;
-	background-size: 70% !important;
+	background-size: 45% !important;
+	height: 257px;
 
 	.feature-banner__wrap {
-		max-width: 50em;
+		display: none;
   }
 } 
 
