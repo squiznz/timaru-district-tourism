@@ -63,7 +63,11 @@
 			}
 
 			&:after {
-				background-position: -149px -52px;
+				background-position: -145px -52px;
+	
+				@-moz-document url-prefix() { 
+					background-position: -145px -42px;
+				}
 			}
 		}
 

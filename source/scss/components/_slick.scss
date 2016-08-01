@@ -276,7 +276,7 @@ $slick-opacity-not-active: 1 !default;
     position: relative;
     text-align: center;
     padding: 0;
-		margin: 21px auto 0 auto;
+    margin: 21px auto 0 auto;
     width: 80%;
 
     @include media-query(note-and-up){
@@ -291,6 +291,7 @@ $slick-opacity-not-active: 1 !default;
         margin: 0 5px !important;
         padding: 0 !important;
         cursor: pointer;
+        border: none !important;
         outline: none;
 
         button {

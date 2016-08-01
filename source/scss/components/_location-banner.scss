@@ -6,12 +6,17 @@
   background-size: cover !important;
 	color: $white;
 	@include clearfix();
+	height: 433px;
 
 	@include media-query(portable){
 		@include position(relative, null null null null);
-		height: 433px;
 	}
 
+	@include media-query(palm-land-up){
+		height: 370px;
+		@include position(relative, null null null null);
+	}
+	
 	@include media-query(note-and-up){
 		height: 550px;
 	}
@@ -40,10 +45,18 @@
 
 
 	.location-banner__wrap {
-		@include media-query(note-and-up){
-			@include container(1270px);
+
+		@include media-query(palm-land-up){
+			@include container();
 			@include position(relative, null null null null);
 			height: 100%;
+			padding: 0;
+		}
+
+		@include media-query(note-and-up){
+			@include container(1270px);
+			// @include position(relative, null null null null);
+			// height: 100%;
 			padding: 0 30px;
 		}
 	}
@@ -54,16 +67,25 @@
 		@include font-size(22px);
 		font-family: $font-secondary;
 		@include clearfix();
-		
+		background-color: rgba(0,29,65,0.89);
+
 		@include media-query(portable){
 			background-color: $tdc-navy;
 			@include position(absolute, null 0 0 0);
 		}
+		
+		@include media-query(palm-land-up){
+			@include font-size(26px);
+			line-height: 35px;
+			width: 42.5%;
+			@include position(static, null);
+			height: 210px;
+		}
 
 		@include media-query(note-and-up){
-			background-color: rgba(0,29,65,0.89);
-			width: 423px;
+			width: 410px;
 			padding: 40px;
+			height: auto;
 			@include font-size(36px);
 			line-height: 44px;
 		}
@@ -82,6 +104,10 @@
 			margin-bottom: 12px;
 			padding-left: 12px;
 			@include font-size(12px);
+			
+			@include media-query(palm-land-up){
+				margin-bottom: 0;
+			}
 
 			@include media-query(note-and-up){
 				line-height: 28.11px;
@@ -127,12 +153,23 @@
 		}
 
 		.location-banner--right & {
+
+			@include media-query(palm-land-up){
+				@include position(absolute, 115px null null 0);
+			}
+
 			@include media-query(note-and-up){
 				@include position(absolute, 147px 30px null null);
 			}
 		}
 
+
 		.location-banner--left & {
+
+			@include media-query(palm-land-up){
+				@include position(absolute, 115px null null 0);
+			}
+
 			@include media-query(note-and-up){
 				@include position(absolute, 147px null null 30px);
 			}
@@ -144,6 +181,8 @@
 			&:after {
 				content: ":";
 				display: inline;
+				margin-left: -1em;
+				margin-right: 0.5em;
 			}
 		}
 	}

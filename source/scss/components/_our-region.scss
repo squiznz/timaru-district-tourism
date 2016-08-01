@@ -22,13 +22,16 @@
 		@include clearfix();
 		@include font-size(24px);
 
+		@include media-query(palm-land-up){
+			padding: 0 45px 15px 35px;
+		}
+		
 		@include media-query(note-and-up){
 			@include container(1005px);
 			padding: 0;
 		    margin-bottom: 5px;
 			height: 47px;
 			line-height: 47px;
-
 		}
 		
 		* {
@@ -60,12 +63,11 @@
 			margin: 0 11px 0 11px;
 			height: 341px;
 			width: 310px;
-
 			background-color: #f7f7f7;
 			@include position(relative, null);
 
-			@include media-query(note-and-up){
-				height: 243px;
+			@include media-query(palm-land-up){
+				height: 246px;
 				margin: 0 30px 0 0;
 				width: 488px !important;
 				
@@ -77,11 +79,15 @@
 					float: left;
 					@include span(1.1 of 2 (no-gutters));
 
-					@include media-query(note-and-up){
+					@include media-query(palm-land-up){
 						width: 243px;
 						height: 100%;
 					}
 				}
+			}
+
+			@include media-query(note-and-up){
+			
 			}
 		}
 	}
@@ -93,7 +99,7 @@
 			color: $tdc-dark-grey;
 			height: 156px;
 
-	   	@include media-query(note-and-up){
+	   	@include media-query(palm-land-up){
 				height: 100%;
 				line-height: 22px;
 				padding: 45px 30px;
@@ -121,7 +127,7 @@
 				@include position(absolute, null null 30px 21px);
 
 
-		   	@include media-query(note-and-up){
+		   	@include media-query(palm-land-up){
 					@include position(absolute, null null 40px 30px);
 				}
 
@@ -140,7 +146,7 @@
 			@include font-size(14px);
 			width: 100%;
 
-			@include media-query(note-and-up){
+			@include media-query(palm-land-up){
 				line-height: 29.45px;
 				float: right;
 				width: auto;

@@ -87,7 +87,7 @@ ul.listing--events {
 	}
 
 	li {
-  	padding: 21px;
+  		padding: 21px;
   	    vertical-align: top;
 	  -webkit-flex: 1 0 0;
 	  flex: 1 0 0;
@@ -97,13 +97,17 @@ ul.listing--events {
 		background-color: $white;
 		border: 1px solid $tdc-grey;
 		@include position(relative, null);
-		
+	
+		@include media-query(palm-land-up){
+			height: 350px;
+		}		
+
 		@include media-query(note-and-up){
 			padding: 30px;
 			margin: 0 30px 30px 0;
-		  flex-basis: 30%;
+		  	flex-basis: 30%;
 			max-width: 30%;
-  		height: 328px;
+  			height: 328px;
 		}
 	
 		.adbt & {

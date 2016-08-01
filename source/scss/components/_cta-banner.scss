@@ -13,6 +13,10 @@
 	padding: 0 21px;
   	display: table;
 	width: 100%;
+	
+	@include media-query(palm-land-up){
+		height: 233px;
+	}
 
 	@include media-query(note-and-up){
 		height: 300px;
@@ -48,6 +52,10 @@
 		line-height: 44px;
 		
 		@include media-query(palm-land-up){
+			@include font-size(40px);
+		}
+		
+		@include media-query(note-and-up){
 			@include font-size(50px);
 			line-height: 52px;	
 		}
@@ -69,6 +77,10 @@
 			text-align: center;
 
 			p {
+				@include media-query(palm-land-up){
+					@include container(75%);
+				}
+
 				@include media-query(note-and-up){
 					@include container(55%);
 				}

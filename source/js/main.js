@@ -61,13 +61,20 @@ function detectScrolling() {
 
 
 function globalActions() {
+  $("#ms").multipleSelect({
+    placeholder: "Tags"
+  });
+
+  $("#ms-landing").multipleSelect({
+    placeholder: "Category"
+  });
 
   if ($('.pagination a').length == 0) {
     $('.pagination').hide();
   };
 
-  $('.tags-list').each(function(index) {
-    if ($('.tags-list').text !== "") {
+  $('.become-list').each(function(index) {
+    if ($('.become-list').text !== "") {
       var $this = $(this),
           $list = $this.text().trim().split(",");
       
@@ -183,7 +190,7 @@ function threeBestSlider() {
     draggable: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 768,
         settings: "unslick"
       },
       {
@@ -325,7 +332,7 @@ function megaMenu() {
 
 function threeBestSlider() {
  var $mobileSlider = $('.slick-three-best');
-  if ($(window).width() < 1023) {
+  if ($(window).width() < 767) {
     if($mobileSlider.hasClass('slick-initialized')) {
       $mobileSlider.slick('unslick');
     }
@@ -411,6 +418,16 @@ function whatsOnSlider() {
 
 /* Clean me */
 $(document).ready(function () {
+  AOS.init();
+
+  mobileMenu();
+  detectScrolling();
+  globalActions();
+  threeBest();
+  megaMenu();  
+  searchForm();
+  whatsOnSlider(); 
+
 
   $('.slick').slick({
     dots: true,
@@ -444,22 +461,11 @@ $(document).ready(function () {
     $('.listing--events__feature').parent('.slick-slide').after("<div class='visuallyhidden slick-slide'></div>");
   // });
 
-  detectScrolling();
-  globalActions();
-  threeBest();
-  megaMenu();  
-  searchForm();
-  whatsOnSlider(); 
-  mobileMenu();
-  // ourRegion();
-  
-  AOS.init({
-    duration: 1200
-  });
 
   $(window).on("resize", debounce(function () {
     threeBestSlider();
     whatsOnSlider(); 
     megaMenu();
   }, 50)); 
+
 });

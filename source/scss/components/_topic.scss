@@ -96,7 +96,7 @@
 		color: $white;
 		min-height: 344px;
 		background-color: $tdc-navy;
-    margin-right: 0;
+    	margin-right: 0;
 
 		@include media-query(palm-land-up){
 			height: 494px;
@@ -107,9 +107,12 @@
 		}
 
 		ul.tags-list {
+			height: 60px;
+			padding: 0;
+
 			@include media-query(note-and-up){
-				width: 49.1525%;
-				@include position(absolute, 40px 0 0 54%);
+				width: 40%;
+				@include position(absolute, 50px 0 0 53%);
 
 			 	li {
 			 		background-color: $white;
@@ -119,10 +122,6 @@
 					}
 			 	}
 			}
-		}
-		
-		.tags-list {
-			padding: 0;
 		}
 
 		img {
@@ -145,13 +144,15 @@
 			@include position(relative, null);
 
 			@include media-query(palm-land-up){
-				padding: 35px 30px !important;
+				padding: 15px 30px 35px 30px !important;
 			}
 	
 			@include media-query(note-and-up){
 				@include span(6 of 12 no-gutters);
-				height: 100%;
-				padding: 115px 42px !important;
+				// height: 100%;
+				top: 100px;
+				bottom: 42px;
+				// padding: 115px 42px !important;
 			}
 
 			a.more {

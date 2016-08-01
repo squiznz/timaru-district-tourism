@@ -5,6 +5,7 @@
 .in-and-around {
 	@include clearfix();
 	padding: 0;
+	display: none;
 	@include position(relative, null);
 	
 	> .container {

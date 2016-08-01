@@ -621,6 +621,67 @@ video {
 	}
 }
 
+.filters-list {
+	margin-bottom: 1em;
+	
+	li {
+		color: $white;
+		background-color: $tdc-purple;
+		display: inline-block;
+		text-align: center;
+		text-indent: 0;
+		// letter-spacing: 0.05em;
+		margin-right: 5px;
+		margin-top: 3px;
+		border-radius: 15px;
+		font-weight: $semibold;
+		@include font-size(11px);
+		text-transform: uppercase;
+
+		@include media-query(note-and-up){
+			border-radius: 15px;
+			font-weight: $bold;
+			height: 23px;
+		}
+
+		span {
+			line-height: inherit;
+			display: block;
+			height: 100%;
+			padding: 0 2.5em 0 1em;
+			line-height: 2em;
+		}
+		
+		&:before {
+			display: none;
+		}
+	
+		// button {
+		// 	background-color: transparent;
+		// 	text-transform: uppercase;
+		// 	@include position(relative, null);
+		// 	border: none;
+		// 	float: left;
+		// 	padding: 2px 32px 2px 10px;
+		// 	@include font-size(11px);
+
+		// 	@include media-query(note-and-up){
+		// 		@include font-size(14px);
+		// 	}
+
+		// 	&:after {
+		// 		content: "\f00d";
+		// 		font-family: 'FontAwesome';
+		// 		@include position(absolute, 0px 10px null null);
+
+		// 		@include media-query(note-and-up){
+		// 			@include position(absolute, 2px 10px null null);
+		// 		}
+		// 	}
+		// }
+	}
+}
+
 .tabs {
 	padding: 0;
 	margin-bottom: 50px;

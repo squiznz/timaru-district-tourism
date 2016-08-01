@@ -32,6 +32,11 @@
 		margin: 0 auto;
 		font-weight: inherit;
 		line-height: 56px;
+		
+		@include media-query(palm-land-up){
+			@include font-size(48px);
+			line-height: 80px;
+		}
 
 		@include media-query(note-and-up){
 			@include font-size(60px);
@@ -45,8 +50,11 @@
 	background: linear-gradient(rgba(72, 33, 192, 0.84), rgba(72, 33, 192, 0.84)), url(../img/placeholder1.jpeg);
 	height: 400px;
 	margin-bottom: 0;
-	
 
+	@include media-query(palm-land-up){
+		height: 440px;
+	}
+	
 	@include media-query(note-and-up){
 		height: 675px;
 	}
@@ -116,6 +124,7 @@
 
 	@include media-query(palm-land-up){
 		padding: 0px;
+		@include container(20em);
 	}
 
 	@include media-query(note-and-up){

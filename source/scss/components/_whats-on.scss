@@ -7,16 +7,20 @@
 	padding: 50px 21px;
 
 	@include media-query(palm-land-up){
-		padding: 50px 45px;
+		padding: 50px 0;
 	}
 
 	@include media-query(note-and-up){
-		padding: 50px 0;
+		// padding: 50px 0;
 		@include position(relative, null);
 	}
 
 	header {
 		@include container(1270px);
+		
+		@include media-query(palm-land-up){
+			padding: 0 45px;
+		}
 
 		a {
 			float: right;
@@ -28,6 +32,10 @@
 			@include media-query(portable){
 				flex-basis: 46%;
 				max-width: 46%;
+			}
+
+			@include media-query(palm-land-up){
+				min-width: 323px;
 			}
 
 			@include media-query(note-and-up){

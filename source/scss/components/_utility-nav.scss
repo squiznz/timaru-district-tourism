@@ -111,7 +111,7 @@
 
 			@include media-query(palm-land-up){
 				padding-top: 20px;
-				background-position: -180px 20px;
+				background-position: -180px 25px;
 
 				.adbt & {
 				    background-position: -180px 23px;
@@ -121,6 +121,7 @@
 			@include media-query(note-and-up){
 				display: none !important;
 				padding: 0;
+				background-position: -180px 20px;
 			}
 
 			.adbt & {

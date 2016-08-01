@@ -64,10 +64,14 @@
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				background-repeat: no-repeat;
 				background-position: 15px -131px;
-				background-size: 400px;
-				
+				background-size: 400px;	
+			
 				@include media-query(note-and-up){
 					background-position: 15px -140px;
+	
+					@-moz-document url-prefix() { 
+						background-position: 15px -137px;
+					}
 				}
 
 				.adbt & {
