@@ -9,7 +9,12 @@
 		}
 
 		.intro {
-			border-bottom: 1px solid $tdc-grey;			
+			border-bottom: 1px solid $tdc-grey;	
+			
+			.intro__wrap {
+				padding-bottom: 40px;
+				@include span(8 of 12 no-gutters);
+			}		
 		}
 	}
 }

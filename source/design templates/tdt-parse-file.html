@@ -26,13 +26,18 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Timaru District - <MySource_print id_name="__global__" var="asset_attribute_name" /></title>
+  <!-- General Metadata -->
   <MySource_AREA id_name="metadata" design_area="metadata" />
+  <!-- Open Graph -->
+  <MySource_AREA id_name="og" design_area="nest_content" print="yes" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
   <link rel="shortcut icon" href="../images/favicon.ico" />
   <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
   <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png" />
   <link rel="stylesheet" href="%globals_asset_href:62640%" />
+  <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
 </head>
 <body class="<MySource_print id_name="__global__" var="asset_attribute_name^css_safe^lowercase^replace:_:-" /> <MySource_print id_name="__global__" var="asset_metadata_TDT.sectionClass" />">
 
@@ -46,7 +51,7 @@
           <li>The official tourism website of the Timaru District</li>
           <li class="text--bold"><a href="">Visit Timaru</a></li>
           <li><a href="">Live, Work, Play</a></li>
-          <li><a href=""><span class="visuallyhidden">Visit Tripadvisor's site</span></a></li>
+          <li><a href="//www.tripadvisor.co.nz" target="_blank"><span class="visuallyhidden">Visit Tripadvisor's site</span></a></li>
         </ul>
       </nav>
       <!-- End Tertiary Navigation -->
@@ -69,7 +74,6 @@
                 </li>   
                 <li class="utility-nav__item--search-toggle">
                   <a href="#search">
-                    <i class="fa fa-search"></i>
                     <span class="hidden-portable">Search this site. </span>
                   </a>
                   <span class="visuallyhidden">Skip to search. </span>
@@ -82,12 +86,11 @@
           <!-- End Utility Navigation -->
 
           <div class="site-search">
-            <form id="search" class="site-search__form" action="./?a=62974" method="post">
+            <form id="search" class="site-search__form" action="./?a=62974" method="get">
               <fieldset>
                 <input type="search" name="queries_query_query" placeholder="Search this site">
                 <button type="submit">
                   <span class="visuallyhidden">Search</span>
-                  <i class="fa fa-search"></i>
                 </button>
               </fieldset>
             </form>
@@ -148,17 +151,15 @@
     <MySource_SET name="prefix_with_divider" value="false" />
     <MySource_SET name="suffix_with_divider" value="false" />
     <MySource_DIVIDER></MySource_DIVIDER>
-      <!--<div class="container">-->
         <ul class="breadcrumbs bare-list">
           <li class="breadcrumbs__home"><a href="<MySource_PRINT id_name="__global__" var="site_link" full_url="yes" />/home">Home</a></li>
           <MySource_ASSET>
              <li><a href="<MySource_PRINT var="asset_link" />"><MySource_PRINT var="asset_short_name" /></a></li>
           </MySource_ASSET>
           <li class="active">
-            <a href="<MySource_PRINT id_name="__global__" var="asset_href" />"><MySource_PRINT id_name="__global__" var="asset_attribute_short_name" /></a>
+            <a href="<MySource_PRINT id_name="__global__" var="asset_href" />"><MySource_PRINT id_name="__global__" var="asset_name" /></a>
           </li>
         </ul>
-      <!--</div>-->
     </MySource_AREA>
   
     <MySource_AREA id_name="in_this_section" design_area="menu_normal" print="no">    
@@ -191,6 +192,7 @@
     </MySource_AREA>  
 
    <MySource_AREA id_name="related_sidebar" design_area="nest_content" print="no" />
+   <MySource_AREA id_name="feature_map" design_area="nest_content" print="no" />
 
 
     <MySource_AREA id_name="show_breadcrumbs" design_area="show_if" print="no">
@@ -220,32 +222,62 @@
       </MySource_THEN>
     </MySource_AREA>
     
-    <MySource_AREA id_name="content_style" design_area="show_if" print="no">
+    <MySource_AREA id_name="is_details_page" design_area="show_if" print="no">
     <MySource_SET name="condition" value="keyword_regexp"/>
       <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
-     <MySource_SET name="condition_keyword_match" value="topic|landing" />
+     <MySource_SET name="condition_keyword_match" value="details" />
       <MySource_THEN>
-         <MySource_PRINT id_name="breadcrumbs" />
-         <section class="intro">
-             <div class="intro__wrap">
-                 <h2>%asset_name%</h2>
-                 <p class="intro__subheading">%asset_metadata_description%</p>
-                 <a href="asset_metadata_landingCTAAsset" class="cta-button">%asset_metadata_landingCTAText%</a>
-                 <!-- pop categories -->
-                </div>
-             </div>
-          </section>
-          <MySource_PRINT id_name="page_content_type"  />
-      </MySource_THEN>
+        <div class="container">
+           <MySource_PRINT id_name="show_breadcrumbs"  />
+           <div class="intro">
+              <div class="six-tenths float--left">
+                <h1>%asset_name%</h1>
+                %asset_metadata_TDT.detailsDescription%
+              </div>
+              <a class="cta-button float--right" href="http://%asset_metadata_TDT.detailsCTALink%" target="_blank">%asset_metadata_TDT.detailsCTAText%</a>
+           </div>
+          <MySource_PRINT id_name="show_related_sidebar"  />
+
+           <div class="details-wrap">
+              <MySource_PRINT id_name="page_body"  />
+           </div> 
+        </div>
+        <MySource_PRINT id_name="feature_map"  />
+     </MySource_THEN>
       <MySource_ELSE>
         <div class="container">
             <MySource_PRINT id_name="show_in_this_section"  />
             <div class="inside-wrap">
+                <MySource_PRINT id_name="show_breadcrumbs"  />
                 <MySource_PRINT id_name="page_body"  />
                 <MySource_PRINT id_name="page_content_type"  />
             </div>
             <MySource_PRINT id_name="show_related_sidebar"  />
         </div>
+      </MySource_ELSE>
+    </MySource_AREA>
+    
+    <MySource_AREA id_name="content_style" design_area="show_if" print="no">
+    <MySource_SET name="condition" value="keyword_regexp"/>
+      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
+     <MySource_SET name="condition_keyword_match" value="topic|landing" />
+      <MySource_THEN>
+         <section class="intro">
+             <MySource_PRINT id_name="show_breadcrumbs"  />
+             <div class="intro__wrap">
+                 <h2>%asset_name%</h2>
+                 <p class="intro__subheading">%asset_metadata_TDT.landingSubhead%</p>
+                 <p>%asset_metadata_TDT.landingDescription%</p>
+                 <a href="%asset_metadata_TDT.landingCTAAsset%" class="cta-button">%asset_metadata_TDT.landingCTAText%</a>
+                 <!-- pop categories -->
+                </div>
+             </div>
+          </section>
+          <MySource_PRINT id_name="page_content_type"  />
+           <MySource_PRINT id_name="page_body" />
+      </MySource_THEN>
+      <MySource_ELSE>
+        <MySource_PRINT id_name="is_details_page"  />
       </MySource_ELSE>
     </MySource_AREA>
 
@@ -276,26 +308,18 @@
       </a>
 
       <!-- Begin Social Media Links -->
-      <ul class="social-media-links bare-list float--left ml++">
+      <ul class="social-media-links bare-list float--left visuallyhidden ml++">
         <li class="social-media-links__twitter">
-          <a href="" target="_blank">
-            <i class="fa fa-twitter"></i>
-          </a>
+           <a href="" target="_blank"></a>
         </li>
         <li class="social-media-links__instagram">
-          <a href="" target="_blank">
-            <i class="fa fa-instagram"></i>
-          </a>
+          <a href="" target="_blank"></a>
         </li>
         <li class="social-media-links__youtube">
-          <a href="" target="_blank">
-            <i class="fa fa-youtube"></i>
-          </a>
+          <a href="" target="_blank"></a>
         </li>
         <li class="social-media-links__facebook">
-          <a href="" target="_blank">
-            <i class="fa fa-facebook"></i>
-          </a>
+          <a href="" target="_blank"></a>
         </li>
       </ul>
       <!-- End Social Media Links -->
@@ -323,14 +347,12 @@
       <ul class="footer-utilities__list">
         <li>The official Timaru Tourism website</li>
         <li class="text--bold"><a href="">Visit Timaru</a></li>
-        <li class="no-border"><a href="">Live, Work, Play</a></li>
-        <li class="hidden-palm">&copy; 2016 Timaru</li>
+        <li class="border--none"><a href="">Live, Work, Play</a></li>
+        <li class="hidden-portable">&copy; 2016 Timaru</li>
         <li class="border--none hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
       </ul>
     </div>
     <!-- End Footer Utilities -->
-
-   </div>
 
   </footer>
   <!-- End Global Footer -->
@@ -338,14 +360,5 @@
 
   <script src="/__data/assets/js_file/0004/65704/core.min.js"></script>
   <script src="/__data/assets/js_file/0003/65703/main.js"></script>
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
-   <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibGRvcmdhbiIsImEiOiJjaW9vMHNrd3gwMDJidjlrdnJ0YzZ5cjRsIn0.-kQIw3xb7fNgSVaOJ43O6A';
-    
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v8'
-    });
-  </script>       
 </body>
 </html>

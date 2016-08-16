@@ -10,7 +10,7 @@
 	
 	> .container {
 		padding: 0;
-		@include container(1700px);
+		@include container(1420px);
 	}
 
 	@include media-query(palm-land-up){

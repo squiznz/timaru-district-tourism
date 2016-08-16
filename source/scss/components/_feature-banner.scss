@@ -9,20 +9,36 @@
 	background: none;
 	text-align: center;
 	margin-bottom: 25px;
-	background-size: cover !important;
-	background-position: top;
-
+	background-position: center 0px;
+	background-size: contain !important;
+  background-origin: content-box;
+	padding-left: 0;
+	padding-right: 0;
+	
 	@include media-query(palm-land-up){
 		height: 480px;
-		padding-top: 120px;
+		background-size: cover !important;
+		padding-top: 118px;
+	}
+
+	@include media-query(portable) {
+		background-size: cover !important;
 	}
 
 	@include media-query(note-and-up){
 		@include font-size(16px);
 		height: 535px;
 		margin-bottom: 60px;
+		// background-size: contain !important;
 	}
 
+	// @include media-query(below-desk){
+	// }
+
+	// @include media-query(desk){
+	// 	background-size: contain !important;
+	// }
+	
 	h1, h2 {
 		color: inherit;
 		@include font-size(33px);
@@ -62,6 +78,7 @@
 
 
 .feature-banner--bare {
+
 	.feature-banner__wrap {
 		display: none;
 	}

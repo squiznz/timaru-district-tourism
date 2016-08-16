@@ -110,7 +110,7 @@ img {
 .intro {
 	padding-bottom: 3.26em;
 	margin-bottom: 50px;
-	@include container(857px);
+	@include container(1063px);
 	padding: 0 21px;
 
 	@include media-query(palm-land-up){
@@ -118,11 +118,11 @@ img {
 	}
 
 	@include media-query(note-and-up){
-		padding: 0 30px;
+		padding: 0;
 	}
 
-	.wide & {
-		@include container(1063px);
+	.landing &, .topic & {
+		@include container(857px);
 	}
 
 	.adbt & {
@@ -200,7 +200,7 @@ video {
 
 
 figure {
-	margin-bottom: 50px;
+	margin: 55px 0 30px 0;
 
 	figcaption {
 		background-color: $tdc-navy;
