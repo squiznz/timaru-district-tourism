@@ -54,7 +54,7 @@
 			padding: 0;
 		}
 
-		li {
+		> li {
 			@include media-query(portable){
 				margin: 0 11px;
 				width: 310px;
@@ -77,14 +77,19 @@
 				}
 			}
 
-			img {
-				height: 165px;
-				width: 100%;
+			// img {
+			// 	height: 165px;
+			// 	width: 100%;
 				
-				@include media-query(note-and-up){
-					height: 180px;
-				}
+			// 	@include media-query(note-and-up){
+			// 		height: 180px;
+			// 	}
+			// }
+
+			> a {
+			  @include aspect-ratio(16, 9);
 			}
+
 		}
 
 		&:nth-child(n+2){
