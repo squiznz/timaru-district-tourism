@@ -177,13 +177,6 @@
 
 		strong {
 			font-weight: $ultrabold;
-
-			&:after {
-				content: ":";
-				display: inline;
-				margin-left: -1em;
-				margin-right: 0.5em;
-			}
 		}
 	}
 
