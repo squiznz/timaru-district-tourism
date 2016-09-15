@@ -113,6 +113,15 @@
 						top: 100px;
 					}
 				}
+
+				&.playing {
+					background-color: transparent;
+					cursor: pointer;
+
+					&:after {
+						display: none;
+					}
+				}
 			}
 
 			
