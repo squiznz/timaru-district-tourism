@@ -176,6 +176,26 @@ function mobileMenu() {
   });
 }
 
+
+function videos() {
+
+  $(".watch-timaru__video-filter").click(function(){
+    console.log('t');
+    var video = $(this).next("video").get(0);
+    
+    $(this).toggleClass('playing');
+
+    if (video.paused) {
+        video.play();
+        return false;
+    } else {
+      video.pause();
+      return false;
+    }
+      return true;
+    });
+}
+
 function threeBestSlider() {
 
   $('.slick-three-best').slick({
@@ -426,7 +446,8 @@ $(document).ready(function () {
   threeBest();
   megaMenu();  
   searchForm();
-  whatsOnSlider(); 
+  // whatsOnSlider(); 
+  videos();
 
 
   $('.slick').slick({
