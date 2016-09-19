@@ -50,7 +50,7 @@
         <ul>
           <li>The official tourism website of the Timaru District</li>
           <li class="text--bold"><a href="">Visit Timaru</a></li>
-          <li><a href="">Live, Work, Play</a></li>
+          <li><a href="//www.aorakidevelopment.co.nz    ">Live, Work, Play</a></li>
           <li><a href="//www.tripadvisor.co.nz" target="_blank"><span class="visuallyhidden">Visit Tripadvisor's site</span></a></li>
         </ul>
       </nav>
@@ -193,6 +193,7 @@
 
    <MySource_AREA id_name="related_sidebar" design_area="nest_content" print="no" />
    <MySource_AREA id_name="feature_map" design_area="nest_content" print="no" />
+   <MySource_AREA id_name="related_content" design_area="nest_content" print="no" />
 
 
     <MySource_AREA id_name="show_breadcrumbs" design_area="show_if" print="no">
@@ -200,103 +201,82 @@
       <MySource_SET name="condition_keyword" value="asset_metadata_TDT.breadCrumbs"/>
      <MySource_SET name="condition_keyword_match" value="show_yes" />
       <MySource_THEN>
-        <MySource_PRINT id_name="breadcrumbs" />
+         <div class="container">
+            <MySource_PRINT id_name="breadcrumbs" />
+         </div>
       </MySource_THEN>
     </MySource_AREA>    
-    
-    <MySource_AREA id_name="show_in_this_section" design_area="show_if" print="no">
-    <MySource_SET name="condition" value="keyword_regexp"/>
-      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.secondaryNav"/>
-     <MySource_SET name="condition_keyword_match" value="show_yes" />
-      <MySource_THEN>
-        <MySource_PRINT id_name="in_this_section" />
-      </MySource_THEN>
-    </MySource_AREA>
-    
-    <MySource_AREA id_name="show_related_sidebar" design_area="show_if" print="no">
-    <MySource_SET name="condition" value="keyword_regexp"/>
-      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.relatedSidebar"/>
-     <MySource_SET name="condition_keyword_match" value="show_yes" />
-      <MySource_THEN>
-        <MySource_PRINT id_name="related_sidebar" />
-      </MySource_THEN>
-    </MySource_AREA>
-    
-    <MySource_AREA id_name="is_details_page" design_area="show_if" print="no">
-    <MySource_SET name="condition" value="keyword_regexp"/>
-      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
-     <MySource_SET name="condition_keyword_match" value="details" />
-      <MySource_THEN>
-        <div class="container">
-           <MySource_PRINT id_name="show_breadcrumbs"  />
-           <div class="intro">
-              <div class="six-tenths float--left">
-                <h1>%asset_name%</h1>
-                %asset_metadata_TDT.detailsDescription%
-              </div>
-              <a class="cta-button float--right" href="http://%asset_metadata_TDT.detailsCTALink%" target="_blank">%asset_metadata_TDT.detailsCTAText%</a>
-           </div>
-          <MySource_PRINT id_name="show_related_sidebar"  />
-
-           <div class="details-wrap">
-              <MySource_PRINT id_name="page_body"  />
-           </div> 
-        </div>
-        <MySource_PRINT id_name="feature_map"  />
-     </MySource_THEN>
-      <MySource_ELSE>
-        <div class="container">
-            <MySource_PRINT id_name="show_in_this_section"  />
-            <div class="inside-wrap">
-                <MySource_PRINT id_name="show_breadcrumbs"  />
-                <MySource_PRINT id_name="page_body"  />
-                <MySource_PRINT id_name="page_content_type"  />
-            </div>
-            <MySource_PRINT id_name="show_related_sidebar"  />
-        </div>
-      </MySource_ELSE>
-    </MySource_AREA>
-    
-    <MySource_AREA id_name="content_style" design_area="show_if" print="no">
-    <MySource_SET name="condition" value="keyword_regexp"/>
-      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
-     <MySource_SET name="condition_keyword_match" value="topic|landing" />
-      <MySource_THEN>
-         <section class="intro">
-             <MySource_PRINT id_name="show_breadcrumbs"  />
-             <div class="intro__wrap">
-                 <h2>%asset_name%</h2>
-                 <p class="intro__subheading">%asset_metadata_TDT.landingSubhead%</p>
-                 <p>%asset_metadata_TDT.landingDescription%</p>
-                 <a href="%asset_metadata_TDT.landingCTAAsset%" class="cta-button">%asset_metadata_TDT.landingCTAText%</a>
-                 <!-- pop categories -->
-                </div>
-             </div>
-          </section>
-          <MySource_PRINT id_name="page_content_type"  />
-           <MySource_PRINT id_name="page_body" />
-      </MySource_THEN>
-      <MySource_ELSE>
-        <MySource_PRINT id_name="is_details_page"  />
-      </MySource_ELSE>
-    </MySource_AREA>
-
 
    <!-- Begin Page Contents -->
    <main id="content">
      <MySource_AREA id_name="feature_banner" design_area="nest_content" />
-
+     
      <MySource_AREA id_name="is_home" design_area="show_if">
      <MySource_SET name="condition" value="keyword_regexp"/>
      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
      <MySource_SET name="condition_keyword_match" value="home" />
-     <MySource_THEN>
-         <MySource_PRINT id_name="page_body" />
-     </MySource_THEN>
-     <MySource_ELSE>
-         <MySource_PRINT id_name="content_style"  />
-     </MySource_ELSE>
-   </MySource_AREA>
+         <MySource_THEN>
+            <MySource_PRINT id_name="page_body" />
+         </MySource_THEN>
+     </MySource_AREA>
+     
+     <MySource_AREA id_name="is_wide" design_area="show_if">
+     <MySource_SET name="condition" value="keyword_regexp"/>
+     <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
+     <MySource_SET name="condition_keyword_match" value="wide" />
+         <MySource_THEN>
+            <MySource_PRINT id_name="show_breadcrumbs"  />
+            <MySource_PRINT id_name="page_body" />
+         </MySource_THEN>
+     </MySource_AREA>
+     
+     <MySource_AREA id_name="is_topic" design_area="show_if">
+     <MySource_SET name="condition" value="keyword_regexp"/>
+     <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
+     <MySource_SET name="condition_keyword_match" value="topic" />
+         <MySource_THEN>
+             <MySource_PRINT id_name="page_body" />
+         </MySource_THEN>
+     </MySource_AREA>
+     
+     <MySource_AREA id_name="is_landing" design_area="show_if">
+     <MySource_SET name="condition" value="keyword_regexp"/>
+     <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
+     <MySource_SET name="condition_keyword_match" value="landing" />
+         <MySource_THEN>
+            <MySource_PRINT id_name="page_body" />
+         </MySource_THEN>
+     </MySource_AREA>
+     
+     <MySource_AREA id_name="is_inside" design_area="show_if">
+     <MySource_SET name="condition" value="keyword_regexp"/>
+     <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
+     <MySource_SET name="condition_keyword_match" value="inside" />
+         <MySource_THEN>
+            <MySource_PRINT id_name="show_breadcrumbs"  />
+                <div class="container">
+                    <MySource_PRINT id_name="in_this_section" />
+                    <MySource_PRINT id_name="page_body" />
+                    <MySource_PRINT id_name="related_sidebar" />
+            </div>
+         </MySource_THEN>
+     </MySource_AREA>
+     
+     
+     <MySource_AREA id_name="is_details" design_area="show_if">
+     <MySource_SET name="condition" value="keyword_regexp"/>
+     <MySource_SET name="condition_keyword" value="asset_metadata_TDT.sectionClass"/>
+     <MySource_SET name="condition_keyword_match" value="details" />
+         <MySource_THEN>
+            <MySource_PRINT id_name="show_breadcrumbs"  />
+            <div class="container">
+                  <MySource_PRINT id_name="page_body" />
+                  <MySource_PRINT id_name="related_sidebar" />
+             </div>
+             <MySource_PRINT id_name="feature_map" />
+             <MySource_PRINT id_name="related_content" />
+         </MySource_THEN>
+     </MySource_AREA>
   </main>
   <!-- End Page Contents -->
 
@@ -347,9 +327,9 @@
       <ul class="footer-utilities__list">
         <li>The official Timaru Tourism website</li>
         <li class="text--bold"><a href="">Visit Timaru</a></li>
-        <li class="border--none"><a href="">Live, Work, Play</a></li>
+        <li class="border--none"><a href="//www.aorakidevelopment.co.nz">Live, Work, Play</a></li>
         <li class="hidden-portable">&copy; 2016 Timaru</li>
-        <li class="border--none hidden-portable"><a href="www.squiz.net" target="_blank">Website by Squiz</a></li>
+        <li class="border--none hidden-portable"><a href="//www.squiz.net" target="_blank">Website by Squiz</a></li>
       </ul>
     </div>
     <!-- End Footer Utilities -->
