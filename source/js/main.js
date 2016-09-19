@@ -1,5 +1,5 @@
 /***
-*   Insert Client Name - Main JS - Authors: Insert Author (Squiz)
+*   Timaru District Tourism  - Main JS - Authors: Lilly Dorgan (Squiz)
 ***/
 
 var $whatsOnSlider = $('.whats-on-slider ul.listing--events:nth-child(3)'),
@@ -21,7 +21,7 @@ function debounce(e, t, n) {
         i = setTimeout(l, t),
         r && e.apply(s, a)
     }
-}
+};
 
 function detectScrolling() {
 
@@ -40,7 +40,7 @@ function detectScrolling() {
       window.requestAnimationFrame(detectTrigger)
     }
     featureDetected = true;
-  }
+  };
 
   function detectTrigger() {
 
@@ -145,7 +145,7 @@ function threeBest(){
       $('.three-best__wrap').html(response);
       threeBestSlider();
     });
-}
+};
 
 function ourRegion(){
   var root = $('.our-region').find('select').val();
@@ -159,7 +159,7 @@ function ourRegion(){
   else {
     ourRegionSlider();
   }
-}
+};
 
 function mobileMenu() {
   $('.utility-nav__item--primary-toggle a').click(function(e) {
@@ -174,7 +174,7 @@ function mobileMenu() {
       $('.primary-nav').hide().removeClass('open');
       $('.utility-nav__item--primary-toggle').removeClass('close');
   });
-}
+};
 
 
 function videos() {
@@ -194,7 +194,7 @@ function videos() {
     }
       return true;
     });
-}
+};
 
 function threeBestSlider() {
 
@@ -222,7 +222,7 @@ function threeBestSlider() {
       }
     ]
   })
-}
+};
 
 function ourRegionSlider(){
 
@@ -263,7 +263,7 @@ function ourRegionSlider(){
       }
     ]
   });
-}
+};
 
  // var $mobileSlider = $('.slick-three-best');
  //  if ($(window).width() < 1025) {
@@ -316,7 +316,7 @@ function searchForm() {
   $('.site-search input[type=search]').focusout(function(e){
     $(this).parent('fieldset').parent('form').parent('.site-search').blur().removeClass('site-search--expanded');
   });
-}
+};
 
 function megaMenu() {
 
@@ -345,13 +345,13 @@ function megaMenu() {
   }
 
   $('ul.topic-list').has('li.topic-list__item--featured').addClass('topic-list--featured');
-} // globalActions()
+}; // megaMenu()
 
 
 
 
 function threeBestSlider() {
- var $mobileSlider = $('.slick-three-best');
+  var $mobileSlider = $('.slick-three-best');
   if ($(window).width() < 767) {
     if($mobileSlider.hasClass('slick-initialized')) {
       $mobileSlider.slick('unslick');
@@ -374,7 +374,7 @@ function threeBestSlider() {
       $mobileSlider.slick('unslick');
     }
   }
-}
+};
 
 function whatsOnSlider() {
   var $newSlider = $clonedSlider.clone(true, true);
@@ -434,7 +434,7 @@ function whatsOnSlider() {
 
   $($whatsOnSlider).find('li').matchHeight({byRow:false});
   $(featuredSlider).find('li').matchHeight({byRow:false});
-}
+};
 
 /* Clean me */
 $(document).ready(function () {
