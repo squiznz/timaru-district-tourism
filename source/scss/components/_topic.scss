@@ -5,7 +5,7 @@
 .topic-list {
 	margin-bottom: 80px;
 
-	li {
+	> li {
 		@include clearfix();
 		float: left;
 		min-height: 315px;
@@ -43,6 +43,7 @@
 		}
 	}
 }
+
 
 .topic-list--featured {
 	.topic-list__item {
