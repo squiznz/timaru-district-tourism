@@ -344,7 +344,9 @@ function megaMenu() {
     });
   }
 
-  $('ul.topic-list').has('li.topic-list__item--featured').addClass('topic-list--featured');
+  $('ul.topic-list').has('li.topic-list__item--featured').removeClass('topic-list--standard').addClass('topic-list--featured');
+
+  console.log('t');
 }; // megaMenu()
 
 
@@ -457,8 +459,10 @@ $(document).ready(function () {
     slidesToScroll: 1,
     slidesToShow: 1
   });
-
-
+var $grid = $('.listing--events__item').isotope({
+  itemSelector: '.element-item',
+  layoutMode: 'masonryHorizontal'
+});
   $('.slick-watch-timaru').slick({
     dots: true,
     infinite: true,

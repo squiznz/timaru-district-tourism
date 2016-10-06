@@ -70,11 +70,17 @@
 		}
 
 		.cta-button {
-			margin-top: 30px;
-			padding: 10px 30px 10px 10px;
-			display: block;
-			height: auto;
+			// margin-top: 30px;
+			padding: 13px 8px 10px 8px;
+			// display: block;
+			// height: auto;
 			@include font-size(17px);
+			width: 100%;
+			letter-spacing: -0.04em;
+
+			&:after {
+				background-position: -197px -94px;
+			}
 		}
 	}
 

@@ -155,15 +155,23 @@
 				padding: 0 30px;
 			}
 
-			li {
+			.footer-utilities__list__item {
 				display: inline-block;
 				border-right: 1px solid $tdc-navy;
 				@include font-size(12px);
 				width: 49.4%;
 				font-weight: $semibold;
+
+				&--copyright {
+					display: none;
+				}
 				
 				@include media-query(palm-land-up){
 					width: auto;
+
+					&--copyright {
+						display: block;
+					}
 				}
 
 				a {

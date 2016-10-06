@@ -74,12 +74,12 @@ ul.listing {
 
 ul.listing--events {
 	@extend .bare-list;	
-	display: -webkit-flex;
-  display: flex;
-	-webkit-flex-direction: row;
-  flex-direction: row;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
+	// display: -webkit-flex;
+ //  display: flex;
+	// -webkit-flex-direction: row;
+ //  flex-direction: row;
+	// -webkit-flex-wrap: wrap;
+	// flex-wrap: wrap;
 
 	* {
 		color: $tdc-dark-navy;
@@ -87,29 +87,44 @@ ul.listing--events {
 	}
 
 	li {
-  		padding: 21px;
-  	    vertical-align: top;
-	  -webkit-flex: 1 0 0;
-	  flex: 1 0 0;
-	  flex-basis: 46.7%;
-		max-width: 46.7%;
+		padding: 21px;
+  //   vertical-align: top;
+	 //  -webkit-flex: 1 0 0;
+	 //  flex: 1 0 0;
+	 //  flex-basis: 46.7%;
+		// max-width: 46.7%;
+		// @include gallery(4);
+	  width: span(3.9);
+	  // width: 3.0169%;
+	  float: left;
+
+    // clear: right;
+			    // @include pull(8);
+
+
 		margin: 0 21px 21px 0;
 		background-color: $white;
 		border: 1px solid $tdc-grey;
 		@include position(relative, null);
 	
 		@include media-query(palm-land-up){
-			height: 350px;
+			height: 350px !important;
 		}		
 
-		@include media-query(note-and-up){
-			padding: 30px;
-			margin: 0 30px 30px 0;
-		  	flex-basis: 30%;
-			max-width: 30%;
-  			height: 328px;
-		}
+		// @include media-query(note-and-up){
+		// 	padding: 30px;
+		// 	margin: 0 30px 30px 0;
+		//   	flex-basis: 30%;
+		// 	max-width: 30%;
+  // 			height: 328px;
+		// }
 	
+		&.isolate {
+		    // clear: l;
+		    // @include isolate(9);
+
+		}
+
 		.adbt & {
 			border: 3px solid $tdc-light-blue;
 		}
@@ -130,16 +145,20 @@ ul.listing--events {
 		}
 
 		&.listing--events__feature {
-		  -webkit-flex: 2 0 0; 
-  			flex: 2 0 0; 
-			flex-basis: 100%;	
-			max-width: 100%;
+		 //  -webkit-flex: 2 0 0; 
+  	// 		flex: 2 0 0; 
+			// flex-basis: 100%;	
+			// max-width: 100%;
 			border: 4px solid $tdc-green;
-			
-			@include media-query(note-and-up){
-				flex-basis: 63%;	
-				max-width:  63%;
-	  		}
+			// @include gallery(8);
+				  width: span(7.8);
+				  // width: 57.6271%;
+		    // @include isolate(5);
+
+			// @include media-query(note-and-up){
+			// 	flex-basis: 63%;	
+			// 	max-width:  63%;
+	  // 		}
 
 			@include media-query(palm-landscape){
 				width: 100% !important;
@@ -287,6 +306,13 @@ ul.listing--with-images {
 	}
 }
 
+ul.listing--related-content {
+
+	li {
+		@include span(4);
+
+	}
+}
 
 ul.listing--basic {
 	img {

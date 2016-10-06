@@ -1,0 +1,104 @@
+/***
+*   Three of the Best
+***/
+
+.related-content {
+	padding: 60px 0 120px 0;
+}
+
+
+	.related-content__list {		
+		@extend .bare-list;
+		// @include container(1063px);
+
+		@include media-query(palm-land-up){
+			padding: 0 45px;
+		}	
+
+		@include media-query(note-and-up){
+			padding: 0;
+		}
+
+		> li {
+			@include position(relative, null);
+			// @include media-query(portable){
+			// 	margin: 0 11px;
+			// 	width: 310px;
+			// }
+
+			// @include media-query(palm-land-up){
+	 	// 		@include span(2.8 of 9 (gutter-override: 30px));	
+	 	// 		margin-left: 0;		
+			
+			// 	&:nth-child(3) {
+			// 		@include last();
+			// 	}
+			// }
+
+			strong {
+				display: block;
+				color: $tdc-green;
+			}
+
+			@include media-query(note-and-up){
+	 			@include span(2.927 of 9 (gutter-override: 35px));			
+
+				&:nth-child(3) {
+					@include last();
+				}
+			}
+
+			img {
+				max-height: 165px;
+				width: 100%;
+				
+			// 	@include media-query(note-and-up){
+			// 		height: 180px;
+			// 	}
+
+			}
+
+			> a {
+			  @include aspect-ratio(16, 9);
+			}
+
+
+
+			// .more {
+			// 	display: block;
+			// 	padding-bottom: 0 !important;
+			
+			// }
+		}
+	}
+
+
+	// 	.three-best__info-wrap {
+	// 	    padding: 9px 0 21px;
+	// 		line-height: 22px;
+		
+	// 		strong {
+	// 			color: $tdc-green;
+	// 			@include font-size(18px);
+	// 			font-weight: $bold;
+	// 			display: block;
+	// 			margin-bottom: 10px;
+	// 			font-family: $font-primary;
+	// 		}
+
+	// 		a {
+	// 			color: $tdc-dark-navy;
+	// 			@include font-size(14px);
+	// 			display: block;	
+	// 			margin-top: 10px;
+	// 			font-weight: $bold;
+	// 		}
+	// 	}
+
+	// 	.three-best-select--blue {
+	// 		color: $tdc-light-blue !important;
+
+	// 		&:after {
+	// 			color: $tdc-light-blue !important;
+	// 		}
+	// 	}
