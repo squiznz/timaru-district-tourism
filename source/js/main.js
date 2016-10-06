@@ -139,6 +139,19 @@ function globalActions() {
 // globalActions()
 
 
+function landingTopicSearch() {
+  var searchBtn = $('.topics-search-btn');
+
+  searchBtn.click(function(e) {
+    e.preventDefault();
+    var keywordsQuery = $('#queries_keywords_query').val() == "" ? "" : $('#queries_keywords_query').val(),
+      optionsQuery = $('#ms-landing').val(),
+      queryString = "?queries_options_query=" + optionsQuery + "&queries_keywords_query=" + keywordsQuery + "&current_result_page=1&results_per_page=12";
+
+    window.location.search = queryString;
+  });
+};
+
 function threeBest(){
   var root = $('.three-best').find('select').val();               
     $.get(( "../../assets/nested-content-assets/content-templates/three-best/three-best-search?id=" + root), function (response) {
@@ -450,6 +463,7 @@ $(document).ready(function () {
   searchForm();
   // whatsOnSlider(); 
   videos();
+  landingTopicSearch();
 
 
   $('.slick').slick({
