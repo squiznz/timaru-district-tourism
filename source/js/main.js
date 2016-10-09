@@ -69,7 +69,7 @@ function globalActions() {
     placeholder: "Category"
   });
 
-  if ($('.pagination a').length == 0) {
+  if ($('.pagination a').lengtha == 0) {
     $('.pagination').hide();
   };
 
@@ -135,7 +135,7 @@ function globalActions() {
   } 
 
 
-  if ($('body').hasClass('itineraries'){
+  if ($('body').hasClass('itineraries')){
     $.each($('.listing-itineraries__highlights'), function() {
       var highlightRoot = $(this).data('root');
 
@@ -145,7 +145,7 @@ function globalActions() {
     })
   }
 
-  
+
 }; 
 // globalActions()
 
