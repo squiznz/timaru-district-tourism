@@ -69,7 +69,7 @@ function globalActions() {
     placeholder: "Category"
   });
 
-  if ($('.pagination a').length == 0) {
+  if ($('.pagination a').lengtha == 0) {
     $('.pagination').hide();
   };
 
@@ -133,6 +133,17 @@ function globalActions() {
   else {
     ourRegionSlider();
   } 
+
+
+  if ($('body').hasClass('itineraries')){
+    $.each($('.listing-itineraries__highlights'), function() {
+      var highlightRoot = $(this).data('root');
+
+      $.get( 'http://tt.timaru.govt.nz/assets/nested-content-assets/nested-content-elements/itineraries/itineraries-highlights?id=' + highlightRoot + '', function( data ) {
+        $('.listing-itineraries__highlights').html( data );
+      });   
+    })
+  }
 
 
 }; 
