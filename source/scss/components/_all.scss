@@ -330,22 +330,14 @@ a.more {
 		height: 100%;
 		display: block;
 		background-repeat: no-repeat;
-		background-position: -47px -52px;
-		background-size: 400px;
+		background-position: -95px -44px;
+		background-size: 500px 500px;
 		@include position(absolute, null -1em 0 null);
-
-		@-moz-document url-prefix() { 
-			background-position: -47px -41px;
-		}	
 	}
 
 	&.tc-tdc-light-blue {
 		&:after {
-			background-position: -145px -53px;
-
-			@-moz-document url-prefix() { 
-				background-position: -145px -41px;
-			}	
+			background-position: -200px -42px;
 		}
 	}
 }
