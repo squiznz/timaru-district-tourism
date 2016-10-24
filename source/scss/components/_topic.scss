@@ -64,6 +64,23 @@
 
 .topic-list__item {
 	@include span(12);
+	min-height: 380px;
+
+	@include media-query(note-and-up) {
+		min-height: 380px;
+		height: 380px;
+	}
+	
+	a.more {
+		&:after {
+			// width: 60px;
+			height: 100%;
+			display: block;
+			background-position: -200px -42px;
+				// background-size: 600px 600px;
+			@include position(absolute, null null 0 5.8em);
+		}
+	}
 }
 
 .topic-list--standard {
@@ -429,6 +446,7 @@
 	a.more {
 		color: $tdc-light-blue;
 		margin-top: 21px;
+		// display: block;
 		@include position(relative, null);
 	}
 

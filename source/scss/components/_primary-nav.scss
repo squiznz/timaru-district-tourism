@@ -187,11 +187,7 @@
 			margin-top: 21px;
 
 			&:after {
-				background-position:-149px -52px;
-
-				@-moz-document url-prefix() { 
-					background-position:-149px -42px;
-				}
+				background-position: -198px -42px;
 			}
 		}
 
