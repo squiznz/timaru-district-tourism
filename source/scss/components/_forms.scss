@@ -189,7 +189,11 @@ form {
 		}		
 		
 		@include media-query(note-and-up){
-			padding: 35px 70px;
+		    padding: 35px 30px;
+		}
+
+		.itineraries & {
+			max-width: 1063px;
 		}
 	}
 
@@ -211,6 +215,11 @@ form {
 			margin-bottom: 0;
 			margin-right: 30px;
 		}
+
+		.itineraries & {
+			float: none;
+		    display: block;
+		}
 	}
 
 	input, select, .ms-choice {
@@ -231,6 +240,12 @@ form {
 
 		@include media-query(note-and-up){
 			width: 280px;	
+		}
+
+		.itineraries & {
+			@include media-query(note-and-up){ 
+				width: 418px;
+			}
 		}
 	}
 
@@ -260,9 +275,16 @@ form {
 		@include media-query(note-and-up){
 			width: 280px;
 		}
+
+		.itineraries & {
+			@include media-query(note-and-up){
+				width: 418px;
+			    margin-left: 30px;
+			}
+		}
 	}
 
-	input[type="submit"]{
+	input[type="submit"], button[type="submit"]{
 		@extend .cta-button;	
 		@include font-size(17px);
 		background-image: url('/__data/assets/image/0005/68702/arrow-right-white.png');
@@ -279,6 +301,12 @@ form {
 		}
 		
 		@include media-query(note-and-up){
+		}
+
+		.itineraries & {
+			@include media-query(palm-land-up){
+				margin-top: 45px;
+			}
 		}
 	}
 }

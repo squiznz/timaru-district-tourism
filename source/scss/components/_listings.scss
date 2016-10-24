@@ -141,7 +141,7 @@ ul.listing--events {
 			}
 
 			.listing--events__info-wrap {
-				float: right;
+				float: none;
 				@include position(static, null);
 
 				@include media-query(note-and-up){

@@ -2,11 +2,6 @@
 *   Timaru District Tourism  - Main JS - Authors: Lilly Dorgan (Squiz)
 ***/
 
-var $whatsOnSlider = $('.whats-on-slider ul.listing--events:nth-child(3)'),
-    $clonedSlider = $whatsOnSlider.clone(true, true),
-    featuredSlides = $('.listing--events__feature').clone(true, true),
-    featuredSlider = $('.featured-list');
-
 function debounce(e, t, n) {
     var i;
     return function() {
@@ -151,15 +146,26 @@ function globalActions() {
 
 
 function landingTopicSearch() {
-  var searchBtn = $('.topics-search-btn');
+  var searchBtn = $('.activity-search').find('input[type=submit]'),
+      searchForm = $('.activity-search').closest('form');
 
-  searchBtn.click(function(e) {
-    e.preventDefault();
-    var keywordsQuery = $('#queries_keywords_query').val() == "" ? "" : $('#queries_keywords_query').val(),
-      optionsQuery = $('#ms-landing').val(),
-      queryString = "?queries_options_query=" + optionsQuery + "&queries_keywords_query=" + keywordsQuery + "&current_result_page=1&results_per_page=12";
+  function submitForm() {
+    var keywordsQuery = $('#queries_keywords_query').val(),
+        optionsQuery = $('#ms-landing').val(),
+        queryString = "?queries_options_query=" + optionsQuery + "&queries_keywords_query=" + keywordsQuery + "&current_result_page=1&results_per_page=12";
+
+    if($('.itineraries').length) {
+      keywordsQuery = $('#queries_length_query').val(),
+      optionsQuery = $('#ms').val();
+      queryString = "?queries_options_query=" + optionsQuery + "&queries_length_query=" + keywordsQuery + "&current_result_page=1&results_per_page=12";
+    }
 
     window.location.search = queryString;
+  }
+
+  searchBtn.click(function(e){
+    e.preventDefault();
+    submitForm();
   });
 };
 
@@ -403,63 +409,51 @@ function threeBestSlider() {
 };
 
 function whatsOnSlider() {
-  var $newSlider = $clonedSlider.clone(true, true);
 
-  if(!featuredSlider.hasClass('slick-initialized')) {
-    featuredSlider.append(featuredSlides);
-    
-    featuredSlider.slick({
-      centerMode: true,
-      initialSlide: 1,
-      slidesToShow: 1,
-      draggable: true,
-      centerPadding: '0px',
-      arrows: false,
-      dots: false
-    });
+  // var $whatsOnSlider = $('.whats-on-slider ul.listing--events:nth-child(3)'),
+  //     $clonedSlider = $whatsOnSlider.clone(true, true),
+  //     featuredSlides = $('.listing--events__feature').clone(true, true),
+  //     featuredSlider = $('.featured-list');
+  var featuredItems = featuredItems == null ? $('.listing--events__feature').clone() : featuredItems;
 
-  }    
-
-  if ($(window).width() > 768) {
-
-    if($whatsOnSlider.hasClass('slick-initialized')) {
-      $whatsOnSlider.slick('unslick');
-    }
-
-    $whatsOnSlider.empty();
-    $whatsOnSlider.append($newSlider.find('li'));
-
-    $whatsOnSlider.slick({
-      dots: true,
-      infinite: true,
-      autoplay: false,
-      mobileFirst: false,
-      draggable: true,
-      variableWidth: true,
-      centerMode: true,
-      appendArrows: $('.whats-on-slider .slider-tools'),
-      appendDots: $('.whats-on-slider .slider-dots')
-    });
-    
+  if($('.featured-list li').length == 0) {
+    $('.featured-list').append(featuredItems);
   }
+
+  $('.whats-on-slider ul.listing--events:nth-child(3)').not('.slick-initialized').slick({
+    dots: true,
+    infinite: true,
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '100px',
+    variableWidth: true,
+    draggable: true,
+    appendArrows: $('.whats-on-slider .slider-tools'),
+    appendDots: $('.whats-on-slider .slider-dots'),
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: false,
+          centerPadding: '0px',
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          rows: 1
+        }
+      }
+    ]
+  });
+
+  if ($(window).width() < 767) {
+    $('.whats-on-slider ul.listing--events:nth-child(3)').slick('slickUnfilter');
+    $('.whats-on-slider ul.listing--events:nth-child(3)').slick('slickFilter', ':not(.listing--events__feature)');
+  }
+
   else {
-
-    if($whatsOnSlider.hasClass('slick-initialized')) {
-      $whatsOnSlider.slick('unslick');
-    }
-
-    $whatsOnSlider.empty();
-    $whatsOnSlider.append($newSlider.find("li:not(.listing--events__feature)"));
-
-    $whatsOnSlider.slick({
-      rows: 2,
-      slidesPerRow: 2,
-      dots: true
-    });
-  } 
-
-  $($whatsOnSlider).find('li').matchHeight({byRow:false});
-  $(featuredSlider).find('li').matchHeight({byRow:false});
+    $('.whats-on-slider ul.listing--events:nth-child(3)').slick('slickUnfilter');
+  }
 };
 
 /* Clean me */
@@ -472,7 +466,7 @@ $(document).ready(function () {
   threeBest();
   megaMenu();  
   searchForm();
-  // whatsOnSlider(); 
+  whatsOnSlider(); 
   videos();
   landingTopicSearch();
 
@@ -484,10 +478,10 @@ $(document).ready(function () {
     slidesToScroll: 1,
     slidesToShow: 1
   });
-var $grid = $('.listing--events__item').isotope({
-  itemSelector: '.element-item',
-  layoutMode: 'masonryHorizontal'
-});
+// var $grid = $('.listing--events__item').isotope({
+//   itemSelector: '.element-item',
+//   layoutMode: 'masonryHorizontal'
+// });
   $('.slick-watch-timaru').slick({
     dots: true,
     infinite: true,
