@@ -180,17 +180,17 @@ video {
 	&:after {
 		content: "";
 		background-repeat: no-repeat;
-		background-size: 400px;
+		background-size: 500px 500px;
 		background-image: url(/__data/assets/file/0009/72099/sprites.svg);
-		background-position: -196px -103px;
+		background-position: -95px -44px;
 		float: right;
 		height: 100%;
 		width: 20px;
 		margin-left: 0.5em;
 
-		@-moz-document url-prefix() { 
-			background-position: -196px -96px;
-		}	
+		// @-moz-document url-prefix() { 
+		// 	background-position: -196px -96px;
+		// }	
 	}
 
 	&.cta-button--tripadvisor {

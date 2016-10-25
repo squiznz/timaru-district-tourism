@@ -42,7 +42,7 @@
 			background-position: -95px -40px;
 			background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 			background-repeat: no-repeat;
-			background-size: 400px;
+			background-size: 600px 600px;
 		}
 	}
 
@@ -96,7 +96,7 @@
 				color: $white !important;
 
 				&:after {
-					background-position: 5px -40px;
+					background-position: -95px -40px;
 				}
 			}
 		}	
@@ -108,7 +108,7 @@
 				color: $tdc-green;
 
 				&:after {
-					background-position: 5px -40px;
+					background-position: -95px -40px;
 				}
 			}
 		}
