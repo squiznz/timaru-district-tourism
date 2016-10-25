@@ -23,7 +23,7 @@ body.events {
 		@include container(1270px);
 		
 		@include media-query(palm-land-up){
-			padding: 0 45px;
+			padding: 20px 45px;
 		}
 
 		a {
@@ -51,9 +51,9 @@ body.events {
 			}
 
 			&.listing--events__feature {
-				max-width: 591px;
+				max-width: 591px !important;
 
-				@include media-query(portable){
+				@include media-query(palm-landscape){
 					max-width: 100% !important;
 				}
 			}

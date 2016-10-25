@@ -375,38 +375,8 @@ function megaMenu() {
   }
 
   $('ul.topic-list').has('li.topic-list__item--featured').removeClass('topic-list--standard').addClass('topic-list--featured');
-
-  console.log('t');
 }; // megaMenu()
 
-
-
-
-function threeBestSlider() {
-  var $mobileSlider = $('.slick-three-best');
-  if ($(window).width() < 767) {
-    if($mobileSlider.hasClass('slick-initialized')) {
-      $mobileSlider.slick('unslick');
-    }
-
-    $mobileSlider.slick({
-      dots: true,
-      centerMode: true,
-      draggable: true,
-      infinite: true,
-      speed: 300,
-      arrows: false,
-      slidesToShow: 1,
-      variableWidth: true
-    });
-
-  } 
-  else {
-    if($mobileSlider.hasClass('slick-initialized')) {
-      $mobileSlider.slick('unslick');
-    }
-  }
-};
 
 function whatsOnSlider() {
 
@@ -510,6 +480,7 @@ $(document).ready(function () {
     threeBestSlider();
     whatsOnSlider(); 
     megaMenu();
+    $('.our-region li').matchHeight();
   }, 50)); 
 
 });

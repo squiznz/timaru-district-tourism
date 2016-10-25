@@ -79,7 +79,7 @@
 			line-height: 35px;
 			width: 42.5%;
 			@include position(static, null);
-			height: 210px;
+			height: auto;
 		}
 
 		@include media-query(note-and-up){
@@ -124,9 +124,14 @@
 				background-repeat: no-repeat;
 				background-position: -298px -2px;
 				background-size: 400px;
+
+				@include media-query(palm-land-up){
+					top: 12px;
+				}
 	
 				@include media-query(note-and-up){
 					background-position: -295px 7px;
+					top: 0px;
 				}
 
 				@-moz-document url-prefix() { 
@@ -155,11 +160,12 @@
 		.location-banner--right & {
 
 			@include media-query(palm-land-up){
-				@include position(absolute, 115px null null 0);
+				@include position(relative, 60px null null null);
+				float: right;
 			}
 
 			@include media-query(note-and-up){
-				@include position(absolute, 147px 30px null null);
+				@include position(absolute, 115px 30px null null);
 			}
 		}
 
@@ -167,11 +173,11 @@
 		.location-banner--left & {
 
 			@include media-query(palm-land-up){
-				@include position(absolute, 115px null null 0);
+				@include position(relative, 60px null null 0);
 			}
 
 			@include media-query(note-and-up){
-				@include position(absolute, 147px null null 30px);
+				@include position(absolute, 115px null null 30px);
 			}
 		}
 

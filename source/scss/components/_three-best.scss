@@ -10,7 +10,8 @@
 		padding: 0 21px;
 		@include container(1063px);
 		@include font-size(24px);
-		margin-bottom: 0.5em;
+	    margin-bottom: 1em;
+   		line-height: 1.2;
 
 		@include media-query(palm-land-up){
 			padding: 0 45px;
@@ -39,6 +40,10 @@
 	    	padding: 50px 0 0;
 		}
 	}
+
+	.slider-tools {
+		display: none;
+	}
 }
 
 
@@ -54,26 +59,30 @@
 			padding: 0;
 		}
 
-		> li {
+		li {
 			@include media-query(portable){
 				margin: 0 11px;
 				width: 310px;
 			}
 
 			@include media-query(palm-land-up){
-	 			@include span(2.8 of 9 (gutter-override: 30px));	
+	 			// @include span(2.8 of 9 (gutter-override: 30px));
+	 			@include gallery(3 of 9 (gutter-override: 30px));
 	 			margin-left: 0;		
 			
 				&:nth-child(3) {
-					@include last();
+					// @include last();
+					margin-right: 0px;
 				}
 			}
 
 			@include media-query(note-and-up){
-	 			@include span(2.927 of 9 (gutter-override: 35px));			
+	 			// @include span(2.927 of 9 (gutter-override: 35px));
+	 			@include gallery(3 of 9 (gutter-override: 35px));			
 
 				&:nth-child(3) {
-					@include last();
+					// @include last();
+					margin-right: 0px;
 				}
 			}
 

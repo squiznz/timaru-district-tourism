@@ -78,6 +78,9 @@
 				img {
 					float: left;
 					@include span(1.1 of 2 (no-gutters));
+				    height: 188px;
+				    width: 100%;
+				    object-fit: cover;
 
 					@include media-query(palm-land-up){
 						width: 243px;
@@ -97,7 +100,7 @@
 			padding: 30px 21px;
 			@include font-size(16px);
 			color: $tdc-dark-grey;
-			height: 156px;
+	        height: 190px;
 
 	   	@include media-query(palm-land-up){
 				height: 100%;
@@ -124,7 +127,8 @@
 
 			a.more {
 				display: inline-block;
-				@include position(absolute, null null 30px 21px);
+				// @include position(absolute, null null 30px 21px);
+				@include position(initial, null null null null);
 
 
 		   	@include media-query(palm-land-up){

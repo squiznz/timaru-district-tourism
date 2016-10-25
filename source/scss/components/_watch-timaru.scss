@@ -20,7 +20,7 @@
 		}
 
 		header {
-			padding: 0 21px;
+		    padding: 0px 21px 20px;
 
 			@include media-query(palm-land-up){
 				padding: 0 0 15px 0;
@@ -35,10 +35,11 @@
 
 			li {
 				@include media-query(palm-land-up){
-					@include span(2.97 of 6 (gutter-override: 30px));
+					@include gallery(3 of 6 (gutter-override: 30px));
 
 					&:nth-child(2){
-						@include last();
+						// @include last();
+						margin-right: 0px;
 					}
 				}
 
