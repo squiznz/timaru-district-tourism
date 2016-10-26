@@ -109,6 +109,7 @@
 			height: 35px;
 			padding: 0;
 			border-radius: 50%;
+			display: none;
 			line-height: 35px;
 			@include position(absolute, null 21px 21px 85%);
 
@@ -156,6 +157,7 @@
 		margin-bottom: 6.25em;
 
 		.feature-banner__info {
+			display: block;
 			@include position(absolute, null 30px 80px null);
 		}
 	}
