@@ -111,7 +111,7 @@
 
 @charset "UTF-8";
 
-$slick-font-path: "../fonts/" !default;
+$slick-font-path: "../fonts/slick/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "./" !default;
 $slick-arrow-color: $black !default;
@@ -120,7 +120,7 @@ $slick-dot-color-active: $slick-dot-color !default;
 $slick-prev-character: "\f177" !default;
 $slick-next-character: "\f178" !default;
 $slick-dot-character: "\2022" !default;
-$slick-dot-size: 20px !default;
+$slick-dot-size: 4px !default;
 $slick-opacity-default: 1 !default;
 $slick-opacity-on-hover: 1 !default;
 $slick-opacity-not-active: 1 !default;
@@ -280,7 +280,7 @@ $slick-opacity-not-active: 1 !default;
     width: 80%;
 
     @include media-query(note-and-up){
-			margin: 30px auto 0 auto;
+		margin: 30px auto 0 auto;
     }
 
     li {
@@ -334,19 +334,12 @@ $slick-opacity-not-active: 1 !default;
             opacity: $slick-opacity-default;
             border: 1px solid $black;
             border-radius: 50%;
-            // top: 1em;
-            // margin-top: px;
-            // width: 12px;
-            // line-height: 1em;
-            // height: 12px;
-            // padding: 3px;
-            width: 15px;
-            line-height: 0.3em;
-            height: 15px;
-            position: absolute;
-            padding-top: 4px;
-            top: 3px;
-            left: 3px;
+            top: 1em;
+            margin-top: px;
+            width: 12px;
+            line-height: 1em;
+            height: 12px;
+            padding: 3px;
         }
     }
 }
