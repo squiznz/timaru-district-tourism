@@ -151,7 +151,7 @@ function landingTopicSearch() {
 
   function submitForm() {
     var keywordsQuery = $('#queries_keywords_query').val(),
-        optionsQuery = $('#ms-landing').val(),
+        optionsQuery = $('#ms-landing').val() || $('#ms').val(),
         queryString = "?queries_options_query=" + optionsQuery + "&queries_keywords_query=" + keywordsQuery + "&current_result_page=1&results_per_page=12";
 
     if($('.itineraries').length) {
@@ -379,11 +379,6 @@ function megaMenu() {
 
 
 function whatsOnSlider() {
-
-  // var $whatsOnSlider = $('.whats-on-slider ul.listing--events:nth-child(3)'),
-  //     $clonedSlider = $whatsOnSlider.clone(true, true),
-  //     featuredSlides = $('.listing--events__feature').clone(true, true),
-  //     featuredSlider = $('.featured-list');
   var featuredItems = featuredItems == null ? $('.listing--events__feature').clone() : featuredItems;
 
   if($('.featured-list li').length == 0) {
@@ -478,9 +473,8 @@ $(document).ready(function () {
 
   $(window).on("resize", debounce(function () {
     threeBestSlider();
-    whatsOnSlider(); 
+    // whatsOnSlider(); 
     megaMenu();
-    $('.our-region li').matchHeight();
   }, 50)); 
 
 });

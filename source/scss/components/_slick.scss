@@ -111,7 +111,7 @@
 
 @charset "UTF-8";
 
-$slick-font-path: "../fonts/" !default;
+$slick-font-path: "../fonts/slick/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "./" !default;
 $slick-arrow-color: $black !default;
@@ -280,7 +280,7 @@ $slick-opacity-not-active: 1 !default;
     width: 80%;
 
     @include media-query(note-and-up){
-			margin: 30px auto 0 auto;
+		margin: 30px auto 0 auto;
     }
 
     li {

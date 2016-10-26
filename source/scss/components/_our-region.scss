@@ -61,7 +61,7 @@
 
 		li {
 			margin: 0 11px 0 11px;
-			height: 341px;
+			height: auto;
 			width: 310px;
 			background-color: #f7f7f7;
 			@include position(relative, null);
@@ -74,23 +74,19 @@
 				.adbt & {
 				    max-height: 18.5em;
 				}
-				
-				img {
-					float: left;
-					@include span(1.1 of 2 (no-gutters));
-				    height: 188px;
-				    width: 100%;
-				    object-fit: cover;
-
-					@include media-query(palm-land-up){
-						width: 243px;
-						height: 100%;
-					}
-				}
 			}
 
-			@include media-query(note-and-up){
-			
+			img {
+				float: none;
+			    height: 188px;
+			    width: 100%;
+			    object-fit: cover;
+
+				@include media-query(palm-land-up){
+					@include span(1.1 of 2 (no-gutters));
+					width: 243px;
+					height: 100%;
+				}
 			}
 		}
 	}
@@ -102,7 +98,7 @@
 			color: $tdc-dark-grey;
 	        height: 190px;
 
-	   	@include media-query(palm-land-up){
+   			@include media-query(palm-land-up){
 				height: 100%;
 				line-height: 22px;
 				padding: 45px 30px;
@@ -128,10 +124,10 @@
 			a.more {
 				display: inline-block;
 				// @include position(absolute, null null 30px 21px);
-				@include position(initial, null null null null);
+				@include position(relative, null null null null);
 
 
-		   	@include media-query(palm-land-up){
+		   		@include media-query(palm-land-up){
 					@include position(absolute, null null 40px 30px);
 				}
 
