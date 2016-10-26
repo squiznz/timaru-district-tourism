@@ -136,7 +136,7 @@ form {
 		}
 	}
 
-	.activity-search & {	
+	.activity-search &, .site-search & {	
 		margin-right: 0;
 
 		&:after {
@@ -169,7 +169,7 @@ form {
   }
 }
 
-.activity-search {
+.activity-search, .global-site-search {
 	background-color: #f7f7f7;
 	margin-bottom: 55px;
 
