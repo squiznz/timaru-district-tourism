@@ -207,16 +207,12 @@
 				background-repeat: no-repeat;
 				@include position(absolute, 0 -1.25em 0 null);
 				background-position: -200px -95px;
-				background-size: 400px;
+				background-size: 500px 500px;
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				float: right;
 				height: 100%;
 				width: 15px;
 				margin-left: 0.5em;
-
-				@-moz-document url-prefix() { 
-					background-position: -200px -93px;;
-				}	
 			}
 		}
 

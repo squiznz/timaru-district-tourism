@@ -111,7 +111,7 @@ img {
 	padding-bottom: 3.26em;
 	margin-bottom: 50px;
 	@include container(1063px);
-	padding: 0 21px;
+	padding: 0 21px 30px 21px;
 
 	@include media-query(palm-land-up){
 		padding: 0 40px;
@@ -187,10 +187,6 @@ video {
 		height: 100%;
 		width: 20px;
 		margin-left: 0.5em;
-
-		// @-moz-document url-prefix() { 
-		// 	background-position: -196px -96px;
-		// }	
 	}
 
 	&.cta-button--tripadvisor {

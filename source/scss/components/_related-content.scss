@@ -3,7 +3,11 @@
 ***/
 
 .related-content {
-	padding: 60px 0 120px 0;
+	padding: 60px 21px 120px 21px;
+	
+	@include media-query(palm-land-up){
+		padding: 60px 0 120px 0;
+	}	
 }
 
 
