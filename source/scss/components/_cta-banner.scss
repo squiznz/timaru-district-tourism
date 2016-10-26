@@ -38,6 +38,7 @@
 		&:after {
 			@include position(absolute, 0 -1em 0 null);
 			content: "";
+			height: 100%;
 			width: 15px;
 			background-position: -95px -40px;
 			background-image: url(/__data/assets/file/0009/72099/sprites.svg);

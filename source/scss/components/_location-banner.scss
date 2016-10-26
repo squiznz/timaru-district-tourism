@@ -206,7 +206,7 @@
 				content: "";
 				background-repeat: no-repeat;
 				@include position(absolute, 0 -1.25em 0 null);
-				background-position: -200px -95px;
+				background-position: -250px -93px;
 				background-size: 500px 500px;
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 				float: right;
@@ -219,6 +219,5 @@
 		@include media-query(note-and-up){
 			display: inline-block;
 			text-align: left;
-			
 		}
 	}
