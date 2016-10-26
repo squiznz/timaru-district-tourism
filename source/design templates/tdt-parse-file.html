@@ -27,6 +27,7 @@
   <!-- Open Graph -->
   <MySource_AREA id_name="og" design_area="nest_content" print="yes" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta name="theme-color" content="#4821c0">
   <link rel="shortcut icon" href="../images/favicon.ico" />
   <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png" />
@@ -46,7 +47,7 @@
         <ul>
           <li>The official tourism website of the Timaru District</li>
           <li class="text--bold"><a href="">Visit Timaru</a></li>
-          <li><a href="//www.aorakidevelopment.co.nz    ">Live, Work, Play</a></li>
+          <li><a href="//www.aorakidevelopment.co.nz" target="_blank">Live, Work, Play</a></li>
           <li><a href="//www.tripadvisor.co.nz" target="_blank"><span class="visuallyhidden">Visit Tripadvisor's site</span></a></li>
         </ul>
       </nav>
@@ -191,11 +192,19 @@
    <MySource_AREA id_name="feature_map" design_area="nest_content" print="no" />
    <MySource_AREA id_name="related_content" design_area="nest_content" print="no" />
 
-
+    <MySource_AREA id_name="show_related_content" design_area="show_if" print="no">
+    <MySource_SET name="condition" value="keyword_regexp"/>
+      <MySource_SET name="condition_keyword" value="asset_metadata_TDT.showRelatedListing"/>
+      <MySource_SET name="condition_keyword_match" value="yes" />
+      <MySource_THEN>
+        <MySource_PRINT id_name="related_content" />
+      </MySource_THEN>
+    </MySource_AREA>   
+    
     <MySource_AREA id_name="show_breadcrumbs" design_area="show_if" print="no">
     <MySource_SET name="condition" value="keyword_regexp"/>
       <MySource_SET name="condition_keyword" value="asset_metadata_TDT.breadCrumbs"/>
-     <MySource_SET name="condition_keyword_match" value="show_yes" />
+     <MySource_SET name="condition_keyword_match" value="yes" />
       <MySource_THEN>
          <div class="container">
             <MySource_PRINT id_name="breadcrumbs" />
@@ -270,7 +279,9 @@
                   <MySource_PRINT id_name="related_sidebar" />
              </div>
              <MySource_PRINT id_name="feature_map" />
-             <MySource_PRINT id_name="related_content" />
+             <section class="related-content container">
+                 <MySource_PRINT id_name="show_related_content" />
+             </section>
          </MySource_THEN>
      </MySource_AREA>
   </main>
@@ -321,11 +332,11 @@
     <!-- Begin Footer Utilities -->
     <div class="footer-utilities">
       <ul class="footer-utilities__list">
-        <li>The official Timaru Tourism website</li>
-        <li class="text--bold"><a href="">Visit Timaru</a></li>
-        <li class="border--none"><a href="//www.aorakidevelopment.co.nz">Live, Work, Play</a></li>
-        <li class="hidden-portable">&copy; 2016 Timaru</li>
-        <li class="border--none hidden-portable"><a href="//www.squiz.net" target="_blank">Website by Squiz</a></li>
+        <li class="footer-utilities__list__item">The official Timaru Tourism website</li>
+        <li class="footer-utilities__list__item text--bold"><a href="">Visit Timaru</a></li>
+        <li class="footer-utilities__list__item border--none"><a href="//www.aorakidevelopment.co.nz" target="_blank">Live, Work, Play</a></li>
+        <li class="footer-utilities__list__item footer-utilities__list__item--copyright">&copy; 2016 Timaru</li>
+        <li class="footer-utilities__list__item border--none hidden-portable"><a href="//www.squiz.net" target="_blank">Website by Squiz</a></li>
       </ul>
     </div>
     <!-- End Footer Utilities -->
