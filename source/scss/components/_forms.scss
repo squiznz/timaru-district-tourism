@@ -121,13 +121,13 @@ form {
 		display: block;
 		background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 		width: 15px;
-		background-size: 500px;		
+		background-size: 500px 500px;		
 		background-repeat: no-repeat;
-		background-position: -245px -50px;
+		background-position: -95px -44px;
 		pointer-events: none;
 
 		.adbt & {
-				background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
+			background-image: url(/__data/assets/file/0020/72191/02-AD-sprites.svg) !important;
 		    background-position: -306px -42px !important;
 						
 			@include media-query(portable) {
@@ -148,19 +148,20 @@ form {
 
 	.our-region &, .three-best & {
 		&:after {
-			background-position: -245px -50px;
-		
+			background-position: -293px -39px;
+			background-size: 600px 600px;		
+
 			@include media-query(note-and-up){
-				background-position: -245px -45px;
+				background-position: -293px -39px;
 			}
 
-			.tc-tdc-light-blue & {
-				background-position: -310px -50px;
+			// .tc-tdc-light-blue & {
+			// 	background-position: -95px -44px;
 
-				@include media-query(note-and-up){
-					background-position: -310px -45px;
-				}
-			}
+			// 	@include media-query(note-and-up){
+			// 		background-position: -95px -44px;
+			// 	}
+			// }
 		}
 	}
 

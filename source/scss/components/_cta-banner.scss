@@ -11,7 +11,7 @@
 	font-weight: $medium;
 	@include font-size(16px);
 	padding: 0 21px;
-  	display: table;
+	display: table;
 	width: 100%;
 	
 	@include media-query(palm-land-up){
@@ -38,11 +38,12 @@
 		&:after {
 			@include position(absolute, 0 -1em 0 null);
 			content: "";
+			height: 100%;
 			width: 15px;
-			background-position: -95px -40px;
+			background-position: -146px -38px;
 			background-image: url(/__data/assets/file/0009/72099/sprites.svg);
 			background-repeat: no-repeat;
-			background-size: 400px;
+			background-size: 500px 500px;
 		}
 	}
 
@@ -96,7 +97,7 @@
 				color: $white !important;
 
 				&:after {
-					background-position: 5px -40px;
+					background-position: -44px -38px;
 				}
 			}
 		}	
@@ -108,7 +109,7 @@
 				color: $tdc-green;
 
 				&:after {
-					background-position: 5px -40px;
+					background-position: -95px -40px;
 				}
 			}
 		}

@@ -68,7 +68,8 @@
 
 	@include media-query(note-and-up) {
 		min-height: 380px;
-		height: 380px;
+		// height: 380px;
+		margin-bottom: 30px;
 	}
 	
 	a.more {

@@ -64,11 +64,7 @@
 			}
 
 			&:after {
-				background-position: -145px -52px;
-	
-				@-moz-document url-prefix() { 
-					background-position: -145px -42px;
-				}
+				background-position: -196px -43px;
 			}
 		}
 
@@ -124,10 +120,10 @@
 			width: 100%;
 			text-align: left;
 			margin-right: 0;
-		    color: $white;
-		    font-weight: $semibold;
-		    text-align: right;
-	        margin-top: 10px;
+	    color: $white;
+	    font-weight: $semibold;
+	    text-align: right;
+      margin-top: 10px;
 			@include font-size(19px);
 
 		    &:after {
