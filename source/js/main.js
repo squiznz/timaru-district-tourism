@@ -150,17 +150,17 @@ function landingTopicSearch() {
       searchForm = $('.activity-search').closest('form');
 
   function submitForm() {
-    var keywordsQuery = $('#queries_keywords_query').val(),
+    var keywordsQuery = $('.activity-search').find('input[name=queries_keywords_query]').val(),
         optionsQuery = $('#ms-landing').val() || $('#ms').val(),
-        queryString = "?queries_options_query=" + optionsQuery + "&queries_keywords_query=" + keywordsQuery + "&current_result_page=1&results_per_page=12";
+        queryString = "?queries_keywords_query=" + keywordsQuery + "&queries_options_query=" + optionsQuery + "&current_result_page=1&results_per_page=12";
 
     if($('.itineraries').length) {
-      keywordsQuery = $('#queries_length_query').val(),
+      keywordsQuery = $(".activity-search__wrap").find('#queries_length_query').val(),
       optionsQuery = $('#ms').val();
       queryString = "?queries_options_query=" + optionsQuery + "&queries_length_query=" + keywordsQuery + "&current_result_page=1&results_per_page=12";
     }
 
-    window.location.search = queryString;
+    window.location = window.location.pathname + queryString;
   }
 
   searchBtn.click(function(e){

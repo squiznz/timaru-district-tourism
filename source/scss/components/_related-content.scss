@@ -7,13 +7,23 @@
 	
 	@include media-query(palm-land-up){
 		padding: 60px 0 120px 0;
+	}
+
+	> h3 {
+		@include media-query(portable) {
+			padding: 0px 45px;
+		}
+
+		@include media-query(palm-landscape) {
+			padding: 0px;
+		}
 	}	
 }
 
 
 	.related-content__list {		
 		@extend .bare-list;
-		// @include container(1063px);
+		@include container(1063px);
 
 		@include media-query(palm-land-up){
 			padding: 0 45px;
@@ -23,12 +33,13 @@
 			padding: 0;
 		}
 
-		> li {
+		li {
 			@include position(relative, null);
-			// @include media-query(portable){
-			// 	margin: 0 11px;
-			// 	width: 310px;
-			// }
+		    margin: 30px 0px;
+			
+			@include media-query(palm-landscape) {
+				margin: 30px 15px;
+			}
 
 			// @include media-query(palm-land-up){
 	 	// 		@include span(2.8 of 9 (gutter-override: 30px));	
@@ -44,8 +55,9 @@
 				color: $tdc-green;
 			}
 
-			@include media-query(note-and-up){
-	 			@include span(2.927 of 9 (gutter-override: 35px));			
+			@include media-query(palm-land-up){
+	 			@include gallery(3 of 9 (gutter-override: 35px));
+	 			@include gutters(30px after);			
 
 				&:nth-child(3) {
 					@include last();
@@ -53,26 +65,15 @@
 			}
 
 			img {
-				max-height: 165px;
+				height: 188px;
 				width: 100%;
-				
-			// 	@include media-query(note-and-up){
-			// 		height: 180px;
-			// 	}
-
+				object-fit: cover;
+				object-position: top;
 			}
-
-			> a {
-			  @include aspect-ratio(16, 9);
-			}
-
-
-
-			// .more {
-			// 	display: block;
-			// 	padding-bottom: 0 !important;
 			
-			// }
+			> div {
+				margin-top: 15px;
+			}
 		}
 	}
 
