@@ -141,6 +141,13 @@ video {
 	max-width: 100%;
 }
 
+.view-website-btn-wrapper {
+	@include media-query(palm-landscape) {
+		clear: left;
+		float: none;
+	    margin-bottom: 30px;
+	}
+}
 
 .cta-button {
 	display: inline-block;
@@ -171,6 +178,10 @@ video {
 
 	&.cta-button--tripadvisor {
 		background-color: #589442;
+
+		@include media-query(palm-landscape) {
+			margin-bottom: 30px;
+		}
 	}
 }
 

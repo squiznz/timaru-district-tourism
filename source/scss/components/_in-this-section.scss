@@ -9,8 +9,8 @@
 	float: left;
 	
 	@include media-query(note-and-up){
-		width: span(2.367);
-		margin-right: 30px;
+		width: span(2.333);
+		// margin-right: 30px;
 		padding: 0;
 		margin-bottom: 80px;
 	}

@@ -4,6 +4,11 @@
 
 .related-content {
 	padding: 60px 21px 120px 21px;
+
+	@include media-query(palm-landscape) {
+		padding-left: 0px;
+	    padding-right: 0px;
+	}
 	
 	@include media-query(palm-land-up){
 		padding: 60px 0 120px 0;
@@ -12,10 +17,6 @@
 	> h3 {
 		@include media-query(portable) {
 			padding: 0px 45px;
-		}
-
-		@include media-query(palm-landscape) {
-			padding: 0px;
 		}
 	}	
 }
