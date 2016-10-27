@@ -144,7 +144,7 @@ video {
 .view-website-btn-wrapper {
 	@include media-query(palm-landscape) {
 		clear: left;
-		float: none;
+		float: none !important;
 	    margin-bottom: 30px;
 	}
 }
