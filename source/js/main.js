@@ -64,7 +64,7 @@ function globalActions() {
     placeholder: "Category"
   });
 
-  if ($('.pagination a').lengtha == 0) {
+  if ($('.pagination a').length === 0) {
     $('.pagination').hide();
   };
 
@@ -424,7 +424,6 @@ function whatsOnSlider() {
 /* Clean me */
 $(document).ready(function () {
   AOS.init();
-
   mobileMenu();
   detectScrolling();
   globalActions();
@@ -443,10 +442,8 @@ $(document).ready(function () {
     slidesToScroll: 1,
     slidesToShow: 1
   });
-// var $grid = $('.listing--events__item').isotope({
-//   itemSelector: '.element-item',
-//   layoutMode: 'masonryHorizontal'
-// });
+
+
   $('.slick-watch-timaru').slick({
     dots: true,
     infinite: true,
