@@ -1,3 +1,24 @@
 /***
 *  Inside Template
 ***/
+
+.inside-wrap {
+	margin-bottom: 80px;
+
+	h2,h3,h4,h5,h6 {
+		margin-top: 30px;
+	}
+
+	@include media-query(note-and-up){
+		// width: 796px;
+		width: span(7.8);
+		// margin: 0 70px;
+		padding: 0 70px !important;
+		float: left;
+		@include clearfix();
+		
+		.wide &, .one_col & {
+			width: 100%;
+		}
+	}
+}
