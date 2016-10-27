@@ -85,26 +85,6 @@ img {
 }
 //End ADBT
 
-.inside-wrap {
-	margin-bottom: 80px;
-
-	h2,h3,h4,h5,h6 {
-		margin-top: 30px;
-	}
-
-	@include media-query(note-and-up){
-		width: 796px;
-		padding: 0 70px !important;
-		float: left;
-		@include clearfix();
-		margin-right: 30px;
-		margin-left: 30px;
-		
-		.wide &, .one_col & {
-			width: 100%;
-		}
-	}
-}
 
 
 .intro {
@@ -182,7 +162,7 @@ video {
 		background-repeat: no-repeat;
 		background-size: 500px 500px;
 		background-image: url(/__data/assets/file/0009/72099/sprites.svg);
-		background-position: -95px -44px;
+		background-position: -245px -96px;
 		float: right;
 		height: 100%;
 		width: 20px;

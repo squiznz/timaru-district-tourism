@@ -148,20 +148,20 @@ form {
 
 	.our-region &, .three-best & {
 		&:after {
-			background-position: -293px -39px;
+			background-position: -293px -47px;
 			background-size: 600px 600px;		
 
 			@include media-query(note-and-up){
 				background-position: -293px -39px;
 			}
 
-			// .tc-tdc-light-blue & {
-			// 	background-position: -95px -44px;
+			.tc-tdc-light-blue & {
+				background-position: -95px -44px;
 
-			// 	@include media-query(note-and-up){
-			// 		background-position: -95px -44px;
-			// 	}
-			// }
+				@include media-query(note-and-up){
+					background-position: -95px -44px;
+				}
+			}
 		}
 	}
 
