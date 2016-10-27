@@ -10,15 +10,18 @@
 	}
 
 	@include media-query(note-and-up){
-		// width: 796px;
-		width: span(7.8);
-		// margin: 0 70px;
-		padding: 0 70px !important;
+		width: span(7.3);
+		padding: 0 45px !important;
 		float: left;
 		@include clearfix();
 		
 		.wide &, .one_col & {
 			width: 100%;
 		}
+	}
+
+	@include media-query(desk){
+		padding: 0 70px !important;
+		width: span(7.8);
 	}
 }
