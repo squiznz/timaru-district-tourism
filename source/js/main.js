@@ -64,7 +64,7 @@ function globalActions() {
     placeholder: "Category"
   });
 
-  if ($('.pagination a').length === 0) {
+  if ($('.pagination__link').length === 0) {
     $('.pagination').hide();
   };
 
