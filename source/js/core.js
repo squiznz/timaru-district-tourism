@@ -3,3 +3,4 @@
 //@prepros-append lib/aos.js
 //@prepros-append lib/multiselect.js
 //@prepros-append lib/masonry.js
+//@prepros-append lib/matchheight.js
