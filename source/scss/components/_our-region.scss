@@ -146,7 +146,7 @@
 			@include font-size(14px);
 			width: 100%;
 
-			@include media-query(palm-land-up){
+			@include media-query(note-and-up){
 				line-height: 29.45px;
 				float: right;
 				width: auto;

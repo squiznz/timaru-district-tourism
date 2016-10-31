@@ -84,6 +84,14 @@
 	}
 }
 
+.topic-list__item-region {
+	margin: 0px 0px -10px;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: $tdc-dark-grey; 
+}
+
 .topic-list--standard {
 	.topic-list__item {
 		@include media-query(lap) {
@@ -340,8 +348,10 @@
 	}
 
 	img {
-		// max-height: 170px;
+		max-height: 164px;
 		width: 100%;
+	    object-fit: cover;
+    	object-position: top;
 	}
 
 	strong {
@@ -375,6 +385,7 @@
 	  img {
 	  	height: 100%;
 	  	float: left;
+	  	max-height: 100%;
 
 			@include media-query(palm-land-up){
 				@include position(absolute);

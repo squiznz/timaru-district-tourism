@@ -160,7 +160,7 @@
 		.location-banner--right & {
 
 			@include media-query(palm-land-up){
-				@include position(relative, 60px null null null);
+				@include position(relative, 50px null null null);
 				float: right;
 			}
 
@@ -173,7 +173,7 @@
 		.location-banner--left & {
 
 			@include media-query(palm-land-up){
-				@include position(relative, 60px null null 0);
+				@include position(relative, 50px null null 0);
 			}
 
 			@include media-query(note-and-up){

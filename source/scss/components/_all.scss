@@ -149,7 +149,7 @@ video {
 .view-website-btn-wrapper {
 	@include media-query(palm-landscape) {
 		clear: left;
-		float: none !important;
+		float: left !important;
 	    margin-bottom: 30px;
 	}
 }
@@ -784,4 +784,9 @@ blockquote, .pull-quote {
 	// 	margin-left: 30px;
 	// 	width: 50%;
 	// }
+}
+
+.eventfinda-disclaimer {
+	margin-top: 40px;
+	display: block;
 }
