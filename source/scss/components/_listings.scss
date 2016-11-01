@@ -88,7 +88,7 @@ ul.listing--events {
 		margin-bottom: 21px;
 		background-color: $white;
 		border: 1px solid $tdc-grey;
-		height: 280px !important;
+		height: auto;
 
 		&:nth-child(2n + 1) {
 			@include media-query(palm-landscape) {
