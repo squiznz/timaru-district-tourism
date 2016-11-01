@@ -181,6 +181,10 @@ video {
 		margin-left: 0.5em;
 	}
 
+	&[href=""], &[href="#"] {
+	  display: none;
+	}
+
 	&.cta-button--tripadvisor {
 		background-color: #589442;
 
