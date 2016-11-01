@@ -8,7 +8,7 @@ body.events {
 
 .whats-on-slider {
 	background-color: $white;
-	padding: 0px 21px 0px;
+	padding: 0px 21px 50px;
 
 	@include media-query(palm-land-up){
 		padding: 0px 0px 50px;
