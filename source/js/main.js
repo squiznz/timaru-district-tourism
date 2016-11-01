@@ -57,11 +57,13 @@ function detectScrolling() {
 
 function globalActions() {
   $("#ms").multipleSelect({
-    placeholder: "Tags"
+    placeholder: "Tags",
+    selectAll: false
   });
 
   $("#ms-landing").multipleSelect({
-    placeholder: "Category"
+    placeholder: "Tags",
+    selectAll: false
   });
 
   if ($('.pagination__link').length === 0) {
