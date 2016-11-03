@@ -17,6 +17,7 @@
 
 	@include media-query(desk-wide){
 		@include container(1700px);
+		width: 1700px;
 	}
 
 	@include media-query(note-and-up){

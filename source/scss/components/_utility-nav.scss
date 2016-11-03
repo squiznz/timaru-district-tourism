@@ -51,16 +51,16 @@
 				height: 100%;
 				width: 100%;
 				background-image: url(/__data/assets/file/0009/72099/sprites.svg);
-				background-size: 400px;
-				background-position: 0 18px;
+				background-size: 500px 500px;
+				background-position: -51px 18px;
 				background-repeat: no-repeat;
 	
 				@include media-query(palm-land-up) {
-					background-position: 0 27px;
+					background-position: -48px 27px;
 				}
 
 				@include media-query(note-and-up) {
-					background-position: 0 32px;
+					background-position: -49px 32px;
 				}
 
 				//ADBT

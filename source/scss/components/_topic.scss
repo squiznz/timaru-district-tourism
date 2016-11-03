@@ -458,7 +458,7 @@
 	a.more {
 		color: $tdc-light-blue;
 		margin-top: 21px;
-		display: block;
+		display: block !important;
 		@include position(relative, null);
 	}
 
