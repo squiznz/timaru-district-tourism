@@ -67,7 +67,13 @@
 				object-fit: cover;
 				object-position: top;
 			}
-			
+		}
+
+		li.slick-slide {
+			padding: 0 16px;
+		}
+
+		> li, li.slick-slide {
 			> div {
 				margin-top: 15px;
 
