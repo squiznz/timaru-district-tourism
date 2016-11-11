@@ -11,14 +11,16 @@
 	margin-bottom: 25px;
 	background-position: center 0px;
 	background-size: contain !important;
-  background-origin: content-box;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+	padding-top: 0;
 	padding-left: 0;
 	padding-right: 0;
 	
 	@include media-query(palm-land-up){
 		height: 480px;
+		padding-top: 112px;
 		background-size: cover !important;
-		padding-top: 118px;
 	}
 
 	@include media-query(portable) {
@@ -28,6 +30,7 @@
 	@include media-query(note-and-up){
 		@include font-size(16px);
 		height: 535px;
+		padding-top: 118px;
 		margin-bottom: 60px;
 		// background-size: contain !important;
 	}
